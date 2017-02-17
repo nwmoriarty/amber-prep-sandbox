@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 9
 only_code None
 force_amber_prep True
@@ -17,31 +17,38 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/r4/pdb1r46.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/r4/r1r46sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/r4/1r46.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.cif
+Can't determine output label for r1r46sf,_refln.crystal_id - skipping.
+Can't determine output label for r1r46sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 852 reflections
+Can't determine output label for r1r46sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1r46.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/r4/pdb1r46.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/r4/r1r46sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/r4/1r46.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46/1r46.cif
+Can't determine output label for r1r46sf,_refln.crystal_id - skipping.
+Can't determine output label for r1r46sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 852 reflections
+Can't determine output label for r1r46sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1r46.mtz
 
 ==================================================
 Summary of pdb4amber for: 1r46.pdb
@@ -61,6 +68,62 @@ None
 ---------- Mising heavy atom(s)
 
 None
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.prmtop
+
+	Running AmberPrep : 1r46.pdb
+
+
+==================================================
+Running pdb4amber on 1r46.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for FUC 
+==================================================
+
+MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
+	23 atoms
+	23 bonds
+	41 angles
+	63 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S R S S 
+
+~> antechamber -i 4antechamber_FUC.pdb -fi pdb -o FUC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i FUC.mol2 -f mol2 -o FUC.frcmod
+
+
+  Residue "EDO" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Running elbow/antechamber for MAN 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 1r46_4tleap_uc1.pdb
@@ -80,25 +143,18 @@ None
 
 None
 
-	Running AmberPrep : 1r46.pdb
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S R 
+
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 1r46.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-FUC.mol2 is present. Skipping elbow/antechamber run for this residue.
-
-
-  Residue "EDO" already in amber monomer library. Skipping elbow/antechamber
-    run for this residue.
-        
-NAG.mol2 is present. Skipping elbow/antechamber run for this residue.
-
-MAN.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
 
 
 ==================================================
@@ -164,7 +220,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1r46.prmtop
     rst7   : 4amber_1r46.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/r4/1r46
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46
 return_files 1r46
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1r46.pdb
@@ -198,7 +254,7 @@ cp 4amber_1r46.prmtop /net/chevy/raid1/nigel/amber/hi_lo/r4/1r46
 1r46_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/1r46.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/r4/1r46
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/r4/1r46
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/1r46_refine_001.log
 ------------------------------
@@ -209,150 +265,6 @@ Running phenix.refine
 
 phenix.refine 1r46.pdb 1r46.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-10 Time 14:39:26 PST -0800 (1486766366.71 s)
-#phil __OFF__
-
-Command line arguments: "1r46.pdb" "1r46.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
-
-HOST = lewis.lbl.gov
-HOSTTYPE = x86_64-linux
-USER = nigel
-PID = 35352
-JOB_ID = 6368441
-SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
-SGE_TASK_ID = 9
-
--------------------------------------------------------------------------------
-  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
-  Version: dev
-  Release tag: svn+SVN
-  User: nigel
--------------------------------------------------------------------------------
-
-              phenix.refine: Macromolecular Structure Refinement
-
--------------------------------------------------------------------------------
-
-Phenix developers include:
-  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
-  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
-  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
-  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
-  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
-  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
-  Tom Terwilliger, Christopher Williams, Peter Zwart
-Phenix home page:
-  http://www.phenix-online.org/
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
-Phenix components are copyrighted by:
-  - Lawrence Berkeley National Laboratory
-  - Los Alamos National Laboratory
-  - University of Cambridge
-  - Duke University
-  - Texas Agricultural Experiment Station &
-    Texas Engineering Experiment Station
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
-Major third-party components of Phenix include:
-    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
-    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
-    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
-  Enter phenix.acknowledgments for details.
--------------------------------------------------------------------------------
-
-Processing inputs. This may take a minute or two.
-
-Command line parameter definitions:
-  refinement.pdb_interpretation.c_beta_restraints = False
-
-  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
-
-  refinement.refine.strategy = *individual_sites individual_sites_real_space \
-                               rigid_body *individual_adp group_adp tls \
-                               *occupancies group_anomalous
-
-  refinement.target_weights.optimize_xyz_weight = True
-
-  refinement.main.number_of_macro_cycles = 10
-
-  refinement.output.write_geo_file = False
-
-  refinement.output.serial = 1
-
-  refinement.pdb_interpretation.restraints_library.cdl = True
-
-  No user-defined map coefficients or files defined; will use default map
-  outputs instead.
-Working crystal symmetry after inspecting all inputs:
-  Unit cell: (88.458, 88.458, 215.482, 90, 90, 120)
-  Space group: P 32 2 1 (No. 154)
-
-
-================================== X-ray data =================================
-
-F-obs:
-  1r46.mtz:FOBS,SIGFOBS
-
-Miller array info: 1r46.mtz:FOBS,SIGFOBS
-Observation type: xray.amplitude
-Type of data: double, size=16022
-Type of sigmas: double, size=16022
-Number of Miller indices: 16022
-Anomalous flag: False
-Unit cell: (88.458, 88.458, 215.482, 90, 90, 120)
-Space group: P 32 2 1 (No. 154)
-Systematic absences: 0
-Centric reflections: 2397
-Resolution range: 40.9156 3.248
-Completeness in resolution range: 0.996579
-Completeness with d_max=infinity: 0.995836
-Wavelength: 1.0330
-
-Number of F-obs in resolution range:                   16022
-Number of F-obs<0 (these reflections will be rejected): 0
-Number of F-obs=0 (these reflections will be used in refinement): 0
-Refinement resolution range: d_max =  40.9156
-                             d_min =   3.2480
-
-R-free flags:
-  1r46.mtz:R-free-flags
-
-Miller array info: 1r46.mtz:R-free-flags
-Observation type: None
-Type of data: int, size=16005
-Type of sigmas: None
-Number of Miller indices: 16005
-Anomalous flag: False
-Unit cell: (88.458, 88.458, 215.482, 90, 90, 120)
-Space group: P 32 2 1 (No. 154)
-Systematic absences: 0
-Centric reflections: 2397
-Resolution range: 40.9156 3.2503
-Completeness in resolution range: 0.997134
-Completeness with d_max=infinity: 0.996389
-Wavelength: 1.0330
-
-Test (R-free flags) flag value: 0
-
-Sorry: R-free flags not compatible with F-obs array: missing flag for 17 F-obs selected for refinement:
-    h   k   l   data  sigmas
-   20   6   0   129.684  54.3991
-   20   6   1   102.934  46.4839
-   20   6  -1   119.74  58.9739
-   23   1   5   77.6959  34.0568
-   16  11   5   78.9105  37.6424
-   16  11  -5   94.7343  43.8332
-   23   1  -5   97.5567  47.0759
-   19   7  10   81.7767  39.5048
-   19   7 -10   139.02  64.8898
-   21   4  11   105.898  48.3153
-    ... (remaining 7 not shown)
-
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/1r46_refine_002.log
 ------------------------------
@@ -362,154 +274,4 @@ phenix.refine log filename ? > 1r46_refine_002.log
 Running phenix.refine
 
 phenix.refine 1r46.pdb 1r46.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
-# Date 2017-02-10 Time 14:39:38 PST -0800 (1486766378.40 s)
-#phil __OFF__
-
-Command line arguments: "1r46.pdb" "1r46.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
-
-HOST = lewis.lbl.gov
-HOSTTYPE = x86_64-linux
-USER = nigel
-PID = 35558
-JOB_ID = 6368441
-SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
-SGE_TASK_ID = 9
-
--------------------------------------------------------------------------------
-  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
-  Version: dev
-  Release tag: svn+SVN
-  User: nigel
--------------------------------------------------------------------------------
-
-              phenix.refine: Macromolecular Structure Refinement
-
--------------------------------------------------------------------------------
-
-Phenix developers include:
-  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
-  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
-  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
-  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
-  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
-  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
-  Tom Terwilliger, Christopher Williams, Peter Zwart
-Phenix home page:
-  http://www.phenix-online.org/
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
-Phenix components are copyrighted by:
-  - Lawrence Berkeley National Laboratory
-  - Los Alamos National Laboratory
-  - University of Cambridge
-  - Duke University
-  - Texas Agricultural Experiment Station &
-    Texas Engineering Experiment Station
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
-Major third-party components of Phenix include:
-    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
-    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
-    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
-  Enter phenix.acknowledgments for details.
--------------------------------------------------------------------------------
-
-Processing inputs. This may take a minute or two.
-
-Command line parameter definitions:
-  refinement.pdb_interpretation.c_beta_restraints = False
-
-  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
-
-  refinement.refine.strategy = *individual_sites individual_sites_real_space \
-                               rigid_body *individual_adp group_adp tls \
-                               *occupancies group_anomalous
-
-  refinement.amber.topology_file_name = /net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.prmtop
-
-  refinement.amber.coordinate_file_name = /net/chevy/raid1/nigel/amber/hi_lo/r4/1r46/4amber_1r46.rst7
-
-  refinement.amber.use_amber = True
-
-  refinement.target_weights.optimize_xyz_weight = True
-
-  refinement.main.number_of_macro_cycles = 10
-
-  refinement.output.write_geo_file = False
-
-  refinement.amber.wxc_factor = 0.300000
-
-  refinement.output.serial = 2
-
-  No user-defined map coefficients or files defined; will use default map
-  outputs instead.
-Working crystal symmetry after inspecting all inputs:
-  Unit cell: (88.458, 88.458, 215.482, 90, 90, 120)
-  Space group: P 32 2 1 (No. 154)
-
-
-================================== X-ray data =================================
-
-F-obs:
-  1r46.mtz:FOBS,SIGFOBS
-
-Miller array info: 1r46.mtz:FOBS,SIGFOBS
-Observation type: xray.amplitude
-Type of data: double, size=16022
-Type of sigmas: double, size=16022
-Number of Miller indices: 16022
-Anomalous flag: False
-Unit cell: (88.458, 88.458, 215.482, 90, 90, 120)
-Space group: P 32 2 1 (No. 154)
-Systematic absences: 0
-Centric reflections: 2397
-Resolution range: 40.9156 3.248
-Completeness in resolution range: 0.996579
-Completeness with d_max=infinity: 0.995836
-Wavelength: 1.0330
-
-Number of F-obs in resolution range:                   16022
-Number of F-obs<0 (these reflections will be rejected): 0
-Number of F-obs=0 (these reflections will be used in refinement): 0
-Refinement resolution range: d_max =  40.9156
-                             d_min =   3.2480
-
-R-free flags:
-  1r46.mtz:R-free-flags
-
-Miller array info: 1r46.mtz:R-free-flags
-Observation type: None
-Type of data: int, size=16005
-Type of sigmas: None
-Number of Miller indices: 16005
-Anomalous flag: False
-Unit cell: (88.458, 88.458, 215.482, 90, 90, 120)
-Space group: P 32 2 1 (No. 154)
-Systematic absences: 0
-Centric reflections: 2397
-Resolution range: 40.9156 3.2503
-Completeness in resolution range: 0.997134
-Completeness with d_max=infinity: 0.996389
-Wavelength: 1.0330
-
-Test (R-free flags) flag value: 0
-
-Sorry: R-free flags not compatible with F-obs array: missing flag for 17 F-obs selected for refinement:
-    h   k   l   data  sigmas
-   20   6   0   129.684  54.3991
-   20   6   1   102.934  46.4839
-   20   6  -1   119.74  58.9739
-   23   1   5   77.6959  34.0568
-   16  11   5   78.9105  37.6424
-   16  11  -5   94.7343  43.8332
-   23   1  -5   97.5567  47.0759
-   19   7  10   81.7767  39.5048
-   19   7 -10   139.02  64.8898
-   21   4  11   105.898  48.3153
-    ... (remaining 7 not shown)
 

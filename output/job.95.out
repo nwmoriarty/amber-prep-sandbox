@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 95
 only_code None
 force_amber_prep True
@@ -59,31 +59,36 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fv/pdb1fvv.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fv/r1fvvsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fv/1fvv.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.cif
+Can't determine output label for r1fvvsf,wavelength_id=1,_refln.F_meas_au,_refln.F_meas_sigma_au - skipping.
+Can't determine output label for r1fvvsf,_refln.crystal_id - skipping.
+Can't determine output label for r1fvvsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1fvvsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1fvv.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/fv/pdb1fvv.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fv/r1fvvsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fv/1fvv.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fv/1fvv/1fvv.cif
+Can't determine output label for r1fvvsf,wavelength_id=1,_refln.F_meas_au,_refln.F_meas_sigma_au - skipping.
+Can't determine output label for r1fvvsf,_refln.crystal_id - skipping.
+Can't determine output label for r1fvvsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1fvvsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1fvv.mtz
 
 ==================================================
 Summary of pdb4amber for: 1fvv.pdb
@@ -111,7 +116,7 @@ GLU_162 misses 4 heavy atom(s)
 TYR_573 misses 7 heavy atom(s)
 GLU_720 misses 4 heavy atom(s)
 ARG_855 misses 6 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/fv/1fvv/4amber_1fvv.prmtop
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fv/1fvv/4amber_1fvv.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/fv/1fvv/4amber_1fvv.prmtop
 
 	Running AmberPrep : 1fvv.pdb
@@ -124,7 +129,23 @@ Running pdb4amber on 1fvv.pdb
 ==================================================
 Setting up library files for non-standard residues
 ==================================================
-107.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+==================================================
+Running elbow/antechamber for 107 
+==================================================
+
+MoleculeClass :  C:21  N: 5  O: 3  S: 2 (CHEMICAL COMPONENTS format)
+	46 atoms
+	50 bonds
+	82 angles
+	120 dihedrals
+	3 rings (groups, rings, atoms) 5 28
+	0 chirals
+
+~> antechamber -i 4antechamber_107.pdb -fi pdb -o 107.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i 107.mol2 -f mol2 -o 107.frcmod
 
 
 ==================================================

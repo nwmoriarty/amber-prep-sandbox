@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 140
 only_code None
 force_amber_prep True
@@ -77,64 +77,39 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y
 3f0y.pdb 4phenix_3f0y.pdb
+3f0y.pdb 4phenix_3f0y.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f0/pdb3f0y.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f0/r3f0ysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f0/3f0y.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.cif
+Can't determine output label for r3f0ysf,_refln.crystal_id - skipping.
+Can't determine output label for r3f0ysf,_refln.scale_group_code - skipping.
+Can't determine output label for r3f0ysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3f0y.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f0/pdb3f0y.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f0/r3f0ysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f0/3f0y.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.cif
+Can't determine output label for r3f0ysf,_refln.crystal_id - skipping.
+Can't determine output label for r3f0ysf,_refln.scale_group_code - skipping.
+Can't determine output label for r3f0ysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3f0y.mtz
 
 ==================================================
 Summary of pdb4amber for: 3f0y.pdb
@@ -214,8 +189,7 @@ None
 ---------- Mising heavy atom(s)
 
 HIS_10912 misses 8 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop
 
 	Running AmberPrep : 3f0y.pdb
 
@@ -299,7 +273,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_3f0y.prmtop
     rst7   : 4amber_3f0y.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
 return_files 3f0y
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3f0y.pdb
@@ -333,7 +307,7 @@ cp 4amber_3f0y.prmtop /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y
 3f0y_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/3f0y_refine_001.log
 ------------------------------

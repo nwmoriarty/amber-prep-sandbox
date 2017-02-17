@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 159
 only_code None
 force_amber_prep True
@@ -92,31 +92,18 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/hf/pdb3hfm.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm/3hfm.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm/3hfm.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm/3hfm.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/hf/r3hfmsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm/3hfm-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/hf/3hfm.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm/3hfm.cif
+Can't determine output label for r3hfmsf,_refln.crystal_id - skipping.
+Can't determine output label for r3hfmsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3hfmsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3hfm.mtz
 
 ==================================================
 Summary of pdb4amber for: 3hfm.pdb
@@ -203,25 +190,76 @@ Minimizing input coordinates.
 
 ~> sander -O -i 3hfm_amber_all.in -p 4amber_3hfm.prmtop -c 4amber_3hfm.rst7 -o 3hfm.min.out            -ref 4amber_3hfm.rst7 -r 4amber_3hfm.min.rst7
 
-Traceback (most recent call last):
-  File "run_tests_local.py", line 321, in <module>
-    run(*tuple(args))
-  File "run_tests_local.py", line 305, in run
-    w2 = run_all_tests(code, force_amber_prep=force_amber_prep)
-  File "run_tests_local.py", line 93, in run_all_tests
-    "clean=on",
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 1034, in run
-    minimization_options=actions.minimization_options)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 689, in run_minimise
-    output_pdb_file )
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 313, in uc_parm7_to_4phenix_pdb
-    parm = parmed.load_file( parm7_file, xyz=rst7_file )
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 197, in load_file
-    return cls.parse(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/amberformat.py", line 359, in parse
-    return LoadParm(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/readparm.py", line 73, in LoadParm
-    f = load_file(xyz)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 168, in load_file
-    raise IOError('%s does not exist' % filename)
-IOError: 4amber_3hfm.min.rst7 does not exist
+checking special positions in 4phenix_3hfm.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_3hfm.pdb
+      4amber_3hfm.prmtop
+      4amber_3hfm.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_3hfm.pdb use_amber=True \
+    amber.topology_file_name=4amber_3hfm.prmtop \
+    amber.coordinate_file_name=4amber_3hfm.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+run_tests_local.py:220: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
+
+  Amber files
+    PDB    : 3hfm.pdb
+    MTZ    : 3hfm.mtz
+    prmtop : 4amber_3hfm.prmtop
+    rst7   : 4amber_3hfm.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm
+return_files 3hfm
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_3hfm.pdb
+4phenix_3hfm.pdb
+cp 4phenix_3hfm.pdb /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm
+3hfm.pdb
+cp 3hfm.pdb /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm
+4amber_3hfm.mtz
+4phenix_3hfm.mtz
+3hfm.mtz
+cp 3hfm.mtz /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm
+4amber_3hfm.rst7
+cp 4amber_3hfm.rst7 /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm
+4phenix_3hfm.rst7
+3hfm.rst7
+4amber_3hfm.prmtop
+cp 4amber_3hfm.prmtop /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm
+4phenix_3hfm.prmtop
+3hfm.prmtop
+4amber_3hfm_refine_001.log
+4phenix_3hfm_refine_001.log
+3hfm_refine_001.log
+4amber_3hfm_refine_002.log
+4phenix_3hfm_refine_002.log
+3hfm_refine_002.log
+4amber_3hfm_refine_001.pdb
+4phenix_3hfm_refine_001.pdb
+3hfm_refine_001.pdb
+4amber_3hfm_refine_002.pdb
+4phenix_3hfm_refine_002.pdb
+3hfm_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm/3hfm.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/hf/3hfm
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm/3hfm_refine_001.log
+------------------------------
+
+	Already done (on chevy) 3hfm_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/hf/3hfm/3hfm_refine_002.log
+------------------------------
+
+	Already done (on chevy) 3hfm_refine_002

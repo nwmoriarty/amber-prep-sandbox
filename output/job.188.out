@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 188
 only_code None
 force_amber_prep True
@@ -105,60 +105,40 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/b9/pdb2b9v.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/b9/r2b9vsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/b9/2b9v.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.cif
+Can't determine output label for r2b9vsf,_refln.crystal_id - skipping.
+Can't determine output label for r2b9vsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2b9vsf,_refln.wavelength_id - skipping.
+Can't determine output label for r2b9vAsf,_refln.crystal_id - skipping.
+Can't determine output label for r2b9vAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2b9vAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2b9v.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/b9/pdb2b9v.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/b9/r2b9vsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/b9/2b9v.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b9/2b9v/2b9v.cif
+Can't determine output label for r2b9vsf,_refln.crystal_id - skipping.
+Can't determine output label for r2b9vsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2b9vsf,_refln.wavelength_id - skipping.
+Can't determine output label for r2b9vAsf,_refln.crystal_id - skipping.
+Can't determine output label for r2b9vAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2b9vAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2b9v.mtz
 
 ==================================================
 Summary of pdb4amber for: 2b9v.pdb
@@ -250,7 +230,7 @@ gap of 21.244355 A between PRO 6093 and GLN 6094
 ---------- Mising heavy atom(s)
 
 ASN_6463 misses 3 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/b9/2b9v/4amber_2b9v.prmtop
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/b9/2b9v/4amber_2b9v.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/b9/2b9v/4amber_2b9v.prmtop
 
 	Running AmberPrep : 2b9v.pdb

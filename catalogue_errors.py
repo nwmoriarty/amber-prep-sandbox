@@ -10,12 +10,16 @@ error_strings = [
   'assert 0',
   '''raise IOError('%s does not exist' % filename)''',
   'Sorry: Error interpreting command line argument as parameter definition:',
+  '''TypeError: 'NoneType' object is not iterable''',
   ]
 
 last_lines = [
   'os.system(cmd)',
-  'Already done',
   ]
+done_lines = [
+  'Already done',
+  'Running phenix.refine',
+]
 
 def run():
   results = {}
@@ -27,8 +31,9 @@ def run():
       if line.find('... ')==0:
         pdb_code = line.split()[-1]
         results.setdefault(pdb_code, None)
-      if line.find('Running phenix.refine')>-1:
-        results[pdb_code]='Running phenix.refine'
+      for dl in done_lines:
+        if line.find(dl)>-1:
+          results[pdb_code]='phenix.refine running/done'
       for es in error_strings:
         if line.find(es)>-1:
           results[pdb_code]=es

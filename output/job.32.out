@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 32
 only_code None
 force_amber_prep True
@@ -27,60 +27,42 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/m1/pdb3m1i.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/m1/r3m1isf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/m1/3m1i.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.cif
+Can't determine output label for r3m1isf,_refln.crystal_id - skipping.
+Can't determine output label for r3m1isf,_refln.scale_group_code - skipping.
+Can't determine output label for r3m1isf,_refln.wavelength_id - skipping.
+Warning: merging non-unique data
+Warning: merging non-unique data
+Converted structure factors saved to 3m1i.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+  I(+),SIGI(+),I(-),SIGI(-) is anomalous
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/m1/pdb3m1i.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/m1/r3m1isf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/m1/3m1i.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m1/3m1i/3m1i.cif
+Can't determine output label for r3m1isf,_refln.crystal_id - skipping.
+Can't determine output label for r3m1isf,_refln.scale_group_code - skipping.
+Can't determine output label for r3m1isf,_refln.wavelength_id - skipping.
+Warning: merging non-unique data
+Warning: merging non-unique data
+Converted structure factors saved to 3m1i.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+  I(+),SIGI(+),I(-),SIGI(-) is anomalous
 
 ==================================================
 Summary of pdb4amber for: 3m1i.pdb
@@ -130,7 +112,7 @@ GLN_1279 misses 4 heavy atom(s)
 GLU_1349 misses 4 heavy atom(s)
 LYS_1351 misses 4 heavy atom(s)
 GLU_1352 misses 4 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/m1/3m1i/4amber_3m1i.prmtop
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/m1/3m1i/4amber_3m1i.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/m1/3m1i/4amber_3m1i.prmtop
 
 	Running AmberPrep : 3m1i.pdb

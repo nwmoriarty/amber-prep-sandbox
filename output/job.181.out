@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 181
 only_code None
 force_amber_prep True
@@ -103,31 +103,36 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fs/pdb1fsz.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fs/r1fszsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fs/1fsz.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.cif
+Can't determine output label for r1fszsf,_refln.crystal_id - skipping.
+Can't determine output label for r1fszsf,wavelength_id=1,_refln.pdbx_F_calc_part_solvent,_refln.pdbx_phase_calc_part_solvent - skipping.
+Can't determine output label for r1fszsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1fszsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1fsz.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/fs/pdb1fsz.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fs/r1fszsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fs/1fsz.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.cif
+Can't determine output label for r1fszsf,_refln.crystal_id - skipping.
+Can't determine output label for r1fszsf,wavelength_id=1,_refln.pdbx_F_calc_part_solvent,_refln.pdbx_phase_calc_part_solvent - skipping.
+Can't determine output label for r1fszsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1fszsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1fsz.mtz
 
 ==================================================
 Summary of pdb4amber for: 1fsz.pdb
@@ -146,6 +151,23 @@ None
 ---------- Mising heavy atom(s)
 
 None
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.prmtop
+natom*3 error
+
+	Running AmberPrep : 1fsz.pdb
+
+
+==================================================
+Running pdb4amber on 1fsz.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for GDP 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 1fsz_4tleap_uc1.pdb
@@ -164,17 +186,18 @@ None
 
 None
 
-	Running AmberPrep : 1fsz.pdb
+MoleculeClass :  C:10  N: 5  O:11  P: 2 (CHEMICAL COMPONENTS format)
+	40 atoms
+	42 bonds
+	73 angles
+	102 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_GDP.pdb -fi pdb -o GDP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 1fsz.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-GDP.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i GDP.mol2 -f mol2 -o GDP.frcmod
 
 
 ==================================================
@@ -240,7 +263,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1fsz.prmtop
     rst7   : 4amber_1fsz.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz
 return_files 1fsz
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1fsz.pdb
@@ -263,20 +286,18 @@ cp 4amber_1fsz.prmtop /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz
 4amber_1fsz_refine_001.log
 4phenix_1fsz_refine_001.log
 1fsz_refine_001.log
-cp 1fsz_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz
 4amber_1fsz_refine_002.log
 4phenix_1fsz_refine_002.log
 1fsz_refine_002.log
 4amber_1fsz_refine_001.pdb
 4phenix_1fsz_refine_001.pdb
 1fsz_refine_001.pdb
-cp 1fsz_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz
 4amber_1fsz_refine_002.pdb
 4phenix_1fsz_refine_002.pdb
 1fsz_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/1fsz.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/1fsz_refine_001.log
 ------------------------------
@@ -298,19 +319,19 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/GDP.cif
   Restarting
     phenix.refine 1fsz.pdb 1fsz.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2 /net/cci/lbnl/nigel/all_chemical_components/cifs/GDP.cif
     
-# Date 2017-02-10 Time 14:41:43 PST -0800 (1486766503.90 s)
+# Date 2017-02-16 Time 21:37:13 PST -0800 (1487309833.51 s)
 #phil __OFF__
 
 Command line arguments: "1fsz.pdb" "1fsz.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "/net/cci/lbnl/nigel/all_chemical_components/cifs/GDP.cif"
 
-HOST = lewis.lbl.gov
+HOST = rebus.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 37614
-JOB_ID = 6368441
+PID = 50950
+JOB_ID = 6368459
 SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
+SGE_TASK_FIRST = 3
+SGE_TASK_LAST = 200
 SGE_TASK_ID = 181
 
 -------------------------------------------------------------------------------
@@ -469,7 +490,7 @@ Number of work/free reflections by resolution:
           Unusual residues: {'GDP': 1}
           Classifications: {'undetermined': 1, 'water': 116}
           Link IDs: {None: 116}
-  Time building chain proxies: 4.01, per 1000 atoms: 0.73
+  Time building chain proxies: 4.39, per 1000 atoms: 0.80
   Number of scatterers: 5477
   At special positions: 0
   Unit cell: (159.14, 159.14, 159.14, 90, 90, 90)
@@ -513,7 +534,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
 
   topology    : /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.prmtop
   coordinates : /net/chevy/raid1/nigel/amber/hi_lo/fs/1fsz/4amber_1fsz.rst7
-  time taken  : 95.9
+  time taken  : 105.0
 
 ======================== Summary of geometry restraints =======================
 
@@ -529,10 +550,10 @@ All atoms refined with f_prime=0 and f_double_prime=0.
         Amino acid - RNA/DNA : False
       
   Number of custom bonds: simple=0, symmetry=0
-  Time building additional restraints: 4.74
-  Conformation dependent library (CDL) restraints added in 300.9 milliseconds
+  Time building additional restraints: 5.13
+  Conformation dependent library (CDL) restraints added in 369.4 milliseconds
   
-  Time building geometry restraints manager: 5.29 seconds
+  Time building geometry restraints manager: 5.59 seconds
 
   NOTE: a complete listing of the restraints can be obtained by requesting
         output of .geo file.
@@ -540,19 +561,19 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   Histogram of bond lengths:
         0.94 -     1.11: 2851
         1.11 -     1.29: 457
-        1.29 -     1.47: 805
-        1.47 -     1.64: 1248
+        1.29 -     1.47: 807
+        1.47 -     1.64: 1246
         1.64 -     1.82: 22
   Bond restraints: 5383
   Sorted by residual:
-  bond pdb=" C3' GDP A 999 "
-       pdb=" C4' GDP A 999 "
-    ideal  model  delta    sigma   weight residual
-    1.264  1.532 -0.268 2.00e-02 2.50e+03 1.80e+02
   bond pdb=" C1' GDP A 999 "
        pdb=" C2' GDP A 999 "
     ideal  model  delta    sigma   weight residual
-    1.264  1.531 -0.267 2.00e-02 2.50e+03 1.79e+02
+    1.264  1.533 -0.269 2.00e-02 2.50e+03 1.81e+02
+  bond pdb=" C3' GDP A 999 "
+       pdb=" C4' GDP A 999 "
+    ideal  model  delta    sigma   weight residual
+    1.264  1.531 -0.267 2.00e-02 2.50e+03 1.78e+02
   bond pdb=" N   GLU A 213 "
        pdb=" H   GLU A 213 "
     ideal  model  delta    sigma   weight residual
@@ -568,9 +589,9 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   ... (remaining 5378 not shown)
 
   Histogram of bond angle deviations from ideal:
-       93.49 -   101.66: 33
-      101.66 -   109.83: 4270
-      109.83 -   118.00: 3251
+       93.48 -   101.65: 33
+      101.65 -   109.83: 4267
+      109.83 -   118.00: 3254
       118.00 -   126.17: 1932
       126.17 -   134.34: 49
   Bond angle restraints: 9535
@@ -589,7 +610,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
         pdb=" N9  GDP A 999 "
         pdb=" C8  GDP A 999 "
       ideal   model   delta    sigma   weight residual
-     101.01  129.44  -28.43 3.00e+00 1.11e-01 8.98e+01
+     101.01  129.30  -28.29 3.00e+00 1.11e-01 8.89e+01
   angle pdb=" CA  ASP A 212 "
         pdb=" C   ASP A 212 "
         pdb=" N   GLU A 213 "
@@ -603,11 +624,11 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   ... (remaining 9530 not shown)
 
   Histogram of dihedral angle deviations from ideal:
-        0.02 -    19.08: 1344
-       19.08 -    38.14: 397
-       38.14 -    57.20: 238
-       57.20 -    76.26: 45
-       76.26 -    95.31: 13
+        0.00 -    19.06: 1344
+       19.06 -    38.13: 397
+       38.13 -    57.19: 237
+       57.19 -    76.25: 46
+       76.25 -    95.31: 13
   Dihedral angle restraints: 2037
     sinusoidal: 1657
       harmonic: 380
@@ -629,12 +650,12 @@ All atoms refined with f_prime=0 and f_double_prime=0.
            pdb=" NE  ARG A 169 "
            pdb=" CZ  ARG A 169 "
       ideal   model   delta sinusoidal    sigma   weight residual
-     -90.00  -33.62  -56.38     2      1.50e+01 4.44e-03 1.48e+01
+     -90.00  -33.54  -56.46     2      1.50e+01 4.44e-03 1.48e+01
   ... (remaining 2034 not shown)
 
   Histogram of chiral volume deviations from ideal:
-       0.000 -    0.087: 253
-       0.087 -    0.174: 121
+       0.000 -    0.087: 252
+       0.087 -    0.174: 122
        0.174 -    0.260: 37
        0.260 -    0.347: 9
        0.347 -    0.434: 2
@@ -663,29 +684,29 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   Planarity restraints: 757
   Sorted by residual:
                                  delta    sigma   weight rms_deltas residual
-  plane pdb=" C1' GDP A 999 "    0.016 2.00e-02 2.50e+03   5.97e-02 1.43e+02
-        pdb=" C2  GDP A 999 "    0.034 2.00e-02 2.50e+03
-        pdb=" C4  GDP A 999 "   -0.006 2.00e-02 2.50e+03
-        pdb=" C5  GDP A 999 "    0.002 2.00e-02 2.50e+03
-        pdb=" C6  GDP A 999 "   -0.002 2.00e-02 2.50e+03
-        pdb=" C8  GDP A 999 "   -0.029 2.00e-02 2.50e+03
-        pdb=" N1  GDP A 999 "    0.021 2.00e-02 2.50e+03
+  plane pdb=" C1' GDP A 999 "    0.018 2.00e-02 2.50e+03   6.16e-02 1.52e+02
+        pdb=" C2  GDP A 999 "    0.033 2.00e-02 2.50e+03
+        pdb=" C4  GDP A 999 "   -0.003 2.00e-02 2.50e+03
+        pdb=" C5  GDP A 999 "    0.004 2.00e-02 2.50e+03
+        pdb=" C6  GDP A 999 "   -0.001 2.00e-02 2.50e+03
+        pdb=" C8  GDP A 999 "   -0.032 2.00e-02 2.50e+03
+        pdb=" N1  GDP A 999 "    0.020 2.00e-02 2.50e+03
         pdb=" N2  GDP A 999 "    0.169 2.00e-02 2.50e+03
-        pdb=" N3  GDP A 999 "    0.038 2.00e-02 2.50e+03
-        pdb=" N7  GDP A 999 "    0.033 2.00e-02 2.50e+03
-        pdb=" N9  GDP A 999 "   -0.003 2.00e-02 2.50e+03
-        pdb=" O6  GDP A 999 "   -0.011 2.00e-02 2.50e+03
-        pdb=" H8  GDP A 999 "   -0.036 2.00e-02 2.50e+03
-        pdb=" HN1 GDP A 999 "   -0.019 2.00e-02 2.50e+03
-        pdb="HN21 GDP A 999 "   -0.093 2.00e-02 2.50e+03
-        pdb="HN22 GDP A 999 "   -0.113 2.00e-02 2.50e+03
+        pdb=" N3  GDP A 999 "    0.043 2.00e-02 2.50e+03
+        pdb=" N7  GDP A 999 "    0.038 2.00e-02 2.50e+03
+        pdb=" N9  GDP A 999 "    0.003 2.00e-02 2.50e+03
+        pdb=" O6  GDP A 999 "   -0.009 2.00e-02 2.50e+03
+        pdb=" H8  GDP A 999 "   -0.049 2.00e-02 2.50e+03
+        pdb=" HN1 GDP A 999 "   -0.022 2.00e-02 2.50e+03
+        pdb="HN21 GDP A 999 "   -0.098 2.00e-02 2.50e+03
+        pdb="HN22 GDP A 999 "   -0.115 2.00e-02 2.50e+03
                                  delta    sigma   weight rms_deltas residual
-  plane pdb=" CB  ASN A 329 "    0.070 2.00e-02 2.50e+03   8.90e-02 1.19e+02
+  plane pdb=" CB  ASN A 329 "    0.070 2.00e-02 2.50e+03   8.92e-02 1.19e+02
         pdb=" CG  ASN A 329 "    0.006 2.00e-02 2.50e+03
         pdb=" OD1 ASN A 329 "   -0.057 2.00e-02 2.50e+03
-        pdb=" ND2 ASN A 329 "   -0.134 2.00e-02 2.50e+03
+        pdb=" ND2 ASN A 329 "   -0.135 2.00e-02 2.50e+03
         pdb="HD21 ASN A 329 "    0.143 2.00e-02 2.50e+03
-        pdb="HD22 ASN A 329 "   -0.028 2.00e-02 2.50e+03
+        pdb="HD22 ASN A 329 "   -0.029 2.00e-02 2.50e+03
                                  delta    sigma   weight rms_deltas residual
   plane pdb=" CD  ARG A  55 "    0.021 2.00e-02 2.50e+03   6.82e-02 1.05e+02
         pdb=" NE  ARG A  55 "    0.020 2.00e-02 2.50e+03
@@ -699,34 +720,34 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   ... (remaining 754 not shown)
 
   Histogram of nonbonded interaction distances:
-        1.30 -     1.96: 260
-        1.96 -     2.62: 6919
-        2.62 -     3.28: 17966
-        3.28 -     3.94: 24967
-        3.94 -     4.60: 36990
-  Nonbonded interactions: 87102
+        1.30 -     1.96: 261
+        1.96 -     2.62: 6918
+        2.62 -     3.28: 17962
+        3.28 -     3.94: 24975
+        3.94 -     4.60: 36983
+  Nonbonded interactions: 87099
   Sorted by model distance:
   nonbonded pdb=" HE3 LYS A 171 "
             pdb=" H1  HOH A 543 "
      model   vdw sym.op.
      1.302 2.270 -z,-x+1/2,y
-  nonbonded pdb=" H2  HOH A 416 "
-            pdb=" H2  HOH A 417 "
-     model   vdw sym.op.
-     1.432 2.100 -x,-y+1/2,z
   nonbonded pdb=" H2  HOH A 417 "
             pdb=" H2  HOH A 416 "
+     model   vdw sym.op.
+     1.432 2.100 -x,-y+1/2,z
+  nonbonded pdb=" H2  HOH A 416 "
+            pdb=" H2  HOH A 417 "
      model   vdw sym.op.
      1.432 2.100 -x,-y+1/2,z
   nonbonded pdb="HD22 ASN A  70 "
             pdb=" H   THR A  71 "
      model   vdw
-     1.471 2.100
+     1.470 2.100
   nonbonded pdb=" H   GLY A 130 "
             pdb=" H1  HOH A 487 "
      model   vdw
-     1.479 2.100
-  ... (remaining 87097 not shown)
+     1.480 2.100
+  ... (remaining 87094 not shown)
 
   NOTE: a complete listing of the restraints can be obtained by requesting
         output of .geo file.
@@ -774,9 +795,9 @@ Look at refinement.ncs for more NCS related parameters.
 =================== Write initial parameters into .eff file ===================
 
 Writing effective parameters to file:
-  /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz_refine_002.eff
+  /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz_refine_002.eff
 
-CPU time processing inputs: 117.51
+CPU time processing inputs: 125.88
 
 
 ============================ Non-default parameters ===========================
@@ -792,7 +813,7 @@ refinement {
   }
   input {
     pdb {
-      file_name = "/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.pdb"
+      file_name = "/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fsz/1fsz.pdb"
     }
     xray_data {
       file_name = "1fsz.mtz"
@@ -893,22 +914,22 @@ Rotatable:
 
 |--(resolution: 2.78 - 33.93 A, n_refl.=16848 (all), 5.06  % free)------------|
 |                                                                             |
-| r_work= 0.3064 r_free= 0.3308 coordinate error (max.-lik. estimate): 0.33 A |
+| r_work= 0.3064 r_free= 0.3307 coordinate error (max.-lik. estimate): 0.33 A |
 |                                                                             |
-| normalized target function (ml) (work): 5.834503                            |
-| target function (ml) not normalized (work): 93328.707836                    |
-| target function (ml) not normalized (free): 5027.038255                     |
+| normalized target function (ml) (work): 5.834477                            |
+| target function (ml) not normalized (work): 93328.289550                    |
+| target function (ml) not normalized (free): 5027.008769                     |
 |-----------------------------------------------------------------------------|
 
 |-----------------------------------------------------------------------------|
 | Bin     Resolution   Compl.  No. Refl.    R-factors          Targets        |
 |number     range              work test   work   test        work        test|
-|  1: 33.9313 -  5.0462 0.97   2704  130 0.3632 0.3761      6.8227      6.6774|
-|  2:  5.0462 -  4.0073 0.99   2683  144 0.2475 0.2700       6.158      6.2526|
-|  3:  4.0073 -  3.5014 1.00   2662  131 0.2832 0.3057      5.8434      5.9818|
-|  4:  3.5014 -  3.1815 1.00   2669  147 0.3170 0.3262      5.6634      5.8066|
-|  5:  3.1815 -  2.9536 0.99   2626  166 0.3132 0.3764      5.3927      5.5205|
-|  6:  2.9536 -  2.7796 0.99   2652  134 0.3226 0.3745      5.1003      5.2614|
+|  1: 33.9313 -  5.0462 0.97   2704  130 0.3632 0.3760      6.8228      6.6774|
+|  2:  5.0462 -  4.0073 0.99   2683  144 0.2475 0.2700       6.158      6.2527|
+|  3:  4.0073 -  3.5014 1.00   2662  131 0.2832 0.3058      5.8434      5.9819|
+|  4:  3.5014 -  3.1815 1.00   2669  147 0.3170 0.3261      5.6634      5.8064|
+|  5:  3.1815 -  2.9536 0.99   2626  166 0.3132 0.3762      5.3927      5.5204|
+|  6:  2.9536 -  2.7796 0.99   2652  134 0.3226 0.3745      5.1002      5.2613|
 |-----------------------------------------------------------------------------|
 
 |-----------------------------------------------------------------------------|
@@ -917,17 +938,17 @@ Rotatable:
 |                                                                             |
 | Bin     Resolution      No. Refl.   FOM  Phase Scale    Alpha        Beta   |
 |  #        range        work  test        error factor                       |
-|  1: 33.9313 -  5.0462  2704   130  0.65  39.16   0.80     0.24     104426.99|
-|  2:  5.0462 -  4.0073  2683   144  0.76  30.62   1.21     0.30      55108.03|
-|  3:  4.0073 -  3.5014  2662   131  0.80  27.35   1.28     0.33      26010.42|
-|  4:  3.5014 -  3.1815  2669   147  0.77  30.52   1.31     0.31      17042.35|
-|  5:  3.1815 -  2.9536  2626   166  0.67  38.87   1.17     0.28      11856.31|
-|  6:  2.9536 -  2.7796  2652   134  0.59  45.06   1.05     0.23       7686.31|
+|  1: 33.9313 -  5.0462  2704   130  0.65  39.16   0.80     0.24     104417.81|
+|  2:  5.0462 -  4.0073  2683   144  0.76  30.62   1.21     0.30      55105.35|
+|  3:  4.0073 -  3.5014  2662   131  0.80  27.35   1.28     0.33      26008.86|
+|  4:  3.5014 -  3.1815  2669   147  0.77  30.51   1.31     0.31      17035.35|
+|  5:  3.1815 -  2.9536  2626   166  0.67  38.86   1.17     0.28      11851.15|
+|  6:  2.9536 -  2.7796  2652   134  0.59  45.05   1.05     0.23       7682.48|
 |alpha:            min =        0.23 max =            0.33 mean =         0.28|
-|beta:             min =     7686.31 max =       104426.99 mean =     37288.69|
+|beta:             min =     7682.48 max =       104417.81 mean =     37283.78|
 |figures of merit: min =        0.00 max =            1.00 mean =         0.71|
-|phase err.(work): min =        0.00 max =           89.94 mean =        35.25|
-|phase err.(test): min =        0.00 max =           89.57 mean =        35.26|
+|phase err.(work): min =        0.00 max =           89.92 mean =        35.25|
+|phase err.(test): min =        0.00 max =           89.55 mean =        35.25|
 |-----------------------------------------------------------------------------|
 Traceback (most recent call last):
   File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/phenix/phenix/command_line/refine.py", line 11, in <module>

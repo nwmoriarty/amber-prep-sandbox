@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 19
 only_code None
 force_amber_prep True
@@ -22,31 +22,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kv/pdb1kv3.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kv/r1kv3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kv/1kv3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.cif
+Can't determine output label for r1kv3sf,_refln.crystal_id - skipping.
+Can't determine output label for r1kv3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kv3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kv3.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/kv/pdb1kv3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kv/r1kv3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kv/1kv3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.cif
+Can't determine output label for r1kv3sf,_refln.crystal_id - skipping.
+Can't determine output label for r1kv3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kv3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kv3.mtz
 
 ==================================================
 Summary of pdb4amber for: 1kv3.pdb
@@ -84,6 +87,23 @@ gap of 19.489167 A between SER 3351 and GLY 3352
 ---------- Mising heavy atom(s)
 
 None
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.prmtop
+natom*3 error
+
+	Running AmberPrep : 1kv3.pdb
+
+
+==================================================
+Running pdb4amber on 1kv3.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for GDP 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 1kv3_4tleap_uc1.pdb
@@ -128,19 +148,19 @@ gap of 19.514112 A between SER 6389 and GLY 6390
 ---------- Mising heavy atom(s)
 
 ASN_6717 misses 2 heavy atom(s)
-not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4phenix_1kv3.pdb
 
-	Running AmberPrep : 1kv3.pdb
+MoleculeClass :  C:10  N: 5  O:11  P: 2 (CHEMICAL COMPONENTS format)
+	40 atoms
+	42 bonds
+	73 angles
+	102 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_GDP.pdb -fi pdb -o GDP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 1kv3.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-GDP.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i GDP.mol2 -f mol2 -o GDP.frcmod
 
 
 ==================================================
@@ -206,7 +226,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1kv3.prmtop
     rst7   : 4amber_1kv3.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3
 return_files 1kv3
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1kv3.pdb
@@ -229,20 +249,18 @@ cp 4amber_1kv3.prmtop /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3
 4amber_1kv3_refine_001.log
 4phenix_1kv3_refine_001.log
 1kv3_refine_001.log
-cp 1kv3_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3
 4amber_1kv3_refine_002.log
 4phenix_1kv3_refine_002.log
 1kv3_refine_002.log
 4amber_1kv3_refine_001.pdb
 4phenix_1kv3_refine_001.pdb
 1kv3_refine_001.pdb
-cp 1kv3_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3
 4amber_1kv3_refine_002.pdb
 4phenix_1kv3_refine_002.pdb
 1kv3_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/1kv3.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/1kv3_refine_001.log
 ------------------------------
@@ -264,19 +282,19 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/GDP.cif
   Restarting
     phenix.refine 1kv3.pdb 1kv3.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2 /net/cci/lbnl/nigel/all_chemical_components/cifs/GDP.cif
     
-# Date 2017-02-10 Time 14:43:45 PST -0800 (1486766625.94 s)
+# Date 2017-02-16 Time 16:32:13 PST -0800 (1487291533.43 s)
 #phil __OFF__
 
 Command line arguments: "1kv3.pdb" "1kv3.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "/net/cci/lbnl/nigel/all_chemical_components/cifs/GDP.cif"
 
-HOST = lewis.lbl.gov
+HOST = rebus.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 39536
-JOB_ID = 6368441
+PID = 11249
+JOB_ID = 6368459
 SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
+SGE_TASK_FIRST = 3
+SGE_TASK_LAST = 200
 SGE_TASK_ID = 19
 
 -------------------------------------------------------------------------------
@@ -641,7 +659,7 @@ Number of work/free reflections by resolution:
         Number of residues, atoms: 54, 162
           Classifications: {'water': 54}
           Link IDs: {None: 53}
-  Time building chain proxies: 41.01, per 1000 atoms: 0.65
+  Time building chain proxies: 45.63, per 1000 atoms: 0.73
   Number of scatterers: 62784
   At special positions: 0
   Unit cell: (132.479, 168.797, 238.568, 90, 90, 90)
@@ -685,7 +703,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
 
   topology    : /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.prmtop
   coordinates : /net/chevy/raid1/nigel/amber/hi_lo/kv/1kv3/4amber_1kv3.rst7
-  time taken  : 80.3
+  time taken  : 109.9
 
 ======================== Summary of geometry restraints =======================
 
@@ -701,19 +719,19 @@ All atoms refined with f_prime=0 and f_double_prime=0.
         Amino acid - RNA/DNA : False
       
   Number of custom bonds: simple=0, symmetry=0
-  Time building additional restraints: 44.08
-  Conformation dependent library (CDL) restraints added in 2.8 seconds
+  Time building additional restraints: 60.84
+  Conformation dependent library (CDL) restraints added in 4.1 seconds
   
-  Time building geometry restraints manager: 47.76 seconds
+  Time building geometry restraints manager: 63.61 seconds
 
   NOTE: a complete listing of the restraints can be obtained by requesting
         output of .geo file.
 
   Histogram of bond lengths:
         0.94 -     1.12: 31204
-        1.12 -     1.30: 5410
-        1.30 -     1.47: 12343
-        1.47 -     1.65: 13843
+        1.12 -     1.30: 5413
+        1.30 -     1.47: 12345
+        1.47 -     1.65: 13838
         1.65 -     1.83: 234
   Bond restraints: 63034
   Sorted by residual:
@@ -728,50 +746,50 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   bond pdb=" C3' GDP C 702 "
        pdb=" C4' GDP C 702 "
     ideal  model  delta    sigma   weight residual
-    1.264  1.550 -0.286 2.00e-02 2.50e+03 2.05e+02
+    1.264  1.550 -0.286 2.00e-02 2.50e+03 2.04e+02
   bond pdb=" C3' GDP B 701 "
        pdb=" C4' GDP B 701 "
     ideal  model  delta    sigma   weight residual
     1.264  1.550 -0.286 2.00e-02 2.50e+03 2.04e+02
-  bond pdb=" C3' GDP F 705 "
-       pdb=" C4' GDP F 705 "
+  bond pdb=" C3' GDP E 704 "
+       pdb=" C4' GDP E 704 "
     ideal  model  delta    sigma   weight residual
     1.264  1.549 -0.285 2.00e-02 2.50e+03 2.03e+02
   ... (remaining 63029 not shown)
 
   Histogram of bond angle deviations from ideal:
-       93.42 -   101.70: 432
-      101.70 -   109.98: 51154
-      109.98 -   118.27: 33479
-      118.27 -   126.55: 26828
-      126.55 -   134.83: 873
+       93.42 -   101.70: 435
+      101.70 -   109.99: 51221
+      109.99 -   118.27: 33444
+      118.27 -   126.56: 26796
+      126.56 -   134.84: 870
   Bond angle restraints: 112766
   Sorted by residual:
   angle pdb=" C1' GDP D 703 "
         pdb=" N9  GDP D 703 "
         pdb=" C8  GDP D 703 "
       ideal   model   delta    sigma   weight residual
-     101.01  130.44  -29.43 3.00e+00 1.11e-01 9.62e+01
+     101.01  130.25  -29.24 3.00e+00 1.11e-01 9.50e+01
   angle pdb=" C1' GDP A 700 "
         pdb=" N9  GDP A 700 "
         pdb=" C8  GDP A 700 "
       ideal   model   delta    sigma   weight residual
-     101.01  130.18  -29.17 3.00e+00 1.11e-01 9.45e+01
-  angle pdb=" C1' GDP F 705 "
-        pdb=" N9  GDP F 705 "
-        pdb=" C8  GDP F 705 "
-      ideal   model   delta    sigma   weight residual
-     101.01  129.97  -28.96 3.00e+00 1.11e-01 9.32e+01
+     101.01  129.96  -28.95 3.00e+00 1.11e-01 9.31e+01
   angle pdb=" C1' GDP B 701 "
         pdb=" N9  GDP B 701 "
         pdb=" C8  GDP B 701 "
       ideal   model   delta    sigma   weight residual
-     101.01  129.95  -28.94 3.00e+00 1.11e-01 9.31e+01
-  angle pdb=" C1' GDP E 704 "
-        pdb=" N9  GDP E 704 "
-        pdb=" C8  GDP E 704 "
+     101.01  129.75  -28.74 3.00e+00 1.11e-01 9.18e+01
+  angle pdb=" C1' GDP F 705 "
+        pdb=" N9  GDP F 705 "
+        pdb=" C8  GDP F 705 "
       ideal   model   delta    sigma   weight residual
-     101.01  129.86  -28.85 3.00e+00 1.11e-01 9.25e+01
+     101.01  129.73  -28.72 3.00e+00 1.11e-01 9.17e+01
+  angle pdb=" C1' GDP C 702 "
+        pdb=" N9  GDP C 702 "
+        pdb=" C8  GDP C 702 "
+      ideal   model   delta    sigma   weight residual
+     101.01  129.71  -28.70 3.00e+00 1.11e-01 9.15e+01
   ... (remaining 112761 not shown)
 
   Histogram of dihedral angle deviations from ideal:
@@ -789,7 +807,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
            pdb=" CG  ASP D 400 "
            pdb=" OD1 ASP D 400 "
       ideal   model   delta sinusoidal    sigma   weight residual
-     -30.00 -157.02  127.02     1      2.00e+01 2.50e-03 3.85e+01
+     -30.00 -157.03  127.03     1      2.00e+01 2.50e-03 3.85e+01
   dihedral pdb=" CA  ASP A 400 "
            pdb=" CB  ASP A 400 "
            pdb=" CG  ASP A 400 "
@@ -801,12 +819,12 @@ All atoms refined with f_prime=0 and f_double_prime=0.
            pdb=" CG  ASP F 400 "
            pdb=" OD1 ASP F 400 "
       ideal   model   delta sinusoidal    sigma   weight residual
-     -30.00 -155.69  125.69     1      2.00e+01 2.50e-03 3.80e+01
+     -30.00 -155.74  125.74     1      2.00e+01 2.50e-03 3.80e+01
   ... (remaining 25359 not shown)
 
   Histogram of chiral volume deviations from ideal:
-       0.000 -    0.147: 3949
-       0.147 -    0.294: 753
+       0.000 -    0.147: 3951
+       0.147 -    0.294: 751
        0.294 -    0.442: 38
        0.442 -    0.589: 0
        0.589 -    0.736: 6
@@ -823,7 +841,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
             pdb=" C   LEU C 424 "
             pdb=" CB  LEU C 424 "
     both_signs  ideal   model   delta    sigma   weight residual
-      False      2.51    1.78    0.73 2.00e-01 2.50e+01 1.35e+01
+      False      2.51    1.78    0.73 2.00e-01 2.50e+01 1.34e+01
   chirality pdb=" CA  LEU F 424 "
             pdb=" N   LEU F 424 "
             pdb=" C   LEU F 424 "
@@ -835,44 +853,44 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   Planarity restraints: 9294
   Sorted by residual:
                                  delta    sigma   weight rms_deltas residual
-  plane pdb=" CD  ARG B 580 "    0.100 2.00e-02 2.50e+03   1.28e-01 3.71e+02
-        pdb=" NE  ARG B 580 "   -0.145 2.00e-02 2.50e+03
-        pdb=" CZ  ARG B 580 "   -0.100 2.00e-02 2.50e+03
-        pdb=" NH1 ARG B 580 "   -0.074 2.00e-02 2.50e+03
-        pdb=" NH2 ARG B 580 "   -0.132 2.00e-02 2.50e+03
+  plane pdb=" CD  ARG B 580 "    0.101 2.00e-02 2.50e+03   1.30e-01 3.82e+02
+        pdb=" NE  ARG B 580 "   -0.146 2.00e-02 2.50e+03
+        pdb=" CZ  ARG B 580 "   -0.102 2.00e-02 2.50e+03
+        pdb=" NH1 ARG B 580 "   -0.076 2.00e-02 2.50e+03
+        pdb=" NH2 ARG B 580 "   -0.135 2.00e-02 2.50e+03
         pdb="HH11 ARG B 580 "    0.049 2.00e-02 2.50e+03
-        pdb="HH12 ARG B 580 "    0.123 2.00e-02 2.50e+03
-        pdb="HH21 ARG B 580 "    0.249 2.00e-02 2.50e+03
-        pdb="HH22 ARG B 580 "   -0.068 2.00e-02 2.50e+03
+        pdb="HH12 ARG B 580 "    0.126 2.00e-02 2.50e+03
+        pdb="HH21 ARG B 580 "    0.253 2.00e-02 2.50e+03
+        pdb="HH22 ARG B 580 "   -0.069 2.00e-02 2.50e+03
                                  delta    sigma   weight rms_deltas residual
-  plane pdb=" CD  ARG C 580 "   -0.104 2.00e-02 2.50e+03   1.28e-01 3.69e+02
-        pdb=" NE  ARG C 580 "    0.138 2.00e-02 2.50e+03
-        pdb=" CZ  ARG C 580 "    0.087 2.00e-02 2.50e+03
-        pdb=" NH1 ARG C 580 "    0.004 2.00e-02 2.50e+03
-        pdb=" NH2 ARG C 580 "    0.162 2.00e-02 2.50e+03
-        pdb="HH11 ARG C 580 "    0.010 2.00e-02 2.50e+03
-        pdb="HH12 ARG C 580 "   -0.121 2.00e-02 2.50e+03
-        pdb="HH21 ARG C 580 "   -0.252 2.00e-02 2.50e+03
-        pdb="HH22 ARG C 580 "    0.077 2.00e-02 2.50e+03
-                                 delta    sigma   weight rms_deltas residual
-  plane pdb=" CD  ARG D 580 "   -0.088 2.00e-02 2.50e+03   1.28e-01 3.69e+02
-        pdb=" NE  ARG D 580 "    0.126 2.00e-02 2.50e+03
-        pdb=" CZ  ARG D 580 "    0.100 2.00e-02 2.50e+03
-        pdb=" NH1 ARG D 580 "    0.082 2.00e-02 2.50e+03
-        pdb=" NH2 ARG D 580 "    0.150 2.00e-02 2.50e+03
+  plane pdb=" CD  ARG D 580 "   -0.090 2.00e-02 2.50e+03   1.30e-01 3.79e+02
+        pdb=" NE  ARG D 580 "    0.127 2.00e-02 2.50e+03
+        pdb=" CZ  ARG D 580 "    0.102 2.00e-02 2.50e+03
+        pdb=" NH1 ARG D 580 "    0.083 2.00e-02 2.50e+03
+        pdb=" NH2 ARG D 580 "    0.153 2.00e-02 2.50e+03
         pdb="HH11 ARG D 580 "   -0.053 2.00e-02 2.50e+03
-        pdb="HH12 ARG D 580 "   -0.126 2.00e-02 2.50e+03
-        pdb="HH21 ARG D 580 "   -0.250 2.00e-02 2.50e+03
-        pdb="HH22 ARG D 580 "    0.058 2.00e-02 2.50e+03
+        pdb="HH12 ARG D 580 "   -0.128 2.00e-02 2.50e+03
+        pdb="HH21 ARG D 580 "   -0.253 2.00e-02 2.50e+03
+        pdb="HH22 ARG D 580 "    0.059 2.00e-02 2.50e+03
+                                 delta    sigma   weight rms_deltas residual
+  plane pdb=" CD  ARG A 580 "    0.086 2.00e-02 2.50e+03   1.29e-01 3.76e+02
+        pdb=" NE  ARG A 580 "   -0.123 2.00e-02 2.50e+03
+        pdb=" CZ  ARG A 580 "   -0.104 2.00e-02 2.50e+03
+        pdb=" NH1 ARG A 580 "   -0.084 2.00e-02 2.50e+03
+        pdb=" NH2 ARG A 580 "   -0.150 2.00e-02 2.50e+03
+        pdb="HH11 ARG A 580 "    0.056 2.00e-02 2.50e+03
+        pdb="HH12 ARG A 580 "    0.128 2.00e-02 2.50e+03
+        pdb="HH21 ARG A 580 "    0.254 2.00e-02 2.50e+03
+        pdb="HH22 ARG A 580 "   -0.063 2.00e-02 2.50e+03
   ... (remaining 9291 not shown)
 
   Histogram of nonbonded interaction distances:
         1.18 -     1.87: 1204
-        1.87 -     2.55: 55608
+        1.87 -     2.55: 55604
         2.55 -     3.23: 197260
-        3.23 -     3.92: 274216
-        3.92 -     4.60: 407349
-  Nonbonded interactions: 935637
+        3.23 -     3.92: 274220
+        3.92 -     4.60: 407342
+  Nonbonded interactions: 935630
   Sorted by model distance:
   nonbonded pdb="HD22 LEU F 530 "
             pdb="HD21 LEU C 530 "
@@ -885,7 +903,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   nonbonded pdb=" H   ASN C 586 "
             pdb=" H1  HOH C 729 "
      model   vdw
-     1.198 2.100
+     1.199 2.100
   nonbonded pdb="HD23 LEU E 603 "
             pdb=" H1  HOH E 721 "
      model   vdw
@@ -893,8 +911,8 @@ All atoms refined with f_prime=0 and f_double_prime=0.
   nonbonded pdb=" H   ASN D 681 "
             pdb=" H2  HOH D 710 "
      model   vdw
-     1.408 2.100
-  ... (remaining 935632 not shown)
+     1.407 2.100
+  ... (remaining 935625 not shown)
 
   NOTE: a complete listing of the restraints can be obtained by requesting
         output of .geo file.
@@ -942,9 +960,9 @@ Look at refinement.ncs for more NCS related parameters.
 =================== Write initial parameters into .eff file ===================
 
 Writing effective parameters to file:
-  /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3_refine_002.eff
+  /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3_refine_002.eff
 
-CPU time processing inputs: 230.33
+CPU time processing inputs: 297.53
 
 
 ============================ Non-default parameters ===========================
@@ -960,7 +978,7 @@ refinement {
   }
   input {
     pdb {
-      file_name = "/net/lewis/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.pdb"
+      file_name = "/net/rebus/raid1/scratch1/nigel/amber/hi_lo/kv/1kv3/1kv3.pdb"
     }
     xray_data {
       file_name = "1kv3.mtz"
@@ -1063,44 +1081,44 @@ Rotatable:
 |                                                                             |
 | r_work= 0.3505 r_free= 0.3752 coordinate error (max.-lik. estimate): 0.20 A |
 |                                                                             |
-| normalized target function (ml) (work): 6.171713                            |
-| target function (ml) not normalized (work): 731940.434109                   |
-| target function (ml) not normalized (free): 38763.252297                    |
+| normalized target function (ml) (work): 6.171707                            |
+| target function (ml) not normalized (work): 731939.715766                   |
+| target function (ml) not normalized (free): 38763.202283                    |
 |-----------------------------------------------------------------------------|
 
 |-----------------------------------------------------------------------------|
 | Bin     Resolution   Compl.  No. Refl.    R-factors          Targets        |
 |number     range              work test   work   test        work        test|
 |  1: 51.7972 -  8.6872 0.89   3941  255 0.5487 0.5216      7.4026      7.3814|
-|  2:  8.6872 -  6.9005 0.96   4143  231 0.4028 0.4085      7.0303      7.0495|
+|  2:  8.6872 -  6.9005 0.96   4143  231 0.4029 0.4085      7.0303      7.0495|
 |  3:  6.9005 -  6.0297 0.98   4129  229 0.3640 0.3577      6.7225      6.7176|
-|  4:  6.0297 -  5.4791 0.98   4157  229 0.2865 0.3174       6.607      6.6345|
-|  5:  5.4791 -  5.0867 0.98   4122  222 0.2604 0.2733      6.5511      6.5529|
-|  6:  5.0867 -  4.7870 0.99   4151  213 0.2524 0.2932      6.5205      6.4826|
-|  7:  4.7870 -  4.5474 0.99   4138  206 0.2618 0.3026      6.5042      6.4476|
-|  8:  4.5474 -  4.3496 0.99   4160  207 0.2950 0.3341      6.4963      6.5362|
+|  4:  6.0297 -  5.4791 0.98   4157  229 0.2864 0.3174       6.607      6.6344|
+|  5:  5.4791 -  5.0867 0.98   4122  222 0.2604 0.2733       6.551      6.5528|
+|  6:  5.0867 -  4.7870 0.99   4151  213 0.2524 0.2932      6.5205      6.4827|
+|  7:  4.7870 -  4.5474 0.99   4138  206 0.2618 0.3026      6.5042      6.4477|
+|  8:  4.5474 -  4.3496 0.99   4160  207 0.2951 0.3341      6.4964      6.5362|
 |  9:  4.3496 -  4.1822 0.99   4143  199 0.3249 0.3806      6.5361      6.5832|
-| 10:  4.1822 -  4.0380 0.99   4151  193 0.3322 0.3546      6.4492      6.3983|
-| 11:  4.0380 -  3.9117 0.98   4073  198 0.3446 0.3618      6.4712      6.5165|
-| 12:  3.9117 -  3.8000 0.98   4112  220 0.3724 0.4325      6.4774      6.4792|
-| 13:  3.8000 -  3.7000 0.99   4113  187 0.3644 0.3845      6.3265      6.3226|
-| 14:  3.7000 -  3.6097 0.97   4067  199 0.3918 0.4474      6.3612      6.4293|
-| 15:  3.6097 -  3.5277 0.98   4041  235 0.3667 0.3734      6.2018      6.1868|
-| 16:  3.5277 -  3.4526 0.97   4012  201 0.3720 0.3986      6.1521      6.1303|
-| 17:  3.4526 -  3.3836 0.96   4007  213 0.3938 0.4510      6.1879      6.3208|
-| 18:  3.3836 -  3.3197 0.95   3927  214 0.3604 0.3912      6.0178      5.9928|
-| 19:  3.3197 -  3.2604 0.94   3911  220 0.3605 0.3893      5.9473      5.9831|
-| 20:  3.2604 -  3.2052 0.93   3875  193 0.3504 0.3614      5.8641      5.8673|
-| 21:  3.2052 -  3.1535 0.93   3808  215 0.3391 0.3546      5.8112      5.8618|
-| 22:  3.1535 -  3.1050 0.92   3826  184 0.3387 0.3595      5.7426      5.7904|
+| 10:  4.1822 -  4.0380 0.99   4151  193 0.3323 0.3546      6.4491      6.3984|
+| 11:  4.0380 -  3.9117 0.98   4073  198 0.3446 0.3619      6.4712      6.5167|
+| 12:  3.9117 -  3.8000 0.98   4112  220 0.3724 0.4324      6.4775       6.479|
+| 13:  3.8000 -  3.7000 0.99   4113  187 0.3644 0.3845      6.3265      6.3228|
+| 14:  3.7000 -  3.6097 0.97   4067  199 0.3918 0.4474      6.3612      6.4292|
+| 15:  3.6097 -  3.5277 0.98   4041  235 0.3666 0.3734      6.2018      6.1867|
+| 16:  3.5277 -  3.4526 0.97   4012  201 0.3719 0.3986      6.1521      6.1306|
+| 17:  3.4526 -  3.3836 0.96   4007  213 0.3938 0.4510      6.1879      6.3206|
+| 18:  3.3836 -  3.3197 0.95   3927  214 0.3604 0.3912      6.0178      5.9927|
+| 19:  3.3197 -  3.2604 0.94   3911  220 0.3604 0.3894      5.9473      5.9833|
+| 20:  3.2604 -  3.2052 0.93   3875  193 0.3504 0.3613      5.8641      5.8675|
+| 21:  3.2052 -  3.1535 0.93   3808  215 0.3391 0.3545      5.8111      5.8618|
+| 22:  3.1535 -  3.1050 0.92   3826  184 0.3386 0.3596      5.7426      5.7905|
 | 23:  3.1050 -  3.0593 0.91   3791  196 0.3486 0.3349      5.6887      5.6937|
 | 24:  3.0593 -  3.0162 0.91   3778  195 0.3348 0.3501      5.6112      5.6853|
-| 25:  3.0162 -  2.9755 0.90   3730  198 0.3408 0.3394      5.6218       5.628|
-| 26:  2.9755 -  2.9368 0.90   3709  196 0.3366 0.3372      5.5278      5.4725|
-| 27:  2.9368 -  2.9001 0.90   3701  207 0.3422 0.3386      5.4927      5.4188|
-| 28:  2.9001 -  2.8652 0.89   3669  212 0.3519 0.3532      5.4547      5.4815|
-| 29:  2.8652 -  2.8319 0.88   3657  205 0.3509 0.3591      5.3684      5.3838|
-| 30:  2.8319 -  2.8001 0.86   3554  202 0.3720 0.3749       5.405      5.2851|
+| 25:  3.0162 -  2.9755 0.90   3730  198 0.3408 0.3393      5.6217      5.6277|
+| 26:  2.9755 -  2.9368 0.90   3709  196 0.3366 0.3371      5.5278      5.4724|
+| 27:  2.9368 -  2.9001 0.90   3701  207 0.3422 0.3385      5.4927      5.4184|
+| 28:  2.9001 -  2.8652 0.89   3669  212 0.3519 0.3532      5.4546      5.4813|
+| 29:  2.8652 -  2.8319 0.88   3657  205 0.3509 0.3590      5.3684      5.3836|
+| 30:  2.8319 -  2.8001 0.86   3554  202 0.3719 0.3750       5.405      5.2853|
 |-----------------------------------------------------------------------------|
 
 |-----------------------------------------------------------------------------|
@@ -1109,41 +1127,41 @@ Rotatable:
 |                                                                             |
 | Bin     Resolution      No. Refl.   FOM  Phase Scale    Alpha        Beta   |
 |  #        range        work  test        error factor                       |
-|  1: 51.7972 -  8.6872  3941   255  0.46  54.86   0.63     0.17     575877.84|
-|  2:  8.6872 -  6.9005  4143   231  0.53  49.36   0.96     0.28     297894.06|
-|  3:  6.9005 -  6.0297  4129   229  0.64  40.35   0.91     0.31     141468.99|
-|  4:  6.0297 -  5.4791  4157   229  0.75  31.45   1.02     0.34      93623.59|
-|  5:  5.4791 -  5.0867  4122   222  0.81  25.99   1.04     0.37      70181.47|
-|  6:  5.0867 -  4.7870  4151   213  0.83  23.74   1.12     0.39      63796.35|
-|  7:  4.7870 -  4.5474  4138   206  0.85  22.14   1.17     0.42      58768.82|
-|  8:  4.5474 -  4.3496  4160   207  0.84  23.03   1.25     0.45      56884.38|
-|  9:  4.3496 -  4.1822  4143   199  0.83  23.52   1.32     0.47      57477.74|
-| 10:  4.1822 -  4.0380  4151   193  0.81  25.67   1.32     0.48      55907.24|
-| 11:  4.0380 -  3.9117  4073   198  0.78  28.30   1.29     0.48      56048.62|
-| 12:  3.9117 -  3.8000  4112   220  0.78  28.76   1.38     0.48      56577.22|
-| 13:  3.8000 -  3.7000  4113   187  0.77  29.98   1.36     0.48      49898.40|
-| 14:  3.7000 -  3.6097  4067   199  0.78  28.66   1.41     0.49      45085.54|
-| 15:  3.6097 -  3.5277  4041   235  0.77  29.54   1.38     0.49      39049.48|
-| 16:  3.5277 -  3.4526  4012   201  0.74  32.12   1.34     0.48      34512.67|
-| 17:  3.4526 -  3.3836  4007   213  0.74  32.26   1.38     0.47      35270.29|
-| 18:  3.3836 -  3.3197  3927   214  0.72  33.99   1.31     0.45      31292.34|
-| 19:  3.3197 -  3.2604  3911   220  0.75  31.99   1.31     0.45      23484.59|
-| 20:  3.2604 -  3.2052  3875   193  0.76  30.80   1.28     0.46      20086.07|
-| 21:  3.2052 -  3.1535  3808   215  0.76  30.99   1.22     0.44      17267.55|
-| 22:  3.1535 -  3.1050  3826   184  0.74  32.91   1.17     0.42      16210.68|
-| 23:  3.1050 -  3.0593  3791   196  0.71  35.24   1.13     0.39      14457.12|
-| 24:  3.0593 -  3.0162  3778   195  0.72  34.10   1.15     0.39      12969.75|
-| 25:  3.0162 -  2.9755  3730   198  0.74  32.72   1.12     0.40      11653.63|
-| 26:  2.9755 -  2.9368  3709   196  0.73  33.19   1.08     0.38      10206.79|
-| 27:  2.9368 -  2.9001  3701   207  0.73  33.38   1.07     0.37       9269.03|
-| 28:  2.9001 -  2.8652  3669   212  0.72  34.91   1.06     0.36       9068.08|
-| 29:  2.8652 -  2.8319  3657   205  0.70  36.54   1.04     0.34       8267.85|
-| 30:  2.8319 -  2.8001  3554   202  0.69  37.04   1.03     0.32       7337.01|
+|  1: 51.7972 -  8.6872  3941   255  0.46  54.86   0.63     0.17     575880.55|
+|  2:  8.6872 -  6.9005  4143   231  0.53  49.37   0.96     0.28     297921.33|
+|  3:  6.9005 -  6.0297  4129   229  0.64  40.35   0.91     0.31     141481.95|
+|  4:  6.0297 -  5.4791  4157   229  0.75  31.45   1.02     0.34      93629.13|
+|  5:  5.4791 -  5.0867  4122   222  0.81  25.99   1.04     0.37      70177.30|
+|  6:  5.0867 -  4.7870  4151   213  0.83  23.73   1.12     0.39      63791.08|
+|  7:  4.7870 -  4.5474  4138   206  0.85  22.14   1.17     0.42      58773.06|
+|  8:  4.5474 -  4.3496  4160   207  0.84  23.03   1.25     0.45      56893.26|
+|  9:  4.3496 -  4.1822  4143   199  0.83  23.52   1.32     0.47      57488.28|
+| 10:  4.1822 -  4.0380  4151   193  0.81  25.68   1.32     0.48      55919.82|
+| 11:  4.0380 -  3.9117  4073   198  0.78  28.30   1.29     0.48      56050.12|
+| 12:  3.9117 -  3.8000  4112   220  0.78  28.75   1.38     0.48      56570.49|
+| 13:  3.8000 -  3.7000  4113   187  0.77  29.98   1.36     0.48      49896.92|
+| 14:  3.7000 -  3.6097  4067   199  0.78  28.66   1.41     0.49      45081.35|
+| 15:  3.6097 -  3.5277  4041   235  0.77  29.54   1.38     0.49      39046.71|
+| 16:  3.5277 -  3.4526  4012   201  0.74  32.12   1.34     0.48      34521.56|
+| 17:  3.4526 -  3.3836  4007   213  0.74  32.27   1.38     0.47      35276.58|
+| 18:  3.3836 -  3.3197  3927   214  0.72  33.99   1.31     0.45      31290.55|
+| 19:  3.3197 -  3.2604  3911   220  0.75  31.99   1.31     0.45      23486.30|
+| 20:  3.2604 -  3.2052  3875   193  0.76  30.81   1.28     0.46      20092.56|
+| 21:  3.2052 -  3.1535  3808   215  0.76  31.00   1.22     0.44      17272.42|
+| 22:  3.1535 -  3.1050  3826   184  0.74  32.91   1.17     0.42      16214.18|
+| 23:  3.1050 -  3.0593  3791   196  0.71  35.25   1.13     0.39      14459.17|
+| 24:  3.0593 -  3.0162  3778   195  0.72  34.10   1.15     0.39      12969.55|
+| 25:  3.0162 -  2.9755  3730   198  0.74  32.71   1.12     0.40      11649.29|
+| 26:  2.9755 -  2.9368  3709   196  0.73  33.18   1.08     0.38      10200.73|
+| 27:  2.9368 -  2.9001  3701   207  0.73  33.36   1.07     0.37       9264.10|
+| 28:  2.9001 -  2.8652  3669   212  0.72  34.91   1.06     0.36       9064.47|
+| 29:  2.8652 -  2.8319  3657   205  0.70  36.54   1.04     0.34       8268.30|
+| 30:  2.8319 -  2.8001  3554   202  0.69  37.07   1.03     0.32       7344.61|
 |alpha:            min =        0.14 max =            0.49 mean =         0.41|
-|beta:             min =     7058.11 max =       660039.73 mean =     67436.01|
+|beta:             min =     7068.07 max =       660032.12 mean =     67438.87|
 |figures of merit: min =        0.00 max =            1.00 mean =         0.74|
 |phase err.(work): min =        0.00 max =           90.00 mean =        32.15|
-|phase err.(test): min =        0.00 max =           89.73 mean =        32.16|
+|phase err.(test): min =        0.00 max =           89.73 mean =        32.17|
 |-----------------------------------------------------------------------------|
 Traceback (most recent call last):
   File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/phenix/phenix/command_line/refine.py", line 11, in <module>

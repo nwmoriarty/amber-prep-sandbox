@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 63
 only_code None
 force_amber_prep True
@@ -43,60 +43,44 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/g3/pdb2g3k.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/g3/r2g3ksf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/g3/2g3k.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.cif
+Can't determine output label for r2g3ksf,_refln.crystal_id - skipping.
+Can't determine output label for r2g3ksf,_refln.scale_group_code - skipping.
+Can't determine output label for r2g3ksf,_refln.wavelength_id - skipping.
+Can't determine output label for r2g3kAsf,_refln.crystal_id - skipping.
+Can't determine output label for r2g3kAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2g3kAsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r2g3kAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2g3k.mtz
+  I(+),SIGI(+),I(-),SIGI(-) is anomalous
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/g3/pdb2g3k.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/g3/r2g3ksf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/g3/2g3k.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g3/2g3k/2g3k.cif
+Can't determine output label for r2g3ksf,_refln.crystal_id - skipping.
+Can't determine output label for r2g3ksf,_refln.scale_group_code - skipping.
+Can't determine output label for r2g3ksf,_refln.wavelength_id - skipping.
+Can't determine output label for r2g3kAsf,_refln.crystal_id - skipping.
+Can't determine output label for r2g3kAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2g3kAsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r2g3kAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2g3k.mtz
+  I(+),SIGI(+),I(-),SIGI(-) is anomalous
 
 ==================================================
 Summary of pdb4amber for: 2g3k.pdb
@@ -130,7 +114,7 @@ gap of 3.293024 A between VAL 580 and ASP 582
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/g3/2g3k/4amber_2g3k.prmtop
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/g3/2g3k/4amber_2g3k.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/g3/2g3k/4amber_2g3k.prmtop
 
 	Running AmberPrep : 2g3k.pdb
@@ -148,8 +132,8 @@ Setting up library files for non-standard residues
 Running elbow/antechamber for MSE 
 ==================================================
 --------------------------------------------------------------------------------
-['/tmp/6368441.63.all.q/tmpt9quBp', '/tmp/6368441.63.all.q/tmpmKJaRW']
-/tmp/6368441.63.all.q/tmpt9quBp
+['/tmp/6368459.63.all.q/tmpAcSa9Y', '/tmp/6368459.63.all.q/tmpl8Z1oR']
+/tmp/6368459.63.all.q/tmpAcSa9Y
   Monomer Library directory:
     "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
   Total number of atoms: 19

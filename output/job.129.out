@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 129
 only_code None
 force_amber_prep True
@@ -77,31 +77,38 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/mr/pdb1mru.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/mr/r1mrusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/mr/1mru.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.cif
+Can't determine output label for r1mrusf,_refln.crystal_id - skipping.
+Can't determine output label for r1mrusf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 81 reflections
+Can't determine output label for r1mrusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1mru.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/mr/pdb1mru.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/mr/r1mrusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/mr/1mru.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.cif
+Can't determine output label for r1mrusf,_refln.crystal_id - skipping.
+Can't determine output label for r1mrusf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 81 reflections
+Can't determine output label for r1mrusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1mru.mtz
 
 ==================================================
 Summary of pdb4amber for: 1mru.pdb
@@ -149,7 +156,7 @@ gap of 25.577785 A between ILE 978 and THR 979
 ---------- Mising heavy atom(s)
 
 None
-not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/4phenix_1mru.pdb
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/mr/1mru/4amber_1mru.prmtop
 
 	Running AmberPrep : 1mru.pdb
 
@@ -229,7 +236,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1mru.prmtop
     rst7   : 4amber_1mru.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/mr/1mru
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru
 return_files 1mru
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1mru.pdb
@@ -252,22 +259,18 @@ cp 4amber_1mru.prmtop /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
 4amber_1mru_refine_001.log
 4phenix_1mru_refine_001.log
 1mru_refine_001.log
-cp 1mru_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
 4amber_1mru_refine_002.log
 4phenix_1mru_refine_002.log
 1mru_refine_002.log
-cp 1mru_refine_002.log /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
 4amber_1mru_refine_001.pdb
 4phenix_1mru_refine_001.pdb
 1mru_refine_001.pdb
-cp 1mru_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
 4amber_1mru_refine_002.pdb
 4phenix_1mru_refine_002.pdb
 1mru_refine_002.pdb
-cp 1mru_refine_002.pdb /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/mr/1mru
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru_refine_001.log
 ------------------------------
@@ -276,10 +279,5 @@ phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru_r
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 1mru_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 1mru.pdb 1mru.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/4amber_1mru.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/4amber_1mru.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 1mru_refine_002

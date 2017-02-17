@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 187
 only_code None
 force_amber_prep True
@@ -106,31 +106,38 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ry/pdb1ryy.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ry/r1ryysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ry/1ryy.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.cif
+Can't determine output label for r1ryysf,_refln.crystal_id - skipping.
+Can't determine output label for r1ryysf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 723 reflections
+Can't determine output label for r1ryysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1ryy.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ry/pdb1ryy.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ry/r1ryysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ry/1ryy.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy/1ryy.cif
+Can't determine output label for r1ryysf,_refln.crystal_id - skipping.
+Can't determine output label for r1ryysf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 723 reflections
+Can't determine output label for r1ryysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1ryy.mtz
 
 ==================================================
 Summary of pdb4amber for: 1ryy.pdb
@@ -202,7 +209,8 @@ gap of 12.726636 A between VAL 6457 and GLN 6458
 ---------- Mising heavy atom(s)
 
 TRP_6736 misses 5 heavy atom(s)
-not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy/4phenix_1ryy.pdb
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ry/1ryy/4amber_1ryy.prmtop
+natom*3 error
 
 	Running AmberPrep : 1ryy.pdb
 
@@ -278,7 +286,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1ryy.prmtop
     rst7   : 4amber_1ryy.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy
 return_files 1ryy
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1ryy.pdb
@@ -301,22 +309,18 @@ cp 4amber_1ryy.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy
 4amber_1ryy_refine_001.log
 4phenix_1ryy_refine_001.log
 1ryy_refine_001.log
-cp 1ryy_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy
 4amber_1ryy_refine_002.log
 4phenix_1ryy_refine_002.log
 1ryy_refine_002.log
-cp 1ryy_refine_002.log /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy
 4amber_1ryy_refine_001.pdb
 4phenix_1ryy_refine_001.pdb
 1ryy_refine_001.pdb
-cp 1ryy_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy
 4amber_1ryy_refine_002.pdb
 4phenix_1ryy_refine_002.pdb
 1ryy_refine_002.pdb
-cp 1ryy_refine_002.pdb /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy/1ryy.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ry/1ryy
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ry/1ryy/1ryy_refine_001.log
 ------------------------------

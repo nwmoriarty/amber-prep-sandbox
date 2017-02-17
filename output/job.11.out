@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 11
 only_code None
 force_amber_prep True
@@ -18,31 +18,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/j0/pdb2j0g.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/j0/r2j0gsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/j0/2j0g.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.cif
+Can't determine output label for r2j0gsf,_refln.crystal_id - skipping.
+Can't determine output label for r2j0gsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2j0gsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2j0g.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/j0/pdb2j0g.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/j0/r2j0gsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/j0/2j0g.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.cif
+Can't determine output label for r2j0gsf,_refln.crystal_id - skipping.
+Can't determine output label for r2j0gsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2j0gsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2j0g.mtz
 
 ==================================================
 Summary of pdb4amber for: 2j0g.pdb
@@ -76,6 +79,62 @@ THR_216 misses 1 heavy atom(s)
 THR_432 misses 1 heavy atom(s)
 The alternate coordinates have been discarded.
 Only the first occurrence for each atom was kept.
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/j0/2j0g/4amber_2j0g.prmtop
+
+	Running AmberPrep : 2j0g.pdb
+
+
+==================================================
+Running pdb4amber on 2j0g.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "BM3" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for MAN 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S R 
+
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
+
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Running elbow/antechamber for FUC 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 2j0g_4tleap_uc1.pdb
@@ -99,25 +158,18 @@ None
 
 None
 
-	Running AmberPrep : 2j0g.pdb
+MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
+	23 atoms
+	23 bonds
+	41 angles
+	63 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S R S S 
+
+~> antechamber -i 4antechamber_FUC.pdb -fi pdb -o FUC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 2j0g.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-
-  Residue "BM3" already in amber monomer library. Skipping elbow/antechamber
-    run for this residue.
-        
-MAN.mol2 is present. Skipping elbow/antechamber run for this residue.
-
-NAG.mol2 is present. Skipping elbow/antechamber run for this residue.
-
-FUC.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i FUC.mol2 -f mol2 -o FUC.frcmod
 
 
 ==================================================
@@ -183,7 +235,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_2j0g.prmtop
     rst7   : 4amber_2j0g.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
 return_files 2j0g
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2j0g.pdb
@@ -217,7 +269,7 @@ cp 4amber_2j0g.prmtop /net/chevy/raid1/nigel/amber/hi_lo/j0/2j0g
 2j0g_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/j0/2j0g/2j0g_refine_001.log
 ------------------------------
@@ -234,19 +286,19 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/BM3.cif
   Restarting
     phenix.refine 2j0g.pdb 2j0g.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True /net/cci/lbnl/nigel/all_chemical_components/cifs/BM3.cif
     
-# Date 2017-02-10 Time 14:39:30 PST -0800 (1486766370.50 s)
+# Date 2017-02-16 Time 15:58:59 PST -0800 (1487289539.18 s)
 #phil __OFF__
 
 Command line arguments: "2j0g.pdb" "2j0g.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/BM3.cif"
 
-HOST = lewis.lbl.gov
+HOST = rebus.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 35450
-JOB_ID = 6368441
+PID = 23051
+JOB_ID = 6368459
 SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
+SGE_TASK_FIRST = 3
+SGE_TASK_LAST = 200
 SGE_TASK_ID = 11
 
 -------------------------------------------------------------------------------
@@ -444,13 +496,9 @@ Number of work/free reflections by resolution:
       Conformer: ""
         Number of residues, atoms: 7, 163
           Unusual residues: {'MAN': 2, 'BM3': 1, 'CA ': 1, 'NAG': 2, 'FUC': 1}
-          Unexpected atoms: {'MAN,O61': 2, 'BM3,H22': 1, 'NAG,O41': 2}
+          Unexpected atoms: {'BM3,H22': 1}
           Classifications: {'undetermined': 7}
           Link IDs: {None: 6}
-          Unresolved non-hydrogen bonds: 4
-          Unresolved non-hydrogen angles: 8
-          Unresolved non-hydrogen dihedrals: 2
-          Unresolved non-hydrogen chiralities: 4
     Chain: "C"
       Number of atoms: 32
       Number of conformers: 1
@@ -473,26 +521,18 @@ Number of work/free reflections by resolution:
       Conformer: ""
         Number of residues, atoms: 6, 139
           Unusual residues: {'MAN': 1, 'BM3': 1, 'CA ': 1, 'NAG': 2, 'FUC': 1}
-          Unexpected atoms: {'MAN,O61': 1, 'BM3,H22': 1, 'NAG,O41': 2}
+          Unexpected atoms: {'BM3,H22': 1}
           Classifications: {'undetermined': 6}
           Link IDs: {None: 5}
-          Unresolved non-hydrogen bonds: 3
-          Unresolved non-hydrogen angles: 6
-          Unresolved non-hydrogen dihedrals: 1
-          Unresolved non-hydrogen chiralities: 3
     Chain: "F"
       Number of atoms: 56
       Number of conformers: 1
       Conformer: ""
         Number of residues, atoms: 3, 56
           Unusual residues: {'BM3': 1, 'CA ': 1, 'MAN': 1}
-          Unexpected atoms: {'BM3,H22': 1, 'MAN,O61': 1}
+          Unexpected atoms: {'BM3,H22': 1}
           Classifications: {'undetermined': 3}
           Link IDs: {None: 2}
-          Unresolved non-hydrogen bonds: 1
-          Unresolved non-hydrogen angles: 2
-          Unresolved non-hydrogen dihedrals: 1
-          Unresolved non-hydrogen chiralities: 1
     Chain: "A"
       Number of atoms: 15
       Number of conformers: 1
@@ -544,19 +584,12 @@ Number of work/free reflections by resolution:
       pdb=" N   ARG F 256 " occ=0.50
       ... (22 atoms not shown)
       pdb="HH22 ARG F 256 " occ=0.50
-  Number of atoms with unknown nonbonded energy type symbols: 12
+  Number of atoms with unknown nonbonded energy type symbols: 4
     "HETATM19924  H22 BM3 B 400 .*.     H  "
-    "HETATM19946  O41 NAG B1001 .*.     O  "
-    "HETATM19976  O41 NAG B1002 .*.     O  "
-    "HETATM20029  O61 MAN B1004 .*.     O  "
-    "HETATM20053  O61 MAN B1005 .*.     O  "
     "HETATM20087  H22 BM3 C 400 .*.     H  "
     "HETATM20120  H22 BM3 E 400 .*.     H  "
-    "HETATM20142  O41 NAG E1001 .*.     O  "
-    "HETATM20172  O41 NAG E1002 .*.     O  "
-    "HETATM20225  O61 MAN E1004 .*.     O  "
-    ... (remaining 2 not shown)
-  Time building chain proxies: 15.39, per 1000 atoms: 0.75
+    "HETATM20259  H22 BM3 F 400 .*.     H  "
+  Time building chain proxies: 15.54, per 1000 atoms: 0.76
   Number of scatterers: 20431
   At special positions: 0
   Unit cell: (96.94, 96.94, 139.47, 90, 90, 120)
@@ -572,7 +605,7 @@ Number of work/free reflections by resolution:
      H    9858      1.00
     sf(0) = scattering factor at diffraction angle 0.
 Sorry: Fatal problems interpreting model file:
-  Number of atoms with unknown nonbonded energy type symbols: 12
+  Number of atoms with unknown nonbonded energy type symbols: 4
     Please edit the model file to resolve the problems and/or supply a
     CIF file with matching restraint definitions, along with
     apply_cif_modification and apply_cif_link parameter definitions

@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 81
 only_code None
 force_amber_prep True
@@ -48,36 +48,42 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/yr/1yrp
 1yrp.pdb 4phenix_1yrp.pdb
-1yrp.pdb 4phenix_1yrp.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/yr/pdb1yrp.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/yr/r1yrpsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/yr/1yrp.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.cif
+Can't determine output label for r1yrpsf,_refln.crystal_id - skipping.
+Can't determine output label for r1yrpsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 294 reflections
+Can't determine output label for r1yrpsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1yrp.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/yr/pdb1yrp.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/yr/r1yrpsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/yr/1yrp.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yr/1yrp/1yrp.cif
+Can't determine output label for r1yrpsf,_refln.crystal_id - skipping.
+Can't determine output label for r1yrpsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 294 reflections
+Can't determine output label for r1yrpsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1yrp.mtz
 
 ==================================================
 Summary of pdb4amber for: 1yrp.pdb
@@ -101,6 +107,7 @@ gap of 4.402744 A between MET 539 and ILE 541
 ---------- Mising heavy atom(s)
 
 None
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/yr/1yrp/4amber_1yrp.prmtop
 not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/yr/1yrp/4phenix_1yrp.pdb
 
 	Running AmberPrep : 1yrp.pdb
@@ -113,7 +120,23 @@ Running pdb4amber on 1yrp.pdb
 ==================================================
 Setting up library files for non-standard residues
 ==================================================
-TPO.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+==================================================
+Running elbow/antechamber for TPO 
+==================================================
+
+MoleculeClass :  C: 4  N: 1  O: 6  P: 1 (CHEMICAL COMPONENTS format)
+	19 atoms
+	18 bonds
+	31 angles
+	36 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	2 chirals : S R 
+
+~> antechamber -i 4antechamber_TPO.pdb -fi pdb -o TPO.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i TPO.mol2 -f mol2 -o TPO.frcmod
 
 
   Residue "DTT" already in amber monomer library. Skipping elbow/antechamber

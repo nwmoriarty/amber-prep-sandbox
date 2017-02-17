@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 174
 only_code None
 force_amber_prep True
@@ -98,60 +98,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kx/pdb1kxg.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kx/r1kxgsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kx/1kxg.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.cif
+Can't determine output label for r1kxgsf,_refln.crystal_id - skipping.
+Can't determine output label for r1kxgsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kxgsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kxg.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kx/pdb1kxg.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kx/r1kxgsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kx/1kxg.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kx/1kxg/1kxg.cif
+Can't determine output label for r1kxgsf,_refln.crystal_id - skipping.
+Can't determine output label for r1kxgsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kxgsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kxg.mtz
 
 ==================================================
 Summary of pdb4amber for: 1kxg.pdb
@@ -175,7 +149,7 @@ None
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/kx/1kxg/4amber_1kxg.prmtop
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/kx/1kxg/4amber_1kxg.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/kx/1kxg/4amber_1kxg.prmtop
 
 	Running AmberPrep : 1kxg.pdb

@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 133
 only_code None
 force_amber_prep True
@@ -78,31 +78,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fs/pdb1fss.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fs/r1fsssf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fs/1fss.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.cif
+Can't determine output label for r1fsssf,_refln.crystal_id - skipping.
+Can't determine output label for r1fsssf,_refln.scale_group_code - skipping.
+Can't determine output label for r1fsssf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1fss.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/fs/pdb1fss.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fs/r1fsssf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fs/1fss.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fs/1fss/1fss.cif
+Can't determine output label for r1fsssf,_refln.crystal_id - skipping.
+Can't determine output label for r1fsssf,_refln.scale_group_code - skipping.
+Can't determine output label for r1fsssf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1fss.mtz
 
 ==================================================
 Summary of pdb4amber for: 1fss.pdb
@@ -127,6 +130,23 @@ GLN_485 misses 4 heavy atom(s)
 GLU_486 misses 4 heavy atom(s)
 SER_487 misses 1 heavy atom(s)
 LYS_488 misses 4 heavy atom(s)
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fs/1fss/4amber_1fss.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/fs/1fss/4amber_1fss.prmtop
+
+	Running AmberPrep : 1fss.pdb
+
+
+==================================================
+Running pdb4amber on 1fss.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 1fss_4tleap_uc1.pdb
@@ -145,19 +165,19 @@ None
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/fs/1fss/4amber_1fss.prmtop
 
-	Running AmberPrep : 1fss.pdb
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 1fss.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-NAG.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
 
 
 ==================================================

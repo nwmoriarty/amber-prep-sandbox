@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 99
 only_code None
 force_amber_prep True
@@ -62,31 +62,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fh/pdb2fhg.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fh/r2fhgsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fh/2fhg.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.cif
+Can't determine output label for r2fhgsf,_refln.crystal_id - skipping.
+Can't determine output label for r2fhgsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2fhgsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2fhg.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/fh/pdb2fhg.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fh/r2fhgsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fh/2fhg.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.cif
+Can't determine output label for r2fhgsf,_refln.crystal_id - skipping.
+Can't determine output label for r2fhgsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2fhgsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2fhg.mtz
 
 ==================================================
 Summary of pdb4amber for: 2fhg.pdb
@@ -209,7 +212,8 @@ gap of 9.937909 A between SER 6599 and LEU 6600
 ---------- Mising heavy atom(s)
 
 None
-not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/4phenix_2fhg.pdb
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fh/2fhg/4amber_2fhg.prmtop
+natom*3 error
 
 	Running AmberPrep : 2fhg.pdb
 
@@ -285,7 +289,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_2fhg.prmtop
     rst7   : 4amber_2fhg.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
 return_files 2fhg
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2fhg.pdb
@@ -308,22 +312,18 @@ cp 4amber_2fhg.prmtop /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg
 4amber_2fhg_refine_001.log
 4phenix_2fhg_refine_001.log
 2fhg_refine_001.log
-cp 2fhg_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg
 4amber_2fhg_refine_002.log
 4phenix_2fhg_refine_002.log
 2fhg_refine_002.log
-cp 2fhg_refine_002.log /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg
 4amber_2fhg_refine_001.pdb
 4phenix_2fhg_refine_001.pdb
 2fhg_refine_001.pdb
-cp 2fhg_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg
 4amber_2fhg_refine_002.pdb
 4phenix_2fhg_refine_002.pdb
 2fhg_refine_002.pdb
-cp 2fhg_refine_002.pdb /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/2fhg_refine_001.log
 ------------------------------

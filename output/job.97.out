@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 97
 only_code None
 force_amber_prep True
@@ -61,31 +61,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ql/pdb1qlr.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ql/r1qlrsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ql/1qlr.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.cif
+Can't determine output label for r1qlrsf,_refln.crystal_id - skipping.
+Can't determine output label for r1qlrsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1qlrsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1qlr.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ql/pdb1qlr.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ql/r1qlrsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ql/1qlr.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.cif
+Can't determine output label for r1qlrsf,_refln.crystal_id - skipping.
+Can't determine output label for r1qlrsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1qlrsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1qlr.mtz
 
 ==================================================
 Summary of pdb4amber for: 1qlr.pdb
@@ -113,6 +116,40 @@ gap of 13.252453 A between PRO 824 and THR 825
 ---------- Mising heavy atom(s)
 
 None
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ql/1qlr/4amber_1qlr.prmtop
+
+	Running AmberPrep : 1qlr.pdb
+
+
+==================================================
+Running pdb4amber on 1qlr.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Running elbow/antechamber for FUC 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 1qlr_4tleap_uc1.pdb
@@ -195,21 +232,19 @@ gap of 13.252656 A between PRO 5072 and THR 5073
 ---------- Mising heavy atom(s)
 
 None
-not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/4phenix_1qlr.pdb
 
-	Running AmberPrep : 1qlr.pdb
+MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
+	23 atoms
+	23 bonds
+	41 angles
+	63 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S R S S 
+
+~> antechamber -i 4antechamber_FUC.pdb -fi pdb -o FUC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 1qlr.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-NAG.mol2 is present. Skipping elbow/antechamber run for this residue.
-
-FUC.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i FUC.mol2 -f mol2 -o FUC.frcmod
 
 
 ==================================================
@@ -275,7 +310,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1qlr.prmtop
     rst7   : 4amber_1qlr.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
 return_files 1qlr
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1qlr.pdb
@@ -298,22 +333,18 @@ cp 4amber_1qlr.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr
 4amber_1qlr_refine_001.log
 4phenix_1qlr_refine_001.log
 1qlr_refine_001.log
-cp 1qlr_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr
 4amber_1qlr_refine_002.log
 4phenix_1qlr_refine_002.log
 1qlr_refine_002.log
-cp 1qlr_refine_002.log /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr
 4amber_1qlr_refine_001.pdb
 4phenix_1qlr_refine_001.pdb
 1qlr_refine_001.pdb
-cp 1qlr_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr
 4amber_1qlr_refine_002.pdb
 4phenix_1qlr_refine_002.pdb
 1qlr_refine_002.pdb
-cp 1qlr_refine_002.pdb /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/1qlr_refine_001.log
 ------------------------------
@@ -322,10 +353,5 @@ phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/1qlr_r
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/1qlr_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 1qlr_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 1qlr.pdb 1qlr.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/4amber_1qlr.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/4amber_1qlr.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 1qlr_refine_002

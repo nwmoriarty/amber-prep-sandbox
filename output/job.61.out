@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 61
 only_code None
 force_amber_prep True
@@ -43,31 +43,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/bm/pdb1bmf.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bm/r1bmfsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bm/1bmf.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.cif
+Can't determine output label for r1bmfsf,_refln.crystal_id - skipping.
+Can't determine output label for r1bmfsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1bmfsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1bmf.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bm/pdb1bmf.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bm/r1bmfsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bm/1bmf.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf/1bmf.cif
+Can't determine output label for r1bmfsf,_refln.crystal_id - skipping.
+Can't determine output label for r1bmfsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1bmfsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1bmf.mtz
 
 ==================================================
 Summary of pdb4amber for: 1bmf.pdb
@@ -96,6 +99,26 @@ gap of 22.746864 A between LYS 2923 and LEU 2924
 ---------- Mising heavy atom(s)
 
 None
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/bm/1bmf/4amber_1bmf.prmtop
+
+	Running AmberPrep : 1bmf.pdb
+
+
+==================================================
+Running pdb4amber on 1bmf.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "ANP" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for ADP 
+==================================================
 
 ==================================================
 Summary of pdb4amber for: 1bmf_4tleap_uc1.pdb
@@ -125,23 +148,19 @@ gap of 22.746864 A between LYS 6523 and LEU 6524
 ---------- Mising heavy atom(s)
 
 TYR_7455 misses 2 heavy atom(s)
-not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/4phenix_1bmf.pdb
 
-	Running AmberPrep : 1bmf.pdb
+MoleculeClass :  C:10  N: 5  O:10  P: 2 (CHEMICAL COMPONENTS format)
+	39 atoms
+	41 bonds
+	71 angles
+	98 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_ADP.pdb -fi pdb -o ADP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
 
 
-==================================================
-Running pdb4amber on 1bmf.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-
-  Residue "ANP" already in amber monomer library. Skipping elbow/antechamber
-    run for this residue.
-        
-ADP.mol2 is present. Skipping elbow/antechamber run for this residue.
+~> parmchk2 -s 2 -i ADP.mol2 -f mol2 -o ADP.frcmod
 
 
 ==================================================
@@ -207,7 +226,7 @@ run_tests_local.py:220: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1bmf.prmtop
     rst7   : 4amber_1bmf.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf
 return_files 1bmf
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1bmf.pdb
@@ -241,7 +260,7 @@ cp 4amber_1bmf.prmtop /net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf
 1bmf_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/1bmf.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/bm/1bmf
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/1bmf_refine_001.log
 ------------------------------
@@ -256,19 +275,19 @@ phenix.refine 1bmf.pdb 1bmf.mtz c_beta_restraints=False discard_psi_phi=False st
   Restarting
     phenix.refine 1bmf.pdb 1bmf.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True refinement.input.xray_data.r_free_flags.generate=True
     
-# Date 2017-02-10 Time 14:41:59 PST -0800 (1486766519.12 s)
+# Date 2017-02-16 Time 18:08:33 PST -0800 (1487297313.25 s)
 #phil __OFF__
 
 Command line arguments: "1bmf.pdb" "1bmf.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "refinement.input.xray_data.r_free_flags.generate=True"
 
-HOST = lewis.lbl.gov
+HOST = rebus.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 37905
-JOB_ID = 6368441
+PID = 37548
+JOB_ID = 6368459
 SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
+SGE_TASK_FIRST = 3
+SGE_TASK_LAST = 200
 SGE_TASK_ID = 61
 
 -------------------------------------------------------------------------------
@@ -607,7 +626,7 @@ Number of work/free reflections by resolution:
     "HETATM46095 H3B2 ANP B 600 .*.     H  "
     "HETATM46141 H3B2 ANP C 600 .*.     H  "
     "HETATM46227 H3B2 ANP F 600 .*.     H  "
-  Time building chain proxies: 27.94, per 1000 atoms: 0.58
+  Time building chain proxies: 33.43, per 1000 atoms: 0.70
   Number of scatterers: 48043
   At special positions: 0
   Unit cell: (284.22, 107.76, 139.68, 90, 90, 90)
@@ -636,19 +655,19 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/ANP.cif
   Restarting
     phenix.refine 1bmf.pdb 1bmf.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True refinement.input.xray_data.r_free_flags.generate=True /net/cci/lbnl/nigel/all_chemical_components/cifs/ANP.cif
     
-# Date 2017-02-10 Time 14:42:51 PST -0800 (1486766571.08 s)
+# Date 2017-02-16 Time 18:09:35 PST -0800 (1487297375.09 s)
 #phil __OFF__
 
 Command line arguments: "1bmf.pdb" "1bmf.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "refinement.input.xray_data.r_free_flags.generate=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/ANP.cif"
 
-HOST = lewis.lbl.gov
+HOST = rebus.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 38614
-JOB_ID = 6368441
+PID = 38996
+JOB_ID = 6368459
 SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
+SGE_TASK_FIRST = 3
+SGE_TASK_LAST = 200
 SGE_TASK_ID = 61
 
 -------------------------------------------------------------------------------
@@ -987,7 +1006,7 @@ Number of work/free reflections by resolution:
     "HETATM46095 H3B2 ANP B 600 .*.     H  "
     "HETATM46141 H3B2 ANP C 600 .*.     H  "
     "HETATM46227 H3B2 ANP F 600 .*.     H  "
-  Time building chain proxies: 29.61, per 1000 atoms: 0.62
+  Time building chain proxies: 34.19, per 1000 atoms: 0.71
   Number of scatterers: 48043
   At special positions: 0
   Unit cell: (284.22, 107.76, 139.68, 90, 90, 90)
@@ -1026,19 +1045,19 @@ phenix.refine 1bmf.pdb 1bmf.mtz c_beta_restraints=False discard_psi_phi=False st
   Restarting
     phenix.refine 1bmf.pdb 1bmf.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/4amber_1bmf.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/4amber_1bmf.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2 refinement.input.xray_data.r_free_flags.generate=True
     
-# Date 2017-02-10 Time 14:43:53 PST -0800 (1486766633.34 s)
+# Date 2017-02-16 Time 18:10:48 PST -0800 (1487297448.18 s)
 #phil __OFF__
 
 Command line arguments: "1bmf.pdb" "1bmf.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/4amber_1bmf.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/bm/1bmf/4amber_1bmf.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "refinement.input.xray_data.r_free_flags.generate=True"
 
-HOST = lewis.lbl.gov
+HOST = rebus.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 39599
-JOB_ID = 6368441
+PID = 40829
+JOB_ID = 6368459
 SGE_ARCH = lx24-amd64
-SGE_TASK_FIRST = 9
-SGE_TASK_LAST = 199
+SGE_TASK_FIRST = 3
+SGE_TASK_LAST = 200
 SGE_TASK_ID = 61
 
 -------------------------------------------------------------------------------
@@ -1383,7 +1402,7 @@ Number of work/free reflections by resolution:
     "HETATM46095 H3B2 ANP B 600 .*.     H  "
     "HETATM46141 H3B2 ANP C 600 .*.     H  "
     "HETATM46227 H3B2 ANP F 600 .*.     H  "
-  Time building chain proxies: 31.45, per 1000 atoms: 0.65
+  Time building chain proxies: 33.36, per 1000 atoms: 0.69
   Number of scatterers: 48043
   At special positions: 0
   Unit cell: (284.22, 107.76, 139.68, 90, 90, 90)

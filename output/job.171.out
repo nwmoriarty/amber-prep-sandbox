@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST rebus.lbl.gov
 only_i 171
 only_code None
 force_amber_prep True
@@ -93,36 +93,38 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/gp/2gps
 2gps.pdb 4phenix_2gps.pdb
-2gps.pdb 4phenix_2gps.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/gp/pdb2gps.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gp/r2gpssf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gp/2gps.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.cif
+Can't determine output label for r2gpssf,_refln.crystal_id - skipping.
+Can't determine output label for r2gpssf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gpssf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2gps.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/gp/pdb2gps.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gp/r2gpssf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gp/2gps.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.cif
+Can't determine output label for r2gpssf,_refln.crystal_id - skipping.
+Can't determine output label for r2gpssf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gpssf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2gps.mtz
 
 ==================================================
 Summary of pdb4amber for: 2gps.pdb
@@ -237,6 +239,7 @@ HIS_1473 misses 9 heavy atom(s)
 HIS_1474 misses 10 heavy atom(s)
 HIS_1475 misses 9 heavy atom(s)
 HIS_1476 misses 9 heavy atom(s)
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/gp/2gps/4amber_2gps.prmtop
 not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/gp/2gps/4phenix_2gps.pdb
 
 	Running AmberPrep : 2gps.pdb
