@@ -11,6 +11,8 @@ error_strings = [
   '''raise IOError('%s does not exist' % filename)''',
   'Sorry: Error interpreting command line argument as parameter definition:',
   '''TypeError: 'NoneType' object is not iterable''',
+  'Sorry: tleap error : "Could not open file ',
+  'OSError: [Errno 2] No such file or directory',
   ]
 
 last_lines = [
