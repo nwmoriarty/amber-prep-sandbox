@@ -1,0 +1,1268 @@
+HOST lewis.lbl.gov
+only_i 45
+only_code None
+force_amber_prep True
+dry_run False
+1 1z3z,A,2.900,1zod,A,1.800
+2 1psi,A,2.920,3ndd,A,1.500
+3 3bpo,A,3.000,3l5w,I,2.000
+4 1e6j,P,3.000,3mge,A,1.900
+5 1r46,A,3.250,3hg3,A,1.900
+6 2j0g,A,2.850,2j1g,A,1.950
+7 1nsk,L,2.800,3bbb,A,1.300
+8 1t04,B,3.000,1t3f,B,2.000
+9 1kiu,B,3.000,1ze3,H,1.840
+10 1kv3,A,2.800,2q3z,A,2.000
+11 1wqs,A,2.800,2iph,A,1.750
+12 3gwp,A,2.900,3i16,A,2.000
+13 1c0n,A,2.800,1kmj,A,2.000
+14 2r8j,A,3.100,3oha,A,2.000
+15 1z5s,C,3.010,2grn,B,1.800
+16 3icq,B,3.200,3m1i,A,2.000
+17 1nb3,I,2.800,3kfq,C,1.990
+18 1otc,A,2.800,2i0q,A,1.910
+19 1ue8,A,3.000,3b4x,A,1.940
+20 1a4o,A,2.800,2o02,A,1.500
+21 1t6i,A,2.810,3g4z,A,1.870
+22 1de9,A,3.000,2o3h,A,1.900
+23 2j6e,L,3.000,3n9g,L,1.434
+... 45 2j6e
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/j6/2j6e
+2j6e.pdb 4phenix_2j6e.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/j6/pdb2j6e.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2j6e.pdb
+===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+H
+I
+L
+M
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 2.477005 A between PRO 211 and PRO 211
+gap of 2.425743 A between SER 212 and SER 212
+gap of 2.469837 A between VAL 213 and VAL 213
+gap of 2.446472 A between PHE 214 and PHE 214
+gap of 2.435048 A between LEU 215 and LEU 215
+gap of 2.519937 A between PHE 216 and PHE 216
+gap of 2.504957 A between PRO 217 and PRO 217
+gap of 2.539095 A between PRO 218 and PRO 218
+gap of 2.436207 A between LYS 219 and LYS 219
+gap of 2.468322 A between PRO 220 and PRO 220
+gap of 2.449850 A between LYS 221 and LYS 221
+gap of 2.523819 A between ASP 222 and ASP 222
+gap of 2.511367 A between THR 223 and THR 223
+gap of 2.505768 A between LEU 224 and LEU 224
+gap of 2.410263 A between MET 225 and MET 225
+gap of 2.533048 A between ILE 226 and ILE 226
+gap of 2.440721 A between SER 227 and SER 227
+gap of 2.433125 A between ARG 228 and ARG 228
+gap of 2.489127 A between THR 229 and THR 229
+gap of 2.454429 A between PRO 230 and PRO 230
+gap of 2.469410 A between GLU 231 and GLU 231
+gap of 2.425032 A between VAL 232 and VAL 232
+gap of 2.506695 A between THR 233 and THR 233
+gap of 2.415320 A between CYX 234 and CYX 234
+gap of 2.465731 A between VAL 235 and VAL 235
+gap of 2.439079 A between VAL 236 and VAL 236
+gap of 2.499087 A between VAL 237 and VAL 237
+gap of 2.489518 A between ASP 238 and ASP 238
+gap of 2.418332 A between VAL 239 and VAL 239
+gap of 2.516153 A between SER 240 and SER 240
+gap of 2.498978 A between HIE 241 and HIE 241
+gap of 2.477262 A between GLU 242 and GLU 242
+gap of 2.450702 A between GLU 243 and GLU 243
+gap of 2.466874 A between PRO 244 and PRO 244
+gap of 2.493068 A between GLU 245 and GLU 245
+gap of 2.531582 A between VAL 246 and VAL 246
+gap of 2.434253 A between LYS 247 and LYS 247
+gap of 2.481894 A between PHE 248 and PHE 248
+gap of 2.428277 A between ASN 249 and ASN 249
+gap of 2.516621 A between TRP 250 and TRP 250
+gap of 2.474889 A between TYR 251 and TYR 251
+gap of 2.467302 A between VAL 252 and VAL 252
+gap of 2.425247 A between ASP 253 and ASP 253
+gap of 2.410896 A between GLY 254 and GLY 254
+gap of 2.439237 A between VAL 255 and VAL 255
+gap of 2.501346 A between GLU 256 and GLU 256
+gap of 2.383721 A between VAL 257 and VAL 257
+gap of 2.454406 A between HIE 258 and HIE 258
+gap of 2.441107 A between ASN 259 and ASN 259
+gap of 2.477200 A between ALA 260 and ALA 260
+gap of 2.441786 A between LYS 261 and LYS 261
+gap of 2.512509 A between THR 262 and THR 262
+gap of 2.462601 A between LYS 263 and LYS 263
+gap of 2.528063 A between PRO 264 and PRO 264
+gap of 2.485318 A between ARG 265 and ARG 265
+gap of 2.447791 A between GLU 266 and GLU 266
+gap of 2.430383 A between GLU 267 and GLU 267
+gap of 2.512062 A between GLN 268 and GLN 268
+gap of 2.533496 A between TYR 269 and TYR 269
+gap of 2.477975 A between ASN 270 and ASN 270
+gap of 2.507870 A between SER 271 and SER 271
+gap of 2.461142 A between THR 272 and THR 272
+gap of 2.443960 A between TYR 273 and TYR 273
+gap of 2.394015 A between ARG 274 and ARG 274
+gap of 2.436761 A between VAL 275 and VAL 275
+gap of 2.472040 A between VAL 276 and VAL 276
+gap of 2.424375 A between SER 277 and SER 277
+gap of 2.496080 A between VAL 278 and VAL 278
+gap of 2.441060 A between LEU 279 and LEU 279
+gap of 2.437440 A between THR 280 and THR 280
+gap of 2.484643 A between VAL 281 and VAL 281
+gap of 2.427586 A between LEU 282 and LEU 282
+gap of 2.533263 A between HIE 283 and HIE 283
+gap of 2.487875 A between GLN 284 and GLN 284
+gap of 2.393413 A between ASP 285 and ASP 285
+gap of 2.384199 A between TRP 286 and TRP 286
+gap of 2.473188 A between LEU 287 and LEU 287
+gap of 2.406655 A between ASN 288 and ASN 288
+gap of 2.573658 A between GLY 289 and GLY 289
+gap of 2.390925 A between LYS 290 and LYS 290
+gap of 2.472921 A between GLU 291 and GLU 291
+gap of 2.469465 A between TYR 292 and TYR 292
+gap of 2.515084 A between LYS 293 and LYS 293
+gap of 2.437885 A between CYX 294 and CYX 294
+gap of 2.461512 A between LYS 295 and LYS 295
+gap of 2.445870 A between VAL 296 and VAL 296
+gap of 2.513398 A between SER 297 and SER 297
+gap of 2.504358 A between ASN 298 and ASN 298
+gap of 2.482867 A between LYS 299 and LYS 299
+gap of 2.456120 A between ALA 300 and ALA 300
+gap of 2.432125 A between LEU 301 and LEU 301
+gap of 2.461984 A between PRO 302 and PRO 302
+gap of 2.396695 A between ALA 303 and ALA 303
+gap of 2.523386 A between PRO 304 and PRO 304
+gap of 2.517666 A between ILE 305 and ILE 305
+gap of 2.438782 A between GLU 306 and GLU 306
+gap of 2.442705 A between LYS 307 and LYS 307
+gap of 2.435917 A between THR 308 and THR 308
+gap of 2.469884 A between ILE 309 and ILE 309
+gap of 2.421898 A between SER 310 and SER 310
+gap of 2.420732 A between LYS 311 and LYS 311
+gap of 2.473256 A between ALA 312 and ALA 312
+gap of 2.419457 A between LYS 313 and LYS 313
+gap of 2.490685 A between GLY 314 and GLY 314
+gap of 2.470210 A between GLN 315 and GLN 315
+gap of 2.448191 A between PRO 316 and PRO 316
+gap of 2.432563 A between ARG 317 and ARG 317
+gap of 2.525093 A between GLU 318 and GLU 318
+gap of 2.468020 A between PRO 319 and PRO 319
+gap of 2.304322 A between GLN 320 and GLN 320
+gap of 2.463244 A between VAL 321 and VAL 321
+gap of 2.516379 A between TYR 322 and TYR 322
+gap of 2.422449 A between THR 323 and THR 323
+gap of 2.457275 A between LEU 324 and LEU 324
+gap of 2.484926 A between PRO 325 and PRO 325
+gap of 2.392695 A between PRO 326 and PRO 326
+gap of 2.321346 A between SER 327 and SER 327
+gap of 2.529300 A between ARG 328 and ARG 328
+gap of 2.454492 A between ASP 329 and ASP 329
+gap of 2.381814 A between GLU 330 and GLU 330
+gap of 2.476588 A between LEU 331 and LEU 331
+gap of 2.428322 A between THR 332 and THR 332
+gap of 2.351329 A between LYS 333 and LYS 333
+gap of 2.475120 A between ASN 334 and ASN 334
+gap of 2.426985 A between GLN 335 and GLN 335
+gap of 2.516732 A between VAL 336 and VAL 336
+gap of 2.436373 A between SER 337 and SER 337
+gap of 2.229959 A between LEU 338 and LEU 338
+gap of 2.464333 A between THR 339 and THR 339
+gap of 2.479330 A between CYX 340 and CYX 340
+gap of 2.456263 A between LEU 341 and LEU 341
+gap of 2.411885 A between VAL 342 and VAL 342
+gap of 2.552071 A between LYS 343 and LYS 343
+gap of 2.486206 A between GLY 344 and GLY 344
+gap of 2.495614 A between PHE 345 and PHE 345
+gap of 2.345037 A between TYR 346 and TYR 346
+gap of 2.498514 A between PRO 347 and PRO 347
+gap of 2.530130 A between SER 348 and SER 348
+gap of 2.388155 A between ASP 349 and ASP 349
+gap of 2.491921 A between ILE 350 and ILE 350
+gap of 2.378202 A between ALA 351 and ALA 351
+gap of 2.373312 A between VAL 352 and VAL 352
+gap of 2.403316 A between GLU 353 and GLU 353
+gap of 2.483738 A between TRP 354 and TRP 354
+gap of 2.464477 A between GLU 355 and GLU 355
+gap of 2.371058 A between SER 356 and SER 356
+gap of 2.514982 A between ASN 357 and ASN 357
+gap of 2.467488 A between GLY 358 and GLY 358
+gap of 2.467973 A between GLN 359 and GLN 359
+gap of 2.496793 A between PRO 360 and PRO 360
+gap of 2.381778 A between GLU 361 and GLU 361
+gap of 2.502229 A between ASN 362 and ASN 362
+gap of 2.487066 A between ASN 363 and ASN 363
+gap of 2.431521 A between TYR 364 and TYR 364
+gap of 2.480959 A between LYS 365 and LYS 365
+gap of 2.435067 A between THR 366 and THR 366
+gap of 2.419912 A between THR 367 and THR 367
+gap of 2.398529 A between PRO 368 and PRO 368
+gap of 2.368079 A between PRO 369 and PRO 369
+gap of 2.465502 A between VAL 370 and VAL 370
+gap of 2.394725 A between LEU 371 and LEU 371
+gap of 2.429188 A between ASP 372 and ASP 372
+gap of 2.477650 A between SER 373 and SER 373
+gap of 2.517192 A between ASP 374 and ASP 374
+gap of 2.537860 A between GLY 375 and GLY 375
+gap of 2.457968 A between SER 376 and SER 376
+gap of 2.415337 A between PHE 377 and PHE 377
+gap of 2.357653 A between PHE 378 and PHE 378
+gap of 2.351602 A between LEU 379 and LEU 379
+gap of 2.376050 A between TYR 380 and TYR 380
+gap of 2.349888 A between SER 381 and SER 381
+gap of 2.486974 A between LYS 382 and LYS 382
+gap of 2.349788 A between LEU 383 and LEU 383
+gap of 2.408720 A between THR 384 and THR 384
+gap of 2.429891 A between VAL 385 and VAL 385
+gap of 2.431063 A between ASP 386 and ASP 386
+gap of 2.489990 A between LYS 387 and LYS 387
+gap of 2.474604 A between SER 388 and SER 388
+gap of 2.425176 A between ARG 389 and ARG 389
+gap of 2.455389 A between TRP 390 and TRP 390
+gap of 2.488027 A between GLN 391 and GLN 391
+gap of 2.476727 A between GLN 392 and GLN 392
+gap of 2.550447 A between GLY 393 and GLY 393
+gap of 2.377746 A between ASN 394 and ASN 394
+gap of 2.408557 A between VAL 395 and VAL 395
+gap of 2.361545 A between PHE 396 and PHE 396
+gap of 2.459632 A between SER 397 and SER 397
+gap of 2.277289 A between CYX 398 and CYX 398
+gap of 2.382358 A between SER 399 and SER 399
+gap of 2.461905 A between VAL 400 and VAL 400
+gap of 2.375428 A between MET 401 and MET 401
+gap of 2.431782 A between HIE 402 and HIE 402
+gap of 2.532074 A between GLU 403 and GLU 403
+gap of 2.529368 A between ALA 404 and ALA 404
+gap of 2.446610 A between LEU 405 and LEU 405
+gap of 2.428315 A between HIE 406 and HIE 406
+gap of 2.460809 A between ASN 407 and ASN 407
+gap of 2.520826 A between HIE 408 and HIE 408
+gap of 2.483957 A between TYR 409 and TYR 409
+gap of 2.429960 A between THR 410 and THR 410
+gap of 2.466847 A between GLN 411 and GLN 411
+gap of 2.421846 A between LYS 412 and LYS 412
+gap of 2.424053 A between SER 413 and SER 413
+gap of 2.406206 A between LEU 414 and LEU 414
+gap of 2.498131 A between SER 415 and SER 415
+gap of 2.415372 A between LEU 416 and LEU 416
+gap of 2.411433 A between SER 417 and SER 417
+gap of 2.559004 A between PRO 418 and PRO 418
+gap of 28.695201 A between GLN 420 and GLY 419
+gap of 4.981113 A between LEU 421 and GLN 420
+gap of 5.995200 A between GLN 422 and LEU 421
+gap of 5.978745 A between LEU 423 and GLN 422
+gap of 5.881812 A between GLN 424 and LEU 423
+gap of 5.540749 A between GLU 425 and GLN 424
+gap of 5.989152 A between SER 426 and GLU 425
+gap of 5.898446 A between GLY 427 and SER 426
+gap of 5.488861 A between PRO 428 and GLY 427
+gap of 5.458856 A between GLY 429 and PRO 428
+gap of 4.860631 A between LEU 430 and GLY 429
+gap of 6.081332 A between VAL 431 and LEU 430
+gap of 5.620277 A between LYS 432 and VAL 431
+gap of 5.314900 A between PRO 433 and LYS 432
+gap of 5.308519 A between SER 434 and PRO 433
+gap of 4.852181 A between GLU 435 and SER 434
+gap of 5.868227 A between THR 436 and GLU 435
+gap of 5.499740 A between LEU 437 and THR 436
+gap of 6.089221 A between SER 438 and LEU 437
+gap of 5.807095 A between LEU 439 and SER 438
+gap of 6.029686 A between THR 440 and LEU 439
+gap of 5.927053 A between CYX 441 and THR 440
+gap of 5.770920 A between THR 442 and CYX 441
+gap of 5.734246 A between VAL 443 and THR 442
+gap of 5.909318 A between SER 444 and VAL 443
+gap of 5.033675 A between GLY 445 and SER 444
+gap of 4.674783 A between GLY 446 and GLY 445
+gap of 5.784816 A between SER 447 and GLY 446
+gap of 5.303852 A between ILE 448 and SER 447
+gap of 4.797487 A between SER 449 and ILE 448
+gap of 4.953038 A between ARG 450 and SER 449
+gap of 5.210465 A between GLY 451 and ARG 450
+gap of 5.238110 A between SER 452 and GLY 451
+gap of 4.702414 A between HIE 453 and SER 452
+gap of 5.672859 A between TYR 454 and HIE 453
+gap of 5.843956 A between TRP 455 and TYR 454
+gap of 6.026645 A between GLY 456 and TRP 455
+gap of 5.932825 A between TRP 457 and GLY 456
+gap of 5.922431 A between ILE 458 and TRP 457
+gap of 5.834312 A between ARG 459 and ILE 458
+gap of 6.088969 A between GLN 460 and ARG 459
+gap of 5.392467 A between PRO 461 and GLN 460
+gap of 5.234723 A between PRO 462 and PRO 461
+gap of 4.848099 A between GLY 463 and PRO 462
+gap of 4.954099 A between LYS 464 and GLY 463
+gap of 5.770226 A between GLY 465 and LYS 464
+gap of 5.573063 A between LEU 466 and GLY 465
+gap of 6.127567 A between GLU 467 and LEU 466
+gap of 5.616760 A between TRP 468 and GLU 467
+gap of 5.845839 A between ILE 469 and TRP 468
+gap of 5.144770 A between GLY 470 and ILE 469
+gap of 5.947474 A between SER 471 and GLY 470
+gap of 5.959775 A between ILE 472 and SER 471
+gap of 5.710326 A between TYR 473 and ILE 472
+gap of 5.214315 A between TYR 474 and TYR 473
+gap of 4.902150 A between SER 475 and TYR 474
+gap of 5.029195 A between GLY 476 and SER 475
+gap of 4.926729 A between ASN 477 and GLY 476
+gap of 5.968342 A between THR 478 and ASN 477
+gap of 5.957361 A between TYR 479 and THR 478
+gap of 5.821679 A between PHE 480 and TYR 479
+gap of 5.603239 A between ASN 481 and PHE 480
+gap of 5.362484 A between PRO 482 and ASN 481
+gap of 4.832205 A between SER 483 and PRO 482
+gap of 4.952764 A between LEU 484 and SER 483
+gap of 5.310449 A between LYS 485 and LEU 484
+gap of 4.901605 A between SER 486 and LYS 485
+gap of 4.907779 A between ARG 487 and SER 486
+gap of 5.069781 A between VAL 488 and ARG 487
+gap of 6.032352 A between THR 489 and VAL 488
+gap of 5.856404 A between ILE 490 and THR 489
+gap of 6.026946 A between SER 491 and ILE 490
+gap of 5.949992 A between VAL 492 and SER 491
+gap of 5.821362 A between ASP 493 and VAL 492
+gap of 5.276814 A between THR 494 and ASP 493
+gap of 4.785612 A between SER 495 and THR 494
+gap of 4.755450 A between LYS 496 and SER 495
+gap of 4.992863 A between ASN 497 and LYS 496
+gap of 5.290825 A between GLN 498 and ASN 497
+gap of 5.869130 A between PHE 499 and GLN 498
+gap of 6.049740 A between SER 500 and PHE 499
+gap of 6.030833 A between LEU 501 and SER 500
+gap of 5.993676 A between LYS 502 and LEU 501
+gap of 5.655971 A between LEU 503 and LYS 502
+gap of 5.698311 A between SER 504 and LEU 503
+gap of 5.259536 A between SER 505 and SER 504
+gap of 5.254528 A between VAL 506 and SER 505
+gap of 5.911630 A between THR 507 and VAL 506
+gap of 5.215351 A between ALA 508 and THR 507
+gap of 4.732727 A between ALA 509 and ALA 508
+gap of 4.758876 A between ASP 510 and ALA 509
+gap of 5.166496 A between THR 511 and ASP 510
+gap of 5.766007 A between ALA 512 and THR 511
+gap of 5.459848 A between VAL 513 and ALA 512
+gap of 5.770408 A between TYR 514 and VAL 513
+gap of 5.780906 A between TYR 515 and TYR 514
+gap of 5.781869 A between CYX 516 and TYR 515
+gap of 5.768004 A between ALA 517 and CYX 516
+gap of 5.475421 A between ARG 518 and ALA 517
+gap of 5.505635 A between LEU 519 and ARG 518
+gap of 5.255555 A between GLY 520 and LEU 519
+gap of 5.605862 A between PRO 521 and GLY 520
+gap of 4.936605 A between ASP 522 and PRO 521
+gap of 5.350302 A between ASP 523 and ASP 522
+gap of 5.123509 A between TYR 524 and ASP 523
+gap of 4.990575 A between THR 525 and TYR 524
+gap of 5.941141 A between LEU 526 and THR 525
+gap of 4.952034 A between ASP 527 and LEU 526
+gap of 4.900962 A between GLY 528 and ASP 527
+gap of 5.898717 A between MET 529 and GLY 528
+gap of 5.677138 A between ASP 530 and MET 529
+gap of 4.812275 A between VAL 531 and ASP 530
+gap of 5.899169 A between TRP 532 and VAL 531
+gap of 5.609558 A between GLY 533 and TRP 532
+gap of 5.309232 A between GLN 534 and GLY 533
+gap of 5.098764 A between GLY 535 and GLN 534
+gap of 6.034360 A between THR 536 and GLY 535
+gap of 5.597685 A between THR 537 and THR 536
+gap of 6.003010 A between VAL 538 and THR 537
+gap of 5.637322 A between THR 539 and VAL 538
+gap of 5.656156 A between VAL 540 and THR 539
+gap of 5.480848 A between SER 541 and VAL 540
+gap of 6.065516 A between SER 542 and SER 541
+gap of 4.979881 A between GLY 543 and SER 542
+gap of 5.036165 A between SER 544 and GLY 543
+gap of 5.445972 A between ALA 545 and SER 544
+gap of 6.112898 A between SER 546 and ALA 545
+gap of 5.489623 A between ALA 547 and SER 546
+gap of 5.777653 A between PRO 548 and ALA 547
+gap of 6.047018 A between THR 549 and PRO 548
+gap of 5.647998 A between LEU 550 and THR 549
+gap of 6.129014 A between PHE 551 and LEU 550
+gap of 5.458455 A between PRO 552 and PHE 551
+gap of 5.683399 A between LEU 553 and PRO 552
+gap of 5.684433 A between VAL 554 and LEU 553
+gap of 16.308994 A between SER 555 and VAL 554
+gap of 5.263342 A between SER 556 and SER 555
+gap of 5.483793 A between VAL 557 and SER 556
+gap of 6.107033 A between ALA 558 and VAL 557
+gap of 6.116883 A between VAL 559 and ALA 558
+gap of 6.023655 A between GLY 560 and VAL 559
+gap of 6.008410 A between CYX 561 and GLY 560
+gap of 5.394929 A between LEU 562 and CYX 561
+gap of 6.126089 A between ALA 563 and LEU 562
+gap of 5.799275 A between GLN 564 and ALA 563
+gap of 5.660068 A between ASP 565 and GLN 564
+gap of 4.961469 A between PHE 566 and ASP 565
+gap of 5.952634 A between LEU 567 and PHE 566
+gap of 4.828951 A between PRO 568 and LEU 567
+gap of 5.404632 A between ASP 569 and PRO 568
+gap of 5.760761 A between SER 570 and ASP 569
+gap of 5.450942 A between ILE 571 and SER 570
+gap of 5.574146 A between THR 572 and ILE 571
+gap of 5.430687 A between PHE 573 and THR 572
+gap of 6.028491 A between SER 574 and PHE 573
+gap of 6.012875 A between TRP 575 and SER 574
+gap of 6.063779 A between LYS 576 and TRP 575
+gap of 5.484929 A between TYR 577 and LYS 576
+gap of 5.244819 A between LYS 578 and TYR 577
+gap of 4.785271 A between ASN 579 and LYS 578
+gap of 4.790675 A between ASN 580 and ASN 579
+gap of 5.554428 A between SER 581 and ASN 580
+gap of 5.697086 A between ASP 582 and SER 581
+gap of 5.550932 A between ILE 583 and ASP 582
+gap of 5.461643 A between SER 584 and ILE 583
+gap of 4.823252 A between SER 585 and SER 584
+gap of 5.909321 A between THR 586 and SER 585
+gap of 6.084510 A between ARG 587 and THR 586
+gap of 6.008024 A between GLY 588 and ARG 587
+gap of 5.653757 A between PHE 589 and GLY 588
+gap of 5.458318 A between PRO 590 and PHE 589
+gap of 5.548839 A between SER 591 and PRO 590
+gap of 5.834441 A between VAL 592 and SER 591
+gap of 5.745113 A between LEU 593 and VAL 592
+gap of 5.760279 A between ARG 594 and LEU 593
+gap of 4.870982 A between GLY 595 and ARG 594
+gap of 4.946864 A between GLY 596 and GLY 595
+gap of 4.934972 A between LYS 597 and GLY 596
+gap of 5.742147 A between TYR 598 and LYS 597
+gap of 6.099418 A between ALA 599 and TYR 598
+gap of 5.849967 A between ALA 600 and ALA 599
+gap of 5.808299 A between THR 601 and ALA 600
+gap of 6.089521 A between SER 602 and THR 601
+gap of 5.679405 A between GLN 603 and SER 602
+gap of 6.037757 A between VAL 604 and GLN 603
+gap of 5.398054 A between LEU 605 and VAL 604
+gap of 6.061187 A between LEU 606 and LEU 605
+gap of 5.452643 A between PRO 607 and LEU 606
+gap of 5.485189 A between SER 608 and PRO 607
+gap of 4.694048 A between LYS 609 and SER 608
+gap of 5.433095 A between ASP 610 and LYS 609
+gap of 5.405289 A between VAL 611 and ASP 610
+gap of 5.693760 A between MET 612 and VAL 611
+gap of 4.784581 A between GLN 613 and MET 612
+gap of 5.218750 A between GLY 614 and GLN 613
+gap of 5.445316 A between THR 615 and GLY 614
+gap of 5.579090 A between ASP 616 and THR 615
+gap of 4.878004 A between GLU 617 and ASP 616
+gap of 4.873230 A between HIE 618 and GLU 617
+gap of 6.061296 A between VAL 619 and HIE 618
+gap of 5.803593 A between VAL 620 and VAL 619
+gap of 5.932709 A between CYX 621 and VAL 620
+gap of 5.448815 A between LYS 622 and CYX 621
+gap of 5.815904 A between VAL 623 and LYS 622
+gap of 5.642604 A between GLN 624 and VAL 623
+gap of 6.099304 A between HIE 625 and GLN 624
+gap of 5.490919 A between PRO 626 and HIE 625
+gap of 4.819814 A between ASN 627 and PRO 626
+gap of 4.779995 A between GLY 628 and ASN 627
+gap of 5.897954 A between ASN 629 and GLY 628
+gap of 5.526543 A between LYS 630 and ASN 629
+gap of 6.024534 A between GLU 631 and LYS 630
+gap of 6.093512 A between LYS 632 and GLU 631
+gap of 5.796080 A between ASN 633 and LYS 632
+gap of 5.859758 A between VAL 634 and ASN 633
+gap of 71.521993 A between GLN 636 and PRO 635
+gap of 4.674783 A between LEU 637 and GLN 636
+gap of 5.905554 A between GLN 638 and LEU 637
+gap of 5.904022 A between LEU 639 and GLN 638
+gap of 5.917373 A between GLN 640 and LEU 639
+gap of 5.544658 A between GLU 641 and GLN 640
+gap of 5.930069 A between SER 642 and GLU 641
+gap of 5.777662 A between GLY 643 and SER 642
+gap of 5.325013 A between PRO 644 and GLY 643
+gap of 5.500956 A between GLY 645 and PRO 644
+gap of 4.815129 A between LEU 646 and GLY 645
+gap of 5.950836 A between VAL 647 and LEU 646
+gap of 5.626977 A between LYS 648 and VAL 647
+gap of 5.352629 A between PRO 649 and LYS 648
+gap of 5.210969 A between SER 650 and PRO 649
+gap of 4.682375 A between GLU 651 and SER 650
+gap of 5.796633 A between THR 652 and GLU 651
+gap of 5.701857 A between LEU 653 and THR 652
+gap of 5.969758 A between SER 654 and LEU 653
+gap of 5.852827 A between LEU 655 and SER 654
+gap of 5.947504 A between THR 656 and LEU 655
+gap of 5.742336 A between CYX 657 and THR 656
+gap of 5.775644 A between THR 658 and CYX 657
+gap of 5.737177 A between VAL 659 and THR 658
+gap of 5.967147 A between SER 660 and VAL 659
+gap of 5.115285 A between GLY 661 and SER 660
+gap of 4.747381 A between GLY 662 and GLY 661
+gap of 5.729937 A between SER 663 and GLY 662
+gap of 5.442352 A between ILE 664 and SER 663
+gap of 4.758889 A between SER 665 and ILE 664
+gap of 4.818043 A between ARG 666 and SER 665
+gap of 5.009654 A between GLY 667 and ARG 666
+gap of 5.099421 A between SER 668 and GLY 667
+gap of 4.877225 A between HIE 669 and SER 668
+gap of 5.668695 A between TYR 670 and HIE 669
+gap of 6.004467 A between TRP 671 and TYR 670
+gap of 6.090911 A between GLY 672 and TRP 671
+gap of 5.881433 A between TRP 673 and GLY 672
+gap of 5.870043 A between ILE 674 and TRP 673
+gap of 5.776396 A between ARG 675 and ILE 674
+gap of 6.075253 A between GLN 676 and ARG 675
+gap of 5.406752 A between PRO 677 and GLN 676
+gap of 5.297181 A between PRO 678 and PRO 677
+gap of 4.998359 A between GLY 679 and PRO 678
+gap of 5.113638 A between LYS 680 and GLY 679
+gap of 5.647114 A between GLY 681 and LYS 680
+gap of 5.759807 A between LEU 682 and GLY 681
+gap of 6.045190 A between GLU 683 and LEU 682
+gap of 5.422536 A between TRP 684 and GLU 683
+gap of 5.674060 A between ILE 685 and TRP 684
+gap of 5.077427 A between GLY 686 and ILE 685
+gap of 5.969838 A between SER 687 and GLY 686
+gap of 6.030972 A between ILE 688 and SER 687
+gap of 5.759342 A between TYR 689 and ILE 688
+gap of 5.243640 A between TYR 690 and TYR 689
+gap of 4.828359 A between SER 691 and TYR 690
+gap of 5.002857 A between GLY 692 and SER 691
+gap of 5.018231 A between ASN 693 and GLY 692
+gap of 6.211478 A between THR 694 and ASN 693
+gap of 6.063117 A between TYR 695 and THR 694
+gap of 5.898753 A between PHE 696 and TYR 695
+gap of 5.229689 A between ASN 697 and PHE 696
+gap of 5.307388 A between PRO 698 and ASN 697
+gap of 4.901778 A between SER 699 and PRO 698
+gap of 5.005999 A between LEU 700 and SER 699
+gap of 5.208388 A between LYS 701 and LEU 700
+gap of 4.862893 A between SER 702 and LYS 701
+gap of 4.768732 A between ARG 703 and SER 702
+gap of 4.973364 A between VAL 704 and ARG 703
+gap of 5.972603 A between THR 705 and VAL 704
+gap of 5.775508 A between ILE 706 and THR 705
+gap of 5.866071 A between SER 707 and ILE 706
+gap of 5.927953 A between VAL 708 and SER 707
+gap of 5.919344 A between ASP 709 and VAL 708
+gap of 5.275337 A between THR 710 and ASP 709
+gap of 4.895557 A between SER 711 and THR 710
+gap of 4.829397 A between LYS 712 and SER 711
+gap of 4.925503 A between ASN 713 and LYS 712
+gap of 5.217320 A between GLN 714 and ASN 713
+gap of 5.850811 A between PHE 715 and GLN 714
+gap of 5.982436 A between SER 716 and PHE 715
+gap of 5.965225 A between LEU 717 and SER 716
+gap of 5.930320 A between LYS 718 and LEU 717
+gap of 5.422600 A between LEU 719 and LYS 718
+gap of 5.861819 A between SER 720 and LEU 719
+gap of 5.122445 A between SER 721 and SER 720
+gap of 5.346158 A between VAL 722 and SER 721
+gap of 6.002683 A between THR 723 and VAL 722
+gap of 5.099642 A between ALA 724 and THR 723
+gap of 4.776516 A between ALA 725 and ALA 724
+gap of 4.823630 A between ASP 726 and ALA 725
+gap of 4.756596 A between THR 727 and ASP 726
+gap of 5.756633 A between ALA 728 and THR 727
+gap of 5.506684 A between VAL 729 and ALA 728
+gap of 5.494474 A between TYR 730 and VAL 729
+gap of 5.869580 A between TYR 731 and TYR 730
+gap of 5.744976 A between CYX 732 and TYR 731
+gap of 5.911663 A between ALA 733 and CYX 732
+gap of 5.693565 A between ARG 734 and ALA 733
+gap of 5.411436 A between LEU 735 and ARG 734
+gap of 5.279283 A between GLY 736 and LEU 735
+gap of 5.568892 A between PRO 737 and GLY 736
+gap of 4.699465 A between ASP 738 and PRO 737
+gap of 5.460951 A between ASP 739 and ASP 738
+gap of 5.095662 A between TYR 740 and ASP 739
+gap of 5.049774 A between THR 741 and TYR 740
+gap of 5.907681 A between LEU 742 and THR 741
+gap of 5.069169 A between ASP 743 and LEU 742
+gap of 4.965843 A between GLY 744 and ASP 743
+gap of 5.838782 A between MET 745 and GLY 744
+gap of 5.670045 A between ASP 746 and MET 745
+gap of 4.700161 A between VAL 747 and ASP 746
+gap of 5.778190 A between TRP 748 and VAL 747
+gap of 5.390095 A between GLY 749 and TRP 748
+gap of 5.308048 A between GLN 750 and GLY 749
+gap of 5.015056 A between GLY 751 and GLN 750
+gap of 5.937663 A between THR 752 and GLY 751
+gap of 5.605915 A between THR 753 and THR 752
+gap of 5.924826 A between VAL 754 and THR 753
+gap of 5.653275 A between THR 755 and VAL 754
+gap of 5.591473 A between VAL 756 and THR 755
+gap of 5.698927 A between SER 757 and VAL 756
+gap of 5.858710 A between SER 758 and SER 757
+gap of 5.092622 A between GLY 759 and SER 758
+gap of 5.187919 A between SER 760 and GLY 759
+gap of 5.356307 A between ALA 761 and SER 760
+gap of 6.096747 A between SER 762 and ALA 761
+gap of 5.773600 A between ALA 763 and SER 762
+gap of 5.647237 A between PRO 764 and ALA 763
+gap of 5.640929 A between THR 765 and PRO 764
+gap of 5.735910 A between LEU 766 and THR 765
+gap of 6.052161 A between PHE 767 and LEU 766
+gap of 5.676843 A between PRO 768 and PHE 767
+gap of 5.890572 A between LEU 769 and PRO 768
+gap of 5.433019 A between VAL 770 and LEU 769
+gap of 5.798053 A between SER 771 and VAL 770
+gap of 4.800174 A between CYS 772 and SER 771
+gap of 13.190253 A between ASP 773 and CYS 772
+gap of 5.727959 A between THR 774 and ASP 773
+gap of 5.468988 A between SER 775 and THR 774
+gap of 4.667598 A between SER 776 and SER 775
+gap of 5.590876 A between VAL 777 and SER 776
+gap of 6.084902 A between ALA 778 and VAL 777
+gap of 6.029078 A between VAL 779 and ALA 778
+gap of 6.059746 A between GLY 780 and VAL 779
+gap of 6.059708 A between CYX 781 and GLY 780
+gap of 5.754894 A between LEU 782 and CYX 781
+gap of 5.961136 A between ALA 783 and LEU 782
+gap of 5.846867 A between GLN 784 and ALA 783
+gap of 5.525374 A between ASP 785 and GLN 784
+gap of 4.959241 A between PHE 786 and ASP 785
+gap of 5.771011 A between LEU 787 and PHE 786
+gap of 4.683629 A between PRO 788 and LEU 787
+gap of 5.490163 A between ASP 789 and PRO 788
+gap of 5.833392 A between SER 790 and ASP 789
+gap of 5.063938 A between ILE 791 and SER 790
+gap of 6.030760 A between THR 792 and ILE 791
+gap of 5.505236 A between PHE 793 and THR 792
+gap of 6.114563 A between SER 794 and PHE 793
+gap of 5.986669 A between TRP 795 and SER 794
+gap of 6.013009 A between LYS 796 and TRP 795
+gap of 5.487729 A between TYR 797 and LYS 796
+gap of 5.197169 A between LYS 798 and TYR 797
+gap of 4.661886 A between ASN 799 and LYS 798
+gap of 4.998896 A between ASN 800 and ASN 799
+gap of 5.222972 A between SER 801 and ASN 800
+gap of 5.551710 A between ASP 802 and SER 801
+gap of 5.973469 A between ILE 803 and ASP 802
+gap of 5.794914 A between SER 804 and ILE 803
+gap of 4.721297 A between SER 805 and SER 804
+gap of 5.338961 A between THR 806 and SER 805
+gap of 5.964303 A between ARG 807 and THR 806
+gap of 5.645963 A between GLY 808 and ARG 807
+gap of 5.894691 A between PHE 809 and GLY 808
+gap of 5.496491 A between PRO 810 and PHE 809
+gap of 5.602100 A between SER 811 and PRO 810
+gap of 5.837989 A between VAL 812 and SER 811
+gap of 5.703951 A between LEU 813 and VAL 812
+gap of 5.669190 A between ARG 814 and LEU 813
+gap of 4.973197 A between GLY 815 and ARG 814
+gap of 5.072573 A between GLY 816 and GLY 815
+gap of 4.941926 A between LYS 817 and GLY 816
+gap of 5.814206 A between TYR 818 and LYS 817
+gap of 6.082666 A between ALA 819 and TYR 818
+gap of 5.997417 A between ALA 820 and ALA 819
+gap of 6.027750 A between THR 821 and ALA 820
+gap of 5.894851 A between SER 822 and THR 821
+gap of 5.990395 A between GLN 823 and SER 822
+gap of 6.061755 A between VAL 824 and GLN 823
+gap of 5.861489 A between LEU 825 and VAL 824
+gap of 6.077958 A between LEU 826 and LEU 825
+gap of 5.646022 A between PRO 827 and LEU 826
+gap of 5.325452 A between SER 828 and PRO 827
+gap of 4.744118 A between LYS 829 and SER 828
+gap of 4.977072 A between ASP 830 and LYS 829
+gap of 5.432184 A between VAL 831 and ASP 830
+gap of 5.585088 A between MET 832 and VAL 831
+gap of 4.714684 A between GLN 833 and MET 832
+gap of 4.903358 A between GLY 834 and GLN 833
+gap of 5.382021 A between THR 835 and GLY 834
+gap of 5.793048 A between ASP 836 and THR 835
+gap of 5.166690 A between GLU 837 and ASP 836
+gap of 5.123182 A between HIE 838 and GLU 837
+gap of 6.151247 A between VAL 839 and HIE 838
+gap of 5.989801 A between VAL 840 and VAL 839
+gap of 5.759267 A between CYX 841 and VAL 840
+gap of 5.844689 A between LYS 842 and CYX 841
+gap of 5.954320 A between VAL 843 and LYS 842
+gap of 5.765695 A between GLN 844 and VAL 843
+gap of 5.968795 A between HIE 845 and GLN 844
+gap of 5.268453 A between PRO 846 and HIE 845
+gap of 4.816994 A between ASN 847 and PRO 846
+gap of 5.013832 A between GLY 848 and ASN 847
+gap of 5.791691 A between ASN 849 and GLY 848
+gap of 6.082479 A between LYS 850 and ASN 849
+gap of 5.977358 A between GLU 851 and LYS 850
+gap of 5.939647 A between LYS 852 and GLU 851
+gap of 5.646943 A between ASN 853 and LYS 852
+gap of 5.697024 A between VAL 854 and ASN 853
+gap of 85.241461 A between GLN 856 and PRO 855
+gap of 4.960445 A between SER 857 and GLN 856
+gap of 5.111286 A between VAL 858 and SER 857
+gap of 5.620483 A between LEU 859 and VAL 858
+gap of 5.899823 A between THR 860 and LEU 859
+gap of 5.774252 A between GLN 861 and THR 860
+gap of 5.333346 A between PRO 862 and GLN 861
+gap of 5.375386 A between PRO 863 and PRO 862
+gap of 4.850342 A between SER 864 and PRO 863
+gap of 6.108284 A between ALA 865 and SER 864
+gap of 5.595130 A between SER 866 and ALA 865
+gap of 6.103617 A between GLY 867 and SER 866
+gap of 5.783884 A between THR 868 and GLY 867
+gap of 5.308159 A between PRO 869 and THR 868
+gap of 5.393420 A between GLY 870 and PRO 869
+gap of 4.984176 A between GLN 871 and GLY 870
+gap of 6.025102 A between ARG 872 and GLN 871
+gap of 5.941170 A between VAL 873 and ARG 872
+gap of 6.025321 A between THR 874 and VAL 873
+gap of 5.862393 A between ILE 875 and THR 874
+gap of 5.751787 A between SER 876 and ILE 875
+gap of 5.978377 A between CYX 877 and SER 876
+gap of 5.445251 A between SER 878 and CYX 877
+gap of 5.900440 A between GLY 879 and SER 878
+gap of 5.813262 A between SER 880 and GLY 879
+gap of 5.396139 A between SER 881 and SER 880
+gap of 4.669966 A between SER 882 and SER 881
+gap of 4.905148 A between ASN 883 and SER 882
+gap of 4.976687 A between ILE 884 and ASN 883
+gap of 4.915500 A between GLY 885 and ILE 884
+gap of 4.911257 A between SER 886 and GLY 885
+gap of 4.947788 A between ASN 887 and SER 886
+gap of 5.387911 A between TYR 888 and ASN 887
+gap of 5.706765 A between VAL 889 and TYR 888
+gap of 5.908632 A between TYR 890 and VAL 889
+gap of 5.965571 A between TRP 891 and TYR 890
+gap of 5.826400 A between TYR 892 and TRP 891
+gap of 5.802471 A between GLN 893 and TYR 892
+gap of 6.008002 A between GLN 894 and GLN 893
+gap of 5.476068 A between LEU 895 and GLN 894
+gap of 5.237908 A between PRO 896 and LEU 895
+gap of 5.095478 A between GLY 897 and PRO 896
+gap of 5.260935 A between THR 898 and GLY 897
+gap of 5.295331 A between ALA 899 and THR 898
+gap of 5.240159 A between PRO 900 and ALA 899
+gap of 5.876683 A between LYS 901 and PRO 900
+gap of 5.341709 A between LEU 902 and LYS 901
+gap of 5.793284 A between LEU 903 and LEU 902
+gap of 4.797850 A between ILE 904 and LEU 903
+gap of 5.891941 A between TYR 905 and ILE 904
+gap of 5.117781 A between ARG 906 and TYR 905
+gap of 4.844832 A between ASN 907 and ARG 906
+gap of 5.170327 A between ASN 908 and ASN 907
+gap of 5.160126 A between GLN 909 and ASN 908
+gap of 5.749966 A between ARG 910 and GLN 909
+gap of 5.444084 A between PRO 911 and ARG 910
+gap of 5.262738 A between SER 912 and PRO 911
+gap of 5.206575 A between GLY 913 and SER 912
+gap of 4.633717 A between VAL 914 and GLY 913
+gap of 5.549682 A between PRO 915 and VAL 914
+gap of 5.513073 A between ASP 916 and PRO 915
+gap of 4.713846 A between ARG 917 and ASP 916
+gap of 4.669245 A between PHE 918 and ARG 917
+gap of 5.898879 A between SER 919 and PHE 918
+gap of 5.894242 A between GLY 920 and SER 919
+gap of 6.070346 A between SER 921 and GLY 920
+gap of 5.906325 A between LYS 922 and SER 921
+gap of 5.896662 A between SER 923 and LYS 922
+gap of 4.669012 A between GLY 924 and SER 923
+gap of 5.244219 A between THR 925 and GLY 924
+gap of 5.020152 A between SER 926 and THR 925
+gap of 5.948588 A between ALA 927 and SER 926
+gap of 5.995235 A between SER 928 and ALA 927
+gap of 5.673612 A between LEU 929 and SER 928
+gap of 5.905504 A between ALA 930 and LEU 929
+gap of 5.758844 A between ILE 931 and ALA 930
+gap of 5.828426 A between SER 932 and ILE 931
+gap of 4.958418 A between GLY 933 and SER 932
+gap of 5.124648 A between LEU 934 and GLY 933
+gap of 5.974867 A between ARG 935 and LEU 934
+gap of 5.324704 A between SER 936 and ARG 935
+gap of 4.625853 A between GLU 937 and SER 936
+gap of 4.982787 A between ASP 938 and GLU 937
+gap of 4.754919 A between GLU 939 and ASP 938
+gap of 5.590416 A between ALA 940 and GLU 939
+gap of 5.431011 A between ASP 941 and ALA 940
+gap of 5.857204 A between TYR 942 and ASP 941
+gap of 6.040714 A between TYR 943 and TYR 942
+gap of 5.817445 A between CYX 944 and TYR 943
+gap of 5.980314 A between ALA 945 and CYX 944
+gap of 5.957055 A between THR 946 and ALA 945
+gap of 5.332490 A between TRP 947 and THR 946
+gap of 5.757460 A between ASP 948 and TRP 947
+gap of 5.470359 A between ASP 949 and ASP 948
+gap of 4.818995 A between SER 950 and ASP 949
+gap of 4.631517 A between LEU 951 and SER 950
+gap of 5.012016 A between SER 952 and LEU 951
+gap of 5.060420 A between ALA 953 and SER 952
+gap of 5.348930 A between VAL 954 and ALA 953
+gap of 5.958751 A between ILE 955 and VAL 954
+gap of 5.865888 A between PHE 956 and ILE 955
+gap of 5.335176 A between GLY 957 and PHE 956
+gap of 5.095297 A between GLY 958 and GLY 957
+gap of 4.986317 A between GLY 959 and GLY 958
+gap of 5.897486 A between THR 960 and GLY 959
+gap of 5.531962 A between LYS 961 and THR 960
+gap of 5.495975 A between LEU 962 and LYS 961
+gap of 5.869631 A between THR 963 and LEU 962
+gap of 5.426752 A between VAL 964 and THR 963
+gap of 5.562344 A between LEU 965 and VAL 964
+gap of 5.895631 A between GLY 966 and LEU 965
+gap of 5.268490 A between GLN 967 and GLY 966
+gap of 5.508187 A between PRO 968 and GLN 967
+gap of 4.994553 A between LYS 969 and PRO 968
+gap of 5.807933 A between ALA 970 and LYS 969
+gap of 5.598645 A between ALA 971 and ALA 970
+gap of 5.565859 A between PRO 972 and ALA 971
+gap of 5.545895 A between SER 973 and PRO 972
+gap of 5.364069 A between VAL 974 and SER 973
+gap of 6.090510 A between THR 975 and VAL 974
+gap of 5.893167 A between LEU 976 and THR 975
+gap of 5.997761 A between PHE 977 and LEU 976
+gap of 5.639504 A between PRO 978 and PHE 977
+gap of 5.292075 A between PRO 979 and PRO 978
+gap of 5.753215 A between SER 980 and PRO 979
+gap of 5.437418 A between SER 981 and SER 980
+gap of 4.626375 A between GLU 982 and SER 981
+gap of 4.660992 A between GLU 983 and GLU 982
+gap of 4.601624 A between LEU 984 and GLU 983
+gap of 4.492349 A between GLN 985 and LEU 984
+gap of 4.775715 A between ALA 986 and GLN 985
+gap of 4.882370 A between ASN 987 and ALA 986
+gap of 5.420233 A between LYS 988 and ASN 987
+gap of 5.680877 A between ALA 989 and LYS 988
+gap of 5.492662 A between THR 990 and ALA 989
+gap of 5.655749 A between LEU 991 and THR 990
+gap of 5.926945 A between VAL 992 and LEU 991
+gap of 5.687871 A between CYX 993 and VAL 992
+gap of 5.554201 A between LEU 994 and CYX 993
+gap of 5.660968 A between ILE 995 and LEU 994
+gap of 5.609269 A between SER 996 and ILE 995
+gap of 5.328406 A between ASP 997 and SER 996
+gap of 6.144920 A between PHE 998 and ASP 997
+gap of 5.835069 A between PHE 999 and PHE 998
+gap of 3.967579 A between PRO 1000 and PHE 999
+gap of 5.659696 A between GLY 1001 and PRO 1000
+gap of 5.509774 A between ALA 1002 and GLY 1001
+gap of 5.882191 A between VAL 1003 and ALA 1002
+gap of 5.755886 A between THR 1004 and VAL 1003
+gap of 5.155108 A between VAL 1005 and THR 1004
+gap of 5.959373 A between ALA 1006 and VAL 1005
+gap of 5.868807 A between TRP 1007 and ALA 1006
+gap of 5.929948 A between LYS 1008 and TRP 1007
+gap of 5.822631 A between ALA 1009 and LYS 1008
+gap of 4.966934 A between ASP 1010 and ALA 1009
+gap of 5.060085 A between GLY 1011 and ASP 1010
+gap of 4.731224 A between ALA 1012 and GLY 1011
+gap of 5.650074 A between PRO 1013 and ALA 1012
+gap of 5.777042 A between VAL 1014 and PRO 1013
+gap of 5.370662 A between LYS 1015 and VAL 1014
+gap of 5.133783 A between ALA 1016 and LYS 1015
+gap of 5.770791 A between GLY 1017 and ALA 1016
+gap of 4.594508 A between VAL 1018 and GLY 1017
+gap of 5.899667 A between GLU 1019 and VAL 1018
+gap of 5.948063 A between THR 1020 and GLU 1019
+gap of 5.706538 A between THR 1021 and THR 1020
+gap of 5.675843 A between LYS 1022 and THR 1021
+gap of 5.273547 A between PRO 1023 and LYS 1022
+gap of 6.142528 A between SER 1024 and PRO 1023
+gap of 5.431666 A between LYS 1025 and SER 1024
+gap of 5.698380 A between GLN 1026 and LYS 1025
+gap of 5.270217 A between SER 1027 and GLN 1026
+gap of 4.510018 A between ASN 1028 and SER 1027
+gap of 4.732876 A between ASN 1029 and ASN 1028
+gap of 5.018316 A between LYS 1030 and ASN 1029
+gap of 5.367007 A between TYR 1031 and LYS 1030
+gap of 6.022067 A between ALA 1032 and TYR 1031
+gap of 6.100200 A between ALA 1033 and ALA 1032
+gap of 6.072180 A between SER 1034 and ALA 1033
+gap of 6.002122 A between SER 1035 and SER 1034
+gap of 6.002694 A between TYR 1036 and SER 1035
+gap of 5.867408 A between LEU 1037 and TYR 1036
+gap of 5.681656 A between SER 1038 and LEU 1037
+gap of 5.510823 A between LEU 1039 and SER 1038
+gap of 5.407288 A between THR 1040 and LEU 1039
+gap of 5.569440 A between PRO 1041 and THR 1040
+gap of 4.720606 A between GLU 1042 and PRO 1041
+gap of 4.893172 A between GLN 1043 and GLU 1042
+gap of 4.669189 A between TRP 1044 and GLN 1043
+gap of 4.542343 A between LYS 1045 and TRP 1044
+gap of 4.755718 A between SER 1046 and LYS 1045
+gap of 4.709611 A between HIE 1047 and SER 1046
+gap of 5.963946 A between ARG 1048 and HIE 1047
+gap of 5.185406 A between SER 1049 and ARG 1048
+gap of 5.902121 A between TYR 1050 and SER 1049
+gap of 5.848661 A between SER 1051 and TYR 1050
+gap of 5.958957 A between CYX 1052 and SER 1051
+gap of 5.410043 A between GLN 1053 and CYX 1052
+gap of 6.008249 A between VAL 1054 and GLN 1053
+gap of 5.407672 A between THR 1055 and VAL 1054
+gap of 5.578832 A between HID 1056 and THR 1055
+gap of 4.564352 A between GLU 1057 and HID 1056
+gap of 4.713272 A between GLY 1058 and GLU 1057
+gap of 4.828967 A between SER 1059 and GLY 1058
+gap of 5.754591 A between THR 1060 and SER 1059
+gap of 5.199216 A between VAL 1061 and THR 1060
+gap of 6.033001 A between GLU 1062 and VAL 1061
+gap of 6.070630 A between LYS 1063 and GLU 1062
+gap of 6.073728 A between THR 1064 and LYS 1063
+gap of 6.017949 A between VAL 1065 and THR 1064
+gap of 5.754305 A between ALA 1066 and VAL 1065
+gap of 5.590610 A between PRO 1067 and ALA 1066
+gap of 4.767312 A between THR 1068 and PRO 1067
+gap of 88.417911 A between GLN 1070 and THR 1068
+gap of 87.596816 A between SER 1071 and GLU 1069
+gap of 5.575286 A between VAL 1072 and GLN 1070
+gap of 7.736084 A between LEU 1073 and SER 1071
+gap of 8.730896 A between THR 1074 and VAL 1072
+gap of 9.225636 A between GLN 1075 and LEU 1073
+gap of 8.810955 A between PRO 1076 and THR 1074
+gap of 7.766624 A between PRO 1077 and GLN 1075
+gap of 6.325038 A between SER 1078 and PRO 1076
+gap of 8.419724 A between ALA 1079 and PRO 1077
+gap of 9.181488 A between SER 1080 and SER 1078
+gap of 9.254623 A between GLY 1081 and ALA 1079
+gap of 8.894841 A between THR 1082 and SER 1080
+gap of 8.260644 A between PRO 1083 and GLY 1081
+gap of 6.706714 A between GLY 1084 and THR 1082
+gap of 6.335384 A between GLN 1085 and PRO 1083
+gap of 7.779884 A between ARG 1086 and GLY 1084
+gap of 8.598548 A between VAL 1087 and GLN 1085
+gap of 9.175639 A between THR 1088 and ARG 1086
+gap of 9.164890 A between ILE 1089 and VAL 1087
+gap of 9.115080 A between SER 1090 and THR 1088
+gap of 9.277835 A between CYX 1091 and ILE 1089
+gap of 9.123405 A between SER 1092 and SER 1090
+gap of 9.168028 A between GLY 1093 and CYX 1091
+gap of 9.067863 A between SER 1094 and SER 1092
+gap of 8.375247 A between SER 1095 and GLY 1093
+gap of 6.122189 A between SER 1096 and SER 1094
+gap of 5.541658 A between ASN 1097 and SER 1095
+gap of 6.304141 A between ILE 1098 and SER 1096
+gap of 5.261247 A between GLY 1099 and ASN 1097
+gap of 5.681921 A between SER 1100 and ILE 1098
+gap of 5.799897 A between ASN 1101 and GLY 1099
+gap of 7.652706 A between TYR 1102 and SER 1100
+gap of 8.597939 A between VAL 1103 and ASN 1101
+gap of 9.131324 A between TYR 1104 and TYR 1102
+gap of 9.234115 A between TRP 1105 and VAL 1103
+gap of 9.102632 A between TYR 1106 and TYR 1104
+gap of 9.128643 A between GLN 1107 and TRP 1105
+gap of 8.926216 A between GLN 1108 and TYR 1106
+gap of 8.670638 A between LEU 1109 and GLN 1107
+gap of 8.061782 A between PRO 1110 and GLN 1108
+gap of 6.207949 A between GLY 1111 and LEU 1109
+gap of 6.111192 A between THR 1112 and PRO 1110
+gap of 7.829382 A between ALA 1113 and GLY 1111
+gap of 8.035567 A between PRO 1114 and THR 1112
+gap of 8.628120 A between LYS 1115 and ALA 1113
+gap of 8.976695 A between LEU 1116 and PRO 1114
+gap of 8.332043 A between LEU 1117 and LYS 1115
+gap of 7.542508 A between ILE 1118 and LEU 1116
+gap of 7.987945 A between TYR 1119 and LEU 1117
+gap of 8.095048 A between ARG 1120 and ILE 1118
+gap of 5.376196 A between ASN 1121 and TYR 1119
+gap of 5.984556 A between ASN 1122 and ARG 1120
+gap of 6.968618 A between GLN 1123 and ASN 1121
+gap of 8.737118 A between ARG 1124 and ASN 1122
+gap of 8.932535 A between PRO 1125 and GLN 1123
+gap of 8.409578 A between SER 1126 and ARG 1124
+gap of 6.414350 A between GLY 1127 and PRO 1125
+gap of 6.752500 A between VAL 1128 and SER 1126
+gap of 7.793445 A between PRO 1129 and GLY 1127
+gap of 8.487338 A between ASP 1130 and VAL 1128
+gap of 6.765052 A between ARG 1131 and PRO 1129
+gap of 6.061700 A between PHE 1132 and ASP 1130
+gap of 8.269026 A between SER 1133 and ARG 1131
+gap of 9.488623 A between GLY 1134 and PHE 1132
+gap of 9.540160 A between SER 1135 and SER 1133
+gap of 9.373475 A between LYS 1136 and GLY 1134
+gap of 9.220889 A between SER 1137 and SER 1135
+gap of 8.374679 A between GLY 1138 and LYS 1136
+gap of 5.814512 A between THR 1139 and SER 1137
+gap of 5.621723 A between SER 1140 and GLY 1138
+gap of 8.205567 A between ALA 1141 and THR 1139
+gap of 9.498993 A between SER 1142 and SER 1140
+gap of 9.170297 A between LEU 1143 and ALA 1141
+gap of 9.028881 A between ALA 1144 and SER 1142
+gap of 9.162011 A between ILE 1145 and LEU 1143
+gap of 8.688977 A between SER 1146 and ALA 1144
+gap of 7.291067 A between GLY 1147 and ILE 1145
+gap of 6.622699 A between LEU 1148 and SER 1146
+gap of 8.497441 A between ARG 1149 and GLY 1147
+gap of 9.051472 A between SER 1150 and LEU 1148
+gap of 6.214652 A between GLU 1151 and ARG 1149
+gap of 5.547120 A between ASP 1152 and SER 1150
+gap of 6.454961 A between GLU 1153 and GLU 1151
+gap of 7.895135 A between ALA 1154 and ASP 1152
+gap of 8.244272 A between ASP 1155 and GLU 1153
+gap of 8.393900 A between TYR 1156 and ALA 1154
+gap of 8.848423 A between TYR 1157 and ASP 1155
+gap of 8.969532 A between CYX 1158 and TYR 1156
+gap of 9.173415 A between ALA 1159 and TYR 1157
+gap of 9.384393 A between THR 1160 and CYX 1158
+gap of 9.106059 A between TRP 1161 and ALA 1159
+gap of 8.620575 A between ASP 1162 and THR 1160
+gap of 8.753105 A between ASP 1163 and TRP 1161
+gap of 6.783872 A between SER 1164 and ASP 1162
+gap of 5.736310 A between LEU 1165 and ASP 1163
+gap of 6.245391 A between SER 1166 and SER 1164
+gap of 6.525075 A between ALA 1167 and LEU 1165
+gap of 7.481162 A between VAL 1168 and SER 1166
+gap of 8.465883 A between ILE 1169 and ALA 1167
+gap of 9.080180 A between PHE 1170 and VAL 1168
+gap of 8.753262 A between GLY 1171 and ILE 1169
+gap of 8.141478 A between GLY 1172 and PHE 1170
+gap of 7.204653 A between GLY 1173 and GLY 1171
+gap of 8.454574 A between THR 1174 and GLY 1172
+gap of 8.934293 A between LYS 1175 and GLY 1173
+gap of 8.864857 A between LEU 1176 and THR 1174
+gap of 9.325479 A between THR 1177 and LYS 1175
+gap of 9.039793 A between VAL 1178 and LEU 1176
+gap of 8.825250 A between LEU 1179 and THR 1177
+gap of 8.378753 A between GLY 1180 and VAL 1178
+gap of 8.193379 A between GLN 1181 and LEU 1179
+gap of 6.982816 A between PRO 1182 and GLY 1180
+gap of 7.864541 A between LYS 1183 and GLN 1181
+gap of 8.482804 A between ALA 1184 and PRO 1182
+gap of 8.635650 A between ALA 1185 and LYS 1183
+gap of 8.481895 A between PRO 1186 and ALA 1184
+gap of 7.980895 A between SER 1187 and ALA 1185
+gap of 8.103622 A between VAL 1188 and PRO 1186
+gap of 8.869115 A between THR 1189 and SER 1187
+gap of 9.550351 A between LEU 1190 and VAL 1188
+gap of 9.218489 A between PHE 1191 and THR 1189
+gap of 8.927884 A between PRO 1192 and LEU 1190
+gap of 8.334897 A between PRO 1193 and PHE 1191
+gap of 8.000158 A between SER 1194 and PRO 1192
+gap of 8.277838 A between SER 1195 and PRO 1193
+gap of 6.025670 A between GLU 1196 and SER 1194
+gap of 5.556516 A between GLU 1197 and SER 1195
+gap of 5.855865 A between LEU 1198 and GLU 1196
+gap of 5.693931 A between GLN 1199 and GLU 1197
+gap of 6.008432 A between ALA 1200 and LEU 1198
+gap of 5.705797 A between ASN 1201 and GLN 1199
+gap of 6.427998 A between LYS 1202 and ALA 1200
+gap of 8.820714 A between ALA 1203 and ASN 1201
+gap of 8.651123 A between THR 1204 and LYS 1202
+gap of 8.443358 A between LEU 1205 and ALA 1203
+gap of 8.904777 A between VAL 1206 and THR 1204
+gap of 9.089474 A between CYX 1207 and LEU 1205
+gap of 8.931364 A between LEU 1208 and VAL 1206
+gap of 8.184318 A between ILE 1209 and CYX 1207
+gap of 8.238003 A between SER 1210 and LEU 1208
+gap of 8.411055 A between ASP 1211 and ILE 1209
+gap of 8.788258 A between PHE 1212 and SER 1210
+gap of 9.715428 A between PHE 1213 and ASP 1211
+gap of 7.035947 A between PRO 1214 and PHE 1212
+gap of 6.748839 A between GLY 1215 and PHE 1213
+gap of 6.679551 A between ALA 1216 and PRO 1214
+gap of 9.035657 A between VAL 1217 and GLY 1215
+gap of 9.336014 A between THR 1218 and ALA 1216
+gap of 9.512337 A between VAL 1219 and VAL 1217
+gap of 9.474220 A between ALA 1220 and THR 1218
+gap of 9.329126 A between TRP 1221 and VAL 1219
+gap of 9.197006 A between LYS 1222 and ALA 1220
+gap of 9.343577 A between ALA 1223 and TRP 1221
+gap of 7.007350 A between ASP 1224 and LYS 1222
+gap of 5.073078 A between GLY 1225 and ALA 1223
+gap of 5.639636 A between ALA 1226 and ASP 1224
+gap of 7.503664 A between PRO 1227 and GLY 1225
+gap of 8.658953 A between VAL 1228 and ALA 1226
+gap of 8.526534 A between LYS 1229 and PRO 1227
+gap of 7.642360 A between ALA 1230 and VAL 1228
+gap of 7.424433 A between GLY 1231 and LYS 1229
+gap of 6.891229 A between VAL 1232 and ALA 1230
+gap of 7.233995 A between GLU 1233 and GLY 1231
+gap of 8.604868 A between THR 1234 and VAL 1232
+gap of 8.983557 A between THR 1235 and GLU 1233
+gap of 8.608872 A between LYS 1236 and THR 1234
+gap of 8.189221 A between PRO 1237 and THR 1235
+gap of 8.572730 A between SER 1238 and LYS 1236
+gap of 9.228069 A between LYS 1239 and PRO 1237
+gap of 8.917713 A between GLN 1240 and SER 1238
+gap of 8.567026 A between SER 1241 and LYS 1239
+gap of 5.271657 A between ASN 1242 and GLN 1240
+gap of 5.819230 A between ASN 1243 and SER 1241
+gap of 5.625156 A between LYS 1244 and ASN 1242
+gap of 7.249915 A between TYR 1245 and ASN 1243
+gap of 8.974955 A between ALA 1246 and LYS 1244
+gap of 9.450798 A between ALA 1247 and TYR 1245
+gap of 9.516015 A between SER 1248 and ALA 1246
+gap of 9.594818 A between SER 1249 and ALA 1247
+gap of 9.421383 A between TYR 1250 and SER 1248
+gap of 9.365684 A between LEU 1251 and SER 1249
+gap of 8.889954 A between SER 1252 and TYR 1250
+gap of 8.245341 A between LEU 1253 and LEU 1251
+gap of 8.585318 A between THR 1254 and SER 1252
+gap of 8.517758 A between PRO 1255 and LEU 1253
+gap of 5.986248 A between GLU 1256 and THR 1254
+gap of 5.711799 A between GLN 1257 and PRO 1255
+gap of 5.921102 A between TRP 1258 and GLU 1256
+gap of 5.904638 A between LYS 1259 and GLN 1257
+gap of 5.635801 A between SER 1260 and TRP 1258
+gap of 6.583827 A between HIE 1261 and LYS 1259
+gap of 7.999106 A between ARG 1262 and SER 1260
+gap of 7.373571 A between SER 1263 and HIE 1261
+gap of 8.244777 A between TYR 1264 and ARG 1262
+gap of 9.523469 A between SER 1265 and SER 1263
+gap of 9.335908 A between CYX 1266 and TYR 1264
+gap of 8.823585 A between GLN 1267 and SER 1265
+gap of 8.726785 A between VAL 1268 and CYX 1266
+gap of 9.262404 A between THR 1269 and GLN 1267
+gap of 8.990984 A between HID 1270 and VAL 1268
+gap of 7.502423 A between GLU 1271 and THR 1269
+gap of 5.171245 A between GLY 1272 and HID 1270
+gap of 5.922362 A between SER 1273 and GLU 1271
+gap of 7.898740 A between THR 1274 and GLY 1272
+gap of 8.043594 A between VAL 1275 and SER 1273
+gap of 8.463876 A between GLU 1276 and THR 1274
+gap of 9.352311 A between LYS 1277 and VAL 1275
+gap of 9.611787 A between THR 1278 and GLU 1276
+gap of 9.367603 A between VAL 1279 and LYS 1277
+gap of 9.362776 A between ALA 1280 and THR 1278
+gap of 8.958866 A between PRO 1281 and VAL 1279
+gap of 6.555237 A between THR 1282 and ALA 1280
+gap of 8.153406 A between GLU 1283 and PRO 1281
+
+---------- Mising heavy atom(s)
+
+PRO_210 misses 6 heavy atom(s)
+PRO_211 misses 2 heavy atom(s)
+GLY_419 misses 3 heavy atom(s)
+GLU_1069 misses 8 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/j6/2j6e/4amber_2j6e.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/j6/2j6e/4amber_2j6e.prmtop
+
+	Running AmberPrep : 2j6e.pdb
+
+
+==================================================
+Running pdb4amber on 2j6e.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "MPD" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for BMA 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S S S R 
+
+~> antechamber -i 4antechamber_BMA.pdb -fi pdb -o BMA.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BMA.mol2 -f mol2 -o BMA.frcmod
+
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Running elbow/antechamber for NDG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S R R S R 
+
+~> antechamber -i 4antechamber_NDG.pdb -fi pdb -o NDG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NDG.mol2 -f mol2 -o NDG.frcmod
+
+
+==================================================
+Running elbow/antechamber for GAL 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R S R R 
+
+~> antechamber -i 4antechamber_GAL.pdb -fi pdb -o GAL.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GAL.mol2 -f mol2 -o GAL.frcmod
+
+
+  Residue "ACT" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for CAC 
+==================================================
+
+MoleculeClass :  C: 2  O: 2 As: 1 (CHEMICAL COMPONENTS format)
+	11 atoms
+	10 bonds
+	18 angles
+	18 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	0 chirals
+
+~> antechamber -i 4antechamber_CAC.pdb -fi pdb -o CAC.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+For atom[1]:AS, the best APS is not zero, bonds involved by this atom are frozen
+Sorry: Error: cannot run "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin/bondtype -j full -i ANTECHAMBER_BOND_TYPE.AC0 -o ANTECHAMBER_BOND_TYPE.AC -f ac" in judgebondtype() of antechamber.c properly, exit
