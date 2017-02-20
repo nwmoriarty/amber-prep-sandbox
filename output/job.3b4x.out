@@ -1,0 +1,79 @@
+HOST rebus.lbl.gov
+only_i 38
+only_code None
+force_amber_prep True
+dry_run False
+... 38 3b4x
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/b4/3b4x
+3b4x.pdb 4phenix_3b4x.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/b4/pdb3b4x.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/b4/r3b4xsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/b4/3b4x.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x.cif
+Can't determine output label for r3b4xsf,_refln.crystal_id - skipping.
+Can't determine output label for r3b4xsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.098
+R-free-flags: missing 994 reflections
+Can't determine output label for r3b4xsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3b4x.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/b4/pdb3b4x.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/b4/r3b4xsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/b4/3b4x.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/b4/3b4x/3b4x.cif
+Can't determine output label for r3b4xsf,_refln.crystal_id - skipping.
+Can't determine output label for r3b4xsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.098
+R-free-flags: missing 994 reflections
+Can't determine output label for r3b4xsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3b4x.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/b4/3b4x/4amber_3b4x.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/b4/3b4x/4amber_3b4x.prmtop
+
+	Running AmberPrep : 3b4x.pdb
+
+
+==================================================
+Running pdb4amber on 3b4x.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for HEM 
+==================================================
+	Difficulties in the ring structures may lead to problems later
+
+   Residue has metal at the centre of a coordination sphere. Using input
+   geometry to generate restraints. Hydrogens may not be added.
+   
+
+MoleculeClass :  C:34  N: 4  O: 4 Fe: 1 (CHEMICAL COMPONENTS format)
+	73 atoms
+	80 bonds
+	144 angles
+	218 dihedrals
+	1 rings (groups, rings, atoms) 8 44
+	0 chirals
+
+~> antechamber -i 4antechamber_HEM.pdb -fi pdb -o HEM.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+(2) adjust atom valence penalty parameters in APS.DAT, and/or 

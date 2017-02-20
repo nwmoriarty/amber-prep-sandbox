@@ -1,0 +1,81 @@
+HOST rebus.lbl.gov
+only_i 34
+only_code None
+force_amber_prep True
+dry_run False
+... 34 3kfq
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/kf/3kfq
+3kfq.pdb 4phenix_3kfq.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/kf/pdb3kfq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kf/r3kfqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kf/3kfq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq.cif
+Can't determine output label for r3kfqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3kfqsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3kfqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3kfq.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/kf/pdb3kfq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kf/r3kfqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kf/3kfq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kf/3kfq/3kfq.cif
+Can't determine output label for r3kfqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3kfqsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3kfqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3kfq.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/kf/3kfq/4amber_3kfq.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/kf/3kfq/4amber_3kfq.prmtop
+
+	Running AmberPrep : 3kfq.pdb
+
+
+==================================================
+Running pdb4amber on 3kfq.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for SCH 
+==================================================
+
+MoleculeClass :  C: 4  N: 1  O: 2  S: 2 (CHEMICAL COMPONENTS format)
+	17 atoms
+	16 bonds
+	26 angles
+	28 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : R 
+
+~> antechamber -i 4antechamber_SCH.pdb -fi pdb -o SCH.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i SCH.mol2 -f mol2 -o SCH.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3kfq.pdb
+==================================================
+
+~> tleap -f 3kfq_asu_tleap_input_run
+
+Checking output filenames
+  file : 3kfq_asu.prmtop

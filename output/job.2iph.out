@@ -1,0 +1,81 @@
+HOST rebus.lbl.gov
+only_i 22
+only_code None
+force_amber_prep True
+dry_run False
+... 22 2iph
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ip/2iph
+2iph.pdb 4phenix_2iph.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ip/pdb2iph.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ip/r2iphsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ip/2iph.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph.cif
+Can't determine output label for r2iphsf,_refln.crystal_id - skipping.
+Can't determine output label for r2iphsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2iphsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2iph.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ip/pdb2iph.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ip/r2iphsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ip/2iph.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/2iph/2iph.cif
+Can't determine output label for r2iphsf,_refln.crystal_id - skipping.
+Can't determine output label for r2iphsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2iphsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2iph.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ip/2iph/4amber_2iph.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ip/2iph/4amber_2iph.prmtop
+
+	Running AmberPrep : 2iph.pdb
+
+
+==================================================
+Running pdb4amber on 2iph.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for LGG 
+==================================================
+
+MoleculeClass :  C:34  N: 7  O:11 (CHEMICAL COMPONENTS format)
+	101 atoms
+	101 bonds
+	180 angles
+	259 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S S 
+
+~> antechamber -i 4antechamber_LGG.pdb -fi pdb -o LGG.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i LGG.mol2 -f mol2 -o LGG.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2iph.pdb
+==================================================
+
+~> tleap -f 2iph_asu_tleap_input_run
+
+Checking output filenames
+  file : 2iph_asu.prmtop

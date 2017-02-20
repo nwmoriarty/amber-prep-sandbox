@@ -1,0 +1,93 @@
+HOST rebus.lbl.gov
+only_i 96
+only_code None
+force_amber_prep True
+dry_run False
+... 96 3ddq
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/dd/3ddq
+3ddq.pdb 4phenix_3ddq.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/dd/pdb3ddq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/dd/r3ddqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/dd/3ddq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq.cif
+Can't determine output label for r3ddqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3ddqsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.040
+R-free-flags: missing 13644 reflections
+Can't determine output label for r3ddqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ddq.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/dd/pdb3ddq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/dd/r3ddqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/dd/3ddq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dd/3ddq/3ddq.cif
+Can't determine output label for r3ddqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3ddqsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.040
+R-free-flags: missing 13644 reflections
+Can't determine output label for r3ddqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ddq.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/dd/3ddq/4amber_3ddq.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/dd/3ddq/4amber_3ddq.prmtop
+
+	Running AmberPrep : 3ddq.pdb
+
+
+==================================================
+Running pdb4amber on 3ddq.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for TPO 
+==================================================
+
+MoleculeClass :  C: 4  N: 1  O: 6  P: 1 (CHEMICAL COMPONENTS format)
+	19 atoms
+	18 bonds
+	31 angles
+	36 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	2 chirals : S R 
+
+~> antechamber -i 4antechamber_TPO.pdb -fi pdb -o TPO.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i TPO.mol2 -f mol2 -o TPO.frcmod
+
+
+  Residue "SGM" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "RRC" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3ddq.pdb
+==================================================
+
+~> tleap -f 3ddq_asu_tleap_input_run
+
+Checking output filenames
+  file : 3ddq_asu.prmtop

@@ -1,0 +1,144 @@
+HOST rebus.lbl.gov
+only_i 243
+only_code None
+force_amber_prep True
+dry_run False
+... 243 1e6j
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j
+1e6j.pdb 4phenix_1e6j.pdb
+1e6j.pdb 4phenix_1e6j.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/e6/pdb1e6j.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/e6/1e6j/1e6j.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/e6/1e6j/1e6j.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/e6/r1e6jsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/e6/1e6j/1e6j-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/e6/1e6j.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/e6/1e6j/1e6j.cif
+Can't determine output label for r1e6jsf,_refln.crystal_id - skipping.
+Can't determine output label for r1e6jsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1e6jsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1e6j.mtz
+
+	Running AmberPrep : 1e6j.pdb
+
+
+==================================================
+Running pdb4amber on 1e6j.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1e6j.pdb
+==================================================
+
+~> tleap -f 1e6j_asu_tleap_input_run
+
+Checking output filenames
+  file : 1e6j_asu.prmtop
+  file : 1e6j_asu.rst7
+
+~> ChBox -c 1e6j_asu.rst7 -o 1e6j_asu.rst7 -X 193.08 -Y 45.6 -Z 132.47 -al 90.0 -bt 132.41 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1e6j.prmtop and 4amber_1e6j.rst7
+============================================================
+
+~> UnitCell -p 1e6j_4UnitCell.pdb -o 1e6j_4tleap_uc1.pdb
+
+
+~> tleap -f 1e6j_uc_tleap_input_run
+
+Checking output filenames
+  file : 1e6j_uc.prmtop
+  file : 1e6j_uc.rst7
+
+~> ChBox -c 1e6j_uc.rst7 -o 1e6j_uc.rst7 -X 193.08 -Y 45.6 -Z 132.47 -al 90.0 -bt 132.41 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1e6j_amber_all.in -p 4amber_1e6j.prmtop -c 4amber_1e6j.rst7 -o 1e6j.min.out            -ref 4amber_1e6j.rst7 -r 4amber_1e6j.min.rst7
+
+checking special positions in 4phenix_1e6j.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1e6j.pdb
+      4amber_1e6j.prmtop
+      4amber_1e6j.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1e6j.pdb use_amber=True \
+    amber.topology_file_name=4amber_1e6j.prmtop \
+    amber.coordinate_file_name=4amber_1e6j.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1e6j.pdb
+    MTZ    : 1e6j.mtz
+    prmtop : 4amber_1e6j.prmtop
+    rst7   : 4amber_1e6j.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/e6/1e6j
+return_files 1e6j
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1e6j.pdb
+4phenix_1e6j.pdb
+cp 4phenix_1e6j.pdb /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j
+1e6j.pdb
+cp 1e6j.pdb /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j
+4amber_1e6j.mtz
+4phenix_1e6j.mtz
+1e6j.mtz
+cp 1e6j.mtz /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j
+4amber_1e6j.rst7
+cp 4amber_1e6j.rst7 /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j
+4phenix_1e6j.rst7
+1e6j.rst7
+4amber_1e6j.prmtop
+cp 4amber_1e6j.prmtop /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j
+4phenix_1e6j.prmtop
+1e6j.prmtop
+4amber_1e6j_refine_001.log
+4phenix_1e6j_refine_001.log
+1e6j_refine_001.log
+4amber_1e6j_refine_002.log
+4phenix_1e6j_refine_002.log
+1e6j_refine_002.log
+4amber_1e6j_refine_001.pdb
+4phenix_1e6j_refine_001.pdb
+1e6j_refine_001.pdb
+4amber_1e6j_refine_002.pdb
+4phenix_1e6j_refine_002.pdb
+1e6j_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j/1e6j.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/e6/1e6j
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j/1e6j_refine_001.log
+------------------------------
+
+	Already done (on chevy) 1e6j_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/e6/1e6j/1e6j_refine_002.log
+------------------------------
+
+	Already done (on chevy) 1e6j_refine_002

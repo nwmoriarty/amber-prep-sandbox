@@ -1,0 +1,156 @@
+HOST rebus.lbl.gov
+only_i 353
+only_code None
+force_amber_prep True
+dry_run False
+... 353 1jl4
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4
+1jl4.pdb 4phenix_1jl4.pdb
+1jl4.pdb 4phenix_1jl4.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/jl/pdb1jl4.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jl/1jl4/1jl4.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jl/1jl4/1jl4.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/jl/r1jl4sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jl/1jl4/1jl4-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/jl/1jl4.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jl/1jl4/1jl4.cif
+Can't determine output label for r1jl4sf,_refln.crystal_id - skipping.
+Can't determine output label for r1jl4sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.100
+R-free-flags: missing 996 reflections
+Can't determine output label for r1jl4sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1jl4.mtz
+
+	Running AmberPrep : 1jl4.pdb
+
+
+==================================================
+Running pdb4amber on 1jl4.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1jl4.pdb
+==================================================
+
+~> tleap -f 1jl4_asu_tleap_input_run
+
+Checking output filenames
+  file : 1jl4_asu.prmtop
+  file : 1jl4_asu.rst7
+
+~> ChBox -c 1jl4_asu.rst7 -o 1jl4_asu.rst7 -X 145.195 -Y 145.195 -Z 103.846 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1jl4.prmtop and 4amber_1jl4.rst7
+============================================================
+
+~> UnitCell -p 1jl4_4UnitCell.pdb -o 1jl4_4tleap_uc1.pdb
+
+
+~> tleap -f 1jl4_uc_tleap_input_run
+
+Checking output filenames
+  file : 1jl4_uc.prmtop
+  file : 1jl4_uc.rst7
+
+~> ChBox -c 1jl4_uc.rst7 -o 1jl4_uc.rst7 -X 145.195 -Y 145.195 -Z 103.846 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1jl4_amber_all.in -p 4amber_1jl4.prmtop -c 4amber_1jl4.rst7 -o 1jl4.min.out            -ref 4amber_1jl4.rst7 -r 4amber_1jl4.min.rst7
+
+checking special positions in 4phenix_1jl4.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1jl4.pdb
+      4amber_1jl4.prmtop
+      4amber_1jl4.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1jl4.pdb use_amber=True \
+    amber.topology_file_name=4amber_1jl4.prmtop \
+    amber.coordinate_file_name=4amber_1jl4.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1jl4.pdb
+    MTZ    : 1jl4.mtz
+    prmtop : 4amber_1jl4.prmtop
+    rst7   : 4amber_1jl4.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/jl/1jl4
+return_files 1jl4
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1jl4.pdb
+4phenix_1jl4.pdb
+cp 4phenix_1jl4.pdb /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4
+1jl4.pdb
+cp 1jl4.pdb /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4
+4amber_1jl4.mtz
+4phenix_1jl4.mtz
+1jl4.mtz
+cp 1jl4.mtz /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4
+4amber_1jl4.rst7
+cp 4amber_1jl4.rst7 /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4
+4phenix_1jl4.rst7
+1jl4.rst7
+4amber_1jl4.prmtop
+cp 4amber_1jl4.prmtop /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4
+4phenix_1jl4.prmtop
+1jl4.prmtop
+4amber_1jl4_refine_001.log
+4phenix_1jl4_refine_001.log
+1jl4_refine_001.log
+4amber_1jl4_refine_002.log
+4phenix_1jl4_refine_002.log
+1jl4_refine_002.log
+4amber_1jl4_refine_001.pdb
+4phenix_1jl4_refine_001.pdb
+1jl4_refine_001.pdb
+4amber_1jl4_refine_002.pdb
+4phenix_1jl4_refine_002.pdb
+1jl4_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4/1jl4.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/jl/1jl4
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4/1jl4_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 1jl4_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 1jl4.pdb 1jl4.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4/1jl4_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 1jl4_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 1jl4.pdb 1jl4.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4/4amber_1jl4.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/jl/1jl4/4amber_1jl4.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

@@ -1,0 +1,109 @@
+HOST rebus.lbl.gov
+only_i 78
+only_code None
+force_amber_prep True
+dry_run False
+... 78 1vjl
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/vj/1vjl
+1vjl.pdb 4phenix_1vjl.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/vj/pdb1vjl.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/vj/r1vjlsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/vj/1vjl.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl.cif
+Can't determine output label for r1vjlsf,_refln.crystal_id - skipping.
+Can't determine output label for r1vjlsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1vjlsf,_refln.wavelength_id - skipping.
+Can't determine output label for r1vjlAsf,_refln.crystal_id - skipping.
+Can't determine output label for r1vjlAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1vjlAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1vjl.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/vj/pdb1vjl.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/vj/r1vjlsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/vj/1vjl.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vj/1vjl/1vjl.cif
+Can't determine output label for r1vjlsf,_refln.crystal_id - skipping.
+Can't determine output label for r1vjlsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1vjlsf,_refln.wavelength_id - skipping.
+Can't determine output label for r1vjlAsf,_refln.crystal_id - skipping.
+Can't determine output label for r1vjlAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1vjlAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1vjl.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/vj/1vjl/4amber_1vjl.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/vj/1vjl/4amber_1vjl.prmtop
+
+	Running AmberPrep : 1vjl.pdb
+
+
+==================================================
+Running pdb4amber on 1vjl.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for MSE 
+==================================================
+--------------------------------------------------------------------------------
+['/tmp/6368462.78.all.q/tmpAJCVCV', '/tmp/6368462.78.all.q/tmpj3g9Ir']
+/tmp/6368462.78.all.q/tmpAJCVCV
+  Monomer Library directory:
+    "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
+  Total number of atoms: 19
+  Number of models: 1
+  Model: ""
+    Number of chains: 1
+    Chain: "A"
+      Number of atoms: 19
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 1, 17
+          Duplicate atoms: {'MSE,HB2': 1, 'MSE,HG2': 1}
+          Classifications: {'peptide': 1}
+  Number of atoms with unknown nonbonded energy type symbols: 2
+    "HETATM   13  HB3 MSE A   1 .*.A    H  "
+    "HETATM   15  HG3 MSE A   1 .*.A    H  "
+  Time building chain proxies: 0.02, per 1000 atoms: 1.05
+
+--------------------------------------------------------------------------------
+
+MoleculeClass :  C: 5  N: 1  O: 2 Se: 1 (CHEMICAL COMPONENTS format)
+	19 atoms
+	18 bonds
+	31 angles
+	36 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_MSE.pdb -fi pdb -o MSE.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MSE.mol2 -f mol2 -o MSE.frcmod
+
+
+==================================================
+Running elbow/antechamber for UNL 
+==================================================
+
+  The molecule read from Chemical Components 'UNL' is empty
+
+	SMILES string is empty
+

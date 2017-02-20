@@ -1,0 +1,85 @@
+HOST rebus.lbl.gov
+only_i 79
+only_code None
+force_amber_prep True
+dry_run False
+... 79 2f7k
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/f7/2f7k
+2f7k.pdb 4phenix_2f7k.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/f7/pdb2f7k.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f7/r2f7ksf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f7/2f7k.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.cif
+Can't determine output label for r2f7ksf,_refln.crystal_id - skipping.
+Can't determine output label for r2f7ksf,_refln.scale_group_code - skipping.
+Can't determine output label for r2f7ksf,_refln.wavelength_id - skipping.
+Can't determine output label for r2f7kAsf,_refln.crystal_id - skipping.
+Can't determine output label for r2f7kAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2f7kAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2f7k.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/f7/pdb2f7k.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f7/r2f7ksf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f7/2f7k.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.cif
+Can't determine output label for r2f7ksf,_refln.crystal_id - skipping.
+Can't determine output label for r2f7ksf,_refln.scale_group_code - skipping.
+Can't determine output label for r2f7ksf,_refln.wavelength_id - skipping.
+Can't determine output label for r2f7kAsf,_refln.crystal_id - skipping.
+Can't determine output label for r2f7kAsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2f7kAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2f7k.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/f7/2f7k/4amber_2f7k.prmtop
+not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/f7/2f7k/4phenix_2f7k.pdb
+
+	Running AmberPrep : 2f7k.pdb
+
+
+==================================================
+Running pdb4amber on 2f7k.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2f7k.pdb
+==================================================
+
+~> tleap -f 2f7k_asu_tleap_input_run
+
+Checking output filenames
+  file : 2f7k_asu.prmtop
+  file : 2f7k_asu.rst7
+
+~> ChBox -c 2f7k_asu.rst7 -o 2f7k_asu.rst7 -X 52.5 -Y 52.5 -Z 301.0 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2f7k.prmtop and 4amber_2f7k.rst7
+============================================================
+
+~> UnitCell -p 2f7k_4UnitCell.pdb -o 2f7k_4tleap_uc1.pdb
+
+
+~> tleap -f 2f7k_uc_tleap_input_run
+
+Checking output filenames
+  file : 2f7k_uc.prmtop

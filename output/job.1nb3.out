@@ -1,0 +1,197 @@
+HOST rebus.lbl.gov
+only_i 33
+only_code None
+force_amber_prep True
+dry_run False
+... 33 1nb3
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3
+1nb3.pdb 4phenix_1nb3.pdb
+1nb3.pdb 4phenix_1nb3.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/nb/pdb1nb3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/nb/r1nb3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/nb/1nb3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3.cif
+Can't determine output label for r1nb3sf,_refln.crystal_id - skipping.
+Can't determine output label for r1nb3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1nb3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1nb3.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/nb/pdb1nb3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/nb/r1nb3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/nb/1nb3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3/1nb3.cif
+Can't determine output label for r1nb3sf,_refln.crystal_id - skipping.
+Can't determine output label for r1nb3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1nb3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1nb3.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/nb/1nb3/4amber_1nb3.prmtop
+
+	Running AmberPrep : 1nb3.pdb
+
+
+==================================================
+Running pdb4amber on 1nb3.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for BMA 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S S S R 
+
+~> antechamber -i 4antechamber_BMA.pdb -fi pdb -o BMA.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BMA.mol2 -f mol2 -o BMA.frcmod
+
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_1nb3.pdb
+==================================================
+
+~> tleap -f 1nb3_asu_tleap_input_run
+
+Checking output filenames
+  file : 1nb3_asu.prmtop
+  file : 1nb3_asu.rst7
+
+~> ChBox -c 1nb3_asu.rst7 -o 1nb3_asu.rst7 -X 48.584 -Y 91.63 -Z 161.235 -al 90.0 -bt 93.69 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1nb3.prmtop and 4amber_1nb3.rst7
+============================================================
+
+~> UnitCell -p 1nb3_4UnitCell.pdb -o 1nb3_4tleap_uc1.pdb
+
+
+~> tleap -f 1nb3_uc_tleap_input_run
+
+Checking output filenames
+  file : 1nb3_uc.prmtop
+  file : 1nb3_uc.rst7
+
+~> ChBox -c 1nb3_uc.rst7 -o 1nb3_uc.rst7 -X 48.584 -Y 91.63 -Z 161.235 -al 90.0 -bt 93.69 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1nb3_amber_all.in -p 4amber_1nb3.prmtop -c 4amber_1nb3.rst7 -o 1nb3.min.out            -ref 4amber_1nb3.rst7 -r 4amber_1nb3.min.rst7
+
+checking special positions in 4phenix_1nb3.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1nb3.pdb
+      4amber_1nb3.prmtop
+      4amber_1nb3.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1nb3.pdb use_amber=True \
+    amber.topology_file_name=4amber_1nb3.prmtop \
+    amber.coordinate_file_name=4amber_1nb3.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1nb3.pdb
+    MTZ    : 1nb3.mtz
+    prmtop : 4amber_1nb3.prmtop
+    rst7   : 4amber_1nb3.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3
+return_files 1nb3
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1nb3.pdb
+4phenix_1nb3.pdb
+cp 4phenix_1nb3.pdb /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3
+1nb3.pdb
+cp 1nb3.pdb /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3
+4amber_1nb3.mtz
+4phenix_1nb3.mtz
+1nb3.mtz
+cp 1nb3.mtz /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3
+4amber_1nb3.rst7
+cp 4amber_1nb3.rst7 /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3
+4phenix_1nb3.rst7
+1nb3.rst7
+4amber_1nb3.prmtop
+cp 4amber_1nb3.prmtop /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3
+4phenix_1nb3.prmtop
+1nb3.prmtop
+4amber_1nb3_refine_001.log
+4phenix_1nb3_refine_001.log
+1nb3_refine_001.log
+4amber_1nb3_refine_002.log
+4phenix_1nb3_refine_002.log
+1nb3_refine_002.log
+4amber_1nb3_refine_001.pdb
+4phenix_1nb3_refine_001.pdb
+1nb3_refine_001.pdb
+4amber_1nb3_refine_002.pdb
+4phenix_1nb3_refine_002.pdb
+1nb3_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3/1nb3.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/nb/1nb3
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3/1nb3_refine_001.log
+------------------------------
+
+	Already done (on chevy) 1nb3_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/nb/1nb3/1nb3_refine_002.log
+------------------------------
+
+	Already done (on chevy) 1nb3_refine_002

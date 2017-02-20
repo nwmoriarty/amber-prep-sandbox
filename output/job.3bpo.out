@@ -1,0 +1,101 @@
+HOST rebus.lbl.gov
+only_i 5
+only_code None
+force_amber_prep True
+dry_run False
+... 5 3bpo
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/bp/3bpo
+3bpo.pdb 4phenix_3bpo.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bp/pdb3bpo.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bp/r3bposf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bp/3bpo.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo.cif
+Can't determine output label for r3bposf,_refln.crystal_id - skipping.
+Can't determine output label for r3bposf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 219 reflections
+Can't determine output label for r3bposf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3bpo.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bp/pdb3bpo.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bp/r3bposf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bp/3bpo.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bp/3bpo/3bpo.cif
+Can't determine output label for r3bposf,_refln.crystal_id - skipping.
+Can't determine output label for r3bposf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 219 reflections
+Can't determine output label for r3bposf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3bpo.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/bp/3bpo/4amber_3bpo.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/bp/3bpo/4amber_3bpo.prmtop
+
+	Running AmberPrep : 3bpo.pdb
+
+
+==================================================
+Running pdb4amber on 3bpo.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3bpo.pdb
+==================================================
+
+~> tleap -f 3bpo_asu_tleap_input_run
+
+Checking output filenames
+  file : 3bpo_asu.prmtop
+  file : 3bpo_asu.rst7
+
+~> ChBox -c 3bpo_asu.rst7 -o 3bpo_asu.rst7 -X 211.51 -Y 58.169 -Z 64.236 -al 90.0 -bt 100.51 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3bpo.prmtop and 4amber_3bpo.rst7
+============================================================
+
+~> UnitCell -p 3bpo_4UnitCell.pdb -o 3bpo_4tleap_uc1.pdb
+
+
+~> tleap -f 3bpo_uc_tleap_input_run
+
+Checking output filenames
+  file : 3bpo_uc.prmtop

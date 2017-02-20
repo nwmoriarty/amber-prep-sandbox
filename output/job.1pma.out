@@ -1,0 +1,47 @@
+HOST rebus.lbl.gov
+only_i 213
+only_code None
+force_amber_prep True
+dry_run False
+... 213 1pma
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/pm/1pma
+1pma.pdb 4phenix_1pma.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/pm/pdb1pma.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/pm/1pma/1pma.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/pm/1pma/1pma.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/pm/r1pmasf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/pm/1pma/1pma-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/pm/1pma.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/pm/1pma/1pma.cif
+Can't determine output label for r1pmasf,_refln.crystal_id - skipping.
+Can't determine output label for r1pmasf,_refln.scale_group_code - skipping.
+Can't determine output label for r1pmasf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1pma.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/pm/1pma/4amber_1pma.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/pm/1pma/4amber_1pma.prmtop
+
+	Running AmberPrep : 1pma.pdb
+
+
+==================================================
+Running pdb4amber on 1pma.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1pma.pdb
+==================================================
+
+~> tleap -f 1pma_asu_tleap_input_run
+
+Checking output filenames
+  file : 1pma_asu.prmtop

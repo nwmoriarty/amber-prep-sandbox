@@ -1,0 +1,92 @@
+HOST rebus.lbl.gov
+only_i 26
+only_code None
+force_amber_prep True
+dry_run False
+... 26 1kmj
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/km/1kmj
+1kmj.pdb 4phenix_1kmj.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/km/pdb1kmj.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/km/r1kmjsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/km/1kmj.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj.cif
+Can't determine output label for r1kmjsf,_refln.crystal_id - skipping.
+Can't determine output label for r1kmjsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kmjsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r1kmjsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kmj.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/km/pdb1kmj.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/km/r1kmjsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/km/1kmj.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/km/1kmj/1kmj.cif
+Can't determine output label for r1kmjsf,_refln.crystal_id - skipping.
+Can't determine output label for r1kmjsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kmjsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r1kmjsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kmj.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/km/1kmj/4amber_1kmj.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/km/1kmj/4amber_1kmj.prmtop
+
+	Running AmberPrep : 1kmj.pdb
+
+
+==================================================
+Running pdb4amber on 1kmj.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for CSS 
+==================================================
+
+  Not all atoms are connected (distances greater than 1.95 A)
+  Attempting to connect the groups using a longer cutoff
+
+MoleculeClass :  C: 3  N: 1  O: 2  S: 2 (CHEMICAL COMPONENTS format)
+	14 atoms
+	13 bonds
+	20 angles
+	25 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : R 
+
+~> antechamber -i 4antechamber_CSS.pdb -fi pdb -o CSS.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i CSS.mol2 -f mol2 -o CSS.frcmod
+
+
+  Residue "PLP" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_1kmj.pdb
+==================================================
+
+~> tleap -f 1kmj_asu_tleap_input_run
+
+Checking output filenames
+  file : 1kmj_asu.prmtop

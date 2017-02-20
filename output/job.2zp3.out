@@ -1,0 +1,169 @@
+HOST rebus.lbl.gov
+only_i 92
+only_code None
+force_amber_prep True
+dry_run False
+... 92 2zp3
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3
+2zp3.pdb 4phenix_2zp3.pdb
+2zp3.pdb 4phenix_2zp3.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/zp/pdb2zp3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/zp/r2zp3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/zp/2zp3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3.cif
+Can't determine output label for r2zp3sf,_refln.crystal_id - skipping.
+Can't determine output label for r2zp3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2zp3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2zp3.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/zp/pdb2zp3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/zp/r2zp3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/zp/2zp3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3/2zp3.cif
+Can't determine output label for r2zp3sf,_refln.crystal_id - skipping.
+Can't determine output label for r2zp3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2zp3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2zp3.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/zp/2zp3/4amber_2zp3.prmtop
+
+	Running AmberPrep : 2zp3.pdb
+
+
+==================================================
+Running pdb4amber on 2zp3.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "MRD" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "TRS" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2zp3.pdb
+==================================================
+
+~> tleap -f 2zp3_asu_tleap_input_run
+
+Checking output filenames
+  file : 2zp3_asu.prmtop
+  file : 2zp3_asu.rst7
+
+~> ChBox -c 2zp3_asu.rst7 -o 2zp3_asu.rst7 -X 45.786 -Y 45.786 -Z 101.943 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2zp3.prmtop and 4amber_2zp3.rst7
+============================================================
+
+~> UnitCell -p 2zp3_4UnitCell.pdb -o 2zp3_4tleap_uc1.pdb
+
+
+~> tleap -f 2zp3_uc_tleap_input_run
+
+Checking output filenames
+  file : 2zp3_uc.prmtop
+  file : 2zp3_uc.rst7
+
+~> ChBox -c 2zp3_uc.rst7 -o 2zp3_uc.rst7 -X 45.786 -Y 45.786 -Z 101.943 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2zp3_amber_all.in -p 4amber_2zp3.prmtop -c 4amber_2zp3.rst7 -o 2zp3.min.out            -ref 4amber_2zp3.rst7 -r 4amber_2zp3.min.rst7
+
+checking special positions in 4phenix_2zp3.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2zp3.pdb
+      4amber_2zp3.prmtop
+      4amber_2zp3.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2zp3.pdb use_amber=True \
+    amber.topology_file_name=4amber_2zp3.prmtop \
+    amber.coordinate_file_name=4amber_2zp3.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2zp3.pdb
+    MTZ    : 2zp3.mtz
+    prmtop : 4amber_2zp3.prmtop
+    rst7   : 4amber_2zp3.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3
+return_files 2zp3
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2zp3.pdb
+4phenix_2zp3.pdb
+cp 4phenix_2zp3.pdb /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3
+2zp3.pdb
+cp 2zp3.pdb /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3
+4amber_2zp3.mtz
+4phenix_2zp3.mtz
+2zp3.mtz
+cp 2zp3.mtz /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3
+4amber_2zp3.rst7
+cp 4amber_2zp3.rst7 /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3
+4phenix_2zp3.rst7
+2zp3.rst7
+4amber_2zp3.prmtop
+cp 4amber_2zp3.prmtop /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3
+4phenix_2zp3.prmtop
+2zp3.prmtop
+4amber_2zp3_refine_001.log
+4phenix_2zp3_refine_001.log
+2zp3_refine_001.log
+4amber_2zp3_refine_002.log
+4phenix_2zp3_refine_002.log
+2zp3_refine_002.log
+4amber_2zp3_refine_001.pdb
+4phenix_2zp3_refine_001.pdb
+2zp3_refine_001.pdb
+4amber_2zp3_refine_002.pdb
+4phenix_2zp3_refine_002.pdb
+2zp3_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3/2zp3.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/zp/2zp3
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3/2zp3_refine_001.log
+------------------------------
+
+	Already done (on chevy) 2zp3_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/zp/2zp3/2zp3_refine_002.log
+------------------------------
+
+	Already done (on chevy) 2zp3_refine_002

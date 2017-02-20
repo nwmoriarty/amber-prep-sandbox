@@ -1,0 +1,79 @@
+HOST rebus.lbl.gov
+only_i 77
+only_code None
+force_amber_prep True
+dry_run False
+... 77 1sj5
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5
+1sj5.pdb 4phenix_1sj5.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/sj/pdb1sj5.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/sj/r1sj5sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/sj/1sj5.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.cif
+Can't determine output label for r1sj5sf,_refln.crystal_id - skipping.
+Can't determine output label for r1sj5sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1sj5sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1sj5.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/sj/pdb1sj5.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/sj/r1sj5sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/sj/1sj5.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.cif
+Can't determine output label for r1sj5sf,_refln.crystal_id - skipping.
+Can't determine output label for r1sj5sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1sj5sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1sj5.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.prmtop
+
+	Running AmberPrep : 1sj5.pdb
+
+
+==================================================
+Running pdb4amber on 1sj5.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1sj5.pdb
+==================================================
+
+~> tleap -f 1sj5_asu_tleap_input_run
+
+Checking output filenames
+  file : 1sj5_asu.prmtop
+  file : 1sj5_asu.rst7
+
+~> ChBox -c 1sj5_asu.rst7 -o 1sj5_asu.rst7 -X 44.001 -Y 52.136 -Z 73.33 -al 90.0 -bt 97.64 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1sj5.prmtop and 4amber_1sj5.rst7
+============================================================
+
+~> UnitCell -p 1sj5_4UnitCell.pdb -o 1sj5_4tleap_uc1.pdb
+
+
+~> tleap -f 1sj5_uc_tleap_input_run
+
+Checking output filenames
+  file : 1sj5_uc.prmtop

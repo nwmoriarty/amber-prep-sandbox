@@ -1,0 +1,85 @@
+HOST rebus.lbl.gov
+only_i 84
+only_code None
+force_amber_prep True
+dry_run False
+... 84 3ab9
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ab/3ab9
+3ab9.pdb 4phenix_3ab9.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ab/pdb3ab9.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ab/r3ab9sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ab/3ab9.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9.cif
+Can't determine output label for r3ab9sf,_refln.crystal_id - skipping.
+Can't determine output label for r3ab9sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 3 reflections
+Can't determine output label for r3ab9sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ab9.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ab/pdb3ab9.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ab/r3ab9sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ab/3ab9.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ab/3ab9/3ab9.cif
+Can't determine output label for r3ab9sf,_refln.crystal_id - skipping.
+Can't determine output label for r3ab9sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 3 reflections
+Can't determine output label for r3ab9sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ab9.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ab/3ab9/4amber_3ab9.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ab/3ab9/4amber_3ab9.prmtop
+
+	Running AmberPrep : 3ab9.pdb
+
+
+==================================================
+Running pdb4amber on 3ab9.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for LA2 
+==================================================
+
+MoleculeClass :  C:14  N: 2  O: 3  S: 2 (CHEMICAL COMPONENTS format)
+	48 atoms
+	47 bonds
+	86 angles
+	124 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	2 chirals : S R 
+
+~> antechamber -i 4antechamber_LA2.pdb -fi pdb -o LA2.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i LA2.mol2 -f mol2 -o LA2.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3ab9.pdb
+==================================================
+
+~> tleap -f 3ab9_asu_tleap_input_run
+
+Checking output filenames
+  file : 3ab9_asu.prmtop

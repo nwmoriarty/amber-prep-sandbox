@@ -13,10 +13,15 @@ error_strings = [
   '''TypeError: 'NoneType' object is not iterable''',
   'Sorry: tleap error : "Could not open file ',
   'OSError: [Errno 2] No such file or directory',
+  '(2) adjust atom valence penalty parameters in APS.DAT, and/or',
+  'Molecule too small to optimise',
+  'SMILES string is empty',
+  ': /usr/etc',
   ]
 
 last_lines = [
   'os.system(cmd)',
+  'file :',
   ]
 done_lines = [
   'Already done',
@@ -42,7 +47,7 @@ def run():
           break
       if pdb_code and results[pdb_code]: break
 
-    assert pdb_code
+    assert pdb_code, '%s' % filename
     print pdb_code, filename, line
     for ll in last_lines:
       if line.find(ll)>-1:

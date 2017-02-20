@@ -1,0 +1,81 @@
+HOST rebus.lbl.gov
+only_i 31
+only_code None
+force_amber_prep True
+dry_run False
+... 31 3icq
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ic/3icq
+3icq.pdb 4phenix_3icq.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ic/pdb3icq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ic/r3icqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ic/3icq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq.cif
+Can't determine output label for r3icqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3icqsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3icqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3icq.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ic/pdb3icq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ic/r3icqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ic/3icq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ic/3icq/3icq.cif
+Can't determine output label for r3icqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3icqsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3icqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3icq.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ic/3icq/4amber_3icq.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ic/3icq/4amber_3icq.prmtop
+
+	Running AmberPrep : 3icq.pdb
+
+
+==================================================
+Running pdb4amber on 3icq.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for GTP 
+==================================================
+
+MoleculeClass :  C:10  N: 5  O:14  P: 3 (CHEMICAL COMPONENTS format)
+	44 atoms
+	46 bonds
+	80 angles
+	108 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_GTP.pdb -fi pdb -o GTP.mol2 -fo mol2       -nc -4 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GTP.mol2 -f mol2 -o GTP.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3icq.pdb
+==================================================
+
+~> tleap -f 3icq_asu_tleap_input_run
+
+Checking output filenames
+  file : 3icq_asu.prmtop

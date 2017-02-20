@@ -1,0 +1,71 @@
+HOST rebus.lbl.gov
+only_i 82
+only_code None
+force_amber_prep True
+dry_run False
+... 82 3bqr
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/bq/3bqr
+3bqr.pdb 4phenix_3bqr.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bq/pdb3bqr.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bq/r3bqrsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bq/3bqr.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr.cif
+Can't determine output label for r3bqrsf,_refln.crystal_id - skipping.
+Can't determine output label for r3bqrsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3bqrsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3bqr.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bq/pdb3bqr.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bq/r3bqrsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bq/3bqr.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bq/3bqr/3bqr.cif
+Can't determine output label for r3bqrsf,_refln.crystal_id - skipping.
+Can't determine output label for r3bqrsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3bqrsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3bqr.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/bq/3bqr/4amber_3bqr.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/bq/3bqr/4amber_3bqr.prmtop
+
+	Running AmberPrep : 3bqr.pdb
+
+
+==================================================
+Running pdb4amber on 3bqr.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "PGO" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3bqr.pdb
+==================================================
+
+~> tleap -f 3bqr_asu_tleap_input_run
+
+Checking output filenames
+  file : 3bqr_asu.prmtop

@@ -1,0 +1,219 @@
+HOST rebus.lbl.gov
+only_i 45
+only_code None
+force_amber_prep True
+dry_run False
+... 45 2j6e
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/j6/2j6e
+2j6e.pdb 4phenix_2j6e.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/j6/pdb2j6e.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/j6/r2j6esf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/j6/2j6e.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.cif
+Can't determine output label for r2j6esf,_refln.crystal_id - skipping.
+Can't determine output label for r2j6esf,_refln.scale_group_code - skipping.
+Can't determine output label for r2j6esf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2j6e.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/j6/pdb2j6e.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/j6/r2j6esf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/j6/2j6e.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j6/2j6e/2j6e.cif
+Can't determine output label for r2j6esf,_refln.crystal_id - skipping.
+Can't determine output label for r2j6esf,_refln.scale_group_code - skipping.
+Can't determine output label for r2j6esf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2j6e.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/j6/2j6e/4amber_2j6e.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/j6/2j6e/4amber_2j6e.prmtop
+
+	Running AmberPrep : 2j6e.pdb
+
+
+==================================================
+Running pdb4amber on 2j6e.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "MPD" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for BMA 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S S S R 
+
+~> antechamber -i 4antechamber_BMA.pdb -fi pdb -o BMA.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BMA.mol2 -f mol2 -o BMA.frcmod
+
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+==================================================
+Running elbow/antechamber for NDG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S R R S R 
+
+~> antechamber -i 4antechamber_NDG.pdb -fi pdb -o NDG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NDG.mol2 -f mol2 -o NDG.frcmod
+
+
+==================================================
+Running elbow/antechamber for GAL 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R S R R 
+
+~> antechamber -i 4antechamber_GAL.pdb -fi pdb -o GAL.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GAL.mol2 -f mol2 -o GAL.frcmod
+
+
+  Residue "ACT" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for CAC 
+==================================================
+
+MoleculeClass :  C: 2  O: 2 As: 1 (CHEMICAL COMPONENTS format)
+	11 atoms
+	10 bonds
+	18 angles
+	18 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	0 chirals
+
+~> antechamber -i 4antechamber_CAC.pdb -fi pdb -o CAC.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+For atom[1]:AS, the best APS is not zero, bonds involved by this atom are frozen
+
+~> parmchk2 -s 2 -i CAC.mol2 -f mol2 -o CAC.frcmod
+
+
+==================================================
+Running elbow/antechamber for FUL 
+==================================================
+
+MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
+	23 atoms
+	23 bonds
+	41 angles
+	63 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S R S S 
+
+~> antechamber -i 4antechamber_FUL.pdb -fi pdb -o FUL.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i FUL.mol2 -f mol2 -o FUL.frcmod
+
+
+==================================================
+Running elbow/antechamber for MAN 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S R 
+
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2j6e.pdb
+==================================================
+
+~> tleap -f 2j6e_asu_tleap_input_run
+
+
+~> " --- Testing environment ---"
+
+
+AMBERHOME: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber
+
+PATH: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin
+    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
+    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
+    : /usr/local_cci/gcc-4.3.4_fc8_x86_64/bin
+    : /net/cci/xp/CCDC/CSD_2016/bin
+    : /net/boa/srv/sge-6.1u2/bin/lx24-amd64
+    : .
+    : /net/cci/nigel/bin
+    : /net/cci/nigel/bin/Linux
+    : /usr/local_cci/bin
+    : /usr/local/bin
+    : /bin
+    : /usr/bin
+    : /usr/sbin
+    : /usr/bin/X11
+    : /etc
+    : /usr/etc
