@@ -1,0 +1,89 @@
+HOST rebus.lbl.gov
+only_i 172
+only_code None
+force_amber_prep True
+dry_run False
+... 172 3g8c
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/g8/3g8c
+3g8c.pdb 4phenix_3g8c.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/g8/pdb3g8c.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/g8/r3g8csf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/g8/3g8c.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c.cif
+Can't determine output label for r3g8csf,_refln.crystal_id - skipping.
+Can't determine output label for r3g8csf,_refln.scale_group_code - skipping.
+Can't determine output label for r3g8csf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3g8c.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/g8/pdb3g8c.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/g8/r3g8csf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/g8/3g8c.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/g8/3g8c/3g8c.cif
+Can't determine output label for r3g8csf,_refln.crystal_id - skipping.
+Can't determine output label for r3g8csf,_refln.scale_group_code - skipping.
+Can't determine output label for r3g8csf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3g8c.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/g8/3g8c/4amber_3g8c.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/g8/3g8c/4amber_3g8c.prmtop
+
+	Running AmberPrep : 3g8c.pdb
+
+
+==================================================
+Running pdb4amber on 3g8c.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "BCT" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "BTN" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for ADP 
+==================================================
+
+MoleculeClass :  C:10  N: 5  O:10  P: 2 (CHEMICAL COMPONENTS format)
+	39 atoms
+	41 bonds
+	71 angles
+	98 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_ADP.pdb -fi pdb -o ADP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i ADP.mol2 -f mol2 -o ADP.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3g8c.pdb
+==================================================
+
+~> tleap -f 3g8c_asu_tleap_input_run
+
+Checking output filenames
+  file : 3g8c_asu.prmtop

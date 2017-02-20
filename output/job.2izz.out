@@ -1,0 +1,105 @@
+HOST rebus.lbl.gov
+only_i 274
+only_code None
+force_amber_prep True
+dry_run False
+... 274 2izz
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/iz/2izz
+2izz.pdb 4phenix_2izz.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/iz/pdb2izz.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/iz/r2izzsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/iz/2izz.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz.cif
+Can't determine output label for r2izzsf,_refln.crystal_id - skipping.
+Can't determine output label for r2izzsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.016
+R-free-flags: missing 97 reflections
+Can't determine output label for r2izzsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2izz.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/iz/pdb2izz.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/iz/r2izzsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/iz/2izz.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/iz/2izz/2izz.cif
+Can't determine output label for r2izzsf,_refln.crystal_id - skipping.
+Can't determine output label for r2izzsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.016
+R-free-flags: missing 97 reflections
+Can't determine output label for r2izzsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2izz.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/iz/2izz/4amber_2izz.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/iz/2izz/4amber_2izz.prmtop
+
+	Running AmberPrep : 2izz.pdb
+
+
+==================================================
+Running pdb4amber on 2izz.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "EDO" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for NAD 
+==================================================
+
+MoleculeClass :  C:21  N: 7  O:14  P: 2 (CHEMICAL COMPONENTS format)
+	70 atoms
+	74 bonds
+	129 angles
+	190 dihedrals
+	4 rings (groups, rings, atoms) 5 27
+	8 chirals : R S R R R S R R 
+
+~> antechamber -i 4antechamber_NAD.pdb -fi pdb -o NAD.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAD.mol2 -f mol2 -o NAD.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2izz.pdb
+==================================================
+
+~> tleap -f 2izz_asu_tleap_input_run
+
+Checking output filenames
+  file : 2izz_asu.prmtop
+  file : 2izz_asu.rst7
+
+~> ChBox -c 2izz_asu.rst7 -o 2izz_asu.rst7 -X 110.453 -Y 177.944 -Z 87.916 -al 90.0 -bt 106.7 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2izz.prmtop and 4amber_2izz.rst7
+============================================================
+
+~> UnitCell -p 2izz_4UnitCell.pdb -o 2izz_4tleap_uc1.pdb
+
+
+~> tleap -f 2izz_uc_tleap_input_run
+
+Checking output filenames
+  file : 2izz_uc.prmtop

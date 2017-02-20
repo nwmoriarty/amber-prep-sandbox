@@ -1,0 +1,81 @@
+HOST rebus.lbl.gov
+only_i 265
+only_code None
+force_amber_prep True
+dry_run False
+... 265 2oy0
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/oy/2oy0
+2oy0.pdb 4phenix_2oy0.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/oy/pdb2oy0.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/oy/r2oy0sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/oy/2oy0.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0.cif
+Can't determine output label for r2oy0sf,_refln.crystal_id - skipping.
+Can't determine output label for r2oy0sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2oy0sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2oy0.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/oy/pdb2oy0.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/oy/r2oy0sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/oy/2oy0.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oy/2oy0/2oy0.cif
+Can't determine output label for r2oy0sf,_refln.crystal_id - skipping.
+Can't determine output label for r2oy0sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2oy0sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2oy0.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/oy/2oy0/4amber_2oy0.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/oy/2oy0/4amber_2oy0.prmtop
+
+	Running AmberPrep : 2oy0.pdb
+
+
+==================================================
+Running pdb4amber on 2oy0.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for SAH 
+==================================================
+
+MoleculeClass :  C:14  N: 6  O: 5  S: 1 (CHEMICAL COMPONENTS format)
+	45 atoms
+	47 bonds
+	82 angles
+	122 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	5 chirals : S S S R R 
+
+~> antechamber -i 4antechamber_SAH.pdb -fi pdb -o SAH.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i SAH.mol2 -f mol2 -o SAH.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2oy0.pdb
+==================================================
+
+~> tleap -f 2oy0_asu_tleap_input_run
+
+Checking output filenames
+  file : 2oy0_asu.prmtop

@@ -1,0 +1,59 @@
+HOST rebus.lbl.gov
+only_i 333
+only_code None
+force_amber_prep True
+dry_run False
+... 333 1m63
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/m6/1m63
+1m63.pdb 4phenix_1m63.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/m6/pdb1m63.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m6/1m63/1m63.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m6/1m63/1m63.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/m6/r1m63sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m6/1m63/1m63-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/m6/1m63.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/m6/1m63/1m63.cif
+Can't determine output label for r1m63sf,_refln.crystal_id - skipping.
+Can't determine output label for r1m63sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1m63sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1m63.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/m6/1m63/4amber_1m63.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/m6/1m63/4amber_1m63.prmtop
+
+	Running AmberPrep : 1m63.pdb
+
+
+==================================================
+Running pdb4amber on 1m63.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+ABA.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+MLE.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+DAL.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+MVA.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+BMT.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+SAR.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+
+==================================================
+Preparing asu files and 4phenix_1m63.pdb
+==================================================
+
+~> tleap -f 1m63_asu_tleap_input_run
+
+Checking output filenames
+  file : 1m63_asu.prmtop

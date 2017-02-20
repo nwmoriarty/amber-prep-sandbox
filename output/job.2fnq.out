@@ -1,0 +1,63 @@
+HOST rebus.lbl.gov
+only_i 305
+only_code None
+force_amber_prep True
+dry_run False
+... 305 2fnq
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/fn/2fnq
+2fnq.pdb 4phenix_2fnq.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/fn/pdb2fnq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fn/r2fnqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fn/2fnq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.cif
+Can't determine output label for r2fnqsf,_refln.crystal_id - skipping.
+Can't determine output label for r2fnqsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2fnqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2fnq.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/fn/pdb2fnq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/fn/r2fnqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/fn/2fnq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.cif
+Can't determine output label for r2fnqsf,_refln.crystal_id - skipping.
+Can't determine output label for r2fnqsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2fnqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2fnq.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fn/2fnq/4amber_2fnq.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/fn/2fnq/4amber_2fnq.prmtop
+
+	Running AmberPrep : 2fnq.pdb
+
+
+==================================================
+Running pdb4amber on 2fnq.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2fnq.pdb
+==================================================
+
+~> tleap -f 2fnq_asu_tleap_input_run
+
+Checking output filenames
+  file : 2fnq_asu.prmtop

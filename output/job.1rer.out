@@ -1,0 +1,175 @@
+HOST rebus.lbl.gov
+only_i 267
+only_code None
+force_amber_prep True
+dry_run False
+... 267 1rer
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/re/1rer
+1rer.pdb 4phenix_1rer.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/re/pdb1rer.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/re/r1rersf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/re/1rer.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer.cif
+Can't determine output label for r1rersf,_refln.crystal_id - skipping.
+Can't determine output label for r1rersf,_refln.scale_group_code - skipping.
+Can't determine output label for r1rersf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1rer.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/re/pdb1rer.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/re/r1rersf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/re/1rer.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/re/1rer/1rer.cif
+Can't determine output label for r1rersf,_refln.crystal_id - skipping.
+Can't determine output label for r1rersf,_refln.scale_group_code - skipping.
+Can't determine output label for r1rersf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1rer.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/re/1rer/4amber_1rer.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/re/1rer/4amber_1rer.prmtop
+
+	Running AmberPrep : 1rer.pdb
+
+
+==================================================
+Running pdb4amber on 1rer.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for BMA 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S S S R 
+
+~> antechamber -i 4antechamber_BMA.pdb -fi pdb -o BMA.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BMA.mol2 -f mol2 -o BMA.frcmod
+
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+  Residue "PO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for NDG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S R R S R 
+
+~> antechamber -i 4antechamber_NDG.pdb -fi pdb -o NDG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NDG.mol2 -f mol2 -o NDG.frcmod
+
+
+==================================================
+Running elbow/antechamber for FUC 
+==================================================
+
+MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
+	23 atoms
+	23 bonds
+	41 angles
+	63 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S R S S 
+
+~> antechamber -i 4antechamber_FUC.pdb -fi pdb -o FUC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i FUC.mol2 -f mol2 -o FUC.frcmod
+
+
+==================================================
+Running elbow/antechamber for FUL 
+==================================================
+
+MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
+	23 atoms
+	23 bonds
+	41 angles
+	63 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S R S S 
+
+~> antechamber -i 4antechamber_FUL.pdb -fi pdb -o FUL.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i FUL.mol2 -f mol2 -o FUL.frcmod
+
+
+==================================================
+Running elbow/antechamber for MAN 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S R 
+
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
+
+
+==================================================
+Running elbow/antechamber for HO 
+==================================================
+
+   Residue has metal at the centre of a coordination sphere. Using input
+   geometry to generate restraints. Hydrogens may not be added.
+   
+Molecule too small to optimise

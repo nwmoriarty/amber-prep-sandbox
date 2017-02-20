@@ -1,0 +1,179 @@
+HOST rebus.lbl.gov
+only_i 149
+only_code None
+force_amber_prep True
+dry_run False
+... 149 2nty
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/nt/2nty
+2nty.pdb 4phenix_2nty.pdb
+2nty.pdb 4phenix_2nty.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/nt/pdb2nty.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/nt/r2ntysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/nt/2nty.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty.cif
+Can't determine output label for r2ntysf,_refln.crystal_id - skipping.
+Can't determine output label for r2ntysf,_refln.scale_group_code - skipping.
+Can't determine output label for r2ntysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2nty.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/nt/pdb2nty.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/nt/r2ntysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/nt/2nty.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty/2nty.cif
+Can't determine output label for r2ntysf,_refln.crystal_id - skipping.
+Can't determine output label for r2ntysf,_refln.scale_group_code - skipping.
+Can't determine output label for r2ntysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2nty.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/nt/2nty/4amber_2nty.prmtop
+
+	Running AmberPrep : 2nty.pdb
+
+
+==================================================
+Running pdb4amber on 2nty.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for GDP 
+==================================================
+
+MoleculeClass :  C:10  N: 5  O:11  P: 2 (CHEMICAL COMPONENTS format)
+	40 atoms
+	42 bonds
+	73 angles
+	102 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_GDP.pdb -fi pdb -o GDP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GDP.mol2 -f mol2 -o GDP.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2nty.pdb
+==================================================
+
+~> tleap -f 2nty_asu_tleap_input_run
+
+Checking output filenames
+  file : 2nty_asu.prmtop
+  file : 2nty_asu.rst7
+
+~> ChBox -c 2nty_asu.rst7 -o 2nty_asu.rst7 -X 211.17 -Y 211.17 -Z 81.11 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2nty.prmtop and 4amber_2nty.rst7
+============================================================
+
+~> UnitCell -p 2nty_4UnitCell.pdb -o 2nty_4tleap_uc1.pdb
+
+
+~> tleap -f 2nty_uc_tleap_input_run
+
+Checking output filenames
+  file : 2nty_uc.prmtop
+  file : 2nty_uc.rst7
+
+~> ChBox -c 2nty_uc.rst7 -o 2nty_uc.rst7 -X 211.17 -Y 211.17 -Z 81.11 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2nty_amber_all.in -p 4amber_2nty.prmtop -c 4amber_2nty.rst7 -o 2nty.min.out            -ref 4amber_2nty.rst7 -r 4amber_2nty.min.rst7
+
+checking special positions in 4phenix_2nty.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2nty.pdb
+      4amber_2nty.prmtop
+      4amber_2nty.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2nty.pdb use_amber=True \
+    amber.topology_file_name=4amber_2nty.prmtop \
+    amber.coordinate_file_name=4amber_2nty.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2nty.pdb
+    MTZ    : 2nty.mtz
+    prmtop : 4amber_2nty.prmtop
+    rst7   : 4amber_2nty.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty
+return_files 2nty
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2nty.pdb
+4phenix_2nty.pdb
+cp 4phenix_2nty.pdb /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty
+2nty.pdb
+cp 2nty.pdb /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty
+4amber_2nty.mtz
+4phenix_2nty.mtz
+2nty.mtz
+cp 2nty.mtz /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty
+4amber_2nty.rst7
+cp 4amber_2nty.rst7 /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty
+4phenix_2nty.rst7
+2nty.rst7
+4amber_2nty.prmtop
+cp 4amber_2nty.prmtop /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty
+4phenix_2nty.prmtop
+2nty.prmtop
+4amber_2nty_refine_001.log
+4phenix_2nty_refine_001.log
+2nty_refine_001.log
+4amber_2nty_refine_002.log
+4phenix_2nty_refine_002.log
+2nty_refine_002.log
+4amber_2nty_refine_001.pdb
+4phenix_2nty_refine_001.pdb
+2nty_refine_001.pdb
+4amber_2nty_refine_002.pdb
+4phenix_2nty_refine_002.pdb
+2nty_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty/2nty.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/nt/2nty
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty/2nty_refine_001.log
+------------------------------
+
+	Already done (on chevy) 2nty_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/nt/2nty/2nty_refine_002.log
+------------------------------
+
+	Already done (on chevy) 2nty_refine_002

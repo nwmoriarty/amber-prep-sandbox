@@ -1,0 +1,71 @@
+HOST rebus.lbl.gov
+only_i 266
+only_code None
+force_amber_prep True
+dry_run False
+... 266 3lkz
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/lk/3lkz
+3lkz.pdb 4phenix_3lkz.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/lk/pdb3lkz.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/lk/r3lkzsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/lk/3lkz.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz.cif
+Can't determine output label for r3lkzsf,_refln.crystal_id - skipping.
+Can't determine output label for r3lkzsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3lkzsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3lkz.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/lk/pdb3lkz.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/lk/r3lkzsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/lk/3lkz.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lk/3lkz/3lkz.cif
+Can't determine output label for r3lkzsf,_refln.crystal_id - skipping.
+Can't determine output label for r3lkzsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3lkzsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3lkz.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/lk/3lkz/4amber_3lkz.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/lk/3lkz/4amber_3lkz.prmtop
+
+	Running AmberPrep : 3lkz.pdb
+
+
+==================================================
+Running pdb4amber on 3lkz.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "SFG" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3lkz.pdb
+==================================================
+
+~> tleap -f 3lkz_asu_tleap_input_run
+
+Checking output filenames
+  file : 3lkz_asu.prmtop

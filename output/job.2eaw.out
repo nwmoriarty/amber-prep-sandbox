@@ -1,0 +1,179 @@
+HOST rebus.lbl.gov
+only_i 345
+only_code None
+force_amber_prep True
+dry_run False
+... 345 2eaw
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw
+2eaw.pdb 4phenix_2eaw.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ea/pdb2eaw.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ea/r2eawsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ea/2eaw.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw.cif
+Can't determine output label for r2eawsf,_refln.crystal_id - skipping.
+Can't determine output label for r2eawsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.048
+R-free-flags: missing 672 reflections
+Can't determine output label for r2eawsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2eaw.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ea/pdb2eaw.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ea/r2eawsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ea/2eaw.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw/2eaw.cif
+Can't determine output label for r2eawsf,_refln.crystal_id - skipping.
+Can't determine output label for r2eawsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.048
+R-free-flags: missing 672 reflections
+Can't determine output label for r2eawsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2eaw.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ea/2eaw/4amber_2eaw.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw/4amber_2eaw.prmtop
+
+	Running AmberPrep : 2eaw.pdb
+
+
+==================================================
+Running pdb4amber on 2eaw.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "SO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2eaw.pdb
+==================================================
+
+~> tleap -f 2eaw_asu_tleap_input_run
+
+Checking output filenames
+  file : 2eaw_asu.prmtop
+  file : 2eaw_asu.rst7
+
+~> ChBox -c 2eaw_asu.rst7 -o 2eaw_asu.rst7 -X 67.571 -Y 59.37 -Z 69.863 -al 90.0 -bt 114.3 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2eaw.prmtop and 4amber_2eaw.rst7
+============================================================
+
+~> UnitCell -p 2eaw_4UnitCell.pdb -o 2eaw_4tleap_uc1.pdb
+
+
+~> tleap -f 2eaw_uc_tleap_input_run
+
+Checking output filenames
+  file : 2eaw_uc.prmtop
+  file : 2eaw_uc.rst7
+
+~> ChBox -c 2eaw_uc.rst7 -o 2eaw_uc.rst7 -X 67.571 -Y 59.37 -Z 69.863 -al 90.0 -bt 114.3 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2eaw_amber_all.in -p 4amber_2eaw.prmtop -c 4amber_2eaw.rst7 -o 2eaw.min.out            -ref 4amber_2eaw.rst7 -r 4amber_2eaw.min.rst7
+
+checking special positions in 4phenix_2eaw.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2eaw.pdb
+      4amber_2eaw.prmtop
+      4amber_2eaw.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2eaw.pdb use_amber=True \
+    amber.topology_file_name=4amber_2eaw.prmtop \
+    amber.coordinate_file_name=4amber_2eaw.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2eaw.pdb
+    MTZ    : 2eaw.mtz
+    prmtop : 4amber_2eaw.prmtop
+    rst7   : 4amber_2eaw.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw
+return_files 2eaw
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2eaw.pdb
+4phenix_2eaw.pdb
+cp 4phenix_2eaw.pdb /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw
+2eaw.pdb
+cp 2eaw.pdb /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw
+4amber_2eaw.mtz
+4phenix_2eaw.mtz
+2eaw.mtz
+cp 2eaw.mtz /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw
+4amber_2eaw.rst7
+cp 4amber_2eaw.rst7 /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw
+4phenix_2eaw.rst7
+2eaw.rst7
+4amber_2eaw.prmtop
+cp 4amber_2eaw.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw
+4phenix_2eaw.prmtop
+2eaw.prmtop
+4amber_2eaw_refine_001.log
+4phenix_2eaw_refine_001.log
+2eaw_refine_001.log
+4amber_2eaw_refine_002.log
+4phenix_2eaw_refine_002.log
+2eaw_refine_002.log
+4amber_2eaw_refine_001.pdb
+4phenix_2eaw_refine_001.pdb
+2eaw_refine_001.pdb
+4amber_2eaw_refine_002.pdb
+4phenix_2eaw_refine_002.pdb
+2eaw_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw/2eaw.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ea/2eaw
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw/2eaw_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2eaw_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2eaw.pdb 2eaw.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw/2eaw_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2eaw_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2eaw.pdb 2eaw.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw/4amber_2eaw.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ea/2eaw/4amber_2eaw.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

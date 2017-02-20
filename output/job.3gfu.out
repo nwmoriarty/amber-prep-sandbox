@@ -1,0 +1,189 @@
+HOST rebus.lbl.gov
+only_i 292
+only_code None
+force_amber_prep True
+dry_run False
+... 292 3gfu
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
+3gfu.pdb 4phenix_3gfu.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/gf/pdb3gfu.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gf/r3gfusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gf/3gfu.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.cif
+Can't determine output label for r3gfusf,_refln.crystal_id - skipping.
+Can't determine output label for r3gfusf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 46 reflections
+Can't determine output label for r3gfusf,_refln.wavelength_id - skipping.
+Can't determine output label for r3gfuAsf,_refln.crystal_id - skipping.
+Can't determine output label for r3gfuAsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.000
+WARNING: R-free flags in R-free-flags do not appear to contain a valid test, so they can't be extended to higher resolution.
+Can't determine output label for r3gfuAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3gfu.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/gf/pdb3gfu.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gf/r3gfusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gf/3gfu.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.cif
+Can't determine output label for r3gfusf,_refln.crystal_id - skipping.
+Can't determine output label for r3gfusf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 46 reflections
+Can't determine output label for r3gfusf,_refln.wavelength_id - skipping.
+Can't determine output label for r3gfuAsf,_refln.crystal_id - skipping.
+Can't determine output label for r3gfuAsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.000
+WARNING: R-free flags in R-free-flags do not appear to contain a valid test, so they can't be extended to higher resolution.
+Can't determine output label for r3gfuAsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3gfu.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop
+
+	Running AmberPrep : 3gfu.pdb
+
+
+==================================================
+Running pdb4amber on 3gfu.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "SO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3gfu.pdb
+==================================================
+
+~> tleap -f 3gfu_asu_tleap_input_run
+
+Checking output filenames
+  file : 3gfu_asu.prmtop
+  file : 3gfu_asu.rst7
+
+~> ChBox -c 3gfu_asu.rst7 -o 3gfu_asu.rst7 -X 74.924 -Y 90.108 -Z 86.544 -al 90.0 -bt 114.49 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3gfu.prmtop and 4amber_3gfu.rst7
+============================================================
+
+~> UnitCell -p 3gfu_4UnitCell.pdb -o 3gfu_4tleap_uc1.pdb
+
+
+~> tleap -f 3gfu_uc_tleap_input_run
+
+Checking output filenames
+  file : 3gfu_uc.prmtop
+  file : 3gfu_uc.rst7
+
+~> ChBox -c 3gfu_uc.rst7 -o 3gfu_uc.rst7 -X 74.924 -Y 90.108 -Z 86.544 -al 90.0 -bt 114.49 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3gfu_amber_all.in -p 4amber_3gfu.prmtop -c 4amber_3gfu.rst7 -o 3gfu.min.out            -ref 4amber_3gfu.rst7 -r 4amber_3gfu.min.rst7
+
+checking special positions in 4phenix_3gfu.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_3gfu.pdb
+      4amber_3gfu.prmtop
+      4amber_3gfu.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_3gfu.pdb use_amber=True \
+    amber.topology_file_name=4amber_3gfu.prmtop \
+    amber.coordinate_file_name=4amber_3gfu.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 3gfu.pdb
+    MTZ    : 3gfu.mtz
+    prmtop : 4amber_3gfu.prmtop
+    rst7   : 4amber_3gfu.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu
+return_files 3gfu
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_3gfu.pdb
+4phenix_3gfu.pdb
+cp 4phenix_3gfu.pdb /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
+3gfu.pdb
+cp 3gfu.pdb /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
+4amber_3gfu.mtz
+4phenix_3gfu.mtz
+3gfu.mtz
+cp 3gfu.mtz /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
+4amber_3gfu.rst7
+cp 4amber_3gfu.rst7 /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
+4phenix_3gfu.rst7
+3gfu.rst7
+4amber_3gfu.prmtop
+cp 4amber_3gfu.prmtop /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
+4phenix_3gfu.prmtop
+3gfu.prmtop
+4amber_3gfu_refine_001.log
+4phenix_3gfu_refine_001.log
+3gfu_refine_001.log
+4amber_3gfu_refine_002.log
+4phenix_3gfu_refine_002.log
+3gfu_refine_002.log
+4amber_3gfu_refine_001.pdb
+4phenix_3gfu_refine_001.pdb
+3gfu_refine_001.pdb
+4amber_3gfu_refine_002.pdb
+4phenix_3gfu_refine_002.pdb
+3gfu_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/3gfu_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3gfu_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3gfu.pdb 3gfu.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/3gfu_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3gfu_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3gfu.pdb 3gfu.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

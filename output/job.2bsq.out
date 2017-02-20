@@ -1,0 +1,85 @@
+HOST rebus.lbl.gov
+only_i 175
+only_code None
+force_amber_prep True
+dry_run False
+... 175 2bsq
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/bs/2bsq
+2bsq.pdb 4phenix_2bsq.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bs/pdb2bsq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bs/r2bsqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bs/2bsq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq.cif
+Can't determine output label for r2bsqsf,_refln.crystal_id - skipping.
+Can't determine output label for r2bsqsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.100
+R-free-flags: missing 117 reflections
+Can't determine output label for r2bsqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2bsq.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bs/pdb2bsq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bs/r2bsqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bs/2bsq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bs/2bsq/2bsq.cif
+Can't determine output label for r2bsqsf,_refln.crystal_id - skipping.
+Can't determine output label for r2bsqsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.100
+R-free-flags: missing 117 reflections
+Can't determine output label for r2bsqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2bsq.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/bs/2bsq/4amber_2bsq.prmtop
+not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/bs/2bsq/4phenix_2bsq.pdb
+
+	Running AmberPrep : 2bsq.pdb
+
+
+==================================================
+Running pdb4amber on 2bsq.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for 5IU 
+==================================================
+
+MoleculeClass :  C: 9  N: 2  O: 8  P: 1  I: 1 (CHEMICAL COMPONENTS format)
+	31 atoms
+	32 bonds
+	57 angles
+	81 dihedrals
+	2 rings (groups, rings, atoms) 2 11
+	3 chirals : R S R 
+
+~> antechamber -i 4antechamber_5IU.pdb -fi pdb -o 5IU.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i 5IU.mol2 -f mol2 -o 5IU.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2bsq.pdb
+==================================================
+
+~> tleap -f 2bsq_asu_tleap_input_run
+
+Checking output filenames
+  file : 2bsq_asu.prmtop

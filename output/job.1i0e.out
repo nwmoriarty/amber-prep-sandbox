@@ -1,0 +1,154 @@
+HOST rebus.lbl.gov
+only_i 355
+only_code None
+force_amber_prep True
+dry_run False
+... 355 1i0e
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e
+1i0e.pdb 4phenix_1i0e.pdb
+1i0e.pdb 4phenix_1i0e.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/i0/pdb1i0e.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i0/1i0e/1i0e.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i0/1i0e/1i0e.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/i0/r1i0esf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i0/1i0e/1i0e-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/i0/1i0e.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i0/1i0e/1i0e.cif
+Can't determine output label for r1i0esf,_refln.crystal_id - skipping.
+Can't determine output label for r1i0esf,_refln.scale_group_code - skipping.
+Can't determine output label for r1i0esf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1i0e.mtz
+
+	Running AmberPrep : 1i0e.pdb
+
+
+==================================================
+Running pdb4amber on 1i0e.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1i0e.pdb
+==================================================
+
+~> tleap -f 1i0e_asu_tleap_input_run
+
+Checking output filenames
+  file : 1i0e_asu.prmtop
+  file : 1i0e_asu.rst7
+
+~> ChBox -c 1i0e_asu.rst7 -o 1i0e_asu.rst7 -X 89.326 -Y 89.326 -Z 402.962 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1i0e.prmtop and 4amber_1i0e.rst7
+============================================================
+
+~> UnitCell -p 1i0e_4UnitCell.pdb -o 1i0e_4tleap_uc1.pdb
+
+
+~> tleap -f 1i0e_uc_tleap_input_run
+
+Checking output filenames
+  file : 1i0e_uc.prmtop
+  file : 1i0e_uc.rst7
+
+~> ChBox -c 1i0e_uc.rst7 -o 1i0e_uc.rst7 -X 89.326 -Y 89.326 -Z 402.962 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1i0e_amber_all.in -p 4amber_1i0e.prmtop -c 4amber_1i0e.rst7 -o 1i0e.min.out            -ref 4amber_1i0e.rst7 -r 4amber_1i0e.min.rst7
+
+checking special positions in 4phenix_1i0e.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1i0e.pdb
+      4amber_1i0e.prmtop
+      4amber_1i0e.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1i0e.pdb use_amber=True \
+    amber.topology_file_name=4amber_1i0e.prmtop \
+    amber.coordinate_file_name=4amber_1i0e.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1i0e.pdb
+    MTZ    : 1i0e.mtz
+    prmtop : 4amber_1i0e.prmtop
+    rst7   : 4amber_1i0e.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/i0/1i0e
+return_files 1i0e
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1i0e.pdb
+4phenix_1i0e.pdb
+cp 4phenix_1i0e.pdb /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e
+1i0e.pdb
+cp 1i0e.pdb /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e
+4amber_1i0e.mtz
+4phenix_1i0e.mtz
+1i0e.mtz
+cp 1i0e.mtz /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e
+4amber_1i0e.rst7
+cp 4amber_1i0e.rst7 /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e
+4phenix_1i0e.rst7
+1i0e.rst7
+4amber_1i0e.prmtop
+cp 4amber_1i0e.prmtop /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e
+4phenix_1i0e.prmtop
+1i0e.prmtop
+4amber_1i0e_refine_001.log
+4phenix_1i0e_refine_001.log
+1i0e_refine_001.log
+4amber_1i0e_refine_002.log
+4phenix_1i0e_refine_002.log
+1i0e_refine_002.log
+4amber_1i0e_refine_001.pdb
+4phenix_1i0e_refine_001.pdb
+1i0e_refine_001.pdb
+4amber_1i0e_refine_002.pdb
+4phenix_1i0e_refine_002.pdb
+1i0e_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e/1i0e.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/i0/1i0e
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e/1i0e_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 1i0e_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 1i0e.pdb 1i0e.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e/1i0e_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 1i0e_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 1i0e.pdb 1i0e.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e/4amber_1i0e.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/i0/1i0e/4amber_1i0e.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

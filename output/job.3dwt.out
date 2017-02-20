@@ -1,0 +1,175 @@
+HOST rebus.lbl.gov
+only_i 251
+only_code None
+force_amber_prep True
+dry_run False
+... 251 3dwt
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt
+3dwt.pdb 4phenix_3dwt.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/dw/pdb3dwt.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/dw/r3dwtsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/dw/3dwt.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt.cif
+Can't determine output label for r3dwtsf,_refln.crystal_id - skipping.
+Can't determine output label for r3dwtsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3dwtsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3dwt.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/dw/pdb3dwt.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/dw/r3dwtsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/dw/3dwt.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt/3dwt.cif
+Can't determine output label for r3dwtsf,_refln.crystal_id - skipping.
+Can't determine output label for r3dwtsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3dwtsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3dwt.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/dw/3dwt/4amber_3dwt.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt/4amber_3dwt.prmtop
+
+	Running AmberPrep : 3dwt.pdb
+
+
+==================================================
+Running pdb4amber on 3dwt.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3dwt.pdb
+==================================================
+
+~> tleap -f 3dwt_asu_tleap_input_run
+
+Checking output filenames
+  file : 3dwt_asu.prmtop
+  file : 3dwt_asu.rst7
+
+~> ChBox -c 3dwt_asu.rst7 -o 3dwt_asu.rst7 -X 76.72 -Y 174.71 -Z 115.53 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3dwt.prmtop and 4amber_3dwt.rst7
+============================================================
+
+~> UnitCell -p 3dwt_4UnitCell.pdb -o 3dwt_4tleap_uc1.pdb
+
+
+~> tleap -f 3dwt_uc_tleap_input_run
+
+Checking output filenames
+  file : 3dwt_uc.prmtop
+  file : 3dwt_uc.rst7
+
+~> ChBox -c 3dwt_uc.rst7 -o 3dwt_uc.rst7 -X 76.72 -Y 174.71 -Z 115.53 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3dwt_amber_all.in -p 4amber_3dwt.prmtop -c 4amber_3dwt.rst7 -o 3dwt.min.out            -ref 4amber_3dwt.rst7 -r 4amber_3dwt.min.rst7
+
+checking special positions in 4phenix_3dwt.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_3dwt.pdb
+      4amber_3dwt.prmtop
+      4amber_3dwt.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_3dwt.pdb use_amber=True \
+    amber.topology_file_name=4amber_3dwt.prmtop \
+    amber.coordinate_file_name=4amber_3dwt.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 3dwt.pdb
+    MTZ    : 3dwt.mtz
+    prmtop : 4amber_3dwt.prmtop
+    rst7   : 4amber_3dwt.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt
+return_files 3dwt
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_3dwt.pdb
+4phenix_3dwt.pdb
+cp 4phenix_3dwt.pdb /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt
+3dwt.pdb
+cp 3dwt.pdb /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt
+4amber_3dwt.mtz
+4phenix_3dwt.mtz
+3dwt.mtz
+cp 3dwt.mtz /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt
+4amber_3dwt.rst7
+cp 4amber_3dwt.rst7 /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt
+4phenix_3dwt.rst7
+3dwt.rst7
+4amber_3dwt.prmtop
+cp 4amber_3dwt.prmtop /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt
+4phenix_3dwt.prmtop
+3dwt.prmtop
+4amber_3dwt_refine_001.log
+4phenix_3dwt_refine_001.log
+3dwt_refine_001.log
+4amber_3dwt_refine_002.log
+4phenix_3dwt_refine_002.log
+3dwt_refine_002.log
+4amber_3dwt_refine_001.pdb
+4phenix_3dwt_refine_001.pdb
+3dwt_refine_001.pdb
+4amber_3dwt_refine_002.pdb
+4phenix_3dwt_refine_002.pdb
+3dwt_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt/3dwt.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/dw/3dwt
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt/3dwt_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3dwt_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3dwt.pdb 3dwt.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt/3dwt_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3dwt_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3dwt.pdb 3dwt.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt/4amber_3dwt.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dw/3dwt/4amber_3dwt.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

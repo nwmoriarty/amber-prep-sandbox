@@ -1,0 +1,75 @@
+HOST rebus.lbl.gov
+only_i 286
+only_code None
+force_amber_prep True
+dry_run False
+... 286 3ipq
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ip/3ipq
+3ipq.pdb 4phenix_3ipq.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ip/pdb3ipq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ip/r3ipqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ip/3ipq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq.cif
+Can't determine output label for r3ipqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3ipqsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 78 reflections
+Can't determine output label for r3ipqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ipq.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ip/pdb3ipq.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ip/r3ipqsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ip/3ipq.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ip/3ipq/3ipq.cif
+Can't determine output label for r3ipqsf,_refln.crystal_id - skipping.
+Can't determine output label for r3ipqsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 78 reflections
+Can't determine output label for r3ipqsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ipq.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ip/3ipq/4amber_3ipq.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ip/3ipq/4amber_3ipq.prmtop
+
+	Running AmberPrep : 3ipq.pdb
+
+
+==================================================
+Running pdb4amber on 3ipq.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "965" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "SO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3ipq.pdb
+==================================================
+
+~> tleap -f 3ipq_asu_tleap_input_run
+
+Checking output filenames
+  file : 3ipq_asu.prmtop

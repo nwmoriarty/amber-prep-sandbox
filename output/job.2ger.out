@@ -1,0 +1,79 @@
+HOST rebus.lbl.gov
+only_i 273
+only_code None
+force_amber_prep True
+dry_run False
+... 273 2ger
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ge/2ger
+2ger.pdb 4phenix_2ger.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ge/pdb2ger.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ge/r2gersf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ge/2ger.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.cif
+Can't determine output label for r2gersf,_refln.crystal_id - skipping.
+Can't determine output label for r2gersf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gersf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ger.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ge/pdb2ger.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ge/r2gersf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ge/2ger.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.cif
+Can't determine output label for r2gersf,_refln.crystal_id - skipping.
+Can't determine output label for r2gersf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gersf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ger.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ge/2ger/4amber_2ger.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ge/2ger/4amber_2ger.prmtop
+
+	Running AmberPrep : 2ger.pdb
+
+
+==================================================
+Running pdb4amber on 2ger.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2ger.pdb
+==================================================
+
+~> tleap -f 2ger_asu_tleap_input_run
+
+Checking output filenames
+  file : 2ger_asu.prmtop
+  file : 2ger_asu.rst7
+
+~> ChBox -c 2ger_asu.rst7 -o 2ger_asu.rst7 -X 207.607 -Y 123.805 -Z 120.79 -al 90.0 -bt 121.76 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2ger.prmtop and 4amber_2ger.rst7
+============================================================
+
+~> UnitCell -p 2ger_4UnitCell.pdb -o 2ger_4tleap_uc1.pdb
+
+
+~> tleap -f 2ger_uc_tleap_input_run
+
+Checking output filenames
+  file : 2ger_uc.prmtop

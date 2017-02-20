@@ -1,0 +1,111 @@
+HOST rebus.lbl.gov
+only_i 233
+only_code None
+force_amber_prep True
+dry_run False
+... 233 1wk4
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/wk/1wk4
+1wk4.pdb 4phenix_1wk4.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/wk/pdb1wk4.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/wk/r1wk4sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/wk/1wk4.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.cif
+Can't determine output label for r1wk4sf,_refln.crystal_id - skipping.
+Can't determine output label for r1wk4sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1wk4sf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r1wk4sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1wk4.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/wk/pdb1wk4.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/wk/r1wk4sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/wk/1wk4.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.cif
+Can't determine output label for r1wk4sf,_refln.crystal_id - skipping.
+Can't determine output label for r1wk4sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1wk4sf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r1wk4sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1wk4.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/wk/1wk4/4amber_1wk4.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/wk/1wk4/4amber_1wk4.prmtop
+
+	Running AmberPrep : 1wk4.pdb
+
+
+==================================================
+Running pdb4amber on 1wk4.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for MSE 
+==================================================
+--------------------------------------------------------------------------------
+['/tmp/6368462.233.all.q/tmpxayvOR', '/tmp/6368462.233.all.q/tmpcaaIZY']
+/tmp/6368462.233.all.q/tmpxayvOR
+  Monomer Library directory:
+    "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
+  Total number of atoms: 19
+  Number of models: 1
+  Model: ""
+    Number of chains: 1
+    Chain: "A"
+      Number of atoms: 19
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 1, 17
+          Duplicate atoms: {'MSE,HB2': 1, 'MSE,HG2': 1}
+          Classifications: {'peptide': 1}
+  Number of atoms with unknown nonbonded energy type symbols: 2
+    "HETATM   13  HB3 MSE A   1 .*.A    H  "
+    "HETATM   15  HG3 MSE A   1 .*.A    H  "
+  Time building chain proxies: 0.01, per 1000 atoms: 0.53
+
+--------------------------------------------------------------------------------
+
+MoleculeClass :  C: 5  N: 1  O: 2 Se: 1 (CHEMICAL COMPONENTS format)
+	19 atoms
+	18 bonds
+	31 angles
+	36 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_MSE.pdb -fi pdb -o MSE.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MSE.mol2 -f mol2 -o MSE.frcmod
+
+
+  Residue "MES" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_1wk4.pdb
+==================================================
+
+~> tleap -f 1wk4_asu_tleap_input_run
+
+Checking output filenames
+  file : 1wk4_asu.prmtop

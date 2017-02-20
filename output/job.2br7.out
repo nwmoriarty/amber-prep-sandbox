@@ -1,0 +1,67 @@
+HOST rebus.lbl.gov
+only_i 217
+only_code None
+force_amber_prep True
+dry_run False
+... 217 2br7
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/br/2br7
+2br7.pdb 4phenix_2br7.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/br/pdb2br7.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/br/r2br7sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/br/2br7.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7.cif
+Can't determine output label for r2br7sf,_refln.crystal_id - skipping.
+Can't determine output label for r2br7sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2br7sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2br7.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/br/pdb2br7.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/br/r2br7sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/br/2br7.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/br/2br7/2br7.cif
+Can't determine output label for r2br7sf,_refln.crystal_id - skipping.
+Can't determine output label for r2br7sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2br7sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2br7.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/br/2br7/4amber_2br7.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/br/2br7/4amber_2br7.prmtop
+
+	Running AmberPrep : 2br7.pdb
+
+
+==================================================
+Running pdb4amber on 2br7.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "EPE" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2br7.pdb
+==================================================
+
+~> tleap -f 2br7_asu_tleap_input_run
+
+Checking output filenames
+  file : 2br7_asu.prmtop

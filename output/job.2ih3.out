@@ -1,0 +1,85 @@
+HOST rebus.lbl.gov
+only_i 330
+only_code None
+force_amber_prep True
+dry_run False
+... 330 2ih3
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ih/2ih3
+2ih3.pdb 4phenix_2ih3.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ih/pdb2ih3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ih/r2ih3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ih/2ih3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3.cif
+Can't determine output label for r2ih3sf,_refln.crystal_id - skipping.
+Can't determine output label for r2ih3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2ih3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ih3.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ih/pdb2ih3.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ih/r2ih3sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ih/2ih3.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ih/2ih3/2ih3.cif
+Can't determine output label for r2ih3sf,_refln.crystal_id - skipping.
+Can't determine output label for r2ih3sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2ih3sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ih3.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ih/2ih3/4amber_2ih3.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ih/2ih3/4amber_2ih3.prmtop
+
+	Running AmberPrep : 2ih3.pdb
+
+
+==================================================
+Running pdb4amber on 2ih3.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for DAL 
+==================================================
+
+MoleculeClass :  C: 3  N: 1  O: 2 (CHEMICAL COMPONENTS format)
+	12 atoms
+	11 bonds
+	18 angles
+	21 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : R 
+
+~> antechamber -i 4antechamber_DAL.pdb -fi pdb -o DAL.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i DAL.mol2 -f mol2 -o DAL.frcmod
+
+
+  Residue "1EM" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2ih3.pdb
+==================================================
+
+~> tleap -f 2ih3_asu_tleap_input_run
+
+Checking output filenames
+  file : 2ih3_asu.prmtop

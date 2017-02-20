@@ -1,0 +1,161 @@
+HOST rebus.lbl.gov
+only_i 121
+only_code None
+force_amber_prep True
+dry_run False
+... 121 2bct
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/bc/2bct
+2bct.pdb 4phenix_2bct.pdb
+2bct.pdb 4phenix_2bct.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bc/pdb2bct.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bc/r2bctsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bc/2bct.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct.cif
+Can't determine output label for r2bctsf,_refln.crystal_id - skipping.
+Can't determine output label for r2bctsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2bctsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2bct.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bc/pdb2bct.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bc/r2bctsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bc/2bct.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct/2bct.cif
+Can't determine output label for r2bctsf,_refln.crystal_id - skipping.
+Can't determine output label for r2bctsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2bctsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2bct.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/bc/2bct/4amber_2bct.prmtop
+
+	Running AmberPrep : 2bct.pdb
+
+
+==================================================
+Running pdb4amber on 2bct.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2bct.pdb
+==================================================
+
+~> tleap -f 2bct_asu_tleap_input_run
+
+Checking output filenames
+  file : 2bct_asu.prmtop
+  file : 2bct_asu.rst7
+
+~> ChBox -c 2bct_asu.rst7 -o 2bct_asu.rst7 -X 51.09 -Y 75.59 -Z 134.42 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2bct.prmtop and 4amber_2bct.rst7
+============================================================
+
+~> UnitCell -p 2bct_4UnitCell.pdb -o 2bct_4tleap_uc1.pdb
+
+
+~> tleap -f 2bct_uc_tleap_input_run
+
+Checking output filenames
+  file : 2bct_uc.prmtop
+  file : 2bct_uc.rst7
+
+~> ChBox -c 2bct_uc.rst7 -o 2bct_uc.rst7 -X 51.09 -Y 75.59 -Z 134.42 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2bct_amber_all.in -p 4amber_2bct.prmtop -c 4amber_2bct.rst7 -o 2bct.min.out            -ref 4amber_2bct.rst7 -r 4amber_2bct.min.rst7
+
+checking special positions in 4phenix_2bct.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2bct.pdb
+      4amber_2bct.prmtop
+      4amber_2bct.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2bct.pdb use_amber=True \
+    amber.topology_file_name=4amber_2bct.prmtop \
+    amber.coordinate_file_name=4amber_2bct.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2bct.pdb
+    MTZ    : 2bct.mtz
+    prmtop : 4amber_2bct.prmtop
+    rst7   : 4amber_2bct.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct
+return_files 2bct
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2bct.pdb
+4phenix_2bct.pdb
+cp 4phenix_2bct.pdb /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct
+2bct.pdb
+cp 2bct.pdb /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct
+4amber_2bct.mtz
+4phenix_2bct.mtz
+2bct.mtz
+cp 2bct.mtz /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct
+4amber_2bct.rst7
+cp 4amber_2bct.rst7 /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct
+4phenix_2bct.rst7
+2bct.rst7
+4amber_2bct.prmtop
+cp 4amber_2bct.prmtop /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct
+4phenix_2bct.prmtop
+2bct.prmtop
+4amber_2bct_refine_001.log
+4phenix_2bct_refine_001.log
+2bct_refine_001.log
+4amber_2bct_refine_002.log
+4phenix_2bct_refine_002.log
+2bct_refine_002.log
+4amber_2bct_refine_001.pdb
+4phenix_2bct_refine_001.pdb
+2bct_refine_001.pdb
+4amber_2bct_refine_002.pdb
+4phenix_2bct_refine_002.pdb
+2bct_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct/2bct.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/bc/2bct
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct/2bct_refine_001.log
+------------------------------
+
+	Already done (on chevy) 2bct_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/bc/2bct/2bct_refine_002.log
+------------------------------
+
+	Already done (on chevy) 2bct_refine_002

@@ -1,0 +1,171 @@
+HOST rebus.lbl.gov
+only_i 275
+only_code None
+force_amber_prep True
+dry_run False
+... 275 3ifp
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/if/3ifp
+3ifp.pdb 4phenix_3ifp.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/if/pdb3ifp.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/if/r3ifpsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/if/3ifp.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp.cif
+Can't determine output label for r3ifpsf,_refln.crystal_id - skipping.
+Can't determine output label for r3ifpsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3ifpsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ifp.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/if/pdb3ifp.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/if/r3ifpsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/if/3ifp.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp/3ifp.cif
+Can't determine output label for r3ifpsf,_refln.crystal_id - skipping.
+Can't determine output label for r3ifpsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3ifpsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ifp.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/if/3ifp/4amber_3ifp.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp/4amber_3ifp.prmtop
+
+	Running AmberPrep : 3ifp.pdb
+
+
+==================================================
+Running pdb4amber on 3ifp.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_3ifp.pdb
+==================================================
+
+~> tleap -f 3ifp_asu_tleap_input_run
+
+Checking output filenames
+  file : 3ifp_asu.prmtop
+  file : 3ifp_asu.rst7
+
+~> ChBox -c 3ifp_asu.rst7 -o 3ifp_asu.rst7 -X 78.86 -Y 79.24 -Z 94.1 -al 68.66 -bt 65.28 -gm 78.47 
+
+
+============================================================
+Preparing unit cell files: 4amber_3ifp.prmtop and 4amber_3ifp.rst7
+============================================================
+
+~> UnitCell -p 3ifp_4UnitCell.pdb -o 3ifp_4tleap_uc1.pdb
+
+
+~> tleap -f 3ifp_uc_tleap_input_run
+
+Checking output filenames
+  file : 3ifp_uc.prmtop
+  file : 3ifp_uc.rst7
+
+~> ChBox -c 3ifp_uc.rst7 -o 3ifp_uc.rst7 -X 78.86 -Y 79.24 -Z 94.1 -al 68.66 -bt 65.28 -gm 78.47 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3ifp_amber_all.in -p 4amber_3ifp.prmtop -c 4amber_3ifp.rst7 -o 3ifp.min.out            -ref 4amber_3ifp.rst7 -r 4amber_3ifp.min.rst7
+
+checking special positions in 4phenix_3ifp.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_3ifp.pdb
+      4amber_3ifp.prmtop
+      4amber_3ifp.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_3ifp.pdb use_amber=True \
+    amber.topology_file_name=4amber_3ifp.prmtop \
+    amber.coordinate_file_name=4amber_3ifp.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 3ifp.pdb
+    MTZ    : 3ifp.mtz
+    prmtop : 4amber_3ifp.prmtop
+    rst7   : 4amber_3ifp.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp
+return_files 3ifp
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_3ifp.pdb
+4phenix_3ifp.pdb
+cp 4phenix_3ifp.pdb /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp
+3ifp.pdb
+cp 3ifp.pdb /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp
+4amber_3ifp.mtz
+4phenix_3ifp.mtz
+3ifp.mtz
+cp 3ifp.mtz /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp
+4amber_3ifp.rst7
+cp 4amber_3ifp.rst7 /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp
+4phenix_3ifp.rst7
+3ifp.rst7
+4amber_3ifp.prmtop
+cp 4amber_3ifp.prmtop /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp
+4phenix_3ifp.prmtop
+3ifp.prmtop
+4amber_3ifp_refine_001.log
+4phenix_3ifp_refine_001.log
+3ifp_refine_001.log
+4amber_3ifp_refine_002.log
+4phenix_3ifp_refine_002.log
+3ifp_refine_002.log
+4amber_3ifp_refine_001.pdb
+4phenix_3ifp_refine_001.pdb
+3ifp_refine_001.pdb
+4amber_3ifp_refine_002.pdb
+4phenix_3ifp_refine_002.pdb
+3ifp_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp/3ifp.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/if/3ifp
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp/3ifp_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3ifp_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3ifp.pdb 3ifp.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/if/3ifp/3ifp_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3ifp_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3ifp.pdb 3ifp.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/if/3ifp/4amber_3ifp.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/if/3ifp/4amber_3ifp.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

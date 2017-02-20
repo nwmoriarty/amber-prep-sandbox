@@ -1,0 +1,79 @@
+HOST rebus.lbl.gov
+only_i 171
+only_code None
+force_amber_prep True
+dry_run False
+... 171 2gps
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/gp/2gps
+2gps.pdb 4phenix_2gps.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/gp/pdb2gps.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gp/r2gpssf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gp/2gps.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.cif
+Can't determine output label for r2gpssf,_refln.crystal_id - skipping.
+Can't determine output label for r2gpssf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gpssf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2gps.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/gp/pdb2gps.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gp/r2gpssf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gp/2gps.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gp/2gps/2gps.cif
+Can't determine output label for r2gpssf,_refln.crystal_id - skipping.
+Can't determine output label for r2gpssf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gpssf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2gps.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/gp/2gps/4amber_2gps.prmtop
+not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/gp/2gps/4phenix_2gps.pdb
+
+	Running AmberPrep : 2gps.pdb
+
+
+==================================================
+Running pdb4amber on 2gps.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2gps.pdb
+==================================================
+
+~> tleap -f 2gps_asu_tleap_input_run
+
+Checking output filenames
+  file : 2gps_asu.prmtop
+  file : 2gps_asu.rst7
+
+~> ChBox -c 2gps_asu.rst7 -o 2gps_asu.rst7 -X 62.926 -Y 92.619 -Z 86.598 -al 90.0 -bt 98.84 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2gps.prmtop and 4amber_2gps.rst7
+============================================================
+
+~> UnitCell -p 2gps_4UnitCell.pdb -o 2gps_4tleap_uc1.pdb
+
+
+~> tleap -f 2gps_uc_tleap_input_run
+
+Checking output filenames
+  file : 2gps_uc.prmtop

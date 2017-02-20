@@ -1,0 +1,185 @@
+HOST rebus.lbl.gov
+only_i 180
+only_code None
+force_amber_prep True
+dry_run False
+... 180 2ayl
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ay/2ayl
+2ayl.pdb 4phenix_2ayl.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ay/pdb2ayl.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ay/r2aylsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ay/2ayl.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl.cif
+Can't determine output label for r2aylsf,_refln.crystal_id - skipping.
+Can't determine output label for r2aylsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.075
+R-free-flags: missing 24636 reflections
+Can't determine output label for r2aylsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ayl.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ay/pdb2ayl.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ay/r2aylsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ay/2ayl.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ay/2ayl/2ayl.cif
+Can't determine output label for r2aylsf,_refln.crystal_id - skipping.
+Can't determine output label for r2aylsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.075
+R-free-flags: missing 24636 reflections
+Can't determine output label for r2aylsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ayl.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ay/2ayl/4amber_2ayl.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ay/2ayl/4amber_2ayl.prmtop
+
+	Running AmberPrep : 2ayl.pdb
+
+
+==================================================
+Running pdb4amber on 2ayl.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for NAG 
+==================================================
+
+MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
+	30 atoms
+	30 bonds
+	53 angles
+	79 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R R S R 
+
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
+
+
+  Residue "FLP" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for MNH 
+==================================================
+
+   Residue has metal at the centre of a coordination sphere. Using input
+   geometry to generate restraints. Hydrogens may not be added.
+   
+
+  group index 1
+change? False
+
+ChiralClass
+	Atom  NA ( 6) xyz:( 1.518, -0.155, -0.537)      ring index: 1
+	Atom MN  ( 1) xyz:(-0.200, -0.080, -0.505)    S ring index: 1
+	Atom  NB (17) xyz:(-1.147, -1.564, -1.550)      ring index: 1
+	Atom  NC (25) xyz:(-0.615,  1.915, -1.328)      ring index: 1
+	Atom  ND (33) xyz:(-1.040, -0.350,  1.345)      ring index: 1
+
+	not correct chiralisation
+
+MoleculeClass :  C:34  N: 4  O: 4 Mn: 1 (CHEMICAL COMPONENTS format)
+	73 atoms
+	80 bonds
+	144 angles
+	218 dihedrals
+	1 rings (groups, rings, atoms) 8 44
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_MNH.pdb -fi pdb -o MNH.mol2 -fo mol2       -nc 2 -m 2 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+For atom[1]:MN, the best APS is not zero, bonds involved by this atom are frozen
+
+~> parmchk2 -s 2 -i MNH.mol2 -f mol2 -o MNH.frcmod
+
+
+==================================================
+Running elbow/antechamber for BOG 
+==================================================
+
+MoleculeClass :  C:14  O: 6 (CHEMICAL COMPONENTS format)
+	48 atoms
+	48 bonds
+	90 angles
+	132 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R R S S R 
+
+~> antechamber -i 4antechamber_BOG.pdb -fi pdb -o BOG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BOG.mol2 -f mol2 -o BOG.frcmod
+
+
+==================================================
+Running elbow/antechamber for MAN 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S R 
+
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2ayl.pdb
+==================================================
+
+~> tleap -f 2ayl_asu_tleap_input_run
+
+
+~> " --- Testing environment ---"
+
+
+AMBERHOME: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber
+
+PATH: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin
+    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
+    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
+    : /usr/local_cci/gcc-4.3.4_fc8_x86_64/bin
+    : /net/cci/xp/CCDC/CSD_2016/bin
+    : /net/boa/srv/sge-6.1u2/bin/lx24-amd64
+    : .
+    : /net/cci/nigel/bin
+    : /net/cci/nigel/bin/Linux
+    : /usr/local_cci/bin
+    : /usr/local/bin
+    : /bin
+    : /usr/bin
+    : /usr/sbin
+    : /usr/bin/X11
+    : /etc
+    : /usr/etc

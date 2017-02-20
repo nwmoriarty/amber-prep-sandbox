@@ -1,0 +1,103 @@
+HOST rebus.lbl.gov
+only_i 227
+only_code None
+force_amber_prep True
+dry_run False
+... 227 2cxf
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/cx/2cxf
+2cxf.pdb 4phenix_2cxf.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/cx/pdb2cxf.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cx/r2cxfsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cx/2cxf.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf.cif
+Can't determine output label for r2cxfsf,_refln.crystal_id - skipping.
+Can't determine output label for r2cxfsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2cxfsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2cxf.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/cx/pdb2cxf.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cx/r2cxfsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cx/2cxf.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cx/2cxf/2cxf.cif
+Can't determine output label for r2cxfsf,_refln.crystal_id - skipping.
+Can't determine output label for r2cxfsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2cxfsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2cxf.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/cx/2cxf/4amber_2cxf.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/cx/2cxf/4amber_2cxf.prmtop
+
+	Running AmberPrep : 2cxf.pdb
+
+
+==================================================
+Running pdb4amber on 2cxf.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for MSE 
+==================================================
+--------------------------------------------------------------------------------
+['/tmp/6368462.227.all.q/tmprMEkQy', '/tmp/6368462.227.all.q/tmpU9KSkx']
+/tmp/6368462.227.all.q/tmprMEkQy
+  Monomer Library directory:
+    "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
+  Total number of atoms: 19
+  Number of models: 1
+  Model: ""
+    Number of chains: 1
+    Chain: "A"
+      Number of atoms: 19
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 1, 17
+          Duplicate atoms: {'MSE,HB2': 1, 'MSE,HG2': 1}
+          Classifications: {'peptide': 1}
+  Number of atoms with unknown nonbonded energy type symbols: 2
+    "HETATM   13  HB3 MSE A   1 .*.A    H  "
+    "HETATM   15  HG3 MSE A   1 .*.A    H  "
+  Time building chain proxies: 0.02, per 1000 atoms: 1.05
+
+--------------------------------------------------------------------------------
+
+MoleculeClass :  C: 5  N: 1  O: 2 Se: 1 (CHEMICAL COMPONENTS format)
+	19 atoms
+	18 bonds
+	31 angles
+	36 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_MSE.pdb -fi pdb -o MSE.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MSE.mol2 -f mol2 -o MSE.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2cxf.pdb
+==================================================
+
+~> tleap -f 2cxf_asu_tleap_input_run
+
+Checking output filenames
+  file : 2cxf_asu.prmtop

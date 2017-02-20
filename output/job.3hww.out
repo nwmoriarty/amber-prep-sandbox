@@ -1,0 +1,75 @@
+HOST rebus.lbl.gov
+only_i 120
+only_code None
+force_amber_prep True
+dry_run False
+... 120 3hww
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/hw/3hww
+3hww.pdb 4phenix_3hww.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/hw/pdb3hww.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/hw/r3hwwsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/hw/3hww.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww.cif
+Can't determine output label for r3hwwsf,_refln.crystal_id - skipping.
+Can't determine output label for r3hwwsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 5230 reflections
+Can't determine output label for r3hwwsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3hww.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/hw/pdb3hww.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/hw/r3hwwsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/hw/3hww.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/hw/3hww/3hww.cif
+Can't determine output label for r3hwwsf,_refln.crystal_id - skipping.
+Can't determine output label for r3hwwsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 5230 reflections
+Can't determine output label for r3hwwsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3hww.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/hw/3hww/4amber_3hww.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/hw/3hww/4amber_3hww.prmtop
+
+	Running AmberPrep : 3hww.pdb
+
+
+==================================================
+Running pdb4amber on 3hww.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "AKG" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3hww.pdb
+==================================================
+
+~> tleap -f 3hww_asu_tleap_input_run
+
+Checking output filenames
+  file : 3hww_asu.prmtop

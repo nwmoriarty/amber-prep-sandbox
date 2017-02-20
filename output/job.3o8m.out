@@ -1,0 +1,795 @@
+HOST rebus.lbl.gov
+only_i 216
+only_code None
+force_amber_prep True
+dry_run False
+... 216 3o8m
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m
+3o8m.pdb 4phenix_3o8m.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/o8/pdb3o8m.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/o8/r3o8msf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/o8/3o8m.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m.cif
+Can't determine output label for r3o8msf,_refln.crystal_id - skipping.
+Can't determine output label for r3o8msf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.015
+R-free-flags: missing 3670 reflections
+Can't determine output label for r3o8msf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3o8m.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/o8/pdb3o8m.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/o8/r3o8msf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/o8/3o8m.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m/3o8m.cif
+Can't determine output label for r3o8msf,_refln.crystal_id - skipping.
+Can't determine output label for r3o8msf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.015
+R-free-flags: missing 3670 reflections
+Can't determine output label for r3o8msf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3o8m.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/o8/3o8m/4amber_3o8m.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m/4amber_3o8m.prmtop
+
+	Running AmberPrep : 3o8m.pdb
+
+
+==================================================
+Running pdb4amber on 3o8m.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for BGC 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S S R R 
+
+~> antechamber -i 4antechamber_BGC.pdb -fi pdb -o BGC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BGC.mol2 -f mol2 -o BGC.frcmod
+
+
+==================================================
+Running elbow/antechamber for GLC 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S R S S R 
+
+~> antechamber -i 4antechamber_GLC.pdb -fi pdb -o GLC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GLC.mol2 -f mol2 -o GLC.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3o8m.pdb
+==================================================
+
+~> tleap -f 3o8m_asu_tleap_input_run
+
+Checking output filenames
+  file : 3o8m_asu.prmtop
+  file : 3o8m_asu.rst7
+
+~> ChBox -c 3o8m_asu.rst7 -o 3o8m_asu.rst7 -X 64.575 -Y 75.599 -Z 103.857 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3o8m.prmtop and 4amber_3o8m.rst7
+============================================================
+
+~> UnitCell -p 3o8m_4UnitCell.pdb -o 3o8m_4tleap_uc1.pdb
+
+
+~> tleap -f 3o8m_uc_tleap_input_run
+
+Checking output filenames
+  file : 3o8m_uc.prmtop
+  file : 3o8m_uc.rst7
+
+~> ChBox -c 3o8m_uc.rst7 -o 3o8m_uc.rst7 -X 64.575 -Y 75.599 -Z 103.857 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3o8m_amber_all.in -p 4amber_3o8m.prmtop -c 4amber_3o8m.rst7 -o 3o8m.min.out            -ref 4amber_3o8m.rst7 -r 4amber_3o8m.min.rst7
+
+checking special positions in 4phenix_3o8m.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_3o8m.pdb
+      4amber_3o8m.prmtop
+      4amber_3o8m.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_3o8m.pdb use_amber=True \
+    amber.topology_file_name=4amber_3o8m.prmtop \
+    amber.coordinate_file_name=4amber_3o8m.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 3o8m.pdb
+    MTZ    : 3o8m.mtz
+    prmtop : 4amber_3o8m.prmtop
+    rst7   : 4amber_3o8m.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m
+return_files 3o8m
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_3o8m.pdb
+4phenix_3o8m.pdb
+cp 4phenix_3o8m.pdb /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m
+3o8m.pdb
+cp 3o8m.pdb /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m
+4amber_3o8m.mtz
+4phenix_3o8m.mtz
+3o8m.mtz
+cp 3o8m.mtz /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m
+4amber_3o8m.rst7
+cp 4amber_3o8m.rst7 /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m
+4phenix_3o8m.rst7
+3o8m.rst7
+4amber_3o8m.prmtop
+cp 4amber_3o8m.prmtop /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m
+4phenix_3o8m.prmtop
+3o8m.prmtop
+4amber_3o8m_refine_001.log
+4phenix_3o8m_refine_001.log
+3o8m_refine_001.log
+4amber_3o8m_refine_002.log
+4phenix_3o8m_refine_002.log
+3o8m_refine_002.log
+4amber_3o8m_refine_001.pdb
+4phenix_3o8m_refine_001.pdb
+3o8m_refine_001.pdb
+4amber_3o8m_refine_002.pdb
+4phenix_3o8m_refine_002.pdb
+3o8m_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m/3o8m.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/o8/3o8m
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m/3o8m_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3o8m_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3o8m.pdb 3o8m.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+ligand_code :BGC:
+ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/BGC.cif
+
+  Restarting
+    phenix.refine 3o8m.pdb 3o8m.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True /net/cci/lbnl/nigel/all_chemical_components/cifs/BGC.cif
+    
+# Date 2017-02-17 Time 23:12:13 PST -0800 (1487401933.72 s)
+#phil __OFF__
+
+Command line arguments: "3o8m.pdb" "3o8m.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/BGC.cif"
+
+HOST = rebus.lbl.gov
+HOSTTYPE = x86_64-linux
+USER = nigel
+PID = 961
+JOB_ID = 6368462
+SGE_ARCH = lx24-amd64
+SGE_TASK_FIRST = 1
+SGE_TASK_LAST = 400
+SGE_TASK_ID = 216
+
+-------------------------------------------------------------------------------
+  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
+  Version: dev
+  Release tag: svn+SVN
+  User: nigel
+-------------------------------------------------------------------------------
+
+              phenix.refine: Macromolecular Structure Refinement
+
+-------------------------------------------------------------------------------
+
+Phenix developers include:
+  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
+  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
+  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
+  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
+  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
+  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
+  Tom Terwilliger, Christopher Williams, Peter Zwart
+Phenix home page:
+  http://www.phenix-online.org/
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Phenix components are copyrighted by:
+  - Lawrence Berkeley National Laboratory
+  - Los Alamos National Laboratory
+  - University of Cambridge
+  - Duke University
+  - Texas Agricultural Experiment Station &
+    Texas Engineering Experiment Station
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Major third-party components of Phenix include:
+    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
+    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
+    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
+  Enter phenix.acknowledgments for details.
+-------------------------------------------------------------------------------
+
+Processing inputs. This may take a minute or two.
+
+Command line parameter definitions:
+  refinement.pdb_interpretation.c_beta_restraints = False
+
+  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
+
+  refinement.refine.strategy = *individual_sites individual_sites_real_space \
+                               rigid_body *individual_adp group_adp tls \
+                               *occupancies group_anomalous
+
+  refinement.target_weights.optimize_xyz_weight = True
+
+  refinement.main.number_of_macro_cycles = 10
+
+  refinement.output.write_geo_file = False
+
+  refinement.output.serial = 1
+
+  refinement.pdb_interpretation.restraints_library.cdl = True
+
+  No user-defined map coefficients or files defined; will use default map
+  outputs instead.
+Working crystal symmetry after inspecting all inputs:
+  Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+  Space group: P 21 21 21 (No. 19)
+
+
+================================== X-ray data =================================
+
+F-obs:
+  3o8m.mtz:FOBS,SIGFOBS
+
+Miller array info: 3o8m.mtz:FOBS,SIGFOBS
+Observation type: xray.amplitude
+Type of data: double, size=92773
+Type of sigmas: double, size=92773
+Number of Miller indices: 92773
+Anomalous flag: False
+Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6745
+Resolution range: 28.5489 1.42
+Completeness in resolution range: 0.961956
+Completeness with d_max=infinity: 0.961777
+Wavelength: 0.0000
+
+Number of F-obs in resolution range:                   92773
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 0
+Refinement resolution range: d_max =  28.5489
+                             d_min =   1.4200
+
+R-free flags:
+  3o8m.mtz:R-free-flags
+
+Miller array info: 3o8m.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=96443
+Type of sigmas: None
+Number of Miller indices: 96443
+Anomalous flag: False
+Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 7474
+Resolution range: 29.6928 1.42
+Completeness in resolution range: 1
+Completeness with d_max=infinity: 0.999824
+Wavelength: 0.0000
+
+Test (R-free flags) flag value: 0
+
+Number of work/free reflections by resolution:
+                                           work  free  %free
+  bin  1: 28.5547 -  3.0582 [10008/10042]  9847   161   1.6%
+  bin  2:  3.0582 -  2.4278 [ 9745/9752 ]  9615   130   1.3%
+  bin  3:  2.4278 -  2.1210 [ 9665/9684 ]  9526   139   1.4%
+  bin  4:  2.1210 -  1.9271 [ 9622/9642 ]  9492   130   1.4%
+  bin  5:  1.9271 -  1.7890 [ 9555/9585 ]  9410   145   1.5%
+  bin  6:  1.7890 -  1.6835 [ 9521/9572 ]  9386   135   1.4%
+  bin  7:  1.6835 -  1.5992 [ 9482/9555 ]  9321   161   1.7%
+  bin  8:  1.5992 -  1.5296 [ 9427/9527 ]  9289   138   1.5%
+  bin  9:  1.5296 -  1.4707 [ 8645/9564 ]  8531   114   1.3%
+  bin 10:  1.4707 -  1.4200 [ 7103/9519 ]  6989   114   1.6%
+                                  overall 91406  1367   1.5%
+  Monomer Library directory:
+    "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
+  Total number of atoms: 9206
+  Number of models: 1
+  Model: ""
+    Number of chains: 2
+    Chain: "A"
+      Number of atoms: 7321
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 472, 7321
+          Classifications: {'peptide': 472}
+          Modifications used: {'COO': 1, 'NH3': 1}
+          Link IDs: {'PTRANS': 22, 'TRANS': 449}
+    Chain: "A"
+      Number of atoms: 1885
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 617, 1885
+          Unusual residues: {'BGC': 1, 'GLC': 1, 'CL ': 4}
+          Classifications: {'undetermined': 6, 'water': 611}
+          Link IDs: {None: 616}
+  Residues with excluded nonbonded symmetry interactions: 5
+    residue:
+      pdb=" C1  GLC A 486 " occ=0.78
+      ... (22 atoms not shown)
+      pdb=" HO6 GLC A 486 " occ=0.78
+    residue:
+      pdb=" C1  BGC A 487 " occ=0.22
+      ... (22 atoms not shown)
+      pdb="H6C2 BGC A 487 " occ=0.22
+    residue:
+      pdb="CL   CL  A 489 " occ=0.50
+    residue:
+      pdb="CL   CL  A 490 " occ=0.75
+    residue:
+      pdb="CL   CL  A 491 " occ=0.75
+  Time building chain proxies: 6.87, per 1000 atoms: 0.75
+  Number of scatterers: 9206
+  At special positions: 0
+  Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+  Space group: P 21 21 21 (No. 19)
+  Number of sites at special positions: 0
+  Number of scattering types: 6
+    Type Number    sf(0)
+     Cl      4     17.00
+     S      16     16.00
+     O    1339      8.00
+     N     603      7.00
+     C    2346      6.00
+     H    4898      1.00
+    sf(0) = scattering factor at diffraction angle 0.
+
+
+No array of experimental phases found.
+
+
+============================== Scattering factors =============================
+
+
+                ----------X-ray scattering dictionary----------                
+
+Number of scattering types: 6
+  Type Number    sf(0)   Gaussians
+   Cl      4     16.95       2
+   S      16     15.96       2
+   O    1339      7.97       2
+   N     603      6.97       2
+   C    2346      5.97       2
+   H    4898      1.00       2
+  sf(0) = scattering factor at diffraction angle 0.
+
+
+========================== Anomalous scatterer groups =========================
+
+All atoms refined with f_prime=0 and f_double_prime=0.
+
+======================== Summary of geometry restraints =======================
+
+  Number of disulfides: simple=0, symmetry=0
+
+  Automatic linking
+    Parameters for automatic linking
+      Linking & cutoffs
+        Metal                : False - 3.50
+        Amimo acid           : False - 1.90
+        Carbohydrate         : True  - 1.99
+        Ligands              : True  - 1.99
+        Amino acid - RNA/DNA : False
+      
+Sorry: Unable to determine the linking chiral atoms for atom groups
+    group 1
+          "HETATM 7346  C1  BGC A 487 .*.     C  "
+          "HETATM 7347  C2  BGC A 487 .*.     C  "
+          "HETATM 7348  C3  BGC A 487 .*.     C  "
+          "HETATM 7349  C4  BGC A 487 .*.     C  "
+          "HETATM 7350  C5  BGC A 487 .*.     C  "
+          "HETATM 7351  C6  BGC A 487 .*.     C  "
+          "HETATM 7352  O1  BGC A 487 .*.     O  "
+          "HETATM 7353  O2  BGC A 487 .*.     O  "
+          "HETATM 7354  O3  BGC A 487 .*.     O  "
+          "HETATM 7355  O4  BGC A 487 .*.     O  "
+          "HETATM 7356  O5  BGC A 487 .*.     O  "
+          "HETATM 7357  O6  BGC A 487 .*.     O  "
+          "HETATM 7358  H1  BGC A 487 .*.     H  "
+          "HETATM 7359  H2  BGC A 487 .*.     H  "
+          "HETATM 7360  H3  BGC A 487 .*.     H  "
+          "HETATM 7361  HA  BGC A 487 .*.     H  "
+          "HETATM 7362  HB  BGC A 487 .*.     H  "
+          "HETATM 7363  HD  BGC A 487 .*.     H  "
+          "HETATM 7364  H4  BGC A 487 .*.     H  "
+          "HETATM 7365  H5  BGC A 487 .*.     H  "
+          "HETATM 7366  H6  BGC A 487 .*.     H  "
+          "HETATM 7367  HC  BGC A 487 .*.     H  "
+          "HETATM 7368 H6C1 BGC A 487 .*.     H  "
+          "HETATM 7369 H6C2 BGC A 487 .*.     H  "
+
+    group 2
+          "HETATM 7322  C1  GLC A 486 .*.     C  "
+          "HETATM 7323  C2  GLC A 486 .*.     C  "
+          "HETATM 7324  C3  GLC A 486 .*.     C  "
+          "HETATM 7325  C4  GLC A 486 .*.     C  "
+          "HETATM 7326  C5  GLC A 486 .*.     C  "
+          "HETATM 7327  C6  GLC A 486 .*.     C  "
+          "HETATM 7328  O1  GLC A 486 .*.     O  "
+          "HETATM 7329  O2  GLC A 486 .*.     O  "
+          "HETATM 7330  O3  GLC A 486 .*.     O  "
+          "HETATM 7331  O4  GLC A 486 .*.     O  "
+          "HETATM 7332  O5  GLC A 486 .*.     O  "
+          "HETATM 7333  O6  GLC A 486 .*.     O  "
+          "HETATM 7334  H1  GLC A 486 .*.     H  "
+          "HETATM 7335  H2  GLC A 486 .*.     H  "
+          "HETATM 7336  H3  GLC A 486 .*.     H  "
+          "HETATM 7337  H4  GLC A 486 .*.     H  "
+          "HETATM 7338  H5  GLC A 486 .*.     H  "
+          "HETATM 7339  H61 GLC A 486 .*.     H  "
+          "HETATM 7340  H62 GLC A 486 .*.     H  "
+          "HETATM 7341  HO1 GLC A 486 .*.     H  "
+          "HETATM 7342  HO2 GLC A 486 .*.     H  "
+          "HETATM 7343  HO3 GLC A 486 .*.     H  "
+          "HETATM 7344  HO4 GLC A 486 .*.     H  "
+          "HETATM 7345  HO6 GLC A 486 .*.     H  "
+
+    
+
+# Date 2017-02-17 Time 23:12:13 PST -0800 (1487401933.72 s)
+#phil __OFF__
+
+Command line arguments: "3o8m.pdb" "3o8m.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/BGC.cif"
+
+HOST = rebus.lbl.gov
+HOSTTYPE = x86_64-linux
+USER = nigel
+PID = 961
+JOB_ID = 6368462
+SGE_ARCH = lx24-amd64
+SGE_TASK_FIRST = 1
+SGE_TASK_LAST = 400
+SGE_TASK_ID = 216
+
+-------------------------------------------------------------------------------
+  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
+  Version: dev
+  Release tag: svn+SVN
+  User: nigel
+-------------------------------------------------------------------------------
+
+              phenix.refine: Macromolecular Structure Refinement
+
+-------------------------------------------------------------------------------
+
+Phenix developers include:
+  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
+  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
+  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
+  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
+  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
+  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
+  Tom Terwilliger, Christopher Williams, Peter Zwart
+Phenix home page:
+  http://www.phenix-online.org/
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Phenix components are copyrighted by:
+  - Lawrence Berkeley National Laboratory
+  - Los Alamos National Laboratory
+  - University of Cambridge
+  - Duke University
+  - Texas Agricultural Experiment Station &
+    Texas Engineering Experiment Station
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Major third-party components of Phenix include:
+    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
+    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
+    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
+  Enter phenix.acknowledgments for details.
+-------------------------------------------------------------------------------
+
+Processing inputs. This may take a minute or two.
+
+Command line parameter definitions:
+  refinement.pdb_interpretation.c_beta_restraints = False
+
+  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
+
+  refinement.refine.strategy = *individual_sites individual_sites_real_space \
+                               rigid_body *individual_adp group_adp tls \
+                               *occupancies group_anomalous
+
+  refinement.target_weights.optimize_xyz_weight = True
+
+  refinement.main.number_of_macro_cycles = 10
+
+  refinement.output.write_geo_file = False
+
+  refinement.output.serial = 1
+
+  refinement.pdb_interpretation.restraints_library.cdl = True
+
+  No user-defined map coefficients or files defined; will use default map
+  outputs instead.
+Working crystal symmetry after inspecting all inputs:
+  Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+  Space group: P 21 21 21 (No. 19)
+
+
+================================== X-ray data =================================
+
+F-obs:
+  3o8m.mtz:FOBS,SIGFOBS
+
+Miller array info: 3o8m.mtz:FOBS,SIGFOBS
+Observation type: xray.amplitude
+Type of data: double, size=92773
+Type of sigmas: double, size=92773
+Number of Miller indices: 92773
+Anomalous flag: False
+Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6745
+Resolution range: 28.5489 1.42
+Completeness in resolution range: 0.961956
+Completeness with d_max=infinity: 0.961777
+Wavelength: 0.0000
+
+Number of F-obs in resolution range:                   92773
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 0
+Refinement resolution range: d_max =  28.5489
+                             d_min =   1.4200
+
+R-free flags:
+  3o8m.mtz:R-free-flags
+
+Miller array info: 3o8m.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=96443
+Type of sigmas: None
+Number of Miller indices: 96443
+Anomalous flag: False
+Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 7474
+Resolution range: 29.6928 1.42
+Completeness in resolution range: 1
+Completeness with d_max=infinity: 0.999824
+Wavelength: 0.0000
+
+Test (R-free flags) flag value: 0
+
+Number of work/free reflections by resolution:
+                                           work  free  %free
+  bin  1: 28.5547 -  3.0582 [10008/10042]  9847   161   1.6%
+  bin  2:  3.0582 -  2.4278 [ 9745/9752 ]  9615   130   1.3%
+  bin  3:  2.4278 -  2.1210 [ 9665/9684 ]  9526   139   1.4%
+  bin  4:  2.1210 -  1.9271 [ 9622/9642 ]  9492   130   1.4%
+  bin  5:  1.9271 -  1.7890 [ 9555/9585 ]  9410   145   1.5%
+  bin  6:  1.7890 -  1.6835 [ 9521/9572 ]  9386   135   1.4%
+  bin  7:  1.6835 -  1.5992 [ 9482/9555 ]  9321   161   1.7%
+  bin  8:  1.5992 -  1.5296 [ 9427/9527 ]  9289   138   1.5%
+  bin  9:  1.5296 -  1.4707 [ 8645/9564 ]  8531   114   1.3%
+  bin 10:  1.4707 -  1.4200 [ 7103/9519 ]  6989   114   1.6%
+                                  overall 91406  1367   1.5%
+  Monomer Library directory:
+    "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
+  Total number of atoms: 9206
+  Number of models: 1
+  Model: ""
+    Number of chains: 2
+    Chain: "A"
+      Number of atoms: 7321
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 472, 7321
+          Classifications: {'peptide': 472}
+          Modifications used: {'COO': 1, 'NH3': 1}
+          Link IDs: {'PTRANS': 22, 'TRANS': 449}
+    Chain: "A"
+      Number of atoms: 1885
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 617, 1885
+          Unusual residues: {'BGC': 1, 'GLC': 1, 'CL ': 4}
+          Classifications: {'undetermined': 6, 'water': 611}
+          Link IDs: {None: 616}
+  Residues with excluded nonbonded symmetry interactions: 5
+    residue:
+      pdb=" C1  GLC A 486 " occ=0.78
+      ... (22 atoms not shown)
+      pdb=" HO6 GLC A 486 " occ=0.78
+    residue:
+      pdb=" C1  BGC A 487 " occ=0.22
+      ... (22 atoms not shown)
+      pdb="H6C2 BGC A 487 " occ=0.22
+    residue:
+      pdb="CL   CL  A 489 " occ=0.50
+    residue:
+      pdb="CL   CL  A 490 " occ=0.75
+    residue:
+      pdb="CL   CL  A 491 " occ=0.75
+  Time building chain proxies: 6.87, per 1000 atoms: 0.75
+  Number of scatterers: 9206
+  At special positions: 0
+  Unit cell: (64.575, 75.599, 103.857, 90, 90, 90)
+  Space group: P 21 21 21 (No. 19)
+  Number of sites at special positions: 0
+  Number of scattering types: 6
+    Type Number    sf(0)
+     Cl      4     17.00
+     S      16     16.00
+     O    1339      8.00
+     N     603      7.00
+     C    2346      6.00
+     H    4898      1.00
+    sf(0) = scattering factor at diffraction angle 0.
+
+
+No array of experimental phases found.
+
+
+============================== Scattering factors =============================
+
+
+                ----------X-ray scattering dictionary----------                
+
+Number of scattering types: 6
+  Type Number    sf(0)   Gaussians
+   Cl      4     16.95       2
+   S      16     15.96       2
+   O    1339      7.97       2
+   N     603      6.97       2
+   C    2346      5.97       2
+   H    4898      1.00       2
+  sf(0) = scattering factor at diffraction angle 0.
+
+
+========================== Anomalous scatterer groups =========================
+
+All atoms refined with f_prime=0 and f_double_prime=0.
+
+======================== Summary of geometry restraints =======================
+
+  Number of disulfides: simple=0, symmetry=0
+
+  Automatic linking
+    Parameters for automatic linking
+      Linking & cutoffs
+        Metal                : False - 3.50
+        Amimo acid           : False - 1.90
+        Carbohydrate         : True  - 1.99
+        Ligands              : True  - 1.99
+        Amino acid - RNA/DNA : False
+      
+Sorry: Unable to determine the linking chiral atoms for atom groups
+    group 1
+          "HETATM 7346  C1  BGC A 487 .*.     C  "
+          "HETATM 7347  C2  BGC A 487 .*.     C  "
+          "HETATM 7348  C3  BGC A 487 .*.     C  "
+          "HETATM 7349  C4  BGC A 487 .*.     C  "
+          "HETATM 7350  C5  BGC A 487 .*.     C  "
+          "HETATM 7351  C6  BGC A 487 .*.     C  "
+          "HETATM 7352  O1  BGC A 487 .*.     O  "
+          "HETATM 7353  O2  BGC A 487 .*.     O  "
+          "HETATM 7354  O3  BGC A 487 .*.     O  "
+          "HETATM 7355  O4  BGC A 487 .*.     O  "
+          "HETATM 7356  O5  BGC A 487 .*.     O  "
+          "HETATM 7357  O6  BGC A 487 .*.     O  "
+          "HETATM 7358  H1  BGC A 487 .*.     H  "
+          "HETATM 7359  H2  BGC A 487 .*.     H  "
+          "HETATM 7360  H3  BGC A 487 .*.     H  "
+          "HETATM 7361  HA  BGC A 487 .*.     H  "
+          "HETATM 7362  HB  BGC A 487 .*.     H  "
+          "HETATM 7363  HD  BGC A 487 .*.     H  "
+          "HETATM 7364  H4  BGC A 487 .*.     H  "
+          "HETATM 7365  H5  BGC A 487 .*.     H  "
+          "HETATM 7366  H6  BGC A 487 .*.     H  "
+          "HETATM 7367  HC  BGC A 487 .*.     H  "
+          "HETATM 7368 H6C1 BGC A 487 .*.     H  "
+          "HETATM 7369 H6C2 BGC A 487 .*.     H  "
+
+    group 2
+          "HETATM 7322  C1  GLC A 486 .*.     C  "
+          "HETATM 7323  C2  GLC A 486 .*.     C  "
+          "HETATM 7324  C3  GLC A 486 .*.     C  "
+          "HETATM 7325  C4  GLC A 486 .*.     C  "
+          "HETATM 7326  C5  GLC A 486 .*.     C  "
+          "HETATM 7327  C6  GLC A 486 .*.     C  "
+          "HETATM 7328  O1  GLC A 486 .*.     O  "
+          "HETATM 7329  O2  GLC A 486 .*.     O  "
+          "HETATM 7330  O3  GLC A 486 .*.     O  "
+          "HETATM 7331  O4  GLC A 486 .*.     O  "
+          "HETATM 7332  O5  GLC A 486 .*.     O  "
+          "HETATM 7333  O6  GLC A 486 .*.     O  "
+          "HETATM 7334  H1  GLC A 486 .*.     H  "
+          "HETATM 7335  H2  GLC A 486 .*.     H  "
+          "HETATM 7336  H3  GLC A 486 .*.     H  "
+          "HETATM 7337  H4  GLC A 486 .*.     H  "
+          "HETATM 7338  H5  GLC A 486 .*.     H  "
+          "HETATM 7339  H61 GLC A 486 .*.     H  "
+          "HETATM 7340  H62 GLC A 486 .*.     H  "
+          "HETATM 7341  HO1 GLC A 486 .*.     H  "
+          "HETATM 7342  HO2 GLC A 486 .*.     H  "
+          "HETATM 7343  HO3 GLC A 486 .*.     H  "
+          "HETATM 7344  HO4 GLC A 486 .*.     H  "
+          "HETATM 7345  HO6 GLC A 486 .*.     H  "
+
+    
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m/3o8m_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3o8m_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3o8m.pdb 3o8m.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m/4amber_3o8m.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/o8/3o8m/4amber_3o8m.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+
+ligand_code :BGC:
+ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/BGC.cif

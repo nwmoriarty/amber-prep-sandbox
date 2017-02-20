@@ -1,0 +1,125 @@
+HOST rebus.lbl.gov
+only_i 234
+only_code None
+force_amber_prep True
+dry_run False
+... 234 2cy2
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/cy/2cy2
+2cy2.pdb 4phenix_2cy2.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/cy/pdb2cy2.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cy/r2cy2sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cy/2cy2.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2.cif
+Can't determine output label for r2cy2sf,_refln.crystal_id - skipping.
+Can't determine output label for r2cy2sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 1562 reflections
+Can't determine output label for r2cy2sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2cy2.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/cy/pdb2cy2.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cy/r2cy2sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cy/2cy2.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cy/2cy2/2cy2.cif
+Can't determine output label for r2cy2sf,_refln.crystal_id - skipping.
+Can't determine output label for r2cy2sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 1562 reflections
+Can't determine output label for r2cy2sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2cy2.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/cy/2cy2/4amber_2cy2.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/cy/2cy2/4amber_2cy2.prmtop
+
+	Running AmberPrep : 2cy2.pdb
+
+
+==================================================
+Running pdb4amber on 2cy2.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for MSE 
+==================================================
+--------------------------------------------------------------------------------
+['/tmp/6368462.234.all.q/tmpBaMbgr', '/tmp/6368462.234.all.q/tmpRNvd7A']
+/tmp/6368462.234.all.q/tmpBaMbgr
+  Monomer Library directory:
+    "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
+  Total number of atoms: 19
+  Number of models: 1
+  Model: ""
+    Number of chains: 1
+    Chain: "A"
+      Number of atoms: 19
+      Number of conformers: 1
+      Conformer: ""
+        Number of residues, atoms: 1, 17
+          Duplicate atoms: {'MSE,HB2': 1, 'MSE,HG2': 1}
+          Classifications: {'peptide': 1}
+  Number of atoms with unknown nonbonded energy type symbols: 2
+    "HETATM   13  HB3 MSE A   1 .*.A    H  "
+    "HETATM   15  HG3 MSE A   1 .*.A    H  "
+  Time building chain proxies: 0.02, per 1000 atoms: 1.05
+
+--------------------------------------------------------------------------------
+
+MoleculeClass :  C: 5  N: 1  O: 2 Se: 1 (CHEMICAL COMPONENTS format)
+	19 atoms
+	18 bonds
+	31 angles
+	36 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_MSE.pdb -fi pdb -o MSE.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MSE.mol2 -f mol2 -o MSE.frcmod
+
+
+==================================================
+Running elbow/antechamber for ACO 
+==================================================
+
+MoleculeClass :  C:23  N: 7  O:17  P: 3  S: 1 (CHEMICAL COMPONENTS format)
+	85 atoms
+	87 bonds
+	155 angles
+	207 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	5 chirals : R R S R R 
+
+~> antechamber -i 4antechamber_ACO.pdb -fi pdb -o ACO.mol2 -fo mol2       -nc -4 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i ACO.mol2 -f mol2 -o ACO.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_2cy2.pdb
+==================================================
+
+~> tleap -f 2cy2_asu_tleap_input_run
+
+Checking output filenames
+  file : 2cy2_asu.prmtop

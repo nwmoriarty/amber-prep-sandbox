@@ -1,0 +1,83 @@
+HOST rebus.lbl.gov
+only_i 222
+only_code None
+force_amber_prep True
+dry_run False
+... 222 3nxu
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/nx/3nxu
+3nxu.pdb 4phenix_3nxu.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/nx/pdb3nxu.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/nx/r3nxusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/nx/3nxu.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu.cif
+Can't determine output label for r3nxusf,_refln.crystal_id - skipping.
+Can't determine output label for r3nxusf,_refln.scale_group_code - skipping.
+Can't determine output label for r3nxusf,_refln.wavelength_id - skipping.
+Warning: merging non-unique data
+Warning: merging non-unique data
+Converted structure factors saved to 3nxu.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+  I(+),SIGI(+),I(-),SIGI(-) is anomalous
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/nx/pdb3nxu.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/nx/r3nxusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/nx/3nxu.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/nx/3nxu/3nxu.cif
+Can't determine output label for r3nxusf,_refln.crystal_id - skipping.
+Can't determine output label for r3nxusf,_refln.scale_group_code - skipping.
+Can't determine output label for r3nxusf,_refln.wavelength_id - skipping.
+Warning: merging non-unique data
+Warning: merging non-unique data
+Converted structure factors saved to 3nxu.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+  I(+),SIGI(+),I(-),SIGI(-) is anomalous
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/nx/3nxu/4amber_3nxu.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/nx/3nxu/4amber_3nxu.prmtop
+
+	Running AmberPrep : 3nxu.pdb
+
+
+==================================================
+Running pdb4amber on 3nxu.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for HEM 
+==================================================
+	Difficulties in the ring structures may lead to problems later
+
+   Residue has metal at the centre of a coordination sphere. Using input
+   geometry to generate restraints. Hydrogens may not be added.
+   
+
+MoleculeClass :  C:34  N: 4  O: 4 Fe: 1 (CHEMICAL COMPONENTS format)
+	73 atoms
+	80 bonds
+	144 angles
+	218 dihedrals
+	1 rings (groups, rings, atoms) 8 44
+	0 chirals
+
+~> antechamber -i 4antechamber_HEM.pdb -fi pdb -o HEM.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+(2) adjust atom valence penalty parameters in APS.DAT, and/or 

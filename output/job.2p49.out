@@ -1,0 +1,87 @@
+HOST rebus.lbl.gov
+only_i 146
+only_code None
+force_amber_prep True
+dry_run False
+... 146 2p49
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/p4/2p49
+2p49.pdb 4phenix_2p49.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/p4/pdb2p49.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/p4/r2p49sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/p4/2p49.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49.cif
+Can't determine output label for r2p49sf,_refln.crystal_id - skipping.
+Can't determine output label for r2p49sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 145 reflections
+Can't determine output label for r2p49sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2p49.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/p4/pdb2p49.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/p4/r2p49sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/p4/2p49.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p4/2p49/2p49.cif
+Can't determine output label for r2p49sf,_refln.crystal_id - skipping.
+Can't determine output label for r2p49sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 145 reflections
+Can't determine output label for r2p49sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2p49.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/p4/2p49/4amber_2p49.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/p4/2p49/4amber_2p49.prmtop
+
+	Running AmberPrep : 2p49.pdb
+
+
+==================================================
+Running pdb4amber on 2p49.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "PO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2p49.pdb
+==================================================
+
+~> tleap -f 2p49_asu_tleap_input_run
+
+Checking output filenames
+  file : 2p49_asu.prmtop
+  file : 2p49_asu.rst7
+
+~> ChBox -c 2p49_asu.rst7 -o 2p49_asu.rst7 -X 40.13 -Y 54.394 -Z 48.044 -al 90.0 -bt 108.49 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2p49.prmtop and 4amber_2p49.rst7
+============================================================
+
+~> UnitCell -p 2p49_4UnitCell.pdb -o 2p49_4tleap_uc1.pdb
+
+
+~> tleap -f 2p49_uc_tleap_input_run
+
+Checking output filenames
+  file : 2p49_uc.prmtop

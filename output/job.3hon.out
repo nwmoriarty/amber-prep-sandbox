@@ -1,0 +1,79 @@
+HOST rebus.lbl.gov
+only_i 335
+only_code None
+force_amber_prep True
+dry_run False
+... 335 3hon
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ho/3hon
+3hon.pdb 4phenix_3hon.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ho/pdb3hon.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ho/r3honsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ho/3hon.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon.cif
+Can't determine output label for r3honsf,_refln.crystal_id - skipping.
+Can't determine output label for r3honsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3honsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3hon.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ho/pdb3hon.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ho/r3honsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ho/3hon.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ho/3hon/3hon.cif
+Can't determine output label for r3honsf,_refln.crystal_id - skipping.
+Can't determine output label for r3honsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3honsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3hon.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ho/3hon/4amber_3hon.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ho/3hon/4amber_3hon.prmtop
+
+	Running AmberPrep : 3hon.pdb
+
+
+==================================================
+Running pdb4amber on 3hon.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_3hon.pdb
+==================================================
+
+~> tleap -f 3hon_asu_tleap_input_run
+
+Checking output filenames
+  file : 3hon_asu.prmtop
+  file : 3hon_asu.rst7
+
+~> ChBox -c 3hon_asu.rst7 -o 3hon_asu.rst7 -X 94.876 -Y 94.876 -Z 94.876 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3hon.prmtop and 4amber_3hon.rst7
+============================================================
+
+~> UnitCell -p 3hon_4UnitCell.pdb -o 3hon_4tleap_uc1.pdb
+
+
+~> tleap -f 3hon_uc_tleap_input_run
+
+Checking output filenames
+  file : 3hon_uc.prmtop

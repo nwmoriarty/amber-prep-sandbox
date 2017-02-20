@@ -1,0 +1,165 @@
+HOST rebus.lbl.gov
+only_i 192
+only_code None
+force_amber_prep True
+dry_run False
+... 192 1ugn
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn
+1ugn.pdb 4phenix_1ugn.pdb
+1ugn.pdb 4phenix_1ugn.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ug/pdb1ugn.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ug/r1ugnsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ug/1ugn.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn.cif
+Can't determine output label for r1ugnsf,_refln.crystal_id - skipping.
+Can't determine output label for r1ugnsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 260 reflections
+Can't determine output label for r1ugnsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1ugn.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ug/pdb1ugn.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ug/r1ugnsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ug/1ugn.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn/1ugn.cif
+Can't determine output label for r1ugnsf,_refln.crystal_id - skipping.
+Can't determine output label for r1ugnsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 260 reflections
+Can't determine output label for r1ugnsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1ugn.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ug/1ugn/4amber_1ugn.prmtop
+
+	Running AmberPrep : 1ugn.pdb
+
+
+==================================================
+Running pdb4amber on 1ugn.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1ugn.pdb
+==================================================
+
+~> tleap -f 1ugn_asu_tleap_input_run
+
+Checking output filenames
+  file : 1ugn_asu.prmtop
+  file : 1ugn_asu.rst7
+
+~> ChBox -c 1ugn_asu.rst7 -o 1ugn_asu.rst7 -X 36.437 -Y 103.414 -Z 53.022 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1ugn.prmtop and 4amber_1ugn.rst7
+============================================================
+
+~> UnitCell -p 1ugn_4UnitCell.pdb -o 1ugn_4tleap_uc1.pdb
+
+
+~> tleap -f 1ugn_uc_tleap_input_run
+
+Checking output filenames
+  file : 1ugn_uc.prmtop
+  file : 1ugn_uc.rst7
+
+~> ChBox -c 1ugn_uc.rst7 -o 1ugn_uc.rst7 -X 36.437 -Y 103.414 -Z 53.022 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1ugn_amber_all.in -p 4amber_1ugn.prmtop -c 4amber_1ugn.rst7 -o 1ugn.min.out            -ref 4amber_1ugn.rst7 -r 4amber_1ugn.min.rst7
+
+checking special positions in 4phenix_1ugn.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1ugn.pdb
+      4amber_1ugn.prmtop
+      4amber_1ugn.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1ugn.pdb use_amber=True \
+    amber.topology_file_name=4amber_1ugn.prmtop \
+    amber.coordinate_file_name=4amber_1ugn.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1ugn.pdb
+    MTZ    : 1ugn.mtz
+    prmtop : 4amber_1ugn.prmtop
+    rst7   : 4amber_1ugn.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn
+return_files 1ugn
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1ugn.pdb
+4phenix_1ugn.pdb
+cp 4phenix_1ugn.pdb /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn
+1ugn.pdb
+cp 1ugn.pdb /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn
+4amber_1ugn.mtz
+4phenix_1ugn.mtz
+1ugn.mtz
+cp 1ugn.mtz /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn
+4amber_1ugn.rst7
+cp 4amber_1ugn.rst7 /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn
+4phenix_1ugn.rst7
+1ugn.rst7
+4amber_1ugn.prmtop
+cp 4amber_1ugn.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn
+4phenix_1ugn.prmtop
+1ugn.prmtop
+4amber_1ugn_refine_001.log
+4phenix_1ugn_refine_001.log
+1ugn_refine_001.log
+4amber_1ugn_refine_002.log
+4phenix_1ugn_refine_002.log
+1ugn_refine_002.log
+4amber_1ugn_refine_001.pdb
+4phenix_1ugn_refine_001.pdb
+1ugn_refine_001.pdb
+4amber_1ugn_refine_002.pdb
+4phenix_1ugn_refine_002.pdb
+1ugn_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn/1ugn.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ug/1ugn
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn/1ugn_refine_001.log
+------------------------------
+
+	Already done (on chevy) 1ugn_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ug/1ugn/1ugn_refine_002.log
+------------------------------
+
+	Already done (on chevy) 1ugn_refine_002

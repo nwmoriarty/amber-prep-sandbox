@@ -1,0 +1,165 @@
+HOST rebus.lbl.gov
+only_i 167
+only_code None
+force_amber_prep True
+dry_run False
+... 167 1cdd
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd
+1cdd.pdb 4phenix_1cdd.pdb
+1cdd.pdb 4phenix_1cdd.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/cd/pdb1cdd.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cd/r1cddsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cd/1cdd.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd.cif
+Can't determine output label for r1cddsf,_refln.crystal_id - skipping.
+Can't determine output label for r1cddsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1cddsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1cdd.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/cd/pdb1cdd.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cd/r1cddsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cd/1cdd.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd/1cdd.cif
+Can't determine output label for r1cddsf,_refln.crystal_id - skipping.
+Can't determine output label for r1cddsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1cddsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1cdd.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/cd/1cdd/4amber_1cdd.prmtop
+
+	Running AmberPrep : 1cdd.pdb
+
+
+==================================================
+Running pdb4amber on 1cdd.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "PO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_1cdd.pdb
+==================================================
+
+~> tleap -f 1cdd_asu_tleap_input_run
+
+Checking output filenames
+  file : 1cdd_asu.prmtop
+  file : 1cdd_asu.rst7
+
+~> ChBox -c 1cdd_asu.rst7 -o 1cdd_asu.rst7 -X 140.9 -Y 97.6 -Z 102.4 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1cdd.prmtop and 4amber_1cdd.rst7
+============================================================
+
+~> UnitCell -p 1cdd_4UnitCell.pdb -o 1cdd_4tleap_uc1.pdb
+
+
+~> tleap -f 1cdd_uc_tleap_input_run
+
+Checking output filenames
+  file : 1cdd_uc.prmtop
+  file : 1cdd_uc.rst7
+
+~> ChBox -c 1cdd_uc.rst7 -o 1cdd_uc.rst7 -X 140.9 -Y 97.6 -Z 102.4 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1cdd_amber_all.in -p 4amber_1cdd.prmtop -c 4amber_1cdd.rst7 -o 1cdd.min.out            -ref 4amber_1cdd.rst7 -r 4amber_1cdd.min.rst7
+
+checking special positions in 4phenix_1cdd.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1cdd.pdb
+      4amber_1cdd.prmtop
+      4amber_1cdd.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1cdd.pdb use_amber=True \
+    amber.topology_file_name=4amber_1cdd.prmtop \
+    amber.coordinate_file_name=4amber_1cdd.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1cdd.pdb
+    MTZ    : 1cdd.mtz
+    prmtop : 4amber_1cdd.prmtop
+    rst7   : 4amber_1cdd.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd
+return_files 1cdd
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1cdd.pdb
+4phenix_1cdd.pdb
+cp 4phenix_1cdd.pdb /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd
+1cdd.pdb
+cp 1cdd.pdb /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd
+4amber_1cdd.mtz
+4phenix_1cdd.mtz
+1cdd.mtz
+cp 1cdd.mtz /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd
+4amber_1cdd.rst7
+cp 4amber_1cdd.rst7 /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd
+4phenix_1cdd.rst7
+1cdd.rst7
+4amber_1cdd.prmtop
+cp 4amber_1cdd.prmtop /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd
+4phenix_1cdd.prmtop
+1cdd.prmtop
+4amber_1cdd_refine_001.log
+4phenix_1cdd_refine_001.log
+1cdd_refine_001.log
+4amber_1cdd_refine_002.log
+4phenix_1cdd_refine_002.log
+1cdd_refine_002.log
+4amber_1cdd_refine_001.pdb
+4phenix_1cdd_refine_001.pdb
+1cdd_refine_001.pdb
+4amber_1cdd_refine_002.pdb
+4phenix_1cdd_refine_002.pdb
+1cdd_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd/1cdd.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/cd/1cdd
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd/1cdd_refine_001.log
+------------------------------
+
+	Already done (on chevy) 1cdd_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/cd/1cdd/1cdd_refine_002.log
+------------------------------
+
+	Already done (on chevy) 1cdd_refine_002

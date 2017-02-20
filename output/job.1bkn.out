@@ -1,0 +1,161 @@
+HOST rebus.lbl.gov
+only_i 165
+only_code None
+force_amber_prep True
+dry_run False
+... 165 1bkn
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn
+1bkn.pdb 4phenix_1bkn.pdb
+1bkn.pdb 4phenix_1bkn.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bk/pdb1bkn.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bk/r1bknsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bk/1bkn.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn.cif
+Can't determine output label for r1bknsf,_refln.crystal_id - skipping.
+Can't determine output label for r1bknsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1bknsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1bkn.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/bk/pdb1bkn.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/bk/r1bknsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/bk/1bkn.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn/1bkn.cif
+Can't determine output label for r1bknsf,_refln.crystal_id - skipping.
+Can't determine output label for r1bknsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1bknsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1bkn.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/bk/1bkn/4amber_1bkn.prmtop
+
+	Running AmberPrep : 1bkn.pdb
+
+
+==================================================
+Running pdb4amber on 1bkn.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_1bkn.pdb
+==================================================
+
+~> tleap -f 1bkn_asu_tleap_input_run
+
+Checking output filenames
+  file : 1bkn_asu.prmtop
+  file : 1bkn_asu.rst7
+
+~> ChBox -c 1bkn_asu.rst7 -o 1bkn_asu.rst7 -X 87.2 -Y 93.2 -Z 221.7 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1bkn.prmtop and 4amber_1bkn.rst7
+============================================================
+
+~> UnitCell -p 1bkn_4UnitCell.pdb -o 1bkn_4tleap_uc1.pdb
+
+
+~> tleap -f 1bkn_uc_tleap_input_run
+
+Checking output filenames
+  file : 1bkn_uc.prmtop
+  file : 1bkn_uc.rst7
+
+~> ChBox -c 1bkn_uc.rst7 -o 1bkn_uc.rst7 -X 87.2 -Y 93.2 -Z 221.7 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1bkn_amber_all.in -p 4amber_1bkn.prmtop -c 4amber_1bkn.rst7 -o 1bkn.min.out            -ref 4amber_1bkn.rst7 -r 4amber_1bkn.min.rst7
+
+checking special positions in 4phenix_1bkn.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1bkn.pdb
+      4amber_1bkn.prmtop
+      4amber_1bkn.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1bkn.pdb use_amber=True \
+    amber.topology_file_name=4amber_1bkn.prmtop \
+    amber.coordinate_file_name=4amber_1bkn.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1bkn.pdb
+    MTZ    : 1bkn.mtz
+    prmtop : 4amber_1bkn.prmtop
+    rst7   : 4amber_1bkn.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn
+return_files 1bkn
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1bkn.pdb
+4phenix_1bkn.pdb
+cp 4phenix_1bkn.pdb /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn
+1bkn.pdb
+cp 1bkn.pdb /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn
+4amber_1bkn.mtz
+4phenix_1bkn.mtz
+1bkn.mtz
+cp 1bkn.mtz /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn
+4amber_1bkn.rst7
+cp 4amber_1bkn.rst7 /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn
+4phenix_1bkn.rst7
+1bkn.rst7
+4amber_1bkn.prmtop
+cp 4amber_1bkn.prmtop /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn
+4phenix_1bkn.prmtop
+1bkn.prmtop
+4amber_1bkn_refine_001.log
+4phenix_1bkn_refine_001.log
+1bkn_refine_001.log
+4amber_1bkn_refine_002.log
+4phenix_1bkn_refine_002.log
+1bkn_refine_002.log
+4amber_1bkn_refine_001.pdb
+4phenix_1bkn_refine_001.pdb
+1bkn_refine_001.pdb
+4amber_1bkn_refine_002.pdb
+4phenix_1bkn_refine_002.pdb
+1bkn_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn/1bkn.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/bk/1bkn
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn/1bkn_refine_001.log
+------------------------------
+
+	Already done (on chevy) 1bkn_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/bk/1bkn/1bkn_refine_002.log
+------------------------------
+
+	Already done (on chevy) 1bkn_refine_002

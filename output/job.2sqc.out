@@ -1,0 +1,175 @@
+HOST rebus.lbl.gov
+only_i 342
+only_code None
+force_amber_prep True
+dry_run False
+... 342 2sqc
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc
+2sqc.pdb 4phenix_2sqc.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/sq/pdb2sqc.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/sq/r2sqcsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/sq/2sqc.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc.cif
+Can't determine output label for r2sqcsf,_refln.crystal_id - skipping.
+Can't determine output label for r2sqcsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2sqcsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2sqc.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/sq/pdb2sqc.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/sq/r2sqcsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/sq/2sqc.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc/2sqc.cif
+Can't determine output label for r2sqcsf,_refln.crystal_id - skipping.
+Can't determine output label for r2sqcsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2sqcsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2sqc.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/sq/2sqc/4amber_2sqc.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc/4amber_2sqc.prmtop
+
+	Running AmberPrep : 2sqc.pdb
+
+
+==================================================
+Running pdb4amber on 2sqc.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "C8E" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2sqc.pdb
+==================================================
+
+~> tleap -f 2sqc_asu_tleap_input_run
+
+Checking output filenames
+  file : 2sqc_asu.prmtop
+  file : 2sqc_asu.rst7
+
+~> ChBox -c 2sqc_asu.rst7 -o 2sqc_asu.rst7 -X 118.82 -Y 118.82 -Z 276.2 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2sqc.prmtop and 4amber_2sqc.rst7
+============================================================
+
+~> UnitCell -p 2sqc_4UnitCell.pdb -o 2sqc_4tleap_uc1.pdb
+
+
+~> tleap -f 2sqc_uc_tleap_input_run
+
+Checking output filenames
+  file : 2sqc_uc.prmtop
+  file : 2sqc_uc.rst7
+
+~> ChBox -c 2sqc_uc.rst7 -o 2sqc_uc.rst7 -X 118.82 -Y 118.82 -Z 276.2 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2sqc_amber_all.in -p 4amber_2sqc.prmtop -c 4amber_2sqc.rst7 -o 2sqc.min.out            -ref 4amber_2sqc.rst7 -r 4amber_2sqc.min.rst7
+
+checking special positions in 4phenix_2sqc.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2sqc.pdb
+      4amber_2sqc.prmtop
+      4amber_2sqc.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2sqc.pdb use_amber=True \
+    amber.topology_file_name=4amber_2sqc.prmtop \
+    amber.coordinate_file_name=4amber_2sqc.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2sqc.pdb
+    MTZ    : 2sqc.mtz
+    prmtop : 4amber_2sqc.prmtop
+    rst7   : 4amber_2sqc.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc
+return_files 2sqc
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2sqc.pdb
+4phenix_2sqc.pdb
+cp 4phenix_2sqc.pdb /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc
+2sqc.pdb
+cp 2sqc.pdb /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc
+4amber_2sqc.mtz
+4phenix_2sqc.mtz
+2sqc.mtz
+cp 2sqc.mtz /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc
+4amber_2sqc.rst7
+cp 4amber_2sqc.rst7 /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc
+4phenix_2sqc.rst7
+2sqc.rst7
+4amber_2sqc.prmtop
+cp 4amber_2sqc.prmtop /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc
+4phenix_2sqc.prmtop
+2sqc.prmtop
+4amber_2sqc_refine_001.log
+4phenix_2sqc_refine_001.log
+2sqc_refine_001.log
+4amber_2sqc_refine_002.log
+4phenix_2sqc_refine_002.log
+2sqc_refine_002.log
+4amber_2sqc_refine_001.pdb
+4phenix_2sqc_refine_001.pdb
+2sqc_refine_001.pdb
+4amber_2sqc_refine_002.pdb
+4phenix_2sqc_refine_002.pdb
+2sqc_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc/2sqc.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/sq/2sqc
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc/2sqc_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2sqc_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2sqc.pdb 2sqc.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc/2sqc_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2sqc_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2sqc.pdb 2sqc.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc/4amber_2sqc.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/sq/2sqc/4amber_2sqc.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

@@ -1,0 +1,111 @@
+HOST rebus.lbl.gov
+only_i 135
+only_code None
+force_amber_prep True
+dry_run False
+... 135 2onk
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/on/2onk
+2onk.pdb 4phenix_2onk.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/on/pdb2onk.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/on/r2onksf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/on/2onk.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk.cif
+Can't determine output label for r2onksf,_refln.crystal_id - skipping.
+Can't determine output label for r2onksf,_refln.scale_group_code - skipping.
+Can't determine output label for r2onksf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2onk.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/on/pdb2onk.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/on/r2onksf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/on/2onk.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/on/2onk/2onk.cif
+Can't determine output label for r2onksf,_refln.crystal_id - skipping.
+Can't determine output label for r2onksf,_refln.scale_group_code - skipping.
+Can't determine output label for r2onksf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2onk.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/on/2onk/4amber_2onk.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/on/2onk/4amber_2onk.prmtop
+
+	Running AmberPrep : 2onk.pdb
+
+
+==================================================
+Running pdb4amber on 2onk.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for WO4 
+==================================================
+
+   Residue has metal at the centre of a coordination sphere. Using input
+   geometry to generate restraints. Hydrogens may not be added.
+   
+
+MoleculeClass :  O: 4  W: 1 (CHEMICAL COMPONENTS format)
+	5 atoms
+	4 bonds
+	6 angles
+	0 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	0 chirals
+
+~> antechamber -i 4antechamber_WO4.pdb -fi pdb -o WO4.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+For atom[1]:W, the best APS is not zero, bonds involved by this atom are frozen
+
+~> parmchk2 -s 2 -i WO4.mol2 -f mol2 -o WO4.frcmod
+
+
+  Residue "PO4" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2onk.pdb
+==================================================
+
+~> tleap -f 2onk_asu_tleap_input_run
+
+
+~> " --- Testing environment ---"
+
+
+AMBERHOME: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber
+
+PATH: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin
+    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
+    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
+    : /usr/local_cci/gcc-4.3.4_fc8_x86_64/bin
+    : /net/cci/xp/CCDC/CSD_2016/bin
+    : /net/boa/srv/sge-6.1u2/bin/lx24-amd64
+    : .
+    : /net/cci/nigel/bin
+    : /net/cci/nigel/bin/Linux
+    : /usr/local_cci/bin
+    : /usr/local/bin
+    : /bin
+    : /usr/bin
+    : /usr/sbin
+    : /usr/bin/X11
+    : /etc
+    : /usr/etc

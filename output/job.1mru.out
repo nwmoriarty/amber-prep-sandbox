@@ -1,0 +1,169 @@
+HOST rebus.lbl.gov
+only_i 129
+only_code None
+force_amber_prep True
+dry_run False
+... 129 1mru
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
+1mru.pdb 4phenix_1mru.pdb
+1mru.pdb 4phenix_1mru.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/mr/pdb1mru.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/mr/r1mrusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/mr/1mru.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.cif
+Can't determine output label for r1mrusf,_refln.crystal_id - skipping.
+Can't determine output label for r1mrusf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 81 reflections
+Can't determine output label for r1mrusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1mru.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/mr/pdb1mru.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/mr/r1mrusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/mr/1mru.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru/1mru.cif
+Can't determine output label for r1mrusf,_refln.crystal_id - skipping.
+Can't determine output label for r1mrusf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 81 reflections
+Can't determine output label for r1mrusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1mru.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/mr/1mru/4amber_1mru.prmtop
+
+	Running AmberPrep : 1mru.pdb
+
+
+==================================================
+Running pdb4amber on 1mru.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "AGS" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_1mru.pdb
+==================================================
+
+~> tleap -f 1mru_asu_tleap_input_run
+
+Checking output filenames
+  file : 1mru_asu.prmtop
+  file : 1mru_asu.rst7
+
+~> ChBox -c 1mru_asu.rst7 -o 1mru_asu.rst7 -X 63.1 -Y 50.17 -Z 111.07 -al 90.0 -bt 96.19 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_1mru.prmtop and 4amber_1mru.rst7
+============================================================
+
+~> UnitCell -p 1mru_4UnitCell.pdb -o 1mru_4tleap_uc1.pdb
+
+
+~> tleap -f 1mru_uc_tleap_input_run
+
+Checking output filenames
+  file : 1mru_uc.prmtop
+  file : 1mru_uc.rst7
+
+~> ChBox -c 1mru_uc.rst7 -o 1mru_uc.rst7 -X 63.1 -Y 50.17 -Z 111.07 -al 90.0 -bt 96.19 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1mru_amber_all.in -p 4amber_1mru.prmtop -c 4amber_1mru.rst7 -o 1mru.min.out            -ref 4amber_1mru.rst7 -r 4amber_1mru.min.rst7
+
+checking special positions in 4phenix_1mru.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1mru.pdb
+      4amber_1mru.prmtop
+      4amber_1mru.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1mru.pdb use_amber=True \
+    amber.topology_file_name=4amber_1mru.prmtop \
+    amber.coordinate_file_name=4amber_1mru.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 1mru.pdb
+    MTZ    : 1mru.mtz
+    prmtop : 4amber_1mru.prmtop
+    rst7   : 4amber_1mru.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru
+return_files 1mru
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1mru.pdb
+4phenix_1mru.pdb
+cp 4phenix_1mru.pdb /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
+1mru.pdb
+cp 1mru.pdb /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
+4amber_1mru.mtz
+4phenix_1mru.mtz
+1mru.mtz
+cp 1mru.mtz /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
+4amber_1mru.rst7
+cp 4amber_1mru.rst7 /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
+4phenix_1mru.rst7
+1mru.rst7
+4amber_1mru.prmtop
+cp 4amber_1mru.prmtop /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru
+4phenix_1mru.prmtop
+1mru.prmtop
+4amber_1mru_refine_001.log
+4phenix_1mru_refine_001.log
+1mru_refine_001.log
+4amber_1mru_refine_002.log
+4phenix_1mru_refine_002.log
+1mru_refine_002.log
+4amber_1mru_refine_001.pdb
+4phenix_1mru_refine_001.pdb
+1mru_refine_001.pdb
+4amber_1mru_refine_002.pdb
+4phenix_1mru_refine_002.pdb
+1mru_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/mr/1mru
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru_refine_001.log
+------------------------------
+
+	Already done (on chevy) 1mru_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/mr/1mru/1mru_refine_002.log
+------------------------------
+
+	Already done (on chevy) 1mru_refine_002

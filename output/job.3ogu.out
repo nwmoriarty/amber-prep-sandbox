@@ -1,0 +1,71 @@
+HOST rebus.lbl.gov
+only_i 338
+only_code None
+force_amber_prep True
+dry_run False
+... 338 3ogu
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/og/3ogu
+3ogu.pdb 4phenix_3ogu.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/og/pdb3ogu.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/og/r3ogusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/og/3ogu.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu.cif
+Can't determine output label for r3ogusf,_refln.crystal_id - skipping.
+Can't determine output label for r3ogusf,_refln.scale_group_code - skipping.
+Can't determine output label for r3ogusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ogu.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/og/pdb3ogu.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/og/r3ogusf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/og/3ogu.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/og/3ogu/3ogu.cif
+Can't determine output label for r3ogusf,_refln.crystal_id - skipping.
+Can't determine output label for r3ogusf,_refln.scale_group_code - skipping.
+Can't determine output label for r3ogusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ogu.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/og/3ogu/4amber_3ogu.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/og/3ogu/4amber_3ogu.prmtop
+
+	Running AmberPrep : 3ogu.pdb
+
+
+==================================================
+Running pdb4amber on 3ogu.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "MES" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3ogu.pdb
+==================================================
+
+~> tleap -f 3ogu_asu_tleap_input_run
+
+Checking output filenames
+  file : 3ogu_asu.prmtop

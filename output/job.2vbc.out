@@ -1,0 +1,171 @@
+HOST rebus.lbl.gov
+only_i 247
+only_code None
+force_amber_prep True
+dry_run False
+... 247 2vbc
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc
+2vbc.pdb 4phenix_2vbc.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/vb/pdb2vbc.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/vb/r2vbcsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/vb/2vbc.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc.cif
+Can't determine output label for r2vbcsf,_refln.crystal_id - skipping.
+Can't determine output label for r2vbcsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2vbcsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2vbc.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/vb/pdb2vbc.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/vb/r2vbcsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/vb/2vbc.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc/2vbc.cif
+Can't determine output label for r2vbcsf,_refln.crystal_id - skipping.
+Can't determine output label for r2vbcsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2vbcsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2vbc.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/vb/2vbc/4amber_2vbc.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc/4amber_2vbc.prmtop
+
+	Running AmberPrep : 2vbc.pdb
+
+
+==================================================
+Running pdb4amber on 2vbc.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2vbc.pdb
+==================================================
+
+~> tleap -f 2vbc_asu_tleap_input_run
+
+Checking output filenames
+  file : 2vbc_asu.prmtop
+  file : 2vbc_asu.rst7
+
+~> ChBox -c 2vbc_asu.rst7 -o 2vbc_asu.rst7 -X 52.866 -Y 88.242 -Z 76.676 -al 90.0 -bt 94.21 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2vbc.prmtop and 4amber_2vbc.rst7
+============================================================
+
+~> UnitCell -p 2vbc_4UnitCell.pdb -o 2vbc_4tleap_uc1.pdb
+
+
+~> tleap -f 2vbc_uc_tleap_input_run
+
+Checking output filenames
+  file : 2vbc_uc.prmtop
+  file : 2vbc_uc.rst7
+
+~> ChBox -c 2vbc_uc.rst7 -o 2vbc_uc.rst7 -X 52.866 -Y 88.242 -Z 76.676 -al 90.0 -bt 94.21 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2vbc_amber_all.in -p 4amber_2vbc.prmtop -c 4amber_2vbc.rst7 -o 2vbc.min.out            -ref 4amber_2vbc.rst7 -r 4amber_2vbc.min.rst7
+
+checking special positions in 4phenix_2vbc.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2vbc.pdb
+      4amber_2vbc.prmtop
+      4amber_2vbc.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2vbc.pdb use_amber=True \
+    amber.topology_file_name=4amber_2vbc.prmtop \
+    amber.coordinate_file_name=4amber_2vbc.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2vbc.pdb
+    MTZ    : 2vbc.mtz
+    prmtop : 4amber_2vbc.prmtop
+    rst7   : 4amber_2vbc.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc
+return_files 2vbc
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2vbc.pdb
+4phenix_2vbc.pdb
+cp 4phenix_2vbc.pdb /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc
+2vbc.pdb
+cp 2vbc.pdb /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc
+4amber_2vbc.mtz
+4phenix_2vbc.mtz
+2vbc.mtz
+cp 2vbc.mtz /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc
+4amber_2vbc.rst7
+cp 4amber_2vbc.rst7 /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc
+4phenix_2vbc.rst7
+2vbc.rst7
+4amber_2vbc.prmtop
+cp 4amber_2vbc.prmtop /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc
+4phenix_2vbc.prmtop
+2vbc.prmtop
+4amber_2vbc_refine_001.log
+4phenix_2vbc_refine_001.log
+2vbc_refine_001.log
+4amber_2vbc_refine_002.log
+4phenix_2vbc_refine_002.log
+2vbc_refine_002.log
+4amber_2vbc_refine_001.pdb
+4phenix_2vbc_refine_001.pdb
+2vbc_refine_001.pdb
+4amber_2vbc_refine_002.pdb
+4phenix_2vbc_refine_002.pdb
+2vbc_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc/2vbc.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/vb/2vbc
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc/2vbc_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2vbc_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2vbc.pdb 2vbc.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc/2vbc_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2vbc_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2vbc.pdb 2vbc.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc/4amber_2vbc.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/vb/2vbc/4amber_2vbc.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

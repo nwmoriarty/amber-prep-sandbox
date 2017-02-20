@@ -1,0 +1,83 @@
+HOST rebus.lbl.gov
+only_i 365
+only_code None
+force_amber_prep True
+dry_run False
+... 365 2xtw
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/xt/2xtw
+2xtw.pdb 4phenix_2xtw.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/xt/pdb2xtw.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/xt/r2xtwsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/xt/2xtw.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.cif
+Can't determine output label for r2xtwsf,_refln.crystal_id - skipping.
+Can't determine output label for r2xtwsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 58 reflections
+Can't determine output label for r2xtwsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2xtw.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/xt/pdb2xtw.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/xt/r2xtwsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/xt/2xtw.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.cif
+Can't determine output label for r2xtwsf,_refln.crystal_id - skipping.
+Can't determine output label for r2xtwsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 58 reflections
+Can't determine output label for r2xtwsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2xtw.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/xt/2xtw/4amber_2xtw.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/xt/2xtw/4amber_2xtw.prmtop
+
+	Running AmberPrep : 2xtw.pdb
+
+
+==================================================
+Running pdb4amber on 2xtw.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2xtw.pdb
+==================================================
+
+~> tleap -f 2xtw_asu_tleap_input_run
+
+Checking output filenames
+  file : 2xtw_asu.prmtop
+  file : 2xtw_asu.rst7
+
+~> ChBox -c 2xtw_asu.rst7 -o 2xtw_asu.rst7 -X 38.05 -Y 119.532 -Z 231.725 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2xtw.prmtop and 4amber_2xtw.rst7
+============================================================
+
+~> UnitCell -p 2xtw_4UnitCell.pdb -o 2xtw_4tleap_uc1.pdb
+
+
+~> tleap -f 2xtw_uc_tleap_input_run
+
+Checking output filenames
+  file : 2xtw_uc.prmtop

@@ -1,0 +1,85 @@
+HOST rebus.lbl.gov
+only_i 122
+only_code None
+force_amber_prep True
+dry_run False
+... 122 1i7w
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/i7/1i7w
+1i7w.pdb 4phenix_1i7w.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/i7/pdb1i7w.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/i7/r1i7wsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/i7/1i7w.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.cif
+Can't determine output label for r1i7wsf,_refln.crystal_id - skipping.
+Can't determine output label for r1i7wsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.055
+R-free-flags: missing 6666 reflections
+Can't determine output label for r1i7wsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1i7w.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/i7/pdb1i7w.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/i7/r1i7wsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/i7/1i7w.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.cif
+Can't determine output label for r1i7wsf,_refln.crystal_id - skipping.
+Can't determine output label for r1i7wsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.055
+R-free-flags: missing 6666 reflections
+Can't determine output label for r1i7wsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1i7w.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/i7/1i7w/4amber_1i7w.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/i7/1i7w/4amber_1i7w.prmtop
+
+	Running AmberPrep : 1i7w.pdb
+
+
+==================================================
+Running pdb4amber on 1i7w.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for SEP 
+==================================================
+
+MoleculeClass :  C: 3  N: 1  O: 6  P: 1 (CHEMICAL COMPONENTS format)
+	16 atoms
+	15 bonds
+	25 angles
+	27 dihedrals
+	0 rings (groups, rings, atoms) 0 0
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_SEP.pdb -fi pdb -o SEP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i SEP.mol2 -f mol2 -o SEP.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_1i7w.pdb
+==================================================
+
+~> tleap -f 1i7w_asu_tleap_input_run
+
+Checking output filenames
+  file : 1i7w_asu.prmtop

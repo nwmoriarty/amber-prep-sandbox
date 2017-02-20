@@ -1,0 +1,81 @@
+HOST rebus.lbl.gov
+only_i 168
+only_code None
+force_amber_prep True
+dry_run False
+... 168 1jkx
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/jk/1jkx
+1jkx.pdb 4phenix_1jkx.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/jk/pdb1jkx.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/jk/r1jkxsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/jk/1jkx.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx.cif
+Can't determine output label for r1jkxsf,_refln.crystal_id - skipping.
+Can't determine output label for r1jkxsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1jkxsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1jkx.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/jk/pdb1jkx.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/jk/r1jkxsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/jk/1jkx.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/jk/1jkx/1jkx.cif
+Can't determine output label for r1jkxsf,_refln.crystal_id - skipping.
+Can't determine output label for r1jkxsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1jkxsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1jkx.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/jk/1jkx/4amber_1jkx.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/jk/1jkx/4amber_1jkx.prmtop
+
+	Running AmberPrep : 1jkx.pdb
+
+
+==================================================
+Running pdb4amber on 1jkx.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for 138 
+==================================================
+
+MoleculeClass :  C:30  N: 6  O:15  P: 1 (CHEMICAL COMPONENTS format)
+	85 atoms
+	88 bonds
+	152 angles
+	225 dihedrals
+	3 rings (groups, rings, atoms) 4 23
+	6 chirals : S S S R R R 
+
+~> antechamber -i 4antechamber_138.pdb -fi pdb -o 138.mol2 -fo mol2       -nc -4 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i 138.mol2 -f mol2 -o 138.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_1jkx.pdb
+==================================================
+
+~> tleap -f 1jkx_asu_tleap_input_run
+
+Checking output filenames
+  file : 1jkx_asu.prmtop

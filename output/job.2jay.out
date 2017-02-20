@@ -1,0 +1,161 @@
+HOST rebus.lbl.gov
+only_i 100
+only_code None
+force_amber_prep True
+dry_run False
+... 100 2jay
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ja/2jay
+2jay.pdb 4phenix_2jay.pdb
+2jay.pdb 4phenix_2jay.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ja/pdb2jay.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ja/r2jaysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ja/2jay.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay.cif
+Can't determine output label for r2jaysf,_refln.crystal_id - skipping.
+Can't determine output label for r2jaysf,_refln.scale_group_code - skipping.
+Can't determine output label for r2jaysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2jay.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ja/pdb2jay.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ja/r2jaysf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ja/2jay.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay/2jay.cif
+Can't determine output label for r2jaysf,_refln.crystal_id - skipping.
+Can't determine output label for r2jaysf,_refln.scale_group_code - skipping.
+Can't determine output label for r2jaysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2jay.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ja/2jay/4amber_2jay.prmtop
+
+	Running AmberPrep : 2jay.pdb
+
+
+==================================================
+Running pdb4amber on 2jay.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Preparing asu files and 4phenix_2jay.pdb
+==================================================
+
+~> tleap -f 2jay_asu_tleap_input_run
+
+Checking output filenames
+  file : 2jay_asu.prmtop
+  file : 2jay_asu.rst7
+
+~> ChBox -c 2jay_asu.rst7 -o 2jay_asu.rst7 -X 40.504 -Y 40.473 -Z 59.937 -al 90.0 -bt 97.71 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2jay.prmtop and 4amber_2jay.rst7
+============================================================
+
+~> UnitCell -p 2jay_4UnitCell.pdb -o 2jay_4tleap_uc1.pdb
+
+
+~> tleap -f 2jay_uc_tleap_input_run
+
+Checking output filenames
+  file : 2jay_uc.prmtop
+  file : 2jay_uc.rst7
+
+~> ChBox -c 2jay_uc.rst7 -o 2jay_uc.rst7 -X 40.504 -Y 40.473 -Z 59.937 -al 90.0 -bt 97.71 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2jay_amber_all.in -p 4amber_2jay.prmtop -c 4amber_2jay.rst7 -o 2jay.min.out            -ref 4amber_2jay.rst7 -r 4amber_2jay.min.rst7
+
+checking special positions in 4phenix_2jay.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2jay.pdb
+      4amber_2jay.prmtop
+      4amber_2jay.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2jay.pdb use_amber=True \
+    amber.topology_file_name=4amber_2jay.prmtop \
+    amber.coordinate_file_name=4amber_2jay.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2jay.pdb
+    MTZ    : 2jay.mtz
+    prmtop : 4amber_2jay.prmtop
+    rst7   : 4amber_2jay.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay
+return_files 2jay
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2jay.pdb
+4phenix_2jay.pdb
+cp 4phenix_2jay.pdb /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay
+2jay.pdb
+cp 2jay.pdb /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay
+4amber_2jay.mtz
+4phenix_2jay.mtz
+2jay.mtz
+cp 2jay.mtz /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay
+4amber_2jay.rst7
+cp 4amber_2jay.rst7 /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay
+4phenix_2jay.rst7
+2jay.rst7
+4amber_2jay.prmtop
+cp 4amber_2jay.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay
+4phenix_2jay.prmtop
+2jay.prmtop
+4amber_2jay_refine_001.log
+4phenix_2jay_refine_001.log
+2jay_refine_001.log
+4amber_2jay_refine_002.log
+4phenix_2jay_refine_002.log
+2jay_refine_002.log
+4amber_2jay_refine_001.pdb
+4phenix_2jay_refine_001.pdb
+2jay_refine_001.pdb
+4amber_2jay_refine_002.pdb
+4phenix_2jay_refine_002.pdb
+2jay_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay/2jay.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ja/2jay
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay/2jay_refine_001.log
+------------------------------
+
+	Already done (on chevy) 2jay_refine_001
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ja/2jay/2jay_refine_002.log
+------------------------------
+
+	Already done (on chevy) 2jay_refine_002

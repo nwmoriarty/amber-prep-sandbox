@@ -1,0 +1,95 @@
+HOST rebus.lbl.gov
+only_i 272
+only_code None
+force_amber_prep True
+dry_run False
+... 272 2y3z
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/y3/2y3z
+2y3z.pdb 4phenix_2y3z.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/y3/pdb2y3z.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/y3/r2y3zsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/y3/2y3z.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z.cif
+Can't determine output label for r2y3zsf,_refln.crystal_id - skipping.
+Can't determine output label for r2y3zsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.025
+R-free-flags: missing 81 reflections
+Can't determine output label for r2y3zsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2y3z.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/y3/pdb2y3z.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/y3/r2y3zsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/y3/2y3z.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/y3/2y3z/2y3z.cif
+Can't determine output label for r2y3zsf,_refln.crystal_id - skipping.
+Can't determine output label for r2y3zsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.025
+R-free-flags: missing 81 reflections
+Can't determine output label for r2y3zsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2y3z.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/y3/2y3z/4amber_2y3z.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/y3/2y3z/4amber_2y3z.prmtop
+
+	Running AmberPrep : 2y3z.pdb
+
+
+==================================================
+Running pdb4amber on 2y3z.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "TRS" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "2PE" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2y3z.pdb
+==================================================
+
+~> tleap -f 2y3z_asu_tleap_input_run
+
+Checking output filenames
+  file : 2y3z_asu.prmtop
+  file : 2y3z_asu.rst7
+
+~> ChBox -c 2y3z_asu.rst7 -o 2y3z_asu.rst7 -X 76.48 -Y 76.48 -Z 154.3 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2y3z.prmtop and 4amber_2y3z.rst7
+============================================================
+
+~> UnitCell -p 2y3z_4UnitCell.pdb -o 2y3z_4tleap_uc1.pdb
+
+
+~> tleap -f 2y3z_uc_tleap_input_run
+
+Checking output filenames
+  file : 2y3z_uc.prmtop

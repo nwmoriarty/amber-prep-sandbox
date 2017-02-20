@@ -1,0 +1,197 @@
+HOST rebus.lbl.gov
+only_i 383
+only_code None
+force_amber_prep True
+dry_run False
+... 383 2he5
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/he/2he5
+2he5.pdb 4phenix_2he5.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/he/pdb2he5.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/he/r2he5sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/he/2he5.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5.cif
+Can't determine output label for r2he5sf,_refln.crystal_id - skipping.
+Can't determine output label for r2he5sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2he5sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2he5.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/he/pdb2he5.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/he/r2he5sf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/he/2he5.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5/2he5.cif
+Can't determine output label for r2he5sf,_refln.crystal_id - skipping.
+Can't determine output label for r2he5sf,_refln.scale_group_code - skipping.
+Can't determine output label for r2he5sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2he5.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/he/2he5/4amber_2he5.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/he/2he5/4amber_2he5.prmtop
+
+	Running AmberPrep : 2he5.pdb
+
+
+==================================================
+Running pdb4amber on 2he5.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for NDP 
+==================================================
+
+MoleculeClass :  C:21  N: 7  O:17  P: 3 (CHEMICAL COMPONENTS format)
+	74 atoms
+	78 bonds
+	138 angles
+	197 dihedrals
+	4 rings (groups, rings, atoms) 5 27
+	8 chirals : R R R R R S R R 
+
+~> antechamber -i 4antechamber_NDP.pdb -fi pdb -o NDP.mol2 -fo mol2       -nc -4 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i NDP.mol2 -f mol2 -o NDP.frcmod
+
+
+  Residue "BME" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "ACT" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2he5.pdb
+==================================================
+
+~> tleap -f 2he5_asu_tleap_input_run
+
+Checking output filenames
+  file : 2he5_asu.prmtop
+  file : 2he5_asu.rst7
+
+~> ChBox -c 2he5_asu.rst7 -o 2he5_asu.rst7 -X 56.48 -Y 166.76 -Z 69.55 -al 90.0 -bt 97.6 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_2he5.prmtop and 4amber_2he5.rst7
+============================================================
+
+~> UnitCell -p 2he5_4UnitCell.pdb -o 2he5_4tleap_uc1.pdb
+
+
+~> tleap -f 2he5_uc_tleap_input_run
+
+Checking output filenames
+  file : 2he5_uc.prmtop
+  file : 2he5_uc.rst7
+
+~> ChBox -c 2he5_uc.rst7 -o 2he5_uc.rst7 -X 56.48 -Y 166.76 -Z 69.55 -al 90.0 -bt 97.6 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2he5_amber_all.in -p 4amber_2he5.prmtop -c 4amber_2he5.rst7 -o 2he5.min.out            -ref 4amber_2he5.rst7 -r 4amber_2he5.min.rst7
+
+checking special positions in 4phenix_2he5.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2he5.pdb
+      4amber_2he5.prmtop
+      4amber_2he5.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2he5.pdb use_amber=True \
+    amber.topology_file_name=4amber_2he5.prmtop \
+    amber.coordinate_file_name=4amber_2he5.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+
+  Amber files
+    PDB    : 2he5.pdb
+    MTZ    : 2he5.mtz
+    prmtop : 4amber_2he5.prmtop
+    rst7   : 4amber_2he5.rst7
+  
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5
+return_files 2he5
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2he5.pdb
+4phenix_2he5.pdb
+cp 4phenix_2he5.pdb /net/chevy/raid1/nigel/amber/hi_lo/he/2he5
+2he5.pdb
+cp 2he5.pdb /net/chevy/raid1/nigel/amber/hi_lo/he/2he5
+4amber_2he5.mtz
+4phenix_2he5.mtz
+2he5.mtz
+cp 2he5.mtz /net/chevy/raid1/nigel/amber/hi_lo/he/2he5
+4amber_2he5.rst7
+cp 4amber_2he5.rst7 /net/chevy/raid1/nigel/amber/hi_lo/he/2he5
+4phenix_2he5.rst7
+2he5.rst7
+4amber_2he5.prmtop
+cp 4amber_2he5.prmtop /net/chevy/raid1/nigel/amber/hi_lo/he/2he5
+4phenix_2he5.prmtop
+2he5.prmtop
+4amber_2he5_refine_001.log
+4phenix_2he5_refine_001.log
+2he5_refine_001.log
+4amber_2he5_refine_002.log
+4phenix_2he5_refine_002.log
+2he5_refine_002.log
+4amber_2he5_refine_001.pdb
+4phenix_2he5_refine_001.pdb
+2he5_refine_001.pdb
+4amber_2he5_refine_002.pdb
+4phenix_2he5_refine_002.pdb
+2he5_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/he/2he5/2he5.pdb
+/net/rebus/raid1/scratch1/nigel/amber/hi_lo/he/2he5
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/he/2he5/2he5_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2he5_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2he5.pdb 2he5.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/he/2he5/2he5_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2he5_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2he5.pdb 2he5.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/he/2he5/4amber_2he5.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/he/2he5/4amber_2he5.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

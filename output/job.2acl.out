@@ -1,0 +1,67 @@
+HOST rebus.lbl.gov
+only_i 285
+only_code None
+force_amber_prep True
+dry_run False
+... 285 2acl
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ac/2acl
+2acl.pdb 4phenix_2acl.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ac/pdb2acl.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ac/r2aclsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ac/2acl.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl.cif
+Can't determine output label for r2aclsf,_refln.crystal_id - skipping.
+Can't determine output label for r2aclsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2aclsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2acl.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ac/pdb2acl.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ac/r2aclsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ac/2acl.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ac/2acl/2acl.cif
+Can't determine output label for r2aclsf,_refln.crystal_id - skipping.
+Can't determine output label for r2aclsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2aclsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2acl.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ac/2acl/4amber_2acl.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ac/2acl/4amber_2acl.prmtop
+
+	Running AmberPrep : 2acl.pdb
+
+
+==================================================
+Running pdb4amber on 2acl.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "L05" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_2acl.pdb
+==================================================
+
+~> tleap -f 2acl_asu_tleap_input_run
+
+Checking output filenames
+  file : 2acl_asu.prmtop

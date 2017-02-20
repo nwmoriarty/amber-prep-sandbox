@@ -1,0 +1,81 @@
+HOST rebus.lbl.gov
+only_i 143
+only_code None
+force_amber_prep True
+dry_run False
+... 143 1p7d
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/p7/1p7d
+1p7d.pdb 4phenix_1p7d.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/p7/pdb1p7d.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/p7/r1p7dsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/p7/1p7d.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d.cif
+Can't determine output label for r1p7dsf,_refln.crystal_id - skipping.
+Can't determine output label for r1p7dsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1p7dsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1p7d.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/p7/pdb1p7d.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/p7/r1p7dsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/p7/1p7d.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/p7/1p7d/1p7d.cif
+Can't determine output label for r1p7dsf,_refln.crystal_id - skipping.
+Can't determine output label for r1p7dsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1p7dsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1p7d.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/p7/1p7d/4amber_1p7d.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/p7/1p7d/4amber_1p7d.prmtop
+
+	Running AmberPrep : 1p7d.pdb
+
+
+==================================================
+Running pdb4amber on 1p7d.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for PTR 
+==================================================
+
+MoleculeClass :  C: 9  N: 1  O: 6  P: 1 (CHEMICAL COMPONENTS format)
+	26 atoms
+	26 bonds
+	43 angles
+	56 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_PTR.pdb -fi pdb -o PTR.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i PTR.mol2 -f mol2 -o PTR.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_1p7d.pdb
+==================================================
+
+~> tleap -f 1p7d_asu_tleap_input_run
+
+Checking output filenames
+  file : 1p7d_asu.prmtop

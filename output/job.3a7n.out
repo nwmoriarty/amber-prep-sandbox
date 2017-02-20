@@ -1,0 +1,87 @@
+HOST rebus.lbl.gov
+only_i 296
+only_code None
+force_amber_prep True
+dry_run False
+... 296 3a7n
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/a7/3a7n
+3a7n.pdb 4phenix_3a7n.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/a7/pdb3a7n.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/a7/r3a7nsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/a7/3a7n.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n.cif
+Can't determine output label for r3a7nsf,_refln.crystal_id - skipping.
+Can't determine output label for r3a7nsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 421 reflections
+Can't determine output label for r3a7nsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3a7n.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/a7/pdb3a7n.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/a7/r3a7nsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/a7/3a7n.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/3a7n/3a7n.cif
+Can't determine output label for r3a7nsf,_refln.crystal_id - skipping.
+Can't determine output label for r3a7nsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.049
+R-free-flags: missing 421 reflections
+Can't determine output label for r3a7nsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3a7n.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/a7/3a7n/4amber_3a7n.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/a7/3a7n/4amber_3a7n.prmtop
+
+	Running AmberPrep : 3a7n.pdb
+
+
+==================================================
+Running pdb4amber on 3a7n.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "FLC" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_3a7n.pdb
+==================================================
+
+~> tleap -f 3a7n_asu_tleap_input_run
+
+Checking output filenames
+  file : 3a7n_asu.prmtop
+  file : 3a7n_asu.rst7
+
+~> ChBox -c 3a7n_asu.rst7 -o 3a7n_asu.rst7 -X 44.84 -Y 63.67 -Z 86.4 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3a7n.prmtop and 4amber_3a7n.rst7
+============================================================
+
+~> UnitCell -p 3a7n_4UnitCell.pdb -o 3a7n_4tleap_uc1.pdb
+
+
+~> tleap -f 3a7n_uc_tleap_input_run
+
+Checking output filenames
+  file : 3a7n_uc.prmtop

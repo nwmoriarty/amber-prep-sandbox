@@ -1,0 +1,59 @@
+HOST rebus.lbl.gov
+only_i 356
+only_code None
+force_amber_prep True
+dry_run False
+... 356 1u6r
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/u6/1u6r
+1u6r.pdb 4phenix_1u6r.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/u6/pdb1u6r.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/u6/1u6r/1u6r.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/u6/1u6r/1u6r.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/u6/r1u6rsf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/u6/1u6r/1u6r-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/u6/1u6r.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/u6/1u6r/1u6r.cif
+Can't determine output label for r1u6rsf,_refln.crystal_id - skipping.
+Can't determine output label for r1u6rsf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 1937 reflections
+Can't determine output label for r1u6rsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1u6r.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/u6/1u6r/4amber_1u6r.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/u6/1u6r/4amber_1u6r.prmtop
+
+	Running AmberPrep : 1u6r.pdb
+
+
+==================================================
+Running pdb4amber on 1u6r.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "IOM" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+ADP.mol2 is present. Skipping elbow/antechamber run for this residue.
+
+
+  Residue "NO3" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_1u6r.pdb
+==================================================
+
+~> tleap -f 1u6r_asu_tleap_input_run
+
+Checking output filenames
+  file : 1u6r_asu.prmtop

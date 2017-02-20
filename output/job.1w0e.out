@@ -1,0 +1,75 @@
+HOST rebus.lbl.gov
+only_i 221
+only_code None
+force_amber_prep True
+dry_run False
+... 221 1w0e
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/w0/1w0e
+1w0e.pdb 4phenix_1w0e.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/w0/pdb1w0e.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/w0/r1w0esf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/w0/1w0e.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.cif
+Can't determine output label for r1w0esf,_refln.crystal_id - skipping.
+Can't determine output label for r1w0esf,_refln.scale_group_code - skipping.
+Can't determine output label for r1w0esf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1w0e.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/w0/pdb1w0e.ent.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.pdb
+Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/w0/r1w0esf.ent.gz
+Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/w0/1w0e.cif.gz
+Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.cif
+Can't determine output label for r1w0esf,_refln.crystal_id - skipping.
+Can't determine output label for r1w0esf,_refln.scale_group_code - skipping.
+Can't determine output label for r1w0esf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1w0e.mtz
+not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/w0/1w0e/4amber_1w0e.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/w0/1w0e/4amber_1w0e.prmtop
+
+	Running AmberPrep : 1w0e.pdb
+
+
+==================================================
+Running pdb4amber on 1w0e.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for HEM 
+==================================================
+	Difficulties in the ring structures may lead to problems later
+
+   Residue has metal at the centre of a coordination sphere. Using input
+   geometry to generate restraints. Hydrogens may not be added.
+   
+
+MoleculeClass :  C:34  N: 4  O: 4 Fe: 1 (CHEMICAL COMPONENTS format)
+	73 atoms
+	80 bonds
+	144 angles
+	218 dihedrals
+	1 rings (groups, rings, atoms) 8 44
+	0 chirals
+
+~> antechamber -i 4antechamber_HEM.pdb -fi pdb -o HEM.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+
+(2) adjust atom valence penalty parameters in APS.DAT, and/or 
