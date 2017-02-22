@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 293
 only_code None
 force_amber_prep True
@@ -7,123 +7,75 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 2dtg.pdb 4phenix_2dtg.pdb
+2dtg.pdb 4phenix_2dtg.pdb
 local_archive None
 archive PDB None
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg.fa
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg-sf.cif
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg.cif
-Can't determine output label for r2dtgsf,_refln.crystal_id - skipping.
-Can't determine output label for r2dtgsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 392 reflections
-Can't determine output label for r2dtgsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2dtg.mtz
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 173, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg.fa
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg-sf.cif
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg/2dtg.cif
-Can't determine output label for r2dtgsf,_refln.crystal_id - skipping.
-Can't determine output label for r2dtgsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 392 reflections
-Can't determine output label for r2dtgsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2dtg.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/dt/2dtg/4amber_2dtg.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg/4amber_2dtg.prmtop
-
-	Running AmberPrep : 2dtg.pdb
-
-
-==================================================
-Running pdb4amber on 2dtg.pdb
-==================================================
-
-==================================================
-Setting up library files for non-standard residues
-==================================================
-
-==================================================
-Preparing asu files and 4phenix_2dtg.pdb
-==================================================
-
-~> tleap -f 2dtg_asu_tleap_input_run
-
-Checking output filenames
-  file : 2dtg_asu.prmtop
-  file : 2dtg_asu.rst7
-
-~> ChBox -c 2dtg_asu.rst7 -o 2dtg_asu.rst7 -X 123.007 -Y 319.691 -Z 204.867 -al 90.0 -bt 90.0 -gm 90.0 
-
-
-============================================================
-Preparing unit cell files: 4amber_2dtg.prmtop and 4amber_2dtg.rst7
-============================================================
-
-~> UnitCell -p 2dtg_4UnitCell.pdb -o 2dtg_4tleap_uc1.pdb
-
-
-~> tleap -f 2dtg_uc_tleap_input_run
-
-Checking output filenames
-  file : 2dtg_uc.prmtop
-  file : 2dtg_uc.rst7
-
-~> ChBox -c 2dtg_uc.rst7 -o 2dtg_uc.rst7 -X 123.007 -Y 319.691 -Z 204.867 -al 90.0 -bt 90.0 -gm 90.0 
-
-
-==================================================
-Minimizing input coordinates.
-==================================================
-
-~> sander -O -i 2dtg_amber_all.in -p 4amber_2dtg.prmtop -c 4amber_2dtg.rst7 -o 2dtg.min.out            -ref 4amber_2dtg.rst7 -r 4amber_2dtg.min.rst7
-
-checking special positions in 4phenix_2dtg.pdb
-
-==================================================
-Done.  Three new files have been made:
-      4phenix_2dtg.pdb
-      4amber_2dtg.prmtop
-      4amber_2dtg.rst7
-==================================================
-
-Example
-
-  phenix.refine 4phenix_2dtg.pdb use_amber=True \
-    amber.topology_file_name=4amber_2dtg.prmtop \
-    amber.coordinate_file_name=4amber_2dtg.rst7 \
-    ....(other refinement keywords here).....
-
-
-
-Substituting Amber PDB file for downloaded file
-
-  Amber files
-    PDB    : 2dtg.pdb
-    MTZ    : 2dtg.mtz
-    prmtop : 4amber_2dtg.prmtop
-    rst7   : 4amber_2dtg.rst7
-  
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 173, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg
 return_files 2dtg
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2dtg.pdb
 4phenix_2dtg.pdb
-cp 4phenix_2dtg.pdb /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 2dtg.pdb
-cp 2dtg.pdb /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 4amber_2dtg.mtz
 4phenix_2dtg.mtz
 2dtg.mtz
 cp 2dtg.mtz /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 4amber_2dtg.rst7
-cp 4amber_2dtg.rst7 /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 4phenix_2dtg.rst7
 2dtg.rst7
 4amber_2dtg.prmtop
-cp 4amber_2dtg.prmtop /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 4phenix_2dtg.prmtop
 2dtg.prmtop
 4amber_2dtg_refine_001.log
@@ -140,24 +92,15 @@ cp 4amber_2dtg.prmtop /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg
 2dtg_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg/2dtg.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg
+ODD
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/dt/2dtg
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg/2dtg_refine_001.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 2dtg_refine_001.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 2dtg.pdb 2dtg.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
+	Already done (on chevy) 2dtg_refine_001
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg/2dtg_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 2dtg_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 2dtg.pdb 2dtg.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg/4amber_2dtg.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dt/2dtg/4amber_2dtg.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 2dtg_refine_002

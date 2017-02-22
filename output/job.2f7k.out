@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 79
 only_code None
 force_amber_prep True
@@ -11,41 +11,208 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f7/pdb2f7k.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/f7/r2f7ksf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/f7/2f7k.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.cif
-Can't determine output label for r2f7ksf,_refln.crystal_id - skipping.
-Can't determine output label for r2f7ksf,_refln.scale_group_code - skipping.
-Can't determine output label for r2f7ksf,_refln.wavelength_id - skipping.
-Can't determine output label for r2f7kAsf,_refln.crystal_id - skipping.
-Can't determine output label for r2f7kAsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2f7kAsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2f7k.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f7/pdb2f7k.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/f7/r2f7ksf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/f7/2f7k.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.cif
-Can't determine output label for r2f7ksf,_refln.crystal_id - skipping.
-Can't determine output label for r2f7ksf,_refln.scale_group_code - skipping.
-Can't determine output label for r2f7ksf,_refln.wavelength_id - skipping.
-Can't determine output label for r2f7kAsf,_refln.crystal_id - skipping.
-Can't determine output label for r2f7kAsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2f7kAsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2f7k.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/f7/2f7k/4amber_2f7k.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f7/2f7k/2f7k.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2f7k.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 2f7k_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+THR_11 misses 6 heavy atom(s)
+THR_12 misses 7 heavy atom(s)
+THR_13 misses 6 heavy atom(s)
+THR_14 misses 7 heavy atom(s)
+THR_15 misses 6 heavy atom(s)
+THR_16 misses 7 heavy atom(s)
+THR_17 misses 6 heavy atom(s)
+THR_18 misses 7 heavy atom(s)
+THR_19 misses 7 heavy atom(s)
+THR_20 misses 7 heavy atom(s)
+THR_21 misses 6 heavy atom(s)
+THR_22 misses 7 heavy atom(s)
+THR_23 misses 6 heavy atom(s)
+THR_24 misses 6 heavy atom(s)
+THR_347 misses 6 heavy atom(s)
+THR_348 misses 7 heavy atom(s)
+THR_349 misses 6 heavy atom(s)
+THR_350 misses 7 heavy atom(s)
+THR_351 misses 6 heavy atom(s)
+THR_352 misses 7 heavy atom(s)
+THR_353 misses 6 heavy atom(s)
+THR_354 misses 7 heavy atom(s)
+THR_355 misses 7 heavy atom(s)
+THR_356 misses 7 heavy atom(s)
+THR_357 misses 6 heavy atom(s)
+THR_358 misses 7 heavy atom(s)
+THR_359 misses 6 heavy atom(s)
+THR_360 misses 6 heavy atom(s)
+THR_890 misses 6 heavy atom(s)
+THR_891 misses 7 heavy atom(s)
+THR_892 misses 6 heavy atom(s)
+THR_893 misses 7 heavy atom(s)
+THR_894 misses 6 heavy atom(s)
+THR_895 misses 7 heavy atom(s)
+THR_896 misses 6 heavy atom(s)
+THR_897 misses 7 heavy atom(s)
+THR_898 misses 7 heavy atom(s)
+THR_899 misses 7 heavy atom(s)
+THR_900 misses 6 heavy atom(s)
+THR_901 misses 7 heavy atom(s)
+THR_902 misses 6 heavy atom(s)
+THR_903 misses 6 heavy atom(s)
+THR_1226 misses 6 heavy atom(s)
+THR_1227 misses 7 heavy atom(s)
+THR_1228 misses 6 heavy atom(s)
+THR_1229 misses 7 heavy atom(s)
+THR_1230 misses 6 heavy atom(s)
+THR_1231 misses 7 heavy atom(s)
+THR_1232 misses 6 heavy atom(s)
+THR_1233 misses 7 heavy atom(s)
+THR_1234 misses 7 heavy atom(s)
+THR_1235 misses 7 heavy atom(s)
+THR_1236 misses 6 heavy atom(s)
+THR_1237 misses 7 heavy atom(s)
+THR_1238 misses 6 heavy atom(s)
+THR_1239 misses 6 heavy atom(s)
+THR_1769 misses 6 heavy atom(s)
+THR_1770 misses 7 heavy atom(s)
+THR_1771 misses 6 heavy atom(s)
+THR_1772 misses 7 heavy atom(s)
+THR_1773 misses 6 heavy atom(s)
+THR_1774 misses 7 heavy atom(s)
+THR_1775 misses 6 heavy atom(s)
+THR_1776 misses 7 heavy atom(s)
+THR_1777 misses 7 heavy atom(s)
+THR_1778 misses 7 heavy atom(s)
+THR_1779 misses 6 heavy atom(s)
+THR_1780 misses 7 heavy atom(s)
+THR_1781 misses 6 heavy atom(s)
+THR_1782 misses 6 heavy atom(s)
+THR_2105 misses 6 heavy atom(s)
+THR_2106 misses 7 heavy atom(s)
+THR_2107 misses 6 heavy atom(s)
+THR_2108 misses 7 heavy atom(s)
+THR_2109 misses 6 heavy atom(s)
+THR_2110 misses 7 heavy atom(s)
+THR_2111 misses 6 heavy atom(s)
+THR_2112 misses 7 heavy atom(s)
+THR_2113 misses 7 heavy atom(s)
+THR_2114 misses 7 heavy atom(s)
+THR_2115 misses 6 heavy atom(s)
+THR_2116 misses 7 heavy atom(s)
+THR_2117 misses 6 heavy atom(s)
+THR_2118 misses 6 heavy atom(s)
+THR_2648 misses 6 heavy atom(s)
+THR_2649 misses 7 heavy atom(s)
+THR_2650 misses 6 heavy atom(s)
+THR_2651 misses 7 heavy atom(s)
+THR_2652 misses 6 heavy atom(s)
+THR_2653 misses 7 heavy atom(s)
+THR_2654 misses 6 heavy atom(s)
+THR_2655 misses 7 heavy atom(s)
+THR_2656 misses 7 heavy atom(s)
+THR_2657 misses 7 heavy atom(s)
+THR_2658 misses 6 heavy atom(s)
+THR_2659 misses 7 heavy atom(s)
+THR_2660 misses 6 heavy atom(s)
+THR_2661 misses 6 heavy atom(s)
+THR_2984 misses 6 heavy atom(s)
+THR_2985 misses 7 heavy atom(s)
+THR_2986 misses 6 heavy atom(s)
+THR_2987 misses 7 heavy atom(s)
+THR_2988 misses 6 heavy atom(s)
+THR_2989 misses 7 heavy atom(s)
+THR_2990 misses 6 heavy atom(s)
+THR_2991 misses 7 heavy atom(s)
+THR_2992 misses 7 heavy atom(s)
+THR_2993 misses 7 heavy atom(s)
+THR_2994 misses 6 heavy atom(s)
+THR_2995 misses 7 heavy atom(s)
+THR_2996 misses 6 heavy atom(s)
+THR_2997 misses 6 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/f7/2f7k/4amber_2f7k.prmtop
 not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/f7/2f7k/4phenix_2f7k.pdb
 
 	Running AmberPrep : 2f7k.pdb
@@ -83,3 +250,5 @@ Preparing unit cell files: 4amber_2f7k.prmtop and 4amber_2f7k.rst7
 
 Checking output filenames
   file : 2f7k_uc.prmtop
+Sorry:   Output file is empty : 2f7k_uc.prmtop
+  Check contents of "leap.log"

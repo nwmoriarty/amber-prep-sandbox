@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 99
 only_code None
 force_amber_prep True
@@ -12,35 +12,195 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fh/pdb2fhg.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/fh/r2fhgsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/fh/2fhg.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.cif
-Can't determine output label for r2fhgsf,_refln.crystal_id - skipping.
-Can't determine output label for r2fhgsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2fhgsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2fhg.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fh/pdb2fhg.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/fh/r2fhgsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/fh/2fhg.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.cif
-Can't determine output label for r2fhgsf,_refln.crystal_id - skipping.
-Can't determine output label for r2fhgsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2fhgsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2fhg.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fh/2fhg/4amber_2fhg.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2fhg.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+1
+2
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.937909 A between SER 185 and LEU 186
+gap of 9.906284 A between SER 627 and LEU 628
+gap of 9.875777 A between SER 1069 and LEU 1070
+gap of 9.903060 A between SER 1511 and LEU 1512
+gap of 9.886402 A between SER 1953 and LEU 1954
+gap of 9.898917 A between SER 2395 and LEU 2396
+gap of 9.918485 A between SER 2837 and LEU 2838
+gap of 9.904964 A between SER 3279 and LEU 3280
+gap of 9.907595 A between SER 3721 and LEU 3722
+gap of 9.898925 A between SER 4163 and LEU 4164
+gap of 9.911575 A between SER 4605 and LEU 4606
+gap of 9.891922 A between SER 5047 and LEU 5048
+gap of 9.908024 A between SER 5489 and LEU 5490
+gap of 9.889675 A between SER 5931 and LEU 5932
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 2fhg_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+1
+2
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.937909 A between SER 185 and LEU 186
+gap of 9.906284 A between SER 627 and LEU 628
+gap of 9.875777 A between SER 1069 and LEU 1070
+gap of 9.903060 A between SER 1511 and LEU 1512
+gap of 9.886402 A between SER 1953 and LEU 1954
+gap of 9.898917 A between SER 2395 and LEU 2396
+gap of 9.918485 A between SER 2837 and LEU 2838
+gap of 9.904964 A between SER 3279 and LEU 3280
+gap of 9.907595 A between SER 3721 and LEU 3722
+gap of 9.898925 A between SER 4163 and LEU 4164
+gap of 9.911575 A between SER 4605 and LEU 4606
+gap of 9.891922 A between SER 5047 and LEU 5048
+gap of 9.908024 A between SER 5489 and LEU 5490
+gap of 9.889675 A between SER 5931 and LEU 5932
+gap of 9.937909 A between SER 6599 and LEU 6600
+gap of 9.906284 A between SER 7041 and LEU 7042
+gap of 9.875777 A between SER 7483 and LEU 7484
+gap of 9.903060 A between SER 7925 and LEU 7926
+gap of 9.886402 A between SER 8367 and LEU 8368
+gap of 9.898917 A between SER 8809 and LEU 8810
+gap of 9.918485 A between SER 9251 and LEU 9252
+gap of 9.904964 A between SER 9693 and LEU 9694
+gap of 9.907595 A between SER 10135 and LEU 10136
+gap of 9.898925 A between SER 10577 and LEU 10578
+gap of 9.911575 A between SER 11019 and LEU 11020
+gap of 9.891922 A between SER 11461 and LEU 11462
+gap of 9.908024 A between SER 11903 and LEU 11904
+gap of 9.889675 A between SER 12345 and LEU 12346
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/fh/2fhg/4amber_2fhg.prmtop
 
 	Running AmberPrep : 2fhg.pdb
 
@@ -107,6 +267,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2fhg.pdb
@@ -114,7 +276,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2fhg.prmtop
     rst7   : 4amber_2fhg.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
 return_files 2fhg
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2fhg.pdb
@@ -148,7 +310,7 @@ cp 4amber_2fhg.prmtop /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg
 2fhg_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/2fhg.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/fh/2fhg
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/2fhg_refine_001.log
 ------------------------------
@@ -157,10 +319,5 @@ phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/2fhg_r
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/2fhg_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 2fhg_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 2fhg.pdb 2fhg.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/4amber_2fhg.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/fh/2fhg/4amber_2fhg.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 2fhg_refine_002

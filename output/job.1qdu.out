@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 245
 only_code None
 force_amber_prep True
@@ -7,40 +7,263 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu
 1qdu.pdb 4phenix_1qdu.pdb
+1qdu.pdb 4phenix_1qdu.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/qd/pdb1qdu.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/qd/r1qdusf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/qd/1qdu.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.cif
-Can't determine output label for r1qdusf,_refln.crystal_id - skipping.
-Can't determine output label for r1qdusf,_refln.scale_group_code - skipping.
-Can't determine output label for r1qdusf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1qdu.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/qd/pdb1qdu.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/qd/r1qdusf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/qd/1qdu.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.cif
-Can't determine output label for r1qdusf,_refln.crystal_id - skipping.
-Can't determine output label for r1qdusf,_refln.scale_group_code - skipping.
-Can't determine output label for r1qdusf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1qdu.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu/1qdu.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1qdu.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+T
+U
+V
+W
+X
+Y
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 34.656200 A between ASP 245 and LEU 247
+gap of 60.549396 A between ASP 491 and LEU 493
+gap of 34.295932 A between ASP 737 and LEU 739
+gap of 62.758260 A between ASP 983 and LEU 985
+gap of 34.364714 A between ASP 1229 and LEU 1231
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 1qdu_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+T
+U
+V
+W
+X
+Y
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 4.568836 A between LYS 217 and ASP 218
+gap of 5.739016 A between ASP 218 and ASP 218
+gap of 5.957497 A between ASP 218 and LYS 219
+gap of 4.836846 A between LYS 219 and LYS 219
+gap of 3.785257 A between LYS 219 and ASN 220
+gap of 4.560383 A between LYS 461 and ASP 462
+gap of 5.774020 A between ASP 462 and ASP 462
+gap of 6.357891 A between ASP 462 and LYS 463
+gap of 4.936270 A between LYS 463 and LYS 463
+gap of 3.250129 A between LYS 463 and ASN 464
+gap of 4.404149 A between LYS 705 and ASP 706
+gap of 5.692253 A between ASP 706 and ASP 706
+gap of 6.107678 A between ASP 706 and LYS 707
+gap of 5.036397 A between LYS 707 and LYS 707
+gap of 3.802942 A between LYS 707 and ASN 708
+gap of 4.540981 A between LYS 949 and ASP 950
+gap of 5.805887 A between ASP 950 and ASP 950
+gap of 6.466497 A between ASP 950 and LYS 951
+gap of 4.947302 A between LYS 951 and LYS 951
+gap of 3.199451 A between LYS 951 and ASN 952
+gap of 4.431542 A between LYS 1193 and ASP 1194
+gap of 5.653807 A between ASP 1194 and ASP 1194
+gap of 6.098394 A between ASP 1194 and LYS 1195
+gap of 5.063779 A between LYS 1195 and LYS 1195
+gap of 3.845249 A between LYS 1195 and ASN 1196
+gap of 4.501619 A between LYS 1437 and ASP 1438
+gap of 5.799733 A between ASP 1438 and ASP 1438
+gap of 6.461849 A between ASP 1438 and LYS 1439
+gap of 4.921766 A between LYS 1439 and LYS 1439
+gap of 3.166066 A between LYS 1439 and ASN 1440
+gap of 4.568836 A between LYS 1827 and ASP 1828
+gap of 5.739016 A between ASP 1828 and ASP 1828
+gap of 5.957497 A between ASP 1828 and LYS 1829
+gap of 4.836846 A between LYS 1829 and LYS 1829
+gap of 3.785257 A between LYS 1829 and ASN 1830
+gap of 4.560383 A between LYS 2071 and ASP 2072
+gap of 5.774020 A between ASP 2072 and ASP 2072
+gap of 6.357891 A between ASP 2072 and LYS 2073
+gap of 4.936270 A between LYS 2073 and LYS 2073
+gap of 3.250129 A between LYS 2073 and ASN 2074
+gap of 4.404149 A between LYS 2315 and ASP 2316
+gap of 5.692253 A between ASP 2316 and ASP 2316
+gap of 6.107678 A between ASP 2316 and LYS 2317
+gap of 5.036397 A between LYS 2317 and LYS 2317
+gap of 3.802942 A between LYS 2317 and ASN 2318
+gap of 4.540981 A between LYS 2559 and ASP 2560
+gap of 5.805887 A between ASP 2560 and ASP 2560
+gap of 6.466497 A between ASP 2560 and LYS 2561
+gap of 4.947302 A between LYS 2561 and LYS 2561
+gap of 3.199451 A between LYS 2561 and ASN 2562
+gap of 4.431542 A between LYS 2803 and ASP 2804
+gap of 5.653807 A between ASP 2804 and ASP 2804
+gap of 6.098394 A between ASP 2804 and LYS 2805
+gap of 5.063779 A between LYS 2805 and LYS 2805
+gap of 3.845249 A between LYS 2805 and ASN 2806
+gap of 4.501619 A between LYS 3047 and ASP 3048
+gap of 5.799733 A between ASP 3048 and ASP 3048
+gap of 6.461849 A between ASP 3048 and LYS 3049
+gap of 4.921766 A between LYS 3049 and LYS 3049
+gap of 3.166066 A between LYS 3049 and ASN 3050
+gap of 4.568836 A between LYS 3437 and ASP 3438
+gap of 5.739016 A between ASP 3438 and ASP 3438
+gap of 5.957497 A between ASP 3438 and LYS 3439
+gap of 4.836846 A between LYS 3439 and LYS 3439
+gap of 3.785257 A between LYS 3439 and ASN 3440
+gap of 4.560383 A between LYS 3681 and ASP 3682
+gap of 5.774020 A between ASP 3682 and ASP 3682
+gap of 6.357891 A between ASP 3682 and LYS 3683
+gap of 4.936270 A between LYS 3683 and LYS 3683
+gap of 3.250129 A between LYS 3683 and ASN 3684
+gap of 4.404149 A between LYS 3925 and ASP 3926
+gap of 5.692253 A between ASP 3926 and ASP 3926
+gap of 6.107678 A between ASP 3926 and LYS 3927
+gap of 5.036397 A between LYS 3927 and LYS 3927
+gap of 3.802942 A between LYS 3927 and ASN 3928
+gap of 4.540981 A between LYS 4169 and ASP 4170
+gap of 5.805887 A between ASP 4170 and ASP 4170
+gap of 6.466497 A between ASP 4170 and LYS 4171
+gap of 4.947302 A between LYS 4171 and LYS 4171
+gap of 3.199451 A between LYS 4171 and ASN 4172
+gap of 4.431542 A between LYS 4413 and ASP 4414
+gap of 5.653807 A between ASP 4414 and ASP 4414
+gap of 6.098394 A between ASP 4414 and LYS 4415
+gap of 5.063779 A between LYS 4415 and LYS 4415
+gap of 3.845249 A between LYS 4415 and ASN 4416
+gap of 4.501619 A between LYS 4657 and ASP 4658
+gap of 5.799733 A between ASP 4658 and ASP 4658
+gap of 6.461849 A between ASP 4658 and LYS 4659
+gap of 4.921766 A between LYS 4659 and LYS 4659
+gap of 3.166066 A between LYS 4659 and ASN 4660
+gap of 4.568836 A between LYS 5047 and ASP 5048
+gap of 5.739016 A between ASP 5048 and ASP 5048
+gap of 5.957497 A between ASP 5048 and LYS 5049
+gap of 4.836846 A between LYS 5049 and LYS 5049
+gap of 3.785257 A between LYS 5049 and ASN 5050
+gap of 4.560383 A between LYS 5291 and ASP 5292
+gap of 5.774020 A between ASP 5292 and ASP 5292
+gap of 6.357891 A between ASP 5292 and LYS 5293
+gap of 4.936270 A between LYS 5293 and LYS 5293
+gap of 3.250129 A between LYS 5293 and ASN 5294
+gap of 4.404149 A between LYS 5535 and ASP 5536
+gap of 5.692253 A between ASP 5536 and ASP 5536
+gap of 6.107678 A between ASP 5536 and LYS 5537
+gap of 5.036397 A between LYS 5537 and LYS 5537
+gap of 3.802942 A between LYS 5537 and ASN 5538
+gap of 4.540981 A between LYS 5779 and ASP 5780
+gap of 5.805887 A between ASP 5780 and ASP 5780
+gap of 6.466497 A between ASP 5780 and LYS 5781
+gap of 4.947302 A between LYS 5781 and LYS 5781
+gap of 3.199451 A between LYS 5781 and ASN 5782
+gap of 4.431542 A between LYS 6023 and ASP 6024
+gap of 5.653807 A between ASP 6024 and ASP 6024
+gap of 6.098394 A between ASP 6024 and LYS 6025
+gap of 5.063779 A between LYS 6025 and LYS 6025
+gap of 3.845249 A between LYS 6025 and ASN 6026
+gap of 4.501619 A between LYS 6267 and ASP 6268
+gap of 5.799733 A between ASP 6268 and ASP 6268
+gap of 6.461849 A between ASP 6268 and LYS 6269
+gap of 4.921766 A between LYS 6269 and LYS 6269
+gap of 3.166066 A between LYS 6269 and ASN 6270
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.prmtop
 
 	Running AmberPrep : 1qdu.pdb
 
@@ -115,6 +338,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 1qdu.pdb
@@ -122,7 +347,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_1qdu.prmtop
     rst7   : 4amber_1qdu.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu
 return_files 1qdu
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1qdu.pdb
@@ -156,7 +381,7 @@ cp 4amber_1qdu.prmtop /net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu
 1qdu_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/1qdu.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/qd/1qdu
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/1qdu_refine_001.log
 ------------------------------
@@ -171,16 +396,16 @@ phenix.refine 1qdu.pdb 1qdu.mtz c_beta_restraints=False discard_psi_phi=False st
   Restarting
     phenix.refine 1qdu.pdb 1qdu.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True refinement.input.xray_data.r_free_flags.generate=True
     
-# Date 2017-02-18 Time 01:34:02 PST -0800 (1487410442.29 s)
+# Date 2017-02-21 Time 16:26:27 PST -0800 (1487723187.17 s)
 #phil __OFF__
 
 Command line arguments: "1qdu.pdb" "1qdu.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "refinement.input.xray_data.r_free_flags.generate=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 47551
-JOB_ID = 6368462
+PID = 59632
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -348,16 +573,16 @@ Sorry: number of groups of duplicate atom labels: 264
         "ATOM    .*.  H   LYS A 175 .*.     H  "
   ... 254 remaining groups not shown
 
-# Date 2017-02-18 Time 01:34:02 PST -0800 (1487410442.29 s)
+# Date 2017-02-21 Time 16:26:27 PST -0800 (1487723187.17 s)
 #phil __OFF__
 
 Command line arguments: "1qdu.pdb" "1qdu.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "refinement.input.xray_data.r_free_flags.generate=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 47551
-JOB_ID = 6368462
+PID = 59632
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -539,16 +764,16 @@ phenix.refine 1qdu.pdb 1qdu.mtz c_beta_restraints=False discard_psi_phi=False st
   Restarting
     phenix.refine 1qdu.pdb 1qdu.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2 refinement.input.xray_data.r_free_flags.generate=True
     
-# Date 2017-02-18 Time 01:34:20 PST -0800 (1487410460.04 s)
+# Date 2017-02-21 Time 16:26:45 PST -0800 (1487723205.74 s)
 #phil __OFF__
 
 Command line arguments: "1qdu.pdb" "1qdu.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "refinement.input.xray_data.r_free_flags.generate=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 47789
-JOB_ID = 6368462
+PID = 60522
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -722,16 +947,16 @@ Sorry: number of groups of duplicate atom labels: 264
         "ATOM    .*.  H   LYS A 175 .*.     H  "
   ... 254 remaining groups not shown
 
-# Date 2017-02-18 Time 01:34:20 PST -0800 (1487410460.04 s)
+# Date 2017-02-21 Time 16:26:45 PST -0800 (1487723205.74 s)
 #phil __OFF__
 
 Command line arguments: "1qdu.pdb" "1qdu.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/qd/1qdu/4amber_1qdu.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "refinement.input.xray_data.r_free_flags.generate=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 47789
-JOB_ID = 6368462
+PID = 60522
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400

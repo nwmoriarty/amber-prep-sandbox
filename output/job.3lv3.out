@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 298
 only_code None
 force_amber_prep True
@@ -11,39 +11,158 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/lv/pdb3lv3.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/lv/r3lv3sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/lv/3lv3.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.cif
-Can't determine output label for r3lv3sf,_refln.crystal_id - skipping.
-Can't determine output label for r3lv3sf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.051
-R-free-flags: missing 586 reflections
-Can't determine output label for r3lv3sf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3lv3.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/lv/pdb3lv3.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/lv/r3lv3sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/lv/3lv3.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.cif
-Can't determine output label for r3lv3sf,_refln.crystal_id - skipping.
-Can't determine output label for r3lv3sf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.051
-R-free-flags: missing 586 reflections
-Can't determine output label for r3lv3sf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3lv3.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/lv/3lv3/4amber_3lv3.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/lv/3lv3/3lv3.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3lv3.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+SER_42
+GLU_58
+GLU_63
+LYS_68
+GLN_72
+THR_73
+ARG_75
+ASN_86
+ILE_142
+GLU_148
+ARG_151
+GLU_163
+VAL_165
+THR_216
+ARG_273
+TRP_274
+MET_277
+ARG_280
+LYS_296
+GLU_327
+ARG_382
+
+---------- Mising heavy atom(s)
+
+None
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3lv3_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+MET_277 misses 7 heavy atom(s)
+MET_278 misses 8 heavy atom(s)
+MET_279 misses 8 heavy atom(s)
+MET_280 misses 8 heavy atom(s)
+MET_281 misses 7 heavy atom(s)
+MET_282 misses 8 heavy atom(s)
+MET_283 misses 7 heavy atom(s)
+MET_284 misses 8 heavy atom(s)
+MET_285 misses 8 heavy atom(s)
+MET_286 misses 7 heavy atom(s)
+MET_287 misses 8 heavy atom(s)
+MET_288 misses 8 heavy atom(s)
+MET_289 misses 7 heavy atom(s)
+MET_290 misses 7 heavy atom(s)
+MET_291 misses 8 heavy atom(s)
+MET_292 misses 8 heavy atom(s)
+MET_293 misses 8 heavy atom(s)
+MET_294 misses 7 heavy atom(s)
+MET_295 misses 7 heavy atom(s)
+MET_995 misses 7 heavy atom(s)
+MET_996 misses 8 heavy atom(s)
+MET_997 misses 8 heavy atom(s)
+MET_998 misses 8 heavy atom(s)
+MET_999 misses 7 heavy atom(s)
+MET_1000 misses 8 heavy atom(s)
+MET_1001 misses 7 heavy atom(s)
+MET_1002 misses 8 heavy atom(s)
+MET_1003 misses 8 heavy atom(s)
+MET_1004 misses 7 heavy atom(s)
+MET_1005 misses 8 heavy atom(s)
+MET_1006 misses 8 heavy atom(s)
+MET_1007 misses 7 heavy atom(s)
+MET_1008 misses 7 heavy atom(s)
+MET_1009 misses 8 heavy atom(s)
+MET_1010 misses 8 heavy atom(s)
+MET_1011 misses 8 heavy atom(s)
+MET_1012 misses 7 heavy atom(s)
+MET_1013 misses 7 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/lv/3lv3/4amber_3lv3.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/lv/3lv3/4amber_3lv3.prmtop
 
 	Running AmberPrep : 3lv3.pdb
@@ -85,3 +204,5 @@ Preparing unit cell files: 4amber_3lv3.prmtop and 4amber_3lv3.rst7
 
 Checking output filenames
   file : 3lv3_uc.prmtop
+Sorry:   Output file is empty : 3lv3_uc.prmtop
+  Check contents of "leap.log"

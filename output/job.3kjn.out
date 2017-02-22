@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 246
 only_code None
 force_amber_prep True
@@ -7,44 +7,113 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/kj/3kjn
 3kjn.pdb 4phenix_3kjn.pdb
+3kjn.pdb 4phenix_3kjn.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kj/pdb3kjn.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/kj/r3kjnsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/kj/3kjn.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.cif
-Can't determine output label for r3kjnsf,_refln.crystal_id - skipping.
-Can't determine output label for r3kjnsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.102
-R-free-flags: missing 1201 reflections
-Can't determine output label for r3kjnsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3kjn.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kj/pdb3kjn.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/kj/r3kjnsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/kj/3kjn.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.cif
-Can't determine output label for r3kjnsf,_refln.crystal_id - skipping.
-Can't determine output label for r3kjnsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.102
-R-free-flags: missing 1201 reflections
-Can't determine output label for r3kjnsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3kjn.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/kj/3kjn/4amber_3kjn.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/kj/3kjn/4amber_3kjn.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn/3kjn.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3kjn.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+ILE_17
+MET_80
+SER_83
+SER_187
+
+---------- Mising heavy atom(s)
+
+ARG_36 misses 4 heavy atom(s)
+GLU_68 misses 4 heavy atom(s)
+GLU_150 misses 4 heavy atom(s)
+ARG_154 misses 6 heavy atom(s)
+GLU_194 misses 4 heavy atom(s)
+LYS_220 misses 4 heavy atom(s)
+ASP_242 misses 2 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3kjn_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/kj/3kjn/4amber_3kjn.prmtop
 
 	Running AmberPrep : 3kjn.pdb
 
@@ -119,6 +188,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3kjn.pdb
@@ -126,7 +197,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3kjn.prmtop
     rst7   : 4amber_3kjn.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn
 return_files 3kjn
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3kjn.pdb
@@ -160,7 +231,7 @@ cp 4amber_3kjn.prmtop /net/chevy/raid1/nigel/amber/hi_lo/kj/3kjn
 3kjn_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/kj/3kjn/3kjn.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/kj/3kjn
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/kj/3kjn/3kjn_refine_001.log
 ------------------------------
@@ -177,16 +248,16 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/B93.cif
   Restarting
     phenix.refine 3kjn.pdb 3kjn.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True /net/cci/lbnl/nigel/all_chemical_components/cifs/B93.cif
     
-# Date 2017-02-18 Time 01:37:11 PST -0800 (1487410631.07 s)
+# Date 2017-02-21 Time 16:21:49 PST -0800 (1487722909.34 s)
 #phil __OFF__
 
 Command line arguments: "3kjn.pdb" "3kjn.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/B93.cif"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 50410
-JOB_ID = 6368462
+PID = 52315
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -292,17 +363,17 @@ R-free flags:
 
 Miller array info: 3kjn.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=27933
+Type of data: int, size=26732
 Type of sigmas: None
-Number of Miller indices: 27933
+Number of Miller indices: 26732
 Anomalous flag: False
 Unit cell: (62.598, 62.598, 129.389, 90, 90, 120)
 Space group: P 31 2 1 (No. 152)
 Systematic absences: 0
-Centric reflections: 3325
+Centric reflections: 2945
 Resolution range: 19.9439 1.80006
-Completeness in resolution range: 1
-Completeness with d_max=infinity: 0.998856
+Completeness in resolution range: 0.957004
+Completeness with d_max=infinity: 0.955909
 Wavelength: 1.0000
 
 Test (R-free flags) flag value: 0
@@ -366,7 +437,7 @@ Number of work/free reflections by resolution:
   Number of atoms with unknown nonbonded energy type symbols: 2
     "HETATM 3927  H92 B93 A 950 .*.     H  "
     "HETATM 3938 H302 B93 A 950 .*.     H  "
-  Time building chain proxies: 3.83, per 1000 atoms: 0.82
+  Time building chain proxies: 3.51, per 1000 atoms: 0.75
   Number of scatterers: 4669
   At special positions: 0
   Unit cell: (62.598, 62.598, 129.389, 90, 90, 120)

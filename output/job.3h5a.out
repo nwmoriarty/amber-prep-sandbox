@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 209
 only_code None
 force_amber_prep True
@@ -7,64 +7,178 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a
 3h5a.pdb 4phenix_3h5a.pdb
+3h5a.pdb 4phenix_3h5a.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/h5/pdb3h5a.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/h5/r3h5asf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/h5/3h5a.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.cif
-Can't determine output label for r3h5asf,_refln.crystal_id - skipping.
-Can't determine output label for r3h5asf,_refln.scale_group_code - skipping.
-Can't determine output label for r3h5asf,_refln.wavelength_id - skipping.
-Can't determine output label for r3h5aAsf,_refln.crystal_id - skipping.
-Warning: merging non-unique data
-Warning: merging non-unique data
-Warning: merging non-unique data
-Can't determine output label for r3h5aAsf,_refln.scale_group_code - skipping.
-Can't determine output label for r3h5aAsf,wavelength_id=1,_refln.status - skipping.
-Can't determine output label for r3h5aAsf,wavelength_id=2,_refln.status - skipping.
-Can't determine output label for r3h5aAsf,wavelength_id=3,_refln.status - skipping.
-Can't determine output label for r3h5aAsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3h5a.mtz
-  I(+),SIGI(+),I(-),SIGI(-) is anomalous
-  I2(+),SIGI2(+),I2(-),SIGI2(-) is anomalous
-  I3(+),SIGI3(+),I3(-),SIGI3(-) is anomalous
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/h5/pdb3h5a.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/h5/r3h5asf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/h5/3h5a.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.cif
-Can't determine output label for r3h5asf,_refln.crystal_id - skipping.
-Can't determine output label for r3h5asf,_refln.scale_group_code - skipping.
-Can't determine output label for r3h5asf,_refln.wavelength_id - skipping.
-Can't determine output label for r3h5aAsf,_refln.crystal_id - skipping.
-Warning: merging non-unique data
-Warning: merging non-unique data
-Warning: merging non-unique data
-Can't determine output label for r3h5aAsf,_refln.scale_group_code - skipping.
-Can't determine output label for r3h5aAsf,wavelength_id=1,_refln.status - skipping.
-Can't determine output label for r3h5aAsf,wavelength_id=2,_refln.status - skipping.
-Can't determine output label for r3h5aAsf,wavelength_id=3,_refln.status - skipping.
-Can't determine output label for r3h5aAsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3h5a.mtz
-  I(+),SIGI(+),I(-),SIGI(-) is anomalous
-  I2(+),SIGI2(+),I2(-),SIGI2(-) is anomalous
-  I3(+),SIGI3(+),I3(-),SIGI3(-) is anomalous
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a/3h5a.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3h5a.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.531122 A between GLU 88 and ASN 89
+gap of 6.521094 A between ASN 442 and THR 443
+gap of 6.164585 A between ASN 1157 and GLU 1158
+gap of 12.731146 A between ASP 1336 and LYS 1337
+
+---------- Mising heavy atom(s)
+
+VAL_33 misses 2 heavy atom(s)
+LYS_63 misses 4 heavy atom(s)
+GLU_82 misses 4 heavy atom(s)
+GLU_88 misses 4 heavy atom(s)
+ARG_93 misses 6 heavy atom(s)
+ASP_110 misses 3 heavy atom(s)
+LYS_113 misses 4 heavy atom(s)
+LYS_253 misses 4 heavy atom(s)
+LYS_261 misses 4 heavy atom(s)
+ASP_265 misses 3 heavy atom(s)
+ASN_347 misses 3 heavy atom(s)
+MET_349 misses 3 heavy atom(s)
+GLU_351 misses 4 heavy atom(s)
+HIS_357 misses 4 heavy atom(s)
+LYS_382 misses 4 heavy atom(s)
+VAL_390 misses 2 heavy atom(s)
+GLU_439 misses 4 heavy atom(s)
+GLU_444 misses 4 heavy atom(s)
+ASN_445 misses 3 heavy atom(s)
+ARG_513 misses 6 heavy atom(s)
+LYS_581 misses 4 heavy atom(s)
+LYS_610 misses 4 heavy atom(s)
+VAL_620 misses 2 heavy atom(s)
+ASP_622 misses 3 heavy atom(s)
+LEU_623 misses 3 heavy atom(s)
+TYR_624 misses 7 heavy atom(s)
+ARG_705 misses 6 heavy atom(s)
+HIS_714 misses 4 heavy atom(s)
+LYS_739 misses 4 heavy atom(s)
+VAL_747 misses 2 heavy atom(s)
+GLU_802 misses 4 heavy atom(s)
+ASN_803 misses 3 heavy atom(s)
+ARG_808 misses 6 heavy atom(s)
+ASP_825 misses 3 heavy atom(s)
+GLU_898 misses 4 heavy atom(s)
+LYS_968 misses 4 heavy atom(s)
+LYS_976 misses 4 heavy atom(s)
+ASN_1062 misses 3 heavy atom(s)
+MET_1064 misses 3 heavy atom(s)
+HIS_1072 misses 4 heavy atom(s)
+VAL_1105 misses 2 heavy atom(s)
+GLU_1154 misses 4 heavy atom(s)
+LYS_1295 misses 4 heavy atom(s)
+VAL_1334 misses 2 heavy atom(s)
+ASP_1336 misses 3 heavy atom(s)
+LYS_1337 misses 4 heavy atom(s)
+GLU_1338 misses 4 heavy atom(s)
+ASN_1413 misses 3 heavy atom(s)
+ARG_1414 misses 6 heavy atom(s)
+
+==================================================
+Summary of pdb4amber for: 3h5a_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.531122 A between GLU 88 and ASN 89
+gap of 6.521094 A between ASN 442 and THR 443
+gap of 6.164585 A between ASN 1157 and GLU 1158
+gap of 12.731146 A between ASP 1336 and LYS 1337
+gap of 3.531122 A between GLU 1514 and ASN 1515
+gap of 6.521094 A between ASN 1868 and THR 1869
+gap of 6.164585 A between ASN 2583 and GLU 2584
+gap of 12.731523 A between ASP 2762 and LYS 2763
+gap of 3.531122 A between GLU 2940 and ASN 2941
+gap of 6.521094 A between ASN 3294 and THR 3295
+gap of 6.164638 A between ASN 4009 and GLU 4010
+gap of 12.731146 A between ASP 4188 and LYS 4189
+gap of 3.531122 A between GLU 4366 and ASN 4367
+gap of 6.519747 A between ASN 4720 and THR 4721
+gap of 6.164638 A between ASN 5435 and GLU 5436
+gap of 12.731523 A between ASP 5614 and LYS 5615
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.prmtop
 
 	Running AmberPrep : 3h5a.pdb
 
@@ -131,6 +245,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3h5a.pdb
@@ -138,7 +254,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3h5a.prmtop
     rst7   : 4amber_3h5a.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a
 return_files 3h5a
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3h5a.pdb
@@ -172,7 +288,7 @@ cp 4amber_3h5a.prmtop /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a
 3h5a_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/3h5a.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/h5/3h5a
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/3h5a_refine_001.log
 ------------------------------
@@ -183,16 +299,16 @@ Running phenix.refine
 
 phenix.refine 3h5a.pdb 3h5a.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-17 Time 22:14:51 PST -0800 (1487398491.41 s)
+# Date 2017-02-21 Time 16:18:07 PST -0800 (1487722687.64 s)
 #phil __OFF__
 
 Command line arguments: "3h5a.pdb" "3h5a.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 16105
-JOB_ID = 6368462
+PID = 47118
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -269,16 +385,307 @@ Working crystal symmetry after inspecting all inputs:
 
 ================================== X-ray data =================================
 
+I-obs:
+  3h5a.mtz:I(+)(+),SIGI(+)(+),I(+)(-),SIGI(+)(-)
 
-Multiple equally suitable arrays of observed xray data found.
+Miller array info: 3h5a.mtz:I(+)(+),SIGI(+)(+),I(+)(-),SIGI(+)(-)
+Observation type: xray.intensity
+Type of data: double, size=157139
+Type of sigmas: double, size=157139
+Number of Miller indices: 157139
+Anomalous flag: True
+Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6549
+Resolution range: 50.1533 2.79835
+Completeness in resolution range: 0.987948
+Completeness with d_max=infinity: 0.987792
+Anomalous completeness in resolution range: 0.986802
+Bijvoet pairs: 75219
+Lone Bijvoet mates: 152
+Mean anomalous difference: 0.0616
+Wavelength: 1.2829
 
-Possible choices:
-  3h5a.mtz:I(+),SIGI(+),I(-),SIGI(-)
-  3h5a.mtz:I2(+),SIGI2(+),I2(-),SIGI2(-)
-  3h5a.mtz:I3(+),SIGI3(+),I3(-),SIGI3(-)
 
-Please use refinement.input.xray_data.labels
-to specify an unambiguous substring of the target label.
+     ----------Scaling input intensities via French-Wilson Method----------    
 
-Sorry: Multiple equally suitable arrays of observed xray data found.
+Trying 60 bins...
+Number of bins = 60
+** Calculating bin mean intensity values for each intensity **
+** Total # rejected intensities: 4 **
+** Summary or rejected intensities **
+-----------------------------------------------------------------
+Miller Index  :  Intensity  :  Sigma  :  Bin Mean Intensity
+(1, 1, 33)    -32.533      8.604    808.619
+(2, 0, 36)    -47.025      8.100    793.519
+(3, 0, 36)    -26.225      7.007    793.226
+(0, 15, 41)    -50.625      13.350    336.287
+-----------------------------------------------------------------
+Intensities converted to amplitudes for use in refinement.
+
+Number of F-obs in resolution range:                   157135
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 0
+Refinement resolution range: d_max =  50.1533
+                             d_min =   2.7983
+
+
+Fobs statistics after all cutoffs applied:
+
+Miller array info: None
+Observation type: xray.amplitude
+Type of data: double, size=157135
+Type of sigmas: double, size=157135
+Number of Miller indices: 157135
+Anomalous flag: True
+Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6546
+Resolution range: 50.1533 2.79835
+Completeness in resolution range: 0.987922
+Completeness with d_max=infinity: 0.987767
+Anomalous completeness in resolution range: 0.986789
+Bijvoet pairs: 75218
+Lone Bijvoet mates: 153
+Mean anomalous difference: 0.0602
+R-free flags:
+  3h5a.mtz:R-free-flags
+
+Miller array info: 3h5a.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=81821
+Type of sigmas: None
+Number of Miller indices: 81821
+Anomalous flag: False
+Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6544
+Resolution range: 49.6941 2.79835
+Completeness in resolution range: 0.987759
+Completeness with d_max=infinity: 0.987508
+Wavelength: 1.2829
+
+Test (R-free flags) flag value: 0
+
+Generating Bijvoet mates of R-free flags.
+
+Sorry: R-free flags not compatible with F-obs array: missing flag for 101 F-obs selected for refinement:
+    h   k   l   data  sigmas
+    2   1   2   21.1831  0.691591
+   -2  -1  -2   20.3123  0.669546
+  -17  -6 -14   14.8162  0.774053
+  -20 -10  -4   28.4852  1.41869
+  -17 -15  -6   13.1166  0.695434
+  -17 -14  -7   19.2018  1.05123
+  -13 -17 -10   30.1155  0.459401
+  -13 -16 -11   25.8254  0.434991
+   -9 -16 -15   27.0956  0.51106
+  -21  -8 -10   12.1154  1.05186
+    ... (remaining 91 not shown)
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/3h5a_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3h5a_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3h5a.pdb 3h5a.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+
+# Date 2017-02-21 Time 16:18:30 PST -0800 (1487722710.10 s)
+#phil __OFF__
+
+Command line arguments: "3h5a.pdb" "3h5a.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
+
+HOST = lewis.lbl.gov
+HOSTTYPE = x86_64-linux
+USER = nigel
+PID = 47497
+JOB_ID = 6368467
+SGE_ARCH = lx24-amd64
+SGE_TASK_FIRST = 1
+SGE_TASK_LAST = 400
+SGE_TASK_ID = 209
+
+-------------------------------------------------------------------------------
+  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
+  Version: dev
+  Release tag: svn+SVN
+  User: nigel
+-------------------------------------------------------------------------------
+
+              phenix.refine: Macromolecular Structure Refinement
+
+-------------------------------------------------------------------------------
+
+Phenix developers include:
+  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
+  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
+  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
+  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
+  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
+  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
+  Tom Terwilliger, Christopher Williams, Peter Zwart
+Phenix home page:
+  http://www.phenix-online.org/
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Phenix components are copyrighted by:
+  - Lawrence Berkeley National Laboratory
+  - Los Alamos National Laboratory
+  - University of Cambridge
+  - Duke University
+  - Texas Agricultural Experiment Station &
+    Texas Engineering Experiment Station
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Major third-party components of Phenix include:
+    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
+    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
+    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
+  Enter phenix.acknowledgments for details.
+-------------------------------------------------------------------------------
+
+Processing inputs. This may take a minute or two.
+
+Command line parameter definitions:
+  refinement.pdb_interpretation.c_beta_restraints = False
+
+  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
+
+  refinement.refine.strategy = *individual_sites individual_sites_real_space \
+                               rigid_body *individual_adp group_adp tls \
+                               *occupancies group_anomalous
+
+  refinement.amber.topology_file_name = /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.prmtop
+
+  refinement.amber.coordinate_file_name = /net/chevy/raid1/nigel/amber/hi_lo/h5/3h5a/4amber_3h5a.rst7
+
+  refinement.amber.use_amber = True
+
+  refinement.target_weights.optimize_xyz_weight = True
+
+  refinement.main.number_of_macro_cycles = 10
+
+  refinement.output.write_geo_file = False
+
+  refinement.amber.wxc_factor = 0.300000
+
+  refinement.output.serial = 2
+
+  No user-defined map coefficients or files defined; will use default map
+  outputs instead.
+Working crystal symmetry after inspecting all inputs:
+  Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+  Space group: P 21 21 21 (No. 19)
+
+
+================================== X-ray data =================================
+
+I-obs:
+  3h5a.mtz:I(+)(+),SIGI(+)(+),I(+)(-),SIGI(+)(-)
+
+Miller array info: 3h5a.mtz:I(+)(+),SIGI(+)(+),I(+)(-),SIGI(+)(-)
+Observation type: xray.intensity
+Type of data: double, size=157139
+Type of sigmas: double, size=157139
+Number of Miller indices: 157139
+Anomalous flag: True
+Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6549
+Resolution range: 50.1533 2.79835
+Completeness in resolution range: 0.987948
+Completeness with d_max=infinity: 0.987792
+Anomalous completeness in resolution range: 0.986802
+Bijvoet pairs: 75219
+Lone Bijvoet mates: 152
+Mean anomalous difference: 0.0616
+Wavelength: 1.2829
+
+
+     ----------Scaling input intensities via French-Wilson Method----------    
+
+Trying 60 bins...
+Number of bins = 60
+** Calculating bin mean intensity values for each intensity **
+** Total # rejected intensities: 4 **
+** Summary or rejected intensities **
+-----------------------------------------------------------------
+Miller Index  :  Intensity  :  Sigma  :  Bin Mean Intensity
+(1, 1, 33)    -32.533      8.604    808.619
+(2, 0, 36)    -47.025      8.100    793.519
+(3, 0, 36)    -26.225      7.007    793.226
+(0, 15, 41)    -50.625      13.350    336.287
+-----------------------------------------------------------------
+Intensities converted to amplitudes for use in refinement.
+
+Number of F-obs in resolution range:                   157135
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 0
+Refinement resolution range: d_max =  50.1533
+                             d_min =   2.7983
+
+
+Fobs statistics after all cutoffs applied:
+
+Miller array info: None
+Observation type: xray.amplitude
+Type of data: double, size=157135
+Type of sigmas: double, size=157135
+Number of Miller indices: 157135
+Anomalous flag: True
+Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6546
+Resolution range: 50.1533 2.79835
+Completeness in resolution range: 0.987922
+Completeness with d_max=infinity: 0.987767
+Anomalous completeness in resolution range: 0.986789
+Bijvoet pairs: 75218
+Lone Bijvoet mates: 153
+Mean anomalous difference: 0.0602
+R-free flags:
+  3h5a.mtz:R-free-flags
+
+Miller array info: 3h5a.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=81821
+Type of sigmas: None
+Number of Miller indices: 81821
+Anomalous flag: False
+Unit cell: (144.649, 145.035, 158.688, 90, 90, 90)
+Space group: P 21 21 21 (No. 19)
+Systematic absences: 0
+Centric reflections: 6544
+Resolution range: 49.6941 2.79835
+Completeness in resolution range: 0.987759
+Completeness with d_max=infinity: 0.987508
+Wavelength: 1.2829
+
+Test (R-free flags) flag value: 0
+
+Generating Bijvoet mates of R-free flags.
+
+Sorry: R-free flags not compatible with F-obs array: missing flag for 101 F-obs selected for refinement:
+    h   k   l   data  sigmas
+    2   1   2   21.1831  0.691591
+   -2  -1  -2   20.3123  0.669546
+  -17  -6 -14   14.8162  0.774053
+  -20 -10  -4   28.4852  1.41869
+  -17 -15  -6   13.1166  0.695434
+  -17 -14  -7   19.2018  1.05123
+  -13 -17 -10   30.1155  0.459401
+  -13 -16 -11   25.8254  0.434991
+   -9 -16 -15   27.0956  0.51106
+  -21  -8 -10   12.1154  1.05186
+    ... (remaining 91 not shown)
 

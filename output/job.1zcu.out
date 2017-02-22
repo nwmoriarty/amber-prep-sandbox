@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 284
 only_code None
 force_amber_prep True
@@ -11,35 +11,259 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/zc/pdb1zcu.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/zc/r1zcusf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/zc/1zcu.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.cif
-Can't determine output label for r1zcusf,_refln.crystal_id - skipping.
-Can't determine output label for r1zcusf,_refln.scale_group_code - skipping.
-Can't determine output label for r1zcusf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1zcu.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/zc/pdb1zcu.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/zc/r1zcusf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/zc/1zcu.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.cif
-Can't determine output label for r1zcusf,_refln.crystal_id - skipping.
-Can't determine output label for r1zcusf,_refln.scale_group_code - skipping.
-Can't determine output label for r1zcusf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1zcu.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/zc/1zcu/4amber_1zcu.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/zc/1zcu/1zcu.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1zcu.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 7.969746 A between SER 233 and MET 234
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 1zcu_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 7.969746 A between SER 251 and MET 252
+gap of 7.969746 A between SER 620 and MET 621
+gap of 7.969746 A between SER 989 and MET 990
+gap of 7.969746 A between SER 1358 and MET 1359
+gap of 7.969746 A between SER 1727 and MET 1728
+gap of 7.969746 A between SER 2096 and MET 2097
+gap of 7.969746 A between SER 2465 and MET 2466
+gap of 7.969746 A between SER 2834 and MET 2835
+
+---------- Mising heavy atom(s)
+
+MET_1 misses 7 heavy atom(s)
+MET_2 misses 8 heavy atom(s)
+MET_3 misses 8 heavy atom(s)
+MET_4 misses 8 heavy atom(s)
+MET_5 misses 7 heavy atom(s)
+MET_6 misses 8 heavy atom(s)
+MET_7 misses 7 heavy atom(s)
+MET_8 misses 8 heavy atom(s)
+MET_9 misses 8 heavy atom(s)
+MET_10 misses 7 heavy atom(s)
+MET_11 misses 8 heavy atom(s)
+MET_12 misses 8 heavy atom(s)
+MET_13 misses 7 heavy atom(s)
+MET_14 misses 7 heavy atom(s)
+MET_15 misses 8 heavy atom(s)
+MET_16 misses 8 heavy atom(s)
+MET_17 misses 8 heavy atom(s)
+MET_18 misses 7 heavy atom(s)
+MET_19 misses 7 heavy atom(s)
+MET_370 misses 7 heavy atom(s)
+MET_371 misses 8 heavy atom(s)
+MET_372 misses 8 heavy atom(s)
+MET_373 misses 8 heavy atom(s)
+MET_374 misses 7 heavy atom(s)
+MET_375 misses 8 heavy atom(s)
+MET_376 misses 7 heavy atom(s)
+MET_377 misses 8 heavy atom(s)
+MET_378 misses 8 heavy atom(s)
+MET_379 misses 7 heavy atom(s)
+MET_380 misses 8 heavy atom(s)
+MET_381 misses 8 heavy atom(s)
+MET_382 misses 7 heavy atom(s)
+MET_383 misses 7 heavy atom(s)
+MET_384 misses 8 heavy atom(s)
+MET_385 misses 8 heavy atom(s)
+MET_386 misses 8 heavy atom(s)
+MET_387 misses 7 heavy atom(s)
+MET_388 misses 7 heavy atom(s)
+MET_739 misses 7 heavy atom(s)
+MET_740 misses 8 heavy atom(s)
+MET_741 misses 8 heavy atom(s)
+MET_742 misses 8 heavy atom(s)
+MET_743 misses 7 heavy atom(s)
+MET_744 misses 8 heavy atom(s)
+MET_745 misses 7 heavy atom(s)
+MET_746 misses 8 heavy atom(s)
+MET_747 misses 8 heavy atom(s)
+MET_748 misses 7 heavy atom(s)
+MET_749 misses 8 heavy atom(s)
+MET_750 misses 8 heavy atom(s)
+MET_751 misses 7 heavy atom(s)
+MET_752 misses 7 heavy atom(s)
+MET_753 misses 8 heavy atom(s)
+MET_754 misses 8 heavy atom(s)
+MET_755 misses 8 heavy atom(s)
+MET_756 misses 7 heavy atom(s)
+MET_757 misses 7 heavy atom(s)
+MET_1108 misses 7 heavy atom(s)
+MET_1109 misses 8 heavy atom(s)
+MET_1110 misses 8 heavy atom(s)
+MET_1111 misses 8 heavy atom(s)
+MET_1112 misses 7 heavy atom(s)
+MET_1113 misses 8 heavy atom(s)
+MET_1114 misses 7 heavy atom(s)
+MET_1115 misses 8 heavy atom(s)
+MET_1116 misses 8 heavy atom(s)
+MET_1117 misses 7 heavy atom(s)
+MET_1118 misses 8 heavy atom(s)
+MET_1119 misses 8 heavy atom(s)
+MET_1120 misses 7 heavy atom(s)
+MET_1121 misses 7 heavy atom(s)
+MET_1122 misses 8 heavy atom(s)
+MET_1123 misses 8 heavy atom(s)
+MET_1124 misses 8 heavy atom(s)
+MET_1125 misses 7 heavy atom(s)
+MET_1126 misses 7 heavy atom(s)
+MET_1477 misses 7 heavy atom(s)
+MET_1478 misses 8 heavy atom(s)
+MET_1479 misses 8 heavy atom(s)
+MET_1480 misses 8 heavy atom(s)
+MET_1481 misses 7 heavy atom(s)
+MET_1482 misses 8 heavy atom(s)
+MET_1483 misses 7 heavy atom(s)
+MET_1484 misses 8 heavy atom(s)
+MET_1485 misses 8 heavy atom(s)
+MET_1486 misses 7 heavy atom(s)
+MET_1487 misses 8 heavy atom(s)
+MET_1488 misses 8 heavy atom(s)
+MET_1489 misses 7 heavy atom(s)
+MET_1490 misses 7 heavy atom(s)
+MET_1491 misses 8 heavy atom(s)
+MET_1492 misses 8 heavy atom(s)
+MET_1493 misses 8 heavy atom(s)
+MET_1494 misses 7 heavy atom(s)
+MET_1495 misses 7 heavy atom(s)
+MET_1846 misses 7 heavy atom(s)
+MET_1847 misses 8 heavy atom(s)
+MET_1848 misses 8 heavy atom(s)
+MET_1849 misses 8 heavy atom(s)
+MET_1850 misses 7 heavy atom(s)
+MET_1851 misses 8 heavy atom(s)
+MET_1852 misses 7 heavy atom(s)
+MET_1853 misses 8 heavy atom(s)
+MET_1854 misses 8 heavy atom(s)
+MET_1855 misses 7 heavy atom(s)
+MET_1856 misses 8 heavy atom(s)
+MET_1857 misses 8 heavy atom(s)
+MET_1858 misses 7 heavy atom(s)
+MET_1859 misses 7 heavy atom(s)
+MET_1860 misses 8 heavy atom(s)
+MET_1861 misses 8 heavy atom(s)
+MET_1862 misses 8 heavy atom(s)
+MET_1863 misses 7 heavy atom(s)
+MET_1864 misses 7 heavy atom(s)
+MET_2215 misses 7 heavy atom(s)
+MET_2216 misses 8 heavy atom(s)
+MET_2217 misses 8 heavy atom(s)
+MET_2218 misses 8 heavy atom(s)
+MET_2219 misses 7 heavy atom(s)
+MET_2220 misses 8 heavy atom(s)
+MET_2221 misses 7 heavy atom(s)
+MET_2222 misses 8 heavy atom(s)
+MET_2223 misses 8 heavy atom(s)
+MET_2224 misses 7 heavy atom(s)
+MET_2225 misses 8 heavy atom(s)
+MET_2226 misses 8 heavy atom(s)
+MET_2227 misses 7 heavy atom(s)
+MET_2228 misses 7 heavy atom(s)
+MET_2229 misses 8 heavy atom(s)
+MET_2230 misses 8 heavy atom(s)
+MET_2231 misses 8 heavy atom(s)
+MET_2232 misses 7 heavy atom(s)
+MET_2233 misses 7 heavy atom(s)
+MET_2584 misses 7 heavy atom(s)
+MET_2585 misses 8 heavy atom(s)
+MET_2586 misses 8 heavy atom(s)
+MET_2587 misses 8 heavy atom(s)
+MET_2588 misses 7 heavy atom(s)
+MET_2589 misses 8 heavy atom(s)
+MET_2590 misses 7 heavy atom(s)
+MET_2591 misses 8 heavy atom(s)
+MET_2592 misses 8 heavy atom(s)
+MET_2593 misses 7 heavy atom(s)
+MET_2594 misses 8 heavy atom(s)
+MET_2595 misses 8 heavy atom(s)
+MET_2596 misses 7 heavy atom(s)
+MET_2597 misses 7 heavy atom(s)
+MET_2598 misses 8 heavy atom(s)
+MET_2599 misses 8 heavy atom(s)
+MET_2600 misses 8 heavy atom(s)
+MET_2601 misses 7 heavy atom(s)
+MET_2602 misses 7 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/zc/1zcu/4amber_1zcu.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/zc/1zcu/4amber_1zcu.prmtop
 
 	Running AmberPrep : 1zcu.pdb
@@ -77,3 +301,5 @@ Preparing unit cell files: 4amber_1zcu.prmtop and 4amber_1zcu.rst7
 
 Checking output filenames
   file : 1zcu_uc.prmtop
+Sorry:   Output file is empty : 1zcu_uc.prmtop
+  Check contents of "leap.log"

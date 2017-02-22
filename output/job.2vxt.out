@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 294
 only_code None
 force_amber_prep True
@@ -7,44 +7,227 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt
 2vxt.pdb 4phenix_2vxt.pdb
+2vxt.pdb 4phenix_2vxt.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/vx/pdb2vxt.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/vx/r2vxtsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/vx/2vxt.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.cif
-Can't determine output label for r2vxtsf,_refln.crystal_id - skipping.
-Can't determine output label for r2vxtsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 3013 reflections
-Can't determine output label for r2vxtsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2vxt.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/vx/pdb2vxt.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/vx/r2vxtsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/vx/2vxt.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.cif
-Can't determine output label for r2vxtsf,_refln.crystal_id - skipping.
-Can't determine output label for r2vxtsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 3013 reflections
-Can't determine output label for r2vxtsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2vxt.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt/2vxt.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2vxt.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+H
+I
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+SER_17
+VAL_18
+SER_28
+PHE_29
+HIS_41
+GLY_42
+LYS_43
+SER_44
+LEU_45
+SER_59
+TYR_60
+ASP_73
+GLN_74
+SER_75
+SER_76
+SER_88
+GLU_89
+VAL_130
+THR_131
+CYS_134
+LEU_135
+SER_172
+SER_173
+THR_181
+TRP_182
+CYS_189
+ASN_190
+MET_258
+TYR_259
+MET_267
+ALA_268
+SER_272
+VAL_273
+LEU_281
+SER_282
+ILE_288
+SER_289
+ILE_307
+PHE_308
+ARG_311
+SER_312
+GLU_323
+SER_324
+THR_359
+VAL_360
+SER_373
+LEU_374
+GLU_380
+ARG_381
+SER_383
+LEU_384
+SER_394
+LYS_395
+SER_457
+LEU_467
+ALA_468
+SER_490
+GLY_491
+CYS_497
+PHE_498
+ASP_506
+ILE_507
+TRP_526
+THR_527
+MET_538
+SER_539
+CYS_557
+GLU_558
+SER_566
+SER_571
+PHE_572
+
+---------- Gaps (Renumbered Residues!)
+gap of 2.439658 A between SER 17 and SER 17
+gap of 2.422614 A between SER 28 and SER 28
+gap of 3.153290 A between HIE 41 and HIE 41
+gap of 5.246474 A between HIE 41 and GLY 42
+gap of 7.991491 A between GLY 42 and GLY 42
+gap of 8.338859 A between GLY 42 and LYS 43
+gap of 6.659332 A between LYS 43 and LYS 43
+gap of 3.948478 A between LYS 43 and SER 44
+gap of 2.713471 A between SER 44 and SER 44
+gap of 2.406138 A between SER 59 and SER 59
+gap of 2.430752 A between ASP 73 and ASP 73
+gap of 2.365792 A between GLN 74 and GLN 74
+gap of 2.318992 A between SER 75 and SER 75
+gap of 2.502998 A between SER 88 and SER 88
+gap of 13.672556 A between GLY 127 and SER 128
+gap of 2.465057 A between VAL 130 and VAL 130
+gap of 2.429258 A between CYS 134 and CYS 134
+gap of 2.371154 A between CYS 134 and CYS 134
+gap of 2.438182 A between SER 172 and SER 172
+gap of 2.509014 A between THR 181 and THR 181
+gap of 2.359603 A between CYS 189 and CYS 189
+gap of 2.453341 A between MET 258 and MET 258
+gap of 2.431883 A between MET 267 and MET 267
+gap of 2.499619 A between SER 272 and SER 272
+gap of 2.500615 A between LEU 281 and LEU 281
+gap of 2.418550 A between ILE 288 and ILE 288
+gap of 2.443073 A between ILE 307 and ILE 307
+gap of 2.424217 A between ARG 311 and ARG 311
+gap of 2.519701 A between GLU 323 and GLU 323
+gap of 2.326134 A between THR 359 and THR 359
+gap of 2.338017 A between SER 373 and SER 373
+gap of 2.435608 A between GLU 380 and GLU 380
+gap of 2.508356 A between SER 383 and SER 383
+gap of 2.470046 A between SER 394 and SER 394
+gap of 2.408006 A between SER 457 and SER 457
+gap of 2.472262 A between LEU 467 and LEU 467
+gap of 2.497104 A between SER 490 and SER 490
+gap of 2.412706 A between CYX 497 and CYX 497
+gap of 2.454888 A between ASP 506 and ASP 506
+gap of 2.474980 A between TRP 526 and TRP 526
+gap of 2.425366 A between MET 538 and MET 538
+gap of 2.404305 A between CYX 557 and CYX 557
+gap of 2.409565 A between SER 566 and SER 566
+gap of 2.463849 A between SER 571 and SER 571
+gap of 2.466449 A between SER 571 and SER 571
+
+---------- Mising heavy atom(s)
+
+TYR_208 misses 7 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 2vxt_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+H
+I
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 13.672556 A between GLY 127 and SER 128
+gap of 13.671580 A between GLY 1299 and SER 1300
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.prmtop
 
 	Running AmberPrep : 2vxt.pdb
 
@@ -111,6 +294,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2vxt.pdb
@@ -118,7 +303,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2vxt.prmtop
     rst7   : 4amber_2vxt.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt
 return_files 2vxt
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2vxt.pdb
@@ -152,7 +337,7 @@ cp 4amber_2vxt.prmtop /net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt
 2vxt_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/2vxt.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/vx/2vxt
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/2vxt_refine_001.log
 ------------------------------
@@ -163,16 +348,16 @@ Running phenix.refine
 
 phenix.refine 2vxt.pdb 2vxt.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-18 Time 05:02:18 PST -0800 (1487422938.83 s)
+# Date 2017-02-21 Time 16:29:25 PST -0800 (1487723365.62 s)
 #phil __OFF__
 
 Command line arguments: "2vxt.pdb" "2vxt.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 6104
-JOB_ID = 6368462
+PID = 1045
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -278,17 +463,17 @@ R-free flags:
 
 Miller array info: 2vxt.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=89854
+Type of data: int, size=86841
 Type of sigmas: None
-Number of Miller indices: 89854
+Number of Miller indices: 86841
 Anomalous flag: False
 Unit cell: (44.345, 62.435, 104.734, 90, 100.39, 90)
 Space group: P 1 21 1 (No. 4)
 Systematic absences: 0
-Centric reflections: 3155
+Centric reflections: 3075
 Resolution range: 30.6702 1.49487
-Completeness in resolution range: 0.987504
-Completeness with d_max=infinity: 0.987352
+Completeness in resolution range: 0.954391
+Completeness with d_max=infinity: 0.954244
 Wavelength: 1.0004
 
 Test (R-free flags) flag value: 0
@@ -340,16 +525,16 @@ Running phenix.refine
 
 phenix.refine 2vxt.pdb 2vxt.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
-# Date 2017-02-18 Time 05:02:28 PST -0800 (1487422948.71 s)
+# Date 2017-02-21 Time 16:29:34 PST -0800 (1487723374.72 s)
 #phil __OFF__
 
 Command line arguments: "2vxt.pdb" "2vxt.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/vx/2vxt/4amber_2vxt.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 6409
-JOB_ID = 6368462
+PID = 1195
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -461,17 +646,17 @@ R-free flags:
 
 Miller array info: 2vxt.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=89854
+Type of data: int, size=86841
 Type of sigmas: None
-Number of Miller indices: 89854
+Number of Miller indices: 86841
 Anomalous flag: False
 Unit cell: (44.345, 62.435, 104.734, 90, 100.39, 90)
 Space group: P 1 21 1 (No. 4)
 Systematic absences: 0
-Centric reflections: 3155
+Centric reflections: 3075
 Resolution range: 30.6702 1.49487
-Completeness in resolution range: 0.987504
-Completeness with d_max=infinity: 0.987352
+Completeness in resolution range: 0.954391
+Completeness with d_max=infinity: 0.954244
 Wavelength: 1.0004
 
 Test (R-free flags) flag value: 0

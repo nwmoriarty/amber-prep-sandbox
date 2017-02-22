@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 292
 only_code None
 force_amber_prep True
@@ -7,54 +7,228 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
 3gfu.pdb 4phenix_3gfu.pdb
+3gfu.pdb 4phenix_3gfu.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/gf/pdb3gfu.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/gf/r3gfusf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/gf/3gfu.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.cif
-Can't determine output label for r3gfusf,_refln.crystal_id - skipping.
-Can't determine output label for r3gfusf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 46 reflections
-Can't determine output label for r3gfusf,_refln.wavelength_id - skipping.
-Can't determine output label for r3gfuAsf,_refln.crystal_id - skipping.
-Can't determine output label for r3gfuAsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.000
-WARNING: R-free flags in R-free-flags do not appear to contain a valid test, so they can't be extended to higher resolution.
-Can't determine output label for r3gfuAsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3gfu.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/gf/pdb3gfu.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/gf/r3gfusf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/gf/3gfu.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.cif
-Can't determine output label for r3gfusf,_refln.crystal_id - skipping.
-Can't determine output label for r3gfusf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 46 reflections
-Can't determine output label for r3gfusf,_refln.wavelength_id - skipping.
-Can't determine output label for r3gfuAsf,_refln.crystal_id - skipping.
-Can't determine output label for r3gfuAsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.000
-WARNING: R-free flags in R-free-flags do not appear to contain a valid test, so they can't be extended to higher resolution.
-Can't determine output label for r3gfuAsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3gfu.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3gfu.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+ASN_288
+GLY_289
+SER_501
+ASP_502
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.748216 A between ARG 132 and GLY 133
+gap of 4.324837 A between PHE 226 and VAL 227
+gap of 3.183040 A between LEU 228 and ASP 229
+gap of 7.825178 A between PRO 285 and ASN 286
+gap of 6.139450 A between ALA 335 and SER 336
+gap of 14.041429 A between VAL 387 and ASN 388
+gap of 4.830265 A between PHE 655 and VAL 656
+gap of 9.872906 A between PRO 715 and LYS 716
+gap of 6.465528 A between ALA 764 and SER 765
+gap of 16.651503 A between VAL 816 and ASP 817
+
+---------- Mising heavy atom(s)
+
+ASP_5 misses 1 heavy atom(s)
+ARG_12 misses 3 heavy atom(s)
+LYS_15 misses 2 heavy atom(s)
+ASP_16 misses 3 heavy atom(s)
+LYS_27 misses 4 heavy atom(s)
+LYS_43 misses 4 heavy atom(s)
+LYS_57 misses 4 heavy atom(s)
+LYS_59 misses 3 heavy atom(s)
+ASN_61 misses 4 heavy atom(s)
+HIS_74 misses 5 heavy atom(s)
+GLU_95 misses 4 heavy atom(s)
+LYS_114 misses 2 heavy atom(s)
+GLU_118 misses 4 heavy atom(s)
+LYS_121 misses 4 heavy atom(s)
+SER_131 misses 1 heavy atom(s)
+ARG_132 misses 6 heavy atom(s)
+ARG_134 misses 4 heavy atom(s)
+ASN_154 misses 3 heavy atom(s)
+LYS_156 misses 5 heavy atom(s)
+ASN_162 misses 4 heavy atom(s)
+LYS_167 misses 1 heavy atom(s)
+LYS_180 misses 5 heavy atom(s)
+ASN_182 misses 1 heavy atom(s)
+TYR_192 misses 1 heavy atom(s)
+LYS_203 misses 3 heavy atom(s)
+HIS_211 misses 5 heavy atom(s)
+LYS_214 misses 4 heavy atom(s)
+LYS_218 misses 2 heavy atom(s)
+VAL_227 misses 3 heavy atom(s)
+LEU_228 misses 3 heavy atom(s)
+LYS_236 misses 2 heavy atom(s)
+GLU_254 misses 3 heavy atom(s)
+ILE_267 misses 4 heavy atom(s)
+GLU_276 misses 3 heavy atom(s)
+ARG_283 misses 4 heavy atom(s)
+LYS_284 misses 3 heavy atom(s)
+ASN_286 misses 4 heavy atom(s)
+LYS_287 misses 4 heavy atom(s)
+LYS_304 misses 2 heavy atom(s)
+VAL_323 misses 2 heavy atom(s)
+THR_324 misses 1 heavy atom(s)
+LEU_333 misses 1 heavy atom(s)
+ARG_345 misses 6 heavy atom(s)
+SER_347 misses 1 heavy atom(s)
+ARG_376 misses 4 heavy atom(s)
+GLN_410 misses 5 heavy atom(s)
+THR_413 misses 1 heavy atom(s)
+ASP_434 misses 2 heavy atom(s)
+LYS_444 misses 2 heavy atom(s)
+ASP_445 misses 4 heavy atom(s)
+LYS_456 misses 4 heavy atom(s)
+LYS_472 misses 4 heavy atom(s)
+LYS_486 misses 4 heavy atom(s)
+LYS_488 misses 3 heavy atom(s)
+ASN_490 misses 3 heavy atom(s)
+ASP_502 misses 3 heavy atom(s)
+HIS_503 misses 5 heavy atom(s)
+LYS_506 misses 1 heavy atom(s)
+GLU_524 misses 4 heavy atom(s)
+LYS_543 misses 3 heavy atom(s)
+GLU_547 misses 4 heavy atom(s)
+LYS_550 misses 4 heavy atom(s)
+LYS_587 misses 5 heavy atom(s)
+ASN_593 misses 4 heavy atom(s)
+LYS_598 misses 2 heavy atom(s)
+GLU_607 misses 1 heavy atom(s)
+TYR_623 misses 1 heavy atom(s)
+ARG_641 misses 6 heavy atom(s)
+LYS_643 misses 4 heavy atom(s)
+LYS_647 misses 2 heavy atom(s)
+VAL_656 misses 2 heavy atom(s)
+ASN_658 misses 4 heavy atom(s)
+LYS_666 misses 4 heavy atom(s)
+ARG_681 misses 3 heavy atom(s)
+GLU_706 misses 4 heavy atom(s)
+LYS_714 misses 4 heavy atom(s)
+LYS_716 misses 4 heavy atom(s)
+LYS_733 misses 2 heavy atom(s)
+GLU_758 misses 1 heavy atom(s)
+ARG_774 misses 3 heavy atom(s)
+GLU_777 misses 1 heavy atom(s)
+ARG_796 misses 3 heavy atom(s)
+ARG_805 misses 5 heavy atom(s)
+ASN_840 misses 1 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3gfu_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.748216 A between ARG 132 and GLY 133
+gap of 4.324837 A between PHE 226 and VAL 227
+gap of 3.183040 A between LEU 228 and ASP 229
+gap of 7.825178 A between PRO 285 and ASN 286
+gap of 6.139450 A between ALA 335 and SER 336
+gap of 14.041429 A between VAL 387 and ASN 388
+gap of 4.830265 A between PHE 655 and VAL 656
+gap of 9.872906 A between PRO 715 and LYS 716
+gap of 6.465528 A between ALA 764 and SER 765
+gap of 16.651503 A between VAL 816 and ASP 817
+gap of 3.748216 A between ARG 1461 and GLY 1462
+gap of 4.324837 A between PHE 1555 and VAL 1556
+gap of 3.183040 A between LEU 1557 and ASP 1558
+gap of 7.825178 A between PRO 1614 and ASN 1615
+gap of 6.139450 A between ALA 1664 and SER 1665
+gap of 14.041429 A between VAL 1716 and ASN 1717
+gap of 4.830265 A between PHE 1984 and VAL 1985
+gap of 9.872906 A between PRO 2044 and LYS 2045
+gap of 6.465528 A between ALA 2093 and SER 2094
+gap of 16.651503 A between VAL 2145 and ASP 2146
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop
 
 	Running AmberPrep : 3gfu.pdb
 
@@ -125,6 +299,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3gfu.pdb
@@ -132,7 +308,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3gfu.prmtop
     rst7   : 4amber_3gfu.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu
 return_files 3gfu
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3gfu.pdb
@@ -166,24 +342,14 @@ cp 4amber_3gfu.prmtop /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu
 3gfu_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/3gfu.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/gf/3gfu
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/3gfu_refine_001.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 3gfu_refine_001.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 3gfu.pdb 3gfu.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
+	Already done (on chevy) 3gfu_refine_001
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/3gfu_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 3gfu_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 3gfu.pdb 3gfu.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/gf/3gfu/4amber_3gfu.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 3gfu_refine_002

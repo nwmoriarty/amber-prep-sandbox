@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 270
 only_code None
 force_amber_prep True
@@ -12,18 +12,94 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/l5/pdb3l5w.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w/3l5w.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w/3l5w.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/l5/r3l5wsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w/3l5w-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/l5/3l5w.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w/3l5w.cif
-Can't determine output label for r3l5wsf,_refln.crystal_id - skipping.
-Can't determine output label for r3l5wsf,_refln.scale_group_code - skipping.
-Can't determine output label for r3l5wsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3l5w.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w/3l5w.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3l5w.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+H
+I
+J
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+GLU_369
+
+---------- Gaps (Renumbered Residues!)
+gap of 5.209132 A between GLN 452 and ALA 453
+gap of 11.093326 A between GLN 987 and LEU 988
+gap of 3.941898 A between THR 1000 and MET 1001
+gap of 17.912250 A between ALA 1035 and LYS 1036
+
+---------- Mising heavy atom(s)
+
+LYS_435 misses 3 heavy atom(s)
+SER_436 misses 1 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3l5w_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+H
+I
+J
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 5.209132 A between GLN 452 and ALA 453
+gap of 11.093326 A between GLN 987 and LEU 988
+gap of 3.941898 A between THR 1000 and MET 1001
+gap of 17.912250 A between ALA 1035 and LYS 1036
+gap of 5.209132 A between GLN 1936 and ALA 1937
+gap of 11.093326 A between GLN 2471 and LEU 2472
+gap of 3.941898 A between THR 2484 and MET 2485
+gap of 17.912250 A between ALA 2519 and LYS 2520
+
+---------- Mising heavy atom(s)
+
+None
 
 	Running AmberPrep : 3l5w.pdb
 
@@ -94,6 +170,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3l5w.pdb
@@ -101,7 +179,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3l5w.prmtop
     rst7   : 4amber_3l5w.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w
 return_files 3l5w
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3l5w.pdb
@@ -135,7 +213,7 @@ cp 4amber_3l5w.prmtop /net/chevy/raid1/nigel/amber/hi_lo/l5/3l5w
 3l5w_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/l5/3l5w/3l5w.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/l5/3l5w
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/l5/3l5w/3l5w_refine_001.log
 ------------------------------

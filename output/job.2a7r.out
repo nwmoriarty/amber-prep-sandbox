@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 155
 only_code None
 force_amber_prep True
@@ -12,36 +12,306 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/a7/pdb2a7r.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/a7/r2a7rsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/a7/2a7r.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.cif
-Can't determine output label for r2a7rsf,_refln.crystal_id - skipping.
-Can't determine output label for r2a7rsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2a7rsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2a7r.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/a7/pdb2a7r.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/a7/r2a7rsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/a7/2a7r.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.cif
-Can't determine output label for r2a7rsf,_refln.crystal_id - skipping.
-Can't determine output label for r2a7rsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2a7rsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2a7r.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/a7/2a7r/4amber_2a7r.prmtop
-natom*3 error
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r/2a7r.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2a7r.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.531637 A between ARG 624 and SER 625
+gap of 14.694285 A between TYR 953 and GLY 954
+gap of 7.192562 A between TYR 1269 and GLY 1270
+
+---------- Mising heavy atom(s)
+
+HIS_3 misses 5 heavy atom(s)
+LYS_13 misses 4 heavy atom(s)
+ARG_21 misses 6 heavy atom(s)
+LYS_25 misses 4 heavy atom(s)
+SER_26 misses 1 heavy atom(s)
+ARG_27 misses 6 heavy atom(s)
+GLU_29 misses 4 heavy atom(s)
+SER_35 misses 1 heavy atom(s)
+LYS_65 misses 4 heavy atom(s)
+LYS_69 misses 4 heavy atom(s)
+SER_81 misses 1 heavy atom(s)
+GLN_91 misses 4 heavy atom(s)
+PRO_93 misses 2 heavy atom(s)
+SER_107 misses 1 heavy atom(s)
+SER_108 misses 1 heavy atom(s)
+LYS_124 misses 4 heavy atom(s)
+VAL_130 misses 2 heavy atom(s)
+SER_135 misses 1 heavy atom(s)
+HIS_137 misses 5 heavy atom(s)
+GLU_140 misses 4 heavy atom(s)
+LYS_143 misses 4 heavy atom(s)
+LYS_147 misses 4 heavy atom(s)
+SER_171 misses 1 heavy atom(s)
+SER_184 misses 1 heavy atom(s)
+VAL_185 misses 2 heavy atom(s)
+LYS_190 misses 4 heavy atom(s)
+LYS_191 misses 4 heavy atom(s)
+LYS_213 misses 4 heavy atom(s)
+LEU_255 misses 3 heavy atom(s)
+ASP_259 misses 3 heavy atom(s)
+GLU_272 misses 4 heavy atom(s)
+LYS_276 misses 4 heavy atom(s)
+LYS_277 misses 4 heavy atom(s)
+TYR_278 misses 7 heavy atom(s)
+LYS_291 misses 4 heavy atom(s)
+VAL_293 misses 2 heavy atom(s)
+VAL_295 misses 2 heavy atom(s)
+LYS_298 misses 4 heavy atom(s)
+LYS_323 misses 4 heavy atom(s)
+LYS_325 misses 4 heavy atom(s)
+ARG_329 misses 6 heavy atom(s)
+ARG_335 misses 6 heavy atom(s)
+THR_337 misses 2 heavy atom(s)
+GLN_338 misses 4 heavy atom(s)
+HIS_341 misses 5 heavy atom(s)
+LYS_351 misses 4 heavy atom(s)
+LYS_363 misses 4 heavy atom(s)
+SER_364 misses 1 heavy atom(s)
+ARG_365 misses 6 heavy atom(s)
+GLU_367 misses 4 heavy atom(s)
+SER_373 misses 1 heavy atom(s)
+LYS_403 misses 4 heavy atom(s)
+LYS_407 misses 4 heavy atom(s)
+LYS_416 misses 4 heavy atom(s)
+SER_419 misses 1 heavy atom(s)
+GLU_425 misses 4 heavy atom(s)
+GLN_429 misses 4 heavy atom(s)
+PRO_431 misses 2 heavy atom(s)
+SER_445 misses 1 heavy atom(s)
+SER_446 misses 1 heavy atom(s)
+GLU_449 misses 4 heavy atom(s)
+GLN_450 misses 4 heavy atom(s)
+GLN_453 misses 4 heavy atom(s)
+VAL_468 misses 2 heavy atom(s)
+GLU_474 misses 4 heavy atom(s)
+LYS_485 misses 4 heavy atom(s)
+SER_509 misses 1 heavy atom(s)
+SER_522 misses 1 heavy atom(s)
+VAL_523 misses 2 heavy atom(s)
+LYS_528 misses 4 heavy atom(s)
+LYS_529 misses 4 heavy atom(s)
+LYS_551 misses 4 heavy atom(s)
+GLU_592 misses 4 heavy atom(s)
+ILE_594 misses 3 heavy atom(s)
+GLU_595 misses 4 heavy atom(s)
+LYS_600 misses 4 heavy atom(s)
+LEU_603 misses 3 heavy atom(s)
+GLU_610 misses 4 heavy atom(s)
+LYS_614 misses 4 heavy atom(s)
+LYS_615 misses 4 heavy atom(s)
+TYR_616 misses 7 heavy atom(s)
+LYS_628 misses 4 heavy atom(s)
+THR_629 misses 2 heavy atom(s)
+VAL_630 misses 2 heavy atom(s)
+GLU_631 misses 4 heavy atom(s)
+VAL_632 misses 2 heavy atom(s)
+THR_674 misses 2 heavy atom(s)
+GLN_675 misses 4 heavy atom(s)
+HIS_678 misses 5 heavy atom(s)
+LYS_688 misses 4 heavy atom(s)
+LYS_700 misses 4 heavy atom(s)
+SER_701 misses 1 heavy atom(s)
+ARG_702 misses 6 heavy atom(s)
+GLU_704 misses 4 heavy atom(s)
+SER_710 misses 1 heavy atom(s)
+LYS_740 misses 4 heavy atom(s)
+LYS_744 misses 4 heavy atom(s)
+SER_756 misses 1 heavy atom(s)
+GLN_761 misses 4 heavy atom(s)
+GLU_762 misses 4 heavy atom(s)
+GLN_766 misses 4 heavy atom(s)
+PRO_768 misses 2 heavy atom(s)
+LEU_771 misses 3 heavy atom(s)
+SER_782 misses 1 heavy atom(s)
+SER_783 misses 1 heavy atom(s)
+GLU_786 misses 4 heavy atom(s)
+GLN_787 misses 4 heavy atom(s)
+GLN_790 misses 4 heavy atom(s)
+ILE_795 misses 3 heavy atom(s)
+LYS_799 misses 4 heavy atom(s)
+VAL_805 misses 2 heavy atom(s)
+SER_810 misses 1 heavy atom(s)
+HIS_812 misses 5 heavy atom(s)
+GLU_815 misses 4 heavy atom(s)
+LYS_822 misses 4 heavy atom(s)
+SER_859 misses 1 heavy atom(s)
+VAL_860 misses 2 heavy atom(s)
+LYS_865 misses 4 heavy atom(s)
+LYS_888 misses 4 heavy atom(s)
+GLU_929 misses 4 heavy atom(s)
+LEU_930 misses 3 heavy atom(s)
+ILE_931 misses 3 heavy atom(s)
+GLU_932 misses 4 heavy atom(s)
+LYS_936 misses 4 heavy atom(s)
+LYS_937 misses 4 heavy atom(s)
+LEU_940 misses 3 heavy atom(s)
+GLU_947 misses 4 heavy atom(s)
+LYS_951 misses 4 heavy atom(s)
+LYS_952 misses 4 heavy atom(s)
+TYR_953 misses 7 heavy atom(s)
+LYS_955 misses 4 heavy atom(s)
+VAL_957 misses 2 heavy atom(s)
+VAL_959 misses 2 heavy atom(s)
+LYS_987 misses 4 heavy atom(s)
+LYS_989 misses 4 heavy atom(s)
+ARG_993 misses 6 heavy atom(s)
+THR_1001 misses 2 heavy atom(s)
+GLN_1002 misses 4 heavy atom(s)
+LYS_1015 misses 4 heavy atom(s)
+LYS_1027 misses 4 heavy atom(s)
+SER_1028 misses 1 heavy atom(s)
+ARG_1029 misses 6 heavy atom(s)
+GLU_1031 misses 4 heavy atom(s)
+SER_1037 misses 1 heavy atom(s)
+LYS_1067 misses 4 heavy atom(s)
+LYS_1071 misses 4 heavy atom(s)
+SER_1083 misses 1 heavy atom(s)
+GLN_1093 misses 4 heavy atom(s)
+PRO_1095 misses 2 heavy atom(s)
+SER_1109 misses 1 heavy atom(s)
+SER_1110 misses 1 heavy atom(s)
+GLU_1113 misses 4 heavy atom(s)
+GLN_1117 misses 4 heavy atom(s)
+LYS_1126 misses 4 heavy atom(s)
+VAL_1132 misses 2 heavy atom(s)
+SER_1137 misses 1 heavy atom(s)
+LYS_1145 misses 4 heavy atom(s)
+LYS_1149 misses 4 heavy atom(s)
+SER_1173 misses 1 heavy atom(s)
+VAL_1187 misses 2 heavy atom(s)
+LYS_1192 misses 4 heavy atom(s)
+LYS_1193 misses 4 heavy atom(s)
+LYS_1215 misses 4 heavy atom(s)
+LEU_1257 misses 3 heavy atom(s)
+ILE_1258 misses 3 heavy atom(s)
+GLU_1259 misses 4 heavy atom(s)
+ASP_1261 misses 3 heavy atom(s)
+LYS_1263 misses 4 heavy atom(s)
+LYS_1264 misses 4 heavy atom(s)
+LEU_1267 misses 3 heavy atom(s)
+TYR_1269 misses 7 heavy atom(s)
+LYS_1271 misses 4 heavy atom(s)
+THR_1272 misses 2 heavy atom(s)
+LYS_1278 misses 4 heavy atom(s)
+HIS_1283 misses 5 heavy atom(s)
+LYS_1303 misses 4 heavy atom(s)
+LYS_1305 misses 4 heavy atom(s)
+ARG_1309 misses 6 heavy atom(s)
+THR_1317 misses 2 heavy atom(s)
+GLN_1318 misses 4 heavy atom(s)
+GLN_1319 misses 4 heavy atom(s)
+
+==================================================
+Summary of pdb4amber for: 2a7r_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.531637 A between ARG 624 and SER 625
+gap of 14.694285 A between TYR 953 and GLY 954
+gap of 7.192562 A between TYR 1269 and GLY 1270
+gap of 3.532163 A between ARG 1966 and SER 1967
+gap of 14.694655 A between TYR 2295 and GLY 2296
+gap of 7.193160 A between TYR 2611 and GLY 2612
+gap of 3.531692 A between ARG 3308 and SER 3309
+gap of 14.694687 A between TYR 3637 and GLY 3638
+gap of 7.193127 A between TYR 3953 and GLY 3954
+gap of 3.531692 A between ARG 4650 and SER 4651
+gap of 14.694687 A between TYR 4979 and GLY 4980
+gap of 7.193127 A between TYR 5295 and GLY 5296
+gap of 3.531637 A between ARG 5992 and SER 5993
+gap of 14.694285 A between TYR 6321 and GLY 6322
+gap of 7.192562 A between TYR 6637 and GLY 6638
+gap of 3.532163 A between ARG 7334 and SER 7335
+gap of 14.694655 A between TYR 7663 and GLY 7664
+gap of 7.193160 A between TYR 7979 and GLY 7980
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/a7/2a7r/4amber_2a7r.prmtop
 
 	Running AmberPrep : 2a7r.pdb
 
@@ -116,6 +386,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2a7r.pdb
@@ -123,7 +395,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2a7r.prmtop
     rst7   : 4amber_2a7r.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r
 return_files 2a7r
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2a7r.pdb
@@ -157,7 +429,7 @@ cp 4amber_2a7r.prmtop /net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r
 2a7r_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r/2a7r.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/a7/2a7r
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r/2a7r_refine_001.log
 ------------------------------
@@ -166,10 +438,5 @@ phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r/2a7r_r
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r/2a7r_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 2a7r_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 2a7r.pdb 2a7r.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r/4amber_2a7r.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/a7/2a7r/4amber_2a7r.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 2a7r_refine_002

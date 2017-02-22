@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 156
 only_code None
 force_amber_prep True
@@ -12,36 +12,113 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/c6/pdb2c6q.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/c6/r2c6qsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/c6/2c6q.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.cif
-Can't determine output label for r2c6qsf,_refln.crystal_id - skipping.
-Can't determine output label for r2c6qsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2c6qsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2c6q.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/c6/pdb2c6q.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/c6/r2c6qsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/c6/2c6q.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.cif
-Can't determine output label for r2c6qsf,_refln.crystal_id - skipping.
-Can't determine output label for r2c6qsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2c6qsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2c6q.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/c6/2c6q/4amber_2c6q.prmtop
-natom*3 error
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q/2c6q.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2c6q.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+CYS_388
+LYS_389
+ARG_955
+ASP_956
+CYS_1373
+LYS_1374
+SER_1619
+THR_1620
+THR_1622
+TYR_1623
+SER_1633
+ARG_1634
+CYS_2350
+LYS_2351
+SER_2389
+SER_2390
+
+---------- Gaps (Renumbered Residues!)
+gap of 2.387093 A between CYS 388 and CYS 388
+gap of 2.464757 A between ARG 955 and ARG 955
+gap of 2.437416 A between CYS 1373 and CYS 1373
+gap of 2.473743 A between SER 1619 and SER 1619
+gap of 2.472285 A between THR 1622 and THR 1622
+gap of 2.470560 A between SER 1633 and SER 1633
+gap of 13.333571 A between TYR 2239 and ALA 2240
+gap of 2.450996 A between CYS 2350 and CYS 2350
+gap of 2.467200 A between SER 2389 and SER 2389
+
+---------- Mising heavy atom(s)
+
+None
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/c6/2c6q/4amber_2c6q.prmtop
 
 	Running AmberPrep : 2c6q.pdb
 
@@ -62,6 +139,36 @@ Setting up library files for non-standard residues
 Running elbow/antechamber for NDP 
 ==================================================
 
+==================================================
+Summary of pdb4amber for: 2c6q_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 13.333571 A between TYR 2239 and ALA 2240
+gap of 13.333571 A between TYR 7441 and ALA 7442
+gap of 13.333571 A between TYR 12643 and ALA 12644
+gap of 13.333571 A between TYR 17845 and ALA 17846
+
+---------- Mising heavy atom(s)
+
+None
+
 MoleculeClass :  C:21  N: 7  O:17  P: 3 (CHEMICAL COMPONENTS format)
 	74 atoms
 	78 bonds
@@ -70,7 +177,7 @@ MoleculeClass :  C:21  N: 7  O:17  P: 3 (CHEMICAL COMPONENTS format)
 	4 rings (groups, rings, atoms) 5 27
 	8 chirals : R R R R R S R R 
 
-~> antechamber -i 4antechamber_NDP.pdb -fi pdb -o NDP.mol2 -fo mol2       -nc -4 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_NDP.pdb -fi pdb -o NDP.mol2 -fo mol2       -nc -4 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i NDP.mol2 -f mol2 -o NDP.frcmod
@@ -130,6 +237,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2c6q.pdb
@@ -137,7 +246,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2c6q.prmtop
     rst7   : 4amber_2c6q.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q
 return_files 2c6q
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2c6q.pdb
@@ -171,24 +280,14 @@ cp 4amber_2c6q.prmtop /net/chevy/raid1/nigel/amber/hi_lo/c6/2c6q
 2c6q_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/c6/2c6q/2c6q.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/c6/2c6q
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/c6/2c6q/2c6q_refine_001.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 2c6q_refine_001.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 2c6q.pdb 2c6q.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
+	Already done (on chevy) 2c6q_refine_001
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/c6/2c6q/2c6q_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 2c6q_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 2c6q.pdb 2c6q.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/c6/2c6q/4amber_2c6q.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/c6/2c6q/4amber_2c6q.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 2c6q_refine_002

@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 332
 only_code None
 force_amber_prep True
@@ -12,20 +12,140 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/oa/pdb3oaz.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz/3oaz.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz/3oaz.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/oa/r3oazsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz/3oaz-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/oa/3oaz.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz/3oaz.cif
-Can't determine output label for r3oazsf,_refln.crystal_id - skipping.
-Can't determine output label for r3oazsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 1594 reflections
-Can't determine output label for r3oazsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3oaz.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz/3oaz.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3oaz.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+H
+K
+L
+M
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+VAL_2
+VAL_5
+SER_7
+LEU_11
+SER_21
+SER_25
+THR_56
+THR_69
+VAL_88
+SER_101
+ASP_102
+SER_122
+LYS_127
+THR_141
+THR_161
+VAL_179
+THR_201
+THR_203
+ASN_214
+VAL_217
+THR_243
+THR_245
+LEU_270
+LEU_301
+SER_318
+VAL_386
+GLU_388
+THR_441
+SER_445
+SER_448
+THR_456
+THR_458
+LEU_490
+THR_492
+SER_501
+THR_508
+GLU_559
+VAL_568
+SER_598
+VAL_599
+GLU_601
+SER_639
+VAL_641
+GLN_652
+LEU_653
+VAL_654
+VAL_661
+ILE_668
+SER_699
+GLU_725
+ASP_726
+MET_735
+SER_771
+THR_786
+SER_807
+SER_812
+THR_844
+ASN_850
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.610753 A between SER 774 and LYS 775
+gap of 12.235686 A between PRO 784 and GLY 785
+
+---------- Mising heavy atom(s)
+
+GLU_436 misses 4 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3oaz_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+H
+K
+L
+M
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.610753 A between SER 774 and LYS 775
+gap of 12.235686 A between PRO 784 and GLY 785
+gap of 9.610753 A between SER 2680 and LYS 2681
+gap of 12.235686 A between PRO 2690 and GLY 2691
+
+---------- Mising heavy atom(s)
+
+None
 
 	Running AmberPrep : 3oaz.pdb
 
@@ -98,6 +218,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3oaz.pdb
@@ -105,7 +227,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3oaz.prmtop
     rst7   : 4amber_3oaz.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz
 return_files 3oaz
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3oaz.pdb
@@ -139,7 +261,7 @@ cp 4amber_3oaz.prmtop /net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz
 3oaz_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz/3oaz.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/oa/3oaz
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz/3oaz_refine_001.log
 ------------------------------
@@ -150,16 +272,16 @@ Running phenix.refine
 
 phenix.refine 3oaz.pdb 3oaz.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-18 Time 08:37:14 PST -0800 (1487435834.46 s)
+# Date 2017-02-21 Time 16:33:43 PST -0800 (1487723623.12 s)
 #phil __OFF__
 
 Command line arguments: "3oaz.pdb" "3oaz.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 21890
-JOB_ID = 6368462
+PID = 9797
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -265,17 +387,17 @@ R-free flags:
 
 Miller array info: 3oaz.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=87100
+Type of data: int, size=85506
 Type of sigmas: None
-Number of Miller indices: 87100
+Number of Miller indices: 85506
 Anomalous flag: False
 Unit cell: (72.623, 72.092, 84.074, 90, 95.776, 90)
 Space group: P 1 21 1 (No. 4)
 Systematic absences: 0
-Centric reflections: 3105
+Centric reflections: 2424
 Resolution range: 29.6512 1.75002
-Completeness in resolution range: 1
-Completeness with d_max=infinity: 0.999736
+Completeness in resolution range: 0.981699
+Completeness with d_max=infinity: 0.98144
 Wavelength: 0.0000
 
 Test (R-free flags) flag value: 0
@@ -327,16 +449,16 @@ Running phenix.refine
 
 phenix.refine 3oaz.pdb 3oaz.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz/4amber_3oaz.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz/4amber_3oaz.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
-# Date 2017-02-18 Time 08:37:26 PST -0800 (1487435846.86 s)
+# Date 2017-02-21 Time 16:33:53 PST -0800 (1487723633.19 s)
 #phil __OFF__
 
 Command line arguments: "3oaz.pdb" "3oaz.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz/4amber_3oaz.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oa/3oaz/4amber_3oaz.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 22136
-JOB_ID = 6368462
+PID = 10095
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -448,17 +570,17 @@ R-free flags:
 
 Miller array info: 3oaz.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=87100
+Type of data: int, size=85506
 Type of sigmas: None
-Number of Miller indices: 87100
+Number of Miller indices: 85506
 Anomalous flag: False
 Unit cell: (72.623, 72.092, 84.074, 90, 95.776, 90)
 Space group: P 1 21 1 (No. 4)
 Systematic absences: 0
-Centric reflections: 3105
+Centric reflections: 2424
 Resolution range: 29.6512 1.75002
-Completeness in resolution range: 1
-Completeness with d_max=infinity: 0.999736
+Completeness in resolution range: 0.981699
+Completeness with d_max=infinity: 0.98144
 Wavelength: 0.0000
 
 Test (R-free flags) flag value: 0

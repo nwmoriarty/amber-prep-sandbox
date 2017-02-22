@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 68
 only_code None
 force_amber_prep True
@@ -12,35 +12,151 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/dp/pdb3dpk.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/dp/r3dpksf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/dp/3dpk.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.cif
-Can't determine output label for r3dpksf,_refln.crystal_id - skipping.
-Can't determine output label for r3dpksf,_refln.scale_group_code - skipping.
-Can't determine output label for r3dpksf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3dpk.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/dp/pdb3dpk.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/dp/r3dpksf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/dp/3dpk.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.cif
-Can't determine output label for r3dpksf,_refln.crystal_id - skipping.
-Can't determine output label for r3dpksf,_refln.scale_group_code - skipping.
-Can't determine output label for r3dpksf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3dpk.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk/3dpk.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3dpk.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+MET_79
+
+---------- Gaps (Renumbered Residues!)
+gap of 6.566307 A between SER 8 and SER 9
+gap of 8.100453 A between PRO 15 and TYR 16
+gap of 6.579391 A between GLY 50 and ALA 51
+gap of 9.389514 A between ARG 119 and GLN 120
+gap of 4.731964 A between VAL 182 and ARG 183
+
+---------- Mising heavy atom(s)
+
+None
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3dpk_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 6.566307 A between SER 8 and SER 9
+gap of 8.100453 A between PRO 15 and TYR 16
+gap of 6.579391 A between GLY 50 and ALA 51
+gap of 9.389514 A between ARG 119 and GLN 120
+gap of 4.731964 A between VAL 182 and ARG 183
+gap of 6.566239 A between SER 414 and SER 415
+gap of 8.100719 A between PRO 421 and TYR 422
+gap of 6.579055 A between GLY 456 and ALA 457
+gap of 9.389312 A between ARG 525 and GLN 526
+gap of 4.731682 A between VAL 588 and ARG 589
+gap of 6.566163 A between SER 820 and SER 821
+gap of 8.100294 A between PRO 827 and TYR 828
+gap of 6.579032 A between GLY 862 and ALA 863
+gap of 9.389660 A between ARG 931 and GLN 932
+gap of 4.732214 A between VAL 994 and ARG 995
+gap of 6.566307 A between SER 1226 and SER 1227
+gap of 8.100453 A between PRO 1233 and TYR 1234
+gap of 6.579391 A between GLY 1268 and ALA 1269
+gap of 9.389514 A between ARG 1337 and GLN 1338
+gap of 4.731964 A between VAL 1400 and ARG 1401
+gap of 6.566239 A between SER 1632 and SER 1633
+gap of 8.100806 A between PRO 1639 and TYR 1640
+gap of 6.579809 A between GLY 1674 and ALA 1675
+gap of 9.389312 A between ARG 1743 and GLN 1744
+gap of 4.732221 A between VAL 1806 and ARG 1807
+gap of 6.566632 A between SER 2038 and SER 2039
+gap of 8.100294 A between PRO 2045 and TYR 2046
+gap of 6.579032 A between GLY 2080 and ALA 2081
+gap of 9.389660 A between ARG 2149 and GLN 2150
+gap of 4.732085 A between VAL 2212 and ARG 2213
+gap of 6.566345 A between SER 2444 and SER 2445
+gap of 8.099849 A between PRO 2451 and TYR 2452
+gap of 6.578849 A between GLY 2486 and ALA 2487
+gap of 9.389514 A between ARG 2555 and GLN 2556
+gap of 4.732632 A between VAL 2618 and ARG 2619
+gap of 6.566239 A between SER 2850 and SER 2851
+gap of 8.100806 A between PRO 2857 and TYR 2858
+gap of 6.579055 A between GLY 2892 and ALA 2893
+gap of 9.389312 A between ARG 2961 and GLN 2962
+gap of 4.732221 A between VAL 3024 and ARG 3025
+gap of 6.566163 A between SER 3256 and SER 3257
+gap of 8.100984 A between PRO 3263 and TYR 3264
+gap of 6.579032 A between GLY 3298 and ALA 3299
+gap of 9.389660 A between ARG 3367 and GLN 3368
+gap of 4.732085 A between VAL 3430 and ARG 3431
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop
 
 	Running AmberPrep : 3dpk.pdb
 
@@ -115,6 +231,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3dpk.pdb
@@ -122,7 +240,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3dpk.prmtop
     rst7   : 4amber_3dpk.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk
 return_files 3dpk
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3dpk.pdb
@@ -156,33 +274,38 @@ cp 4amber_3dpk.prmtop /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk
 3dpk_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/3dpk.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/dp/3dpk
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/3dpk_refine_001.log
 ------------------------------
+
+	Already done (on chevy) 3dpk_refine_001
 ------------------------------
-phenix.refine log filename ? > 3dpk_refine_001.log
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/3dpk_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3dpk_refine_002.log
 ------------------------------
 Running phenix.refine
 
-phenix.refine 3dpk.pdb 3dpk.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+phenix.refine 3dpk.pdb 3dpk.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
 ligand_code :8C5:
 ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif
 
   Restarting
-    phenix.refine 3dpk.pdb 3dpk.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True /net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif
+    phenix.refine 3dpk.pdb 3dpk.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2 /net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif
     
-# Date 2017-02-17 Time 16:34:52 PST -0800 (1487378092.67 s)
+# Date 2017-02-21 Time 15:50:50 PST -0800 (1487721050.87 s)
 #phil __OFF__
 
-Command line arguments: "3dpk.pdb" "3dpk.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif"
+Command line arguments: "3dpk.pdb" "3dpk.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "/net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 48274
-JOB_ID = 6368462
+PID = 10829
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -240,15 +363,21 @@ Command line parameter definitions:
                                rigid_body *individual_adp group_adp tls \
                                *occupancies group_anomalous
 
+  refinement.amber.topology_file_name = /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop
+
+  refinement.amber.coordinate_file_name = /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.rst7
+
+  refinement.amber.use_amber = True
+
   refinement.target_weights.optimize_xyz_weight = True
 
   refinement.main.number_of_macro_cycles = 10
 
   refinement.output.write_geo_file = False
 
-  refinement.output.serial = 1
+  refinement.amber.wxc_factor = 0.300000
 
-  refinement.pdb_interpretation.restraints_library.cdl = True
+  refinement.output.serial = 2
 
   No user-defined map coefficients or files defined; will use default map
   outputs instead.
@@ -377,7 +506,7 @@ Number of work/free reflections by resolution:
           Link IDs: {None: 126}
   Number of atoms with unknown nonbonded energy type symbols: 1
     "HETATM 4487 H032 8C5 A 923 .*.     H  "
-  Time building chain proxies: 3.90, per 1000 atoms: 0.80
+  Time building chain proxies: 3.61, per 1000 atoms: 0.74
   Number of scatterers: 4869
   At special positions: 0
   Unit cell: (80.95, 80.95, 145.42, 90, 90, 120)
@@ -397,18 +526,6 @@ Sorry: Fatal problems interpreting model file:
     CIF file with matching restraint definitions, along with
     apply_cif_modification and apply_cif_link parameter definitions
     if necessary.
-
-ligand_code :8C5:
-ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif
-------------------------------
-phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/3dpk_refine_002.log
-------------------------------
-------------------------------
-phenix.refine log filename ? > 3dpk_refine_002.log
-------------------------------
-Running phenix.refine
-
-phenix.refine 3dpk.pdb 3dpk.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/dp/3dpk/4amber_3dpk.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
 ligand_code :8C5:
 ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/8C5.cif

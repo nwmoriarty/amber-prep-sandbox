@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 221
 only_code None
 force_amber_prep True
@@ -11,35 +11,297 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/w0/pdb1w0e.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/w0/r1w0esf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/w0/1w0e.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.cif
-Can't determine output label for r1w0esf,_refln.crystal_id - skipping.
-Can't determine output label for r1w0esf,_refln.scale_group_code - skipping.
-Can't determine output label for r1w0esf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1w0e.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/w0/pdb1w0e.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/w0/r1w0esf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/w0/1w0e.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.cif
-Can't determine output label for r1w0esf,_refln.crystal_id - skipping.
-Can't determine output label for r1w0esf,_refln.scale_group_code - skipping.
-Can't determine output label for r1w0esf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1w0e.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/w0/1w0e/4amber_1w0e.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/w0/1w0e/1w0e.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1w0e.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 2.474472 A between PHE 238 and PHE 238
+gap of 2.410145 A between LEU 239 and LEU 239
+gap of 2.482304 A between GLN 240 and GLN 240
+gap of 2.506396 A between LEU 241 and LEU 241
+gap of 2.326745 A between MET 242 and MET 242
+gap of 2.464452 A between ILE 243 and ILE 243
+gap of 8.192391 A between SER 245 and ASP 244
+gap of 5.615935 A between ASP 246 and SER 245
+gap of 4.783081 A between LEU 247 and ASP 246
+gap of 4.695644 A between GLU 248 and LEU 247
+gap of 4.479870 A between LEU 249 and GLU 248
+gap of 4.669785 A between VAL 250 and LEU 249
+gap of 4.708260 A between ALA 251 and VAL 250
+gap of 4.659387 A between GLN 252 and ALA 251
+gap of 4.722149 A between SER 253 and GLN 252
+gap of 4.740945 A between ILE 254 and SER 253
+gap of 4.759384 A between ILE 255 and ILE 254
+gap of 4.744107 A between PHE 256 and ILE 255
+gap of 4.635379 A between ILE 257 and PHE 256
+gap of 4.620861 A between PHE 258 and ILE 257
+gap of 4.795131 A between ALA 259 and PHE 258
+gap of 5.102243 A between GLY 260 and ALA 259
+gap of 5.133566 A between TYR 261 and GLY 260
+gap of 4.902523 A between GLU 262 and TYR 261
+gap of 4.798040 A between THR 263 and GLU 262
+gap of 4.747999 A between THR 264 and THR 263
+gap of 4.733656 A between SER 265 and THR 264
+gap of 4.693143 A between SER 266 and SER 265
+gap of 4.659619 A between VAL 267 and SER 266
+gap of 4.750550 A between LEU 268 and VAL 267
+gap of 4.709123 A between SER 269 and LEU 268
+gap of 4.678106 A between PHE 270 and SER 269
+gap of 4.641705 A between ILE 271 and PHE 270
+gap of 4.665955 A between MET 272 and ILE 271
+gap of 4.673044 A between TYR 273 and MET 272
+gap of 4.648011 A between GLU 274 and TYR 273
+gap of 4.748079 A between LEU 275 and GLU 274
+gap of 4.768458 A between ALA 276 and LEU 275
+gap of 4.535344 A between THR 277 and ALA 276
+gap of 4.145702 A between HID 278 and THR 277
+gap of 4.811589 A between PRO 279 and HID 278
+gap of 4.609480 A between ASP 280 and PRO 279
+gap of 4.613199 A between VAL 281 and ASP 280
+gap of 4.689874 A between GLN 282 and VAL 281
+gap of 4.647687 A between GLN 283 and GLN 282
+gap of 4.579846 A between LYS 284 and GLN 283
+gap of 4.623194 A between LEU 285 and LYS 284
+gap of 4.664131 A between GLN 286 and LEU 285
+gap of 4.705147 A between GLU 287 and GLN 286
+gap of 4.760817 A between GLU 288 and GLU 287
+gap of 4.698831 A between ILE 289 and GLU 288
+gap of 4.629235 A between ASP 290 and ILE 289
+gap of 4.663997 A between ALA 291 and ASP 290
+gap of 4.658963 A between VAL 292 and ALA 291
+gap of 4.635210 A between LEU 293 and VAL 292
+gap of 5.393156 A between PRO 294 and LEU 293
+gap of 5.140706 A between ASN 295 and PRO 294
+gap of 4.924519 A between LYS 296 and ASN 295
+gap of 5.201753 A between ALA 297 and LYS 296
+gap of 5.595440 A between PRO 298 and ALA 297
+gap of 5.550994 A between PRO 299 and PRO 298
+gap of 5.850780 A between THR 300 and PRO 299
+gap of 5.086142 A between TYR 301 and THR 300
+gap of 4.764903 A between ASP 302 and TYR 301
+gap of 4.793195 A between THR 303 and ASP 302
+gap of 4.731728 A between VAL 304 and THR 303
+gap of 4.824518 A between LEU 305 and VAL 304
+gap of 4.619905 A between GLN 306 and LEU 305
+gap of 5.344956 A between MET 307 and GLN 306
+gap of 5.305840 A between GLU 308 and MET 307
+gap of 4.837343 A between TYR 309 and GLU 308
+gap of 4.761160 A between LEU 310 and TYR 309
+gap of 4.643562 A between ASP 311 and LEU 310
+gap of 4.747755 A between MET 312 and ASP 311
+gap of 4.713127 A between VAL 313 and MET 312
+gap of 4.650787 A between VAL 314 and VAL 313
+gap of 4.852656 A between ASN 315 and VAL 314
+gap of 4.729001 A between GLU 316 and ASN 315
+gap of 4.550325 A between THR 317 and GLU 316
+gap of 4.553664 A between LEU 318 and THR 317
+gap of 4.716641 A between ARG 319 and LEU 318
+gap of 4.570949 A between LEU 320 and ARG 319
+gap of 4.914263 A between PHE 321 and LEU 320
+gap of 5.513112 A between PRO 322 and PHE 321
+gap of 5.368401 A between ILE 323 and PRO 322
+gap of 4.829013 A between ALA 324 and ILE 323
+gap of 5.143411 A between MET 325 and ALA 324
+gap of 4.896250 A between ARG 326 and MET 325
+gap of 5.835671 A between LEU 327 and ARG 326
+gap of 5.751136 A between GLU 328 and LEU 327
+gap of 5.958225 A between ARG 329 and GLU 328
+gap of 5.711054 A between VAL 330 and ARG 329
+gap of 5.656654 A between CYS 331 and VAL 330
+gap of 5.532291 A between LYS 332 and CYS 331
+gap of 4.877353 A between LYS 333 and LYS 332
+gap of 5.371888 A between ASP 334 and LYS 333
+gap of 5.949732 A between VAL 335 and ASP 334
+gap of 5.833882 A between GLU 336 and VAL 335
+gap of 5.543332 A between ILE 337 and GLU 336
+gap of 5.027277 A between ASN 338 and ILE 337
+gap of 4.654375 A between GLY 339 and ASN 338
+gap of 5.551522 A between MET 340 and GLY 339
+gap of 5.275852 A between PHE 341 and MET 340
+gap of 5.677907 A between ILE 342 and PHE 341
+gap of 5.634641 A between PRO 343 and ILE 342
+gap of 5.370538 A between LYS 344 and PRO 343
+gap of 5.323575 A between GLY 345 and LYS 344
+gap of 5.005581 A between VAL 346 and GLY 345
+gap of 5.639870 A between VAL 347 and VAL 346
+gap of 5.673074 A between VAL 348 and VAL 347
+gap of 5.813271 A between MET 349 and VAL 348
+gap of 6.000654 A between ILE 350 and MET 349
+gap of 5.492938 A between PRO 351 and ILE 350
+gap of 5.394737 A between SER 352 and PRO 351
+gap of 4.824261 A between TYR 353 and SER 352
+gap of 4.833239 A between ALA 354 and TYR 353
+gap of 4.713951 A between LEU 355 and ALA 354
+gap of 4.729693 A between HID 356 and LEU 355
+gap of 4.953978 A between ARG 357 and HID 356
+gap of 5.116553 A between ASP 358 and ARG 357
+gap of 5.426904 A between PRO 359 and ASP 358
+gap of 4.960960 A between LYS 360 and PRO 359
+gap of 4.917944 A between TYR 361 and LYS 360
+gap of 4.902667 A between TRP 362 and TYR 361
+gap of 5.683683 A between THR 363 and TRP 362
+gap of 4.625007 A between GLU 364 and THR 363
+gap of 5.358572 A between PRO 365 and GLU 364
+gap of 4.870003 A between GLU 366 and PRO 365
+gap of 4.877896 A between LYS 367 and GLU 366
+gap of 5.701318 A between PHE 368 and LYS 367
+gap of 5.663938 A between LEU 369 and PHE 368
+gap of 5.517677 A between PRO 370 and LEU 369
+gap of 4.959246 A between GLU 371 and PRO 370
+gap of 4.882236 A between ARG 372 and GLU 371
+gap of 4.895460 A between PHE 373 and ARG 372
+gap of 4.932878 A between SER 374 and PHE 373
+gap of 5.236753 A between LYS 375 and SER 374
+gap of 5.311300 A between LYS 376 and LYS 375
+gap of 4.084466 A between ASN 377 and LYS 376
+gap of 4.402574 A between LYS 378 and ASN 377
+gap of 5.116888 A between ASP 379 and LYS 378
+gap of 4.711622 A between ASN 380 and ASP 379
+gap of 4.386788 A between ILE 381 and ASN 380
+gap of 5.683800 A between ASP 382 and ILE 381
+gap of 5.253292 A between PRO 383 and ASP 382
+gap of 4.973131 A between TYR 384 and PRO 383
+gap of 4.426727 A between ILE 385 and TYR 384
+gap of 4.350429 A between TYR 386 and ILE 385
+gap of 5.748826 A between THR 387 and TYR 386
+gap of 5.578143 A between PRO 388 and THR 387
+gap of 4.689759 A between PHE 389 and PRO 388
+gap of 4.659851 A between GLY 390 and PHE 389
+gap of 6.033275 A between SER 391 and GLY 390
+gap of 5.416575 A between GLY 392 and SER 391
+gap of 5.309791 A between PRO 393 and GLY 392
+gap of 4.994920 A between ARG 394 and PRO 393
+gap of 5.326533 A between ASN 395 and ARG 394
+gap of 5.137779 A between CYS 396 and ASN 395
+gap of 5.518162 A between ILE 397 and CYS 396
+gap of 4.759002 A between GLY 398 and ILE 397
+gap of 5.263673 A between MET 399 and GLY 398
+gap of 4.754566 A between ARG 400 and MET 399
+gap of 4.572208 A between PHE 401 and ARG 400
+gap of 4.588925 A between ALA 402 and PHE 401
+gap of 4.791439 A between LEU 403 and ALA 402
+gap of 4.650112 A between MET 404 and LEU 403
+gap of 4.717653 A between ASN 405 and MET 404
+gap of 4.845990 A between MET 406 and ASN 405
+gap of 4.739530 A between LYS 407 and MET 406
+gap of 4.528114 A between LEU 408 and LYS 407
+gap of 4.608592 A between ALA 409 and LEU 408
+gap of 4.680852 A between LEU 410 and ALA 409
+gap of 4.805390 A between ILE 411 and LEU 410
+gap of 4.823659 A between ARG 412 and ILE 411
+gap of 4.766151 A between VAL 413 and ARG 412
+gap of 4.760294 A between LEU 414 and VAL 413
+gap of 4.790699 A between GLN 415 and LEU 414
+gap of 5.007899 A between ASN 416 and GLN 415
+gap of 4.774725 A between PHE 417 and ASN 416
+gap of 5.820267 A between SER 418 and PHE 417
+gap of 5.678755 A between PHE 419 and SER 418
+gap of 5.818662 A between LYS 420 and PHE 419
+gap of 5.444243 A between PRO 421 and LYS 420
+gap of 6.183921 A between CYS 422 and PRO 421
+gap of 5.228603 A between LYS 423 and CYS 422
+gap of 5.076984 A between GLU 424 and LYS 423
+gap of 5.043895 A between THR 425 and GLU 424
+gap of 5.405893 A between GLN 426 and THR 425
+gap of 5.909900 A between ILE 427 and GLN 426
+gap of 3.705139 A between PRO 428 and ILE 427
+gap of 5.432713 A between LEU 429 and PRO 428
+gap of 5.428215 A between LYS 430 and LEU 429
+gap of 5.717031 A between LEU 431 and LYS 430
+gap of 5.472496 A between SER 432 and LEU 431
+gap of 5.734196 A between LEU 433 and SER 432
+gap of 4.944068 A between GLY 434 and LEU 433
+gap of 5.549738 A between GLY 435 and GLY 434
+gap of 4.779910 A between LEU 436 and GLY 435
+gap of 5.473382 A between LEU 437 and LEU 436
+gap of 5.513762 A between GLN 438 and LEU 437
+gap of 5.326952 A between PRO 439 and GLN 438
+gap of 5.077154 A between GLU 440 and PRO 439
+gap of 4.129014 A between LYS 441 and GLU 440
+gap of 5.272267 A between PRO 442 and LYS 441
+gap of 5.579665 A between VAL 443 and PRO 442
+gap of 5.809119 A between VAL 444 and VAL 443
+gap of 5.869030 A between LEU 445 and VAL 444
+gap of 5.513043 A between LYS 446 and LEU 445
+gap of 5.724252 A between VAL 447 and LYS 446
+gap of 5.863676 A between GLU 448 and VAL 447
+gap of 5.413353 A between SER 449 and GLU 448
+gap of 5.676147 A between ARG 450 and SER 449
+gap of 4.562043 A between ASP 451 and ARG 450
+
+---------- Mising heavy atom(s)
+
+LYS_144 misses 4 heavy atom(s)
+LEU_237 misses 7 heavy atom(s)
+ASP_244 misses 7 heavy atom(s)
+ASP_451 misses 3 heavy atom(s)
+THR_453 misses 6 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/w0/1w0e/4amber_1w0e.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/w0/1w0e/4amber_1w0e.prmtop
 
 	Running AmberPrep : 1w0e.pdb
@@ -70,6 +332,7 @@ MoleculeClass :  C:34  N: 4  O: 4 Fe: 1 (CHEMICAL COMPONENTS format)
 	1 rings (groups, rings, atoms) 8 44
 	0 chirals
 
-~> antechamber -i 4antechamber_HEM.pdb -fi pdb -o HEM.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_HEM.pdb -fi pdb -o HEM.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 (2) adjust atom valence penalty parameters in APS.DAT, and/or 
+Sorry: Error: cannot run "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin/sqm -O -i sqm.in -o sqm.out" of bcc() in charge.c properly, exit

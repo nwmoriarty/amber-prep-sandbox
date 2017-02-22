@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 334
 only_code None
 force_amber_prep True
@@ -12,25 +12,74 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ll/pdb3ll8.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ll/r3ll8sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ll/3ll8.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.cif
-Can't determine output label for r3ll8sf,_refln.crystal_id - skipping.
-Can't determine output label for r3ll8sf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 934 reflections
-Can't determine output label for r3ll8sf,_refln.wavelength_id - skipping.
-Can't determine output label for r3ll8Asf,_refln.crystal_id - skipping.
-Can't determine output label for r3ll8Asf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.000
-WARNING: R-free flags in R-free-flags do not appear to contain a valid test, so they can't be extended to higher resolution.
-Can't determine output label for r3ll8Asf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3ll8.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3ll8.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 3ll8_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.prmtop
 
 	Running AmberPrep : 3ll8.pdb
 
@@ -82,6 +131,37 @@ Minimizing input coordinates.
 
 ~> sander -O -i 3ll8_amber_all.in -p 4amber_3ll8.prmtop -c 4amber_3ll8.rst7 -o 3ll8.min.out            -ref 4amber_3ll8.rst7 -r 4amber_3ll8.min.rst7
 
+Traceback (most recent call last):
+  File "run_tests_local.py", line 323, in <module>
+    run(*tuple(args))
+  File "run_tests_local.py", line 307, in run
+    w2 = run_all_tests(code, force_amber_prep=force_amber_prep)
+  File "run_tests_local.py", line 93, in run_all_tests
+    "clean=on",
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 1034, in run
+    minimization_options=actions.minimization_options)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 689, in run_minimise
+    output_pdb_file )
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 313, in uc_parm7_to_4phenix_pdb
+    parm = parmed.load_file( parm7_file, xyz=rst7_file )
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 197, in load_file
+    return cls.parse(filename, *args, **kwargs)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/amberformat.py", line 353, in parse
+    return LoadParm(filename, *args, **kwargs)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/readparm.py", line 73, in LoadParm
+    f = load_file(xyz)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 168, in load_file
+    raise IOError('%s does not exist' % filename)
+IOError: 4amber_3ll8.min.rst7 does not exist
+.rst7 -o 3ll8_uc.rst7 -X 86.275 -Y 89.699 -Z 158.914 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3ll8_amber_all.in -p 4amber_3ll8.prmtop -c 4amber_3ll8.rst7 -o 3ll8.min.out            -ref 4amber_3ll8.rst7 -r 4amber_3ll8.min.rst7
+
 checking special positions in 4phenix_3ll8.pdb
 
 ==================================================
@@ -101,6 +181,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3ll8.pdb
@@ -108,7 +190,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3ll8.prmtop
     rst7   : 4amber_3ll8.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
 return_files 3ll8
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3ll8.pdb
@@ -131,55 +213,25 @@ cp 4amber_3ll8.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8
 4amber_3ll8_refine_001.log
 4phenix_3ll8_refine_001.log
 3ll8_refine_001.log
-cp 3ll8_refine_001.log /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8
 4amber_3ll8_refine_002.log
 4phenix_3ll8_refine_002.log
 3ll8_refine_002.log
 4amber_3ll8_refine_001.pdb
 4phenix_3ll8_refine_001.pdb
 3ll8_refine_001.pdb
-cp 3ll8_refine_001.pdb /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8
 4amber_3ll8_refine_002.pdb
 4phenix_3ll8_refine_002.pdb
 3ll8_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/3ll8.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/3ll8_refine_001.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 3ll8_refine_001.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 3ll8.pdb 3ll8.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
+	Already done (on chevy) 3ll8_refine_001
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/3ll8_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 3ll8_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 3ll8.pdb 3ll8.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
----------------------
-------------------------------
-phenix.refine log filename ? > 3ll8_refine_001.log
-------------------------------
-Running phenix.refine
-
-phenix.refine 3ll8.pdb 3ll8.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
-------------------------------
-phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/3ll8_refine_002.log
-------------------------------
-------------------------------
-phenix.refine log filename ? > 3ll8_refine_002.log
-------------------------------
-Running phenix.refine
-
-phenix.refine 3ll8.pdb 3ll8.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 3ll8_refine_002

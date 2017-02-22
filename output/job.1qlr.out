@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 263
 only_code None
 force_amber_prep True
@@ -12,18 +12,139 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ql/pdb1qlr.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ql/r1qlrsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ql/1qlr.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.cif
-Can't determine output label for r1qlrsf,_refln.crystal_id - skipping.
-Can't determine output label for r1qlrsf,_refln.scale_group_code - skipping.
-Can't determine output label for r1qlrsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1qlr.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1qlr.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 12.578022 A between CYX 349 and VAL 350
+gap of 12.470208 A between PRO 400 and THR 401
+gap of 12.640619 A between CYX 773 and VAL 774
+gap of 13.252453 A between PRO 824 and THR 825
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 1qlr_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.904508 A between VAL 29 and SER 30
+gap of 5.239600 A between SER 30 and SER 30
+gap of 3.082449 A between SER 30 and ASN 31
+gap of 12.578022 A between CYX 348 and VAL 349
+gap of 12.470208 A between PRO 399 and THR 400
+gap of 3.899663 A between VAL 452 and SER 453
+gap of 5.283897 A between SER 453 and SER 453
+gap of 3.097190 A between SER 453 and ASN 454
+gap of 12.640619 A between CYX 771 and VAL 772
+gap of 13.252453 A between PRO 822 and THR 823
+gap of 3.904155 A between VAL 879 and SER 880
+gap of 5.239763 A between SER 880 and SER 880
+gap of 3.082468 A between SER 880 and ASN 881
+gap of 12.577934 A between CYX 1198 and VAL 1199
+gap of 12.470124 A between PRO 1249 and THR 1250
+gap of 3.899480 A between VAL 1302 and SER 1303
+gap of 5.284187 A between SER 1303 and SER 1303
+gap of 3.097427 A between SER 1303 and ASN 1304
+gap of 12.640908 A between CYX 1621 and VAL 1622
+gap of 13.252656 A between PRO 1672 and THR 1673
+gap of 3.904381 A between VAL 1729 and SER 1730
+gap of 5.239551 A between SER 1730 and SER 1730
+gap of 3.082742 A between SER 1730 and ASN 1731
+gap of 12.578253 A between CYX 2048 and VAL 2049
+gap of 12.470070 A between PRO 2099 and THR 2100
+gap of 3.900050 A between VAL 2152 and SER 2153
+gap of 5.283892 A between SER 2153 and SER 2153
+gap of 3.097613 A between SER 2153 and ASN 2154
+gap of 12.640724 A between CYX 2471 and VAL 2472
+gap of 13.252691 A between PRO 2522 and THR 2523
+gap of 3.904381 A between VAL 2579 and SER 2580
+gap of 5.239551 A between SER 2580 and SER 2580
+gap of 3.082742 A between SER 2580 and ASN 2581
+gap of 12.578253 A between CYX 2898 and VAL 2899
+gap of 12.470070 A between PRO 2949 and THR 2950
+gap of 3.900050 A between VAL 3002 and SER 3003
+gap of 5.283892 A between SER 3003 and SER 3003
+gap of 3.097613 A between SER 3003 and ASN 3004
+gap of 12.640724 A between CYX 3321 and VAL 3322
+gap of 13.252691 A between PRO 3372 and THR 3373
+gap of 3.904508 A between VAL 3429 and SER 3430
+gap of 5.239600 A between SER 3430 and SER 3430
+gap of 3.082449 A between SER 3430 and ASN 3431
+gap of 12.578022 A between CYX 3748 and VAL 3749
+gap of 12.470208 A between PRO 3799 and THR 3800
+gap of 3.899663 A between VAL 3852 and SER 3853
+gap of 5.283897 A between SER 3853 and SER 3853
+gap of 3.097190 A between SER 3853 and ASN 3854
+gap of 12.640619 A between CYX 4171 and VAL 4172
+gap of 13.252453 A between PRO 4222 and THR 4223
+gap of 3.904155 A between VAL 4279 and SER 4280
+gap of 5.239763 A between SER 4280 and SER 4280
+gap of 3.082468 A between SER 4280 and ASN 4281
+gap of 12.577934 A between CYX 4598 and VAL 4599
+gap of 12.470124 A between PRO 4649 and THR 4650
+gap of 3.899480 A between VAL 4702 and SER 4703
+gap of 5.284187 A between SER 4703 and SER 4703
+gap of 3.097427 A between SER 4703 and ASN 4704
+gap of 12.640908 A between CYX 5021 and VAL 5022
+gap of 13.252656 A between PRO 5072 and THR 5073
+
+---------- Mising heavy atom(s)
+
+None
 
 	Running AmberPrep : 1qlr.pdb
 
@@ -94,6 +215,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 1qlr.pdb
@@ -101,7 +224,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_1qlr.prmtop
     rst7   : 4amber_1qlr.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
 return_files 1qlr
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1qlr.pdb
@@ -135,7 +258,7 @@ cp 4amber_1qlr.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr
 1qlr_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/1qlr.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ql/1qlr
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ql/1qlr/1qlr_refine_001.log
 ------------------------------

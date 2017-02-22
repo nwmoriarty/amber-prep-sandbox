@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 12
 only_code None
 force_amber_prep True
@@ -11,35 +11,101 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/j1/pdb2j1g.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/j1/r2j1gsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/j1/2j1g.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.cif
-Can't determine output label for r2j1gsf,_refln.crystal_id - skipping.
-Can't determine output label for r2j1gsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2j1gsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2j1g.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/j1/pdb2j1g.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/j1/r2j1gsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/j1/2j1g.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.cif
-Can't determine output label for r2j1gsf,_refln.crystal_id - skipping.
-Can't determine output label for r2j1gsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2j1gsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2j1g.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/j1/2j1g/4amber_2j1g.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/j1/2j1g/2j1g.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2j1g.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+LEU_85
+ARG_86
+ASP_91
+PHE_92
+TYR_101
+ARG_102
+ARG_906
+ASP_907
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.392062 A between LEU 83 and GLU 84
+gap of 2.466661 A between LEU 85 and LEU 85
+gap of 2.471565 A between ASP 91 and ASP 91
+gap of 2.493131 A between TYR 101 and TYR 101
+gap of 14.468444 A between THR 130 and PHE 131
+gap of 5.895081 A between TYR 155 and HID 156
+gap of 2.472165 A between ARG 906 and ARG 906
+
+---------- Mising heavy atom(s)
+
+None
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/j1/2j1g/4amber_2j1g.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/j1/2j1g/4amber_2j1g.prmtop
 
 	Running AmberPrep : 2j1g.pdb
@@ -65,7 +131,7 @@ MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
 	1 rings (groups, rings, atoms) 1 6
 	5 chirals : R S S S R 
 
-~> antechamber -i 4antechamber_BMA.pdb -fi pdb -o BMA.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_BMA.pdb -fi pdb -o BMA.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i BMA.mol2 -f mol2 -o BMA.frcmod
@@ -83,7 +149,7 @@ MoleculeClass :  C: 8  N: 1  O: 6 (CHEMICAL COMPONENTS format)
 	1 rings (groups, rings, atoms) 1 6
 	5 chirals : R R R S R 
 
-~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_NAG.pdb -fi pdb -o NAG.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i NAG.mol2 -f mol2 -o NAG.frcmod
@@ -105,7 +171,7 @@ MoleculeClass :  C: 6  O: 5 (CHEMICAL COMPONENTS format)
 	1 rings (groups, rings, atoms) 1 6
 	5 chirals : R S R S S 
 
-~> antechamber -i 4antechamber_FUC.pdb -fi pdb -o FUC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_FUC.pdb -fi pdb -o FUC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i FUC.mol2 -f mol2 -o FUC.frcmod
@@ -127,7 +193,7 @@ MoleculeClass :  C: 5  N: 1  O: 3  S: 1 (CHEMICAL COMPONENTS format)
 	0 rings (groups, rings, atoms) 0 0
 	1 chirals : R 
 
-~> antechamber -i 4antechamber_SC2.pdb -fi pdb -o SC2.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_SC2.pdb -fi pdb -o SC2.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i SC2.mol2 -f mol2 -o SC2.frcmod
@@ -145,7 +211,7 @@ MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
 	1 rings (groups, rings, atoms) 1 6
 	5 chirals : S S S S R 
 
-~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
@@ -159,3 +225,5 @@ Preparing asu files and 4phenix_2j1g.pdb
 
 Checking output filenames
   file : 2j1g_asu.prmtop
+Sorry:   Output file is empty : 2j1g_asu.prmtop
+  Check contents of "leap.log"

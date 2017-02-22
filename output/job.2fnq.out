@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 305
 only_code None
 force_amber_prep True
@@ -11,35 +11,182 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fn/pdb2fnq.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/fn/r2fnqsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/fn/2fnq.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.cif
-Can't determine output label for r2fnqsf,_refln.crystal_id - skipping.
-Can't determine output label for r2fnqsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2fnqsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2fnq.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/fn/pdb2fnq.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/fn/r2fnqsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/fn/2fnq.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.cif
-Can't determine output label for r2fnqsf,_refln.crystal_id - skipping.
-Can't determine output label for r2fnqsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2fnqsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2fnq.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/fn/2fnq/4amber_2fnq.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/fn/2fnq/2fnq.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2fnq.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 8.257740 A between TRP 76 and ASP 77
+gap of 4.648738 A between ARG 266 and ASN 267
+gap of 9.679543 A between TYR 291 and ALA 292
+gap of 8.257801 A between TRP 745 and ASP 746
+gap of 4.648011 A between ARG 935 and ASN 936
+gap of 9.679533 A between TYR 960 and ALA 961
+
+---------- Mising heavy atom(s)
+
+GLU_13 misses 4 heavy atom(s)
+ARG_31 misses 6 heavy atom(s)
+PHE_58 misses 6 heavy atom(s)
+ASP_77 misses 3 heavy atom(s)
+ASP_93 misses 3 heavy atom(s)
+ARG_94 misses 6 heavy atom(s)
+LYS_106 misses 4 heavy atom(s)
+ASN_120 misses 3 heavy atom(s)
+GLU_121 misses 4 heavy atom(s)
+GLU_135 misses 4 heavy atom(s)
+GLN_136 misses 4 heavy atom(s)
+ARG_174 misses 6 heavy atom(s)
+GLU_178 misses 4 heavy atom(s)
+LYS_181 misses 4 heavy atom(s)
+GLU_197 misses 4 heavy atom(s)
+ARG_210 misses 6 heavy atom(s)
+ILE_213 misses 3 heavy atom(s)
+GLU_258 misses 4 heavy atom(s)
+ASN_261 misses 3 heavy atom(s)
+ASP_265 misses 3 heavy atom(s)
+ARG_266 misses 7 heavy atom(s)
+ILE_272 misses 3 heavy atom(s)
+LYS_273 misses 4 heavy atom(s)
+TYR_291 misses 7 heavy atom(s)
+LYS_308 misses 4 heavy atom(s)
+GLU_322 misses 4 heavy atom(s)
+GLU_326 misses 4 heavy atom(s)
+ASN_327 misses 3 heavy atom(s)
+ASN_336 misses 3 heavy atom(s)
+GLU_337 misses 4 heavy atom(s)
+LYS_405 misses 4 heavy atom(s)
+LYS_449 misses 4 heavy atom(s)
+LYS_487 misses 4 heavy atom(s)
+ARG_494 misses 6 heavy atom(s)
+LYS_507 misses 4 heavy atom(s)
+GLU_529 misses 4 heavy atom(s)
+LYS_554 misses 4 heavy atom(s)
+LYS_574 misses 4 heavy atom(s)
+GLU_577 misses 4 heavy atom(s)
+GLN_581 misses 4 heavy atom(s)
+LYS_590 misses 4 heavy atom(s)
+LYS_595 misses 4 heavy atom(s)
+GLU_608 misses 4 heavy atom(s)
+LYS_624 misses 4 heavy atom(s)
+LYS_636 misses 4 heavy atom(s)
+LYS_642 misses 4 heavy atom(s)
+LYS_643 misses 4 heavy atom(s)
+GLU_649 misses 4 heavy atom(s)
+GLU_682 misses 4 heavy atom(s)
+ARG_700 misses 6 heavy atom(s)
+PHE_727 misses 6 heavy atom(s)
+ASP_746 misses 3 heavy atom(s)
+ASP_762 misses 3 heavy atom(s)
+ARG_763 misses 6 heavy atom(s)
+LYS_775 misses 4 heavy atom(s)
+ASN_789 misses 3 heavy atom(s)
+GLU_790 misses 4 heavy atom(s)
+GLU_804 misses 4 heavy atom(s)
+GLN_805 misses 4 heavy atom(s)
+ARG_843 misses 6 heavy atom(s)
+GLU_847 misses 4 heavy atom(s)
+LYS_850 misses 4 heavy atom(s)
+GLU_866 misses 4 heavy atom(s)
+ARG_879 misses 6 heavy atom(s)
+ILE_882 misses 3 heavy atom(s)
+GLU_927 misses 4 heavy atom(s)
+ASN_930 misses 3 heavy atom(s)
+ASP_934 misses 3 heavy atom(s)
+ARG_935 misses 7 heavy atom(s)
+ILE_941 misses 3 heavy atom(s)
+LYS_942 misses 4 heavy atom(s)
+TYR_960 misses 7 heavy atom(s)
+LYS_977 misses 4 heavy atom(s)
+GLU_991 misses 4 heavy atom(s)
+GLU_995 misses 4 heavy atom(s)
+ASN_996 misses 3 heavy atom(s)
+ASN_1005 misses 3 heavy atom(s)
+GLU_1006 misses 4 heavy atom(s)
+LYS_1074 misses 4 heavy atom(s)
+LYS_1118 misses 4 heavy atom(s)
+LYS_1156 misses 4 heavy atom(s)
+ARG_1163 misses 6 heavy atom(s)
+LYS_1176 misses 4 heavy atom(s)
+GLU_1198 misses 4 heavy atom(s)
+LYS_1223 misses 4 heavy atom(s)
+LYS_1243 misses 4 heavy atom(s)
+GLU_1246 misses 4 heavy atom(s)
+GLN_1250 misses 4 heavy atom(s)
+LYS_1259 misses 4 heavy atom(s)
+LYS_1264 misses 4 heavy atom(s)
+GLU_1277 misses 4 heavy atom(s)
+LYS_1293 misses 4 heavy atom(s)
+LYS_1305 misses 4 heavy atom(s)
+LYS_1311 misses 4 heavy atom(s)
+LYS_1312 misses 4 heavy atom(s)
+GLU_1318 misses 4 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/fn/2fnq/4amber_2fnq.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/fn/2fnq/4amber_2fnq.prmtop
 
 	Running AmberPrep : 2fnq.pdb
@@ -61,3 +208,5 @@ Preparing asu files and 4phenix_2fnq.pdb
 
 Checking output filenames
   file : 2fnq_asu.prmtop
+Sorry:   Output file is empty : 2fnq_asu.prmtop
+  Check contents of "leap.log"

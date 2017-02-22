@@ -1,0 +1,148 @@
+HOST lewis.lbl.gov
+only_i 352
+only_code None
+force_amber_prep True
+dry_run False
+... 352 1duv
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/du/1duv
+1duv.pdb 4phenix_1duv.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/du/pdb1duv.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/du/1duv/1duv.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/du/pdb1duv.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/du/1duv/1duv.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1duv.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+G
+H
+I
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+LYS_37 misses 3 heavy atom(s)
+LYS_41 misses 2 heavy atom(s)
+GLU_118 misses 4 heavy atom(s)
+LYS_151 misses 2 heavy atom(s)
+LYS_240 misses 3 heavy atom(s)
+GLU_241 misses 4 heavy atom(s)
+GLU_245 misses 2 heavy atom(s)
+GLU_252 misses 4 heavy atom(s)
+THR_282 misses 3 heavy atom(s)
+THR_283 misses 3 heavy atom(s)
+LYS_286 misses 5 heavy atom(s)
+LYS_287 misses 4 heavy atom(s)
+ALA_289 misses 1 heavy atom(s)
+GLU_290 misses 5 heavy atom(s)
+GLU_291 misses 5 heavy atom(s)
+HIS_295 misses 6 heavy atom(s)
+LYS_339 misses 2 heavy atom(s)
+GLU_372 misses 4 heavy atom(s)
+GLN_522 misses 2 heavy atom(s)
+LYS_553 misses 1 heavy atom(s)
+GLU_585 misses 2 heavy atom(s)
+LYS_591 misses 3 heavy atom(s)
+ARG_738 misses 4 heavy atom(s)
+GLN_855 misses 2 heavy atom(s)
+GLU_907 misses 4 heavy atom(s)
+GLU_911 misses 4 heavy atom(s)
+GLU_918 misses 4 heavy atom(s)
+LYS_924 misses 3 heavy atom(s)
+GLN_927 misses 2 heavy atom(s)
+LYS_952 misses 1 heavy atom(s)
+LYS_953 misses 4 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/du/1duv/4amber_1duv.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/du/1duv/4amber_1duv.prmtop
+
+	Running AmberPrep : 1duv.pdb
+
+
+==================================================
+Running pdb4amber on 1duv.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "MPD" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "PSQ" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Preparing asu files and 4phenix_1duv.pdb
+==================================================
+
+~> tleap -f 1duv_asu_tleap_input_run
+
+Checking output filenames
+  file : 1duv_asu.prmtop
+Sorry:   Output file is empty : 1duv_asu.prmtop
+  Check contents of "leap.log"

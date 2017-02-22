@@ -17,6 +17,8 @@ error_strings = [
   'Molecule too small to optimise',
   'SMILES string is empty',
   ': /usr/etc',
+  'Sorry:   Output file is empty :',
+  "OSError: [Errno 17] File exists: 'h5'",
   ]
 
 last_lines = [

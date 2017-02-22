@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 277
 only_code None
 force_amber_prep True
@@ -7,40 +7,151 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc
 1wnc.pdb 4phenix_1wnc.pdb
+1wnc.pdb 4phenix_1wnc.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/wn/pdb1wnc.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/wn/r1wncsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/wn/1wnc.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.cif
-Can't determine output label for r1wncsf,_refln.crystal_id - skipping.
-Can't determine output label for r1wncsf,_refln.scale_group_code - skipping.
-Can't determine output label for r1wncsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1wnc.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/wn/pdb1wnc.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/wn/r1wncsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/wn/1wnc.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.cif
-Can't determine output label for r1wncsf,_refln.crystal_id - skipping.
-Can't determine output label for r1wncsf,_refln.scale_group_code - skipping.
-Can't determine output label for r1wncsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1wnc.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/wn/1wnc/4amber_1wnc.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc/4amber_1wnc.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc/1wnc.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1wnc.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 12.793609 A between GLN 46 and ILE 47
+gap of 11.210924 A between GLN 115 and ILE 116
+gap of 12.174007 A between GLN 196 and ILE 197
+gap of 14.230562 A between GLN 275 and GLY 276
+gap of 11.303286 A between LEU 353 and ILE 354
+gap of 16.273492 A between GLN 426 and ASN 427
+
+---------- Mising heavy atom(s)
+
+GLN_85 misses 4 heavy atom(s)
+LYS_138 misses 4 heavy atom(s)
+LEU_176 misses 3 heavy atom(s)
+LEU_248 misses 3 heavy atom(s)
+LEU_255 misses 3 heavy atom(s)
+GLN_264 misses 4 heavy atom(s)
+GLU_370 misses 4 heavy atom(s)
+GLN_383 misses 4 heavy atom(s)
+
+==================================================
+Summary of pdb4amber for: 1wnc_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 12.793609 A between GLN 46 and ILE 47
+gap of 11.210924 A between GLN 115 and ILE 116
+gap of 12.174007 A between GLN 196 and ILE 197
+gap of 14.230562 A between GLN 275 and GLY 276
+gap of 11.303286 A between LEU 353 and ILE 354
+gap of 16.273492 A between GLN 426 and ASN 427
+gap of 12.793609 A between GLN 1151 and ILE 1152
+gap of 11.210924 A between GLN 1220 and ILE 1221
+gap of 12.174007 A between GLN 1301 and ILE 1302
+gap of 14.230562 A between GLN 1380 and GLY 1381
+gap of 11.303286 A between LEU 1458 and ILE 1459
+gap of 16.273492 A between GLN 1531 and ASN 1532
+gap of 12.793427 A between GLN 2256 and ILE 2257
+gap of 11.210924 A between GLN 2325 and ILE 2326
+gap of 12.174007 A between GLN 2406 and ILE 2407
+gap of 14.230136 A between GLN 2485 and GLY 2486
+gap of 11.303132 A between LEU 2563 and ILE 2564
+gap of 16.273492 A between GLN 2636 and ASN 2637
+gap of 12.793609 A between GLN 3361 and ILE 3362
+gap of 11.210241 A between GLN 3430 and ILE 3431
+gap of 12.174007 A between GLN 3511 and ILE 3512
+gap of 14.230562 A between GLN 3590 and GLY 3591
+gap of 11.303286 A between LEU 3668 and ILE 3669
+gap of 16.272577 A between GLN 3741 and ASN 3742
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/wn/1wnc/4amber_1wnc.prmtop
 
 	Running AmberPrep : 1wnc.pdb
 
@@ -107,6 +218,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 1wnc.pdb
@@ -114,7 +227,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_1wnc.prmtop
     rst7   : 4amber_1wnc.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc
 return_files 1wnc
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1wnc.pdb
@@ -148,24 +261,14 @@ cp 4amber_1wnc.prmtop /net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc
 1wnc_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc/1wnc.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/wn/1wnc
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc/1wnc_refine_001.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 1wnc_refine_001.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 1wnc.pdb 1wnc.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
+	Already done (on chevy) 1wnc_refine_001
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc/1wnc_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 1wnc_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 1wnc.pdb 1wnc.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc/4amber_1wnc.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/wn/1wnc/4amber_1wnc.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 1wnc_refine_002

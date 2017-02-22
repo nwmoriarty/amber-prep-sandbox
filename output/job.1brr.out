@@ -1,0 +1,211 @@
+HOST lewis.lbl.gov
+only_i 147
+only_code None
+force_amber_prep True
+dry_run False
+... 147 1brr
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/br/1brr
+1brr.pdb 4phenix_1brr.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/br/pdb1brr.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/br/1brr/1brr.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/br/pdb1brr.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/br/1brr/1brr.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1brr.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+GLN_1 misses 4 heavy atom(s)
+ARG_223 misses 6 heavy atom(s)
+ARG_225 misses 6 heavy atom(s)
+ILE_227 misses 3 heavy atom(s)
+PHE_228 misses 6 heavy atom(s)
+GLU_230 misses 4 heavy atom(s)
+GLN_232 misses 4 heavy atom(s)
+ILE_233 misses 3 heavy atom(s)
+ARG_456 misses 6 heavy atom(s)
+GLU_461 misses 4 heavy atom(s)
+ARG_688 misses 6 heavy atom(s)
+ILE_690 misses 3 heavy atom(s)
+PHE_691 misses 6 heavy atom(s)
+GLU_693 misses 4 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/br/1brr/4amber_1brr.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/br/1brr/4amber_1brr.prmtop
+
+	Running AmberPrep : 1brr.pdb
+
+
+==================================================
+Running pdb4amber on 1brr.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+  Residue "GOL" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for BGC 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : R S S R R 
+
+~> antechamber -i 4antechamber_BGC.pdb -fi pdb -o BGC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i BGC.mol2 -f mol2 -o BGC.frcmod
+
+
+==================================================
+Running elbow/antechamber for GLC 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S R S S R 
+
+~> antechamber -i 4antechamber_GLC.pdb -fi pdb -o GLC.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GLC.mol2 -f mol2 -o GLC.frcmod
+
+
+  Residue "RET" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+  Residue "ARC" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for PCA 
+==================================================
+
+MoleculeClass :  C: 5  N: 1  O: 3 (CHEMICAL COMPONENTS format)
+	15 atoms
+	15 bonds
+	27 angles
+	40 dihedrals
+	1 rings (groups, rings, atoms) 1 5
+	1 chirals : S 
+
+~> antechamber -i 4antechamber_PCA.pdb -fi pdb -o PCA.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i PCA.mol2 -f mol2 -o PCA.frcmod
+
+
+  Residue "OCT" already in amber monomer library. Skipping elbow/antechamber
+    run for this residue.
+        
+
+==================================================
+Running elbow/antechamber for MAN 
+==================================================
+
+MoleculeClass :  C: 6  O: 6 (CHEMICAL COMPONENTS format)
+	24 atoms
+	24 bonds
+	42 angles
+	66 dihedrals
+	1 rings (groups, rings, atoms) 1 6
+	5 chirals : S S S S R 
+
+~> antechamber -i 4antechamber_MAN.pdb -fi pdb -o MAN.mol2 -fo mol2       -nc 0 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i MAN.mol2 -f mol2 -o MAN.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_1brr.pdb
+==================================================
+
+~> tleap -f 1brr_asu_tleap_input_run
+
+Checking output filenames
+  file : 1brr_asu.prmtop
+Sorry:   Output file is empty : 1brr_asu.prmtop
+  Check contents of "leap.log"

@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 233
 only_code None
 force_amber_prep True
@@ -11,39 +11,85 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/wk/pdb1wk4.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/wk/r1wk4sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/wk/1wk4.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.cif
-Can't determine output label for r1wk4sf,_refln.crystal_id - skipping.
-Can't determine output label for r1wk4sf,_refln.scale_group_code - skipping.
-Can't determine output label for r1wk4sf,wavelength_id=1,_refln.status - skipping.
-Can't determine output label for r1wk4sf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1wk4.mtz
-  F(+),SIGF(+),F(-),SIGF(-) is anomalous
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/wk/pdb1wk4.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/wk/r1wk4sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/wk/1wk4.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.cif
-Can't determine output label for r1wk4sf,_refln.crystal_id - skipping.
-Can't determine output label for r1wk4sf,_refln.scale_group_code - skipping.
-Can't determine output label for r1wk4sf,wavelength_id=1,_refln.status - skipping.
-Can't determine output label for r1wk4sf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1wk4.mtz
-  F(+),SIGF(+),F(-),SIGF(-) is anomalous
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/wk/1wk4/4amber_1wk4.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/wk/1wk4/1wk4.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1wk4.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 4.534700 A between ARG 124 and LEU 126
+gap of 4.452968 A between ARG 298 and LEU 300
+gap of 4.737114 A between ARG 472 and LEU 474
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/wk/1wk4/4amber_1wk4.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/wk/1wk4/4amber_1wk4.prmtop
 
 	Running AmberPrep : 1wk4.pdb
@@ -61,8 +107,8 @@ Setting up library files for non-standard residues
 Running elbow/antechamber for MSE 
 ==================================================
 --------------------------------------------------------------------------------
-['/tmp/6368462.233.all.q/tmpxayvOR', '/tmp/6368462.233.all.q/tmpcaaIZY']
-/tmp/6368462.233.all.q/tmpxayvOR
+['/tmp/6368467.233.all.q/tmpwbuScP', '/tmp/6368467.233.all.q/tmpqdAa52']
+/tmp/6368467.233.all.q/tmpwbuScP
   Monomer Library directory:
     "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
   Total number of atoms: 19
@@ -91,7 +137,7 @@ MoleculeClass :  C: 5  N: 1  O: 2 Se: 1 (CHEMICAL COMPONENTS format)
 	0 rings (groups, rings, atoms) 0 0
 	1 chirals : S 
 
-~> antechamber -i 4antechamber_MSE.pdb -fi pdb -o MSE.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_MSE.pdb -fi pdb -o MSE.mol2 -fo mol2       -nc -1 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i MSE.mol2 -f mol2 -o MSE.frcmod
@@ -109,3 +155,5 @@ Preparing asu files and 4phenix_1wk4.pdb
 
 Checking output filenames
   file : 1wk4_asu.prmtop
+Sorry:   Output file is empty : 1wk4_asu.prmtop
+  Check contents of "leap.log"

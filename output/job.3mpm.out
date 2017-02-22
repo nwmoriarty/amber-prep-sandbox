@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 58
 only_code None
 force_amber_prep True
@@ -12,35 +12,106 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/mp/pdb3mpm.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/mp/r3mpmsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/mp/3mpm.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.cif
-Can't determine output label for r3mpmsf,_refln.crystal_id - skipping.
-Can't determine output label for r3mpmsf,_refln.scale_group_code - skipping.
-Can't determine output label for r3mpmsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3mpm.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/mp/pdb3mpm.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/mp/r3mpmsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/mp/3mpm.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.cif
-Can't determine output label for r3mpmsf,_refln.crystal_id - skipping.
-Can't determine output label for r3mpmsf,_refln.scale_group_code - skipping.
-Can't determine output label for r3mpmsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3mpm.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/mp/3mpm/4amber_3mpm.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm/3mpm.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3mpm.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+EDO_259
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.582807 A between ARG 160 and PHE 161
+
+---------- Mising heavy atom(s)
+
+GLN_72 misses 4 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3mpm_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 9.582807 A between ARG 160 and PHE 161
+gap of 9.583742 A between ARG 677 and PHE 678
+gap of 9.582807 A between ARG 1194 and PHE 1195
+gap of 9.581872 A between ARG 1711 and PHE 1712
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/mp/3mpm/4amber_3mpm.prmtop
 
 	Running AmberPrep : 3mpm.pdb
 
@@ -115,6 +186,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3mpm.pdb
@@ -122,7 +195,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3mpm.prmtop
     rst7   : 4amber_3mpm.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm
 return_files 3mpm
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3mpm.pdb
@@ -156,7 +229,7 @@ cp 4amber_3mpm.prmtop /net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm
 3mpm_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm/3mpm.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/mp/3mpm
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm/3mpm_refine_001.log
 ------------------------------
@@ -178,16 +251,16 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/5LK.cif
   Restarting
     phenix.refine 3mpm.pdb 3mpm.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm/4amber_3mpm.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm/4amber_3mpm.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2 /net/cci/lbnl/nigel/all_chemical_components/cifs/5LK.cif
     
-# Date 2017-02-17 Time 16:10:34 PST -0800 (1487376634.10 s)
+# Date 2017-02-21 Time 15:47:54 PST -0800 (1487720874.55 s)
 #phil __OFF__
 
 Command line arguments: "3mpm.pdb" "3mpm.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm/4amber_3mpm.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/mp/3mpm/4amber_3mpm.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2" "/net/cci/lbnl/nigel/all_chemical_components/cifs/5LK.cif"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 20940
-JOB_ID = 6368462
+PID = 6243
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -360,7 +433,7 @@ Number of work/free reflections by resolution:
           Link IDs: {None: 259}
   Number of atoms with unknown nonbonded energy type symbols: 1
     "HETATM 4225 H123 5LK A   1 .*.     H  "
-  Time building chain proxies: 4.22, per 1000 atoms: 0.84
+  Time building chain proxies: 3.57, per 1000 atoms: 0.71
   Number of scatterers: 5017
   At special positions: 0
   Unit cell: (58.073, 44.624, 120.967, 90, 90, 90)

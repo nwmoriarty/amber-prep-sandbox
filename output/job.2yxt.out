@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 80
 only_code None
 force_amber_prep True
@@ -12,35 +12,128 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/yx/pdb2yxt.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/yx/r2yxtsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/yx/2yxt.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.cif
-Can't determine output label for r2yxtsf,_refln.crystal_id - skipping.
-Can't determine output label for r2yxtsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2yxtsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2yxt.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/yx/pdb2yxt.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/yx/r2yxtsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/yx/2yxt.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.cif
-Can't determine output label for r2yxtsf,_refln.crystal_id - skipping.
-Can't determine output label for r2yxtsf,_refln.scale_group_code - skipping.
-Can't determine output label for r2yxtsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2yxt.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/yx/2yxt/4amber_2yxt.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt/2yxt.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2yxt.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 4.829474 A between LYS 117 and GLY 118
+gap of 8.624826 A between ARG 203 and GLY 204
+gap of 6.216315 A between GLN 579 and PRO 580
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 2yxt_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 4.829474 A between LYS 117 and GLY 118
+gap of 8.624826 A between ARG 203 and GLY 204
+gap of 6.216315 A between GLN 579 and PRO 580
+gap of 4.829474 A between LYS 1265 and GLY 1266
+gap of 8.624826 A between ARG 1351 and GLY 1352
+gap of 6.216315 A between GLN 1727 and PRO 1728
+gap of 4.829474 A between LYS 2413 and GLY 2414
+gap of 8.624826 A between ARG 2499 and GLY 2500
+gap of 6.216315 A between GLN 2875 and PRO 2876
+gap of 4.829474 A between LYS 3561 and GLY 3562
+gap of 8.624826 A between ARG 3647 and GLY 3648
+gap of 6.216315 A between GLN 4023 and PRO 4024
+gap of 4.829474 A between LYS 4709 and GLY 4710
+gap of 8.624826 A between ARG 4795 and GLY 4796
+gap of 6.216315 A between GLN 5171 and PRO 5172
+gap of 4.829474 A between LYS 5857 and GLY 5858
+gap of 8.624826 A between ARG 5943 and GLY 5944
+gap of 6.216315 A between GLN 6319 and PRO 6320
+gap of 4.829474 A between LYS 7005 and GLY 7006
+gap of 8.625380 A between ARG 7091 and GLY 7092
+gap of 6.216315 A between GLN 7467 and PRO 7468
+gap of 4.829474 A between LYS 8153 and GLY 8154
+gap of 8.625380 A between ARG 8239 and GLY 8240
+gap of 6.216315 A between GLN 8615 and PRO 8616
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/yx/2yxt/4amber_2yxt.prmtop
 
 	Running AmberPrep : 2yxt.pdb
 
@@ -115,6 +208,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2yxt.pdb
@@ -122,7 +217,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2yxt.prmtop
     rst7   : 4amber_2yxt.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt
 return_files 2yxt
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2yxt.pdb
@@ -156,7 +251,7 @@ cp 4amber_2yxt.prmtop /net/chevy/raid1/nigel/amber/hi_lo/yx/2yxt
 2yxt_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/yx/2yxt/2yxt.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/yx/2yxt
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/yx/2yxt/2yxt_refine_001.log
 ------------------------------

@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 140
 only_code None
 force_amber_prep True
@@ -12,36 +12,139 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f0/pdb3f0y.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/f0/r3f0ysf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/f0/3f0y.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.cif
-Can't determine output label for r3f0ysf,_refln.crystal_id - skipping.
-Can't determine output label for r3f0ysf,_refln.scale_group_code - skipping.
-Can't determine output label for r3f0ysf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3f0y.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f0/pdb3f0y.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/f0/r3f0ysf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/f0/3f0y.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.cif
-Can't determine output label for r3f0ysf,_refln.crystal_id - skipping.
-Can't determine output label for r3f0ysf,_refln.scale_group_code - skipping.
-Can't determine output label for r3f0ysf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 3f0y.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop
-natom*3 error
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 3f0y.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+I
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+ARG_62
+THR_131
+ASN_170
+TYR_192
+SER_250
+VAL_444
+THR_527
+VAL_642
+ASN_648
+MET_651
+ASN_657
+TYR_786
+VAL_840
+THR_951
+TYR_984
+THR_1028
+VAL_1038
+THR_1149
+TYR_1182
+THR_1227
+VAL_1237
+TYR_1381
+VAL_1435
+THR_1518
+CYS_1519
+THR_1546
+ASN_1638
+
+---------- Mising heavy atom(s)
+
+None
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 3f0y_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+I
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop
 
 	Running AmberPrep : 3f0y.pdb
 
@@ -116,6 +219,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 3f0y.pdb
@@ -123,7 +228,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_3f0y.prmtop
     rst7   : 4amber_3f0y.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
 return_files 3f0y
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3f0y.pdb
@@ -157,7 +262,7 @@ cp 4amber_3f0y.prmtop /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y
 3f0y_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/3f0y_refine_001.log
 ------------------------------
@@ -173,16 +278,16 @@ Running phenix.refine
 
 phenix.refine 3f0y.pdb 3f0y.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
-# Date 2017-02-17 Time 19:32:40 PST -0800 (1487388760.49 s)
+# Date 2017-02-21 Time 16:11:48 PST -0800 (1487722308.34 s)
 #phil __OFF__
 
 Command line arguments: "3f0y.pdb" "3f0y.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 27149
-JOB_ID = 6368462
+PID = 39020
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -499,7 +604,7 @@ Number of work/free reflections by resolution:
       pdb=" O   HOH F 797 " occ=0.50
       pdb=" H1  HOH F 797 " occ=0.50
       pdb=" H2  HOH F 797 " occ=0.50
-  Time building chain proxies: 21.59, per 1000 atoms: 0.66
+  Time building chain proxies: 19.59, per 1000 atoms: 0.60
   Number of scatterers: 32667
   At special positions: 0
   Unit cell: (106.47, 106.47, 311.71, 90, 90, 120)
@@ -541,7 +646,7 @@ All atoms refined with f_prime=0 and f_double_prime=0.
 
   topology    : /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.prmtop
   coordinates : /net/chevy/raid1/nigel/amber/hi_lo/f0/3f0y/4amber_3f0y.rst7
-  time taken  : 180.4
+  time taken  : 204.8
 
 ======================== Summary of geometry restraints =======================
 
@@ -557,10 +662,10 @@ All atoms refined with f_prime=0 and f_double_prime=0.
         Amino acid - RNA/DNA : False
       
   Number of custom bonds: simple=0, symmetry=0
-  Time building additional restraints: 35.61
-  Conformation dependent library (CDL) restraints added in 1.8 seconds
+  Time building additional restraints: 27.72
+  Conformation dependent library (CDL) restraints added in 1.4 seconds
   
-  Time building geometry restraints manager: 36.90 seconds
+  Time building geometry restraints manager: 29.69 seconds
 
   NOTE: a complete listing of the restraints can be obtained by requesting
         output of .geo file.
@@ -802,9 +907,9 @@ Look at refinement.ncs for more NCS related parameters.
 =================== Write initial parameters into .eff file ===================
 
 Writing effective parameters to file:
-  /net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y_refine_002.eff
+  /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y_refine_002.eff
 
-CPU time processing inputs: 282.52
+CPU time processing inputs: 269.15
 
 
 ============================ Non-default parameters ===========================
@@ -820,7 +925,7 @@ refinement {
   }
   input {
     pdb {
-      file_name = "/net/rebus/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb"
+      file_name = "/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f0/3f0y/3f0y.pdb"
     }
     xray_data {
       file_name = "3f0y.mtz"
@@ -1003,18 +1108,18 @@ Rotatable:
 |phase err.(test): min =        0.00 max =           89.52 mean =        22.17|
 |-----------------------------------------------------------------------------|
   Amber total: -242523.90 bonds (n=197814): 11809.89 angles (n=296154): 14163.00 diheds (n=756696): 125664.59 elec.: -356959.47 vdW: -37201.91
-starting angle_rmsd: 19:38:35
-done with angle_rmsd: 19:38:38
-starting bond_rmsd: 19:38:38
-done with bond_rmsd: 19:38:40
+starting angle_rmsd: 16:17:46
+done with angle_rmsd: 16:17:48
+starting bond_rmsd: 16:17:48
+done with bond_rmsd: 16:17:49
 
         ----------Initial model statistics (before refinement)----------       
 
   Amber total: -242523.90 bonds (n=197814): 11809.89 angles (n=296154): 14163.00 diheds (n=756696): 125664.59 elec.: -356959.47 vdW: -37201.91
-starting angle_rmsd: 19:39:16
-done with angle_rmsd: 19:39:19
-starting bond_rmsd: 19:39:19
-done with bond_rmsd: 19:39:30
+starting angle_rmsd: 16:18:21
+done with angle_rmsd: 16:18:23
+starting bond_rmsd: 16:18:23
+done with bond_rmsd: 16:18:33
   Bond deltas from Amber ideals
     Atoms                                      ideal   model   delta
    C3 GOL   27248     -   O3 GOL   27249        1.423   1.294   0.129
@@ -1137,20 +1242,20 @@ Total model structure factor:
   Approximation of k_total with k_overall*exp(-b_overall*s**2/4)
     k_overall=1.0047   b_overall=-0.1600 
   Amber total: -242523.90 bonds (n=197814): 11809.89 angles (n=296154): 14163.00 diheds (n=756696): 125664.59 elec.: -356959.47 vdW: -37201.91
-starting angle_rmsd: 19:42:17
-done with angle_rmsd: 19:42:19
-starting bond_rmsd: 19:42:19
-done with bond_rmsd: 19:42:21
+starting angle_rmsd: 16:20:49
+done with angle_rmsd: 16:20:52
+starting bond_rmsd: 16:20:52
+done with bond_rmsd: 16:20:54
 
 ============================ Set refinement target ============================
 
   using refinement target ls_wunit_k1 
 
   Amber total: -242523.90 bonds (n=197814): 11809.89 angles (n=296154): 14163.00 diheds (n=756696): 125664.59 elec.: -356959.47 vdW: -37201.91
-starting angle_rmsd: 19:42:46
-done with angle_rmsd: 19:42:48
-starting bond_rmsd: 19:42:48
-done with bond_rmsd: 19:42:54
+starting angle_rmsd: 16:21:16
+done with angle_rmsd: 16:21:18
+starting bond_rmsd: 16:21:18
+done with bond_rmsd: 16:21:29
 
 ================================== NQH flips ==================================
 
@@ -1186,15 +1291,15 @@ Total number of N/Q/H flips: 23
 
 r_work=0.1915 r_free=0.2160
   Amber total: -244014.42 bonds (n=197814): 11809.89 angles (n=296154): 14163.00 diheds (n=756696): 125675.28 elec.: -358477.09 vdW: -37185.51
-starting angle_rmsd: 19:43:48
-done with angle_rmsd: 19:43:51
-starting bond_rmsd: 19:43:51
-done with bond_rmsd: 19:43:53
+starting angle_rmsd: 16:22:22
+done with angle_rmsd: 16:22:24
+starting bond_rmsd: 16:22:24
+done with bond_rmsd: 16:22:26
 
 ==================== Compute data/restraints target weights ===================
 
   Amber total: -244014.42 bonds (n=197814): 11809.89 angles (n=296154): 14163.00 diheds (n=756696): 125675.28 elec.: -358477.09 vdW: -37185.51
-  Amber total: 47410199524.62 bonds (n=197814): 839969.69 angles (n=296154): 23132.68 diheds (n=756696): 126541.89 elec.: -339736.21 vdW: 47409549616.57
+  Amber total: 47410199537.21 bonds (n=197814): 839969.69 angles (n=296154): 23132.68 diheds (n=756696): 126541.89 elec.: -339736.21 vdW: 47409549629.16
 _______________________________________________________________________________
 
 Filtering AMBER geometry gradients
@@ -1202,5 +1307,5 @@ Filtering AMBER geometry gradients
   Percent of gradients filtered: 0.00
 _______________________________________________________________________________
 
-Sorry: wxc is too high: wxc=1170.726181
+Sorry: wxc is too high: wxc=1170.726182
 

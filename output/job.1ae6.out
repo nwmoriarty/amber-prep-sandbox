@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 189
 only_code None
 force_amber_prep True
@@ -12,37 +12,117 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ae/pdb1ae6.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ae/r1ae6sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ae/1ae6.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.cif
-Can't determine output label for r1ae6sf,_refln.crystal_id - skipping.
-Can't determine output label for r1ae6sf,wavelength_id=1,_refln.pdbx_F_calc_part_solvent,_refln.pdbx_phase_calc_part_solvent - skipping.
-Can't determine output label for r1ae6sf,_refln.scale_group_code - skipping.
-Can't determine output label for r1ae6sf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1ae6.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ae/pdb1ae6.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ae/r1ae6sf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ae/1ae6.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.cif
-Can't determine output label for r1ae6sf,_refln.crystal_id - skipping.
-Can't determine output label for r1ae6sf,wavelength_id=1,_refln.pdbx_F_calc_part_solvent,_refln.pdbx_phase_calc_part_solvent - skipping.
-Can't determine output label for r1ae6sf,_refln.scale_group_code - skipping.
-Can't determine output label for r1ae6sf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1ae6.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ae/1ae6/4amber_1ae6.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6/1ae6.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1ae6.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+H
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 1ae6_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+H
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 3.212789 A between SER 28 and LEU 29
+gap of 5.168117 A between LEU 29 and LEU 29
+gap of 4.301423 A between LEU 29 and HIE 30
+gap of 4.423266 A between LEU 301 and SER 302
+gap of 5.171451 A between SER 302 and SER 302
+gap of 3.326007 A between SER 302 and LEU 303
+gap of 3.631850 A between TYR 320 and TYR 321
+gap of 5.209044 A between TYR 321 and TYR 321
+gap of 3.046358 A between TYR 321 and ALA 322
+gap of 3.212789 A between SER 462 and LEU 463
+gap of 5.168117 A between LEU 463 and LEU 463
+gap of 4.301423 A between LEU 463 and HIE 464
+gap of 4.423266 A between LEU 735 and SER 736
+gap of 5.171451 A between SER 736 and SER 736
+gap of 3.326007 A between SER 736 and LEU 737
+gap of 3.631850 A between TYR 754 and TYR 755
+gap of 5.209044 A between TYR 755 and TYR 755
+gap of 3.046358 A between TYR 755 and ALA 756
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ae/1ae6/4amber_1ae6.prmtop
 
 	Running AmberPrep : 1ae6.pdb
 
@@ -109,6 +189,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 1ae6.pdb
@@ -116,7 +198,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_1ae6.prmtop
     rst7   : 4amber_1ae6.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6
 return_files 1ae6
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1ae6.pdb
@@ -150,7 +232,7 @@ cp 4amber_1ae6.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6
 1ae6_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6/1ae6.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ae/1ae6
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6/1ae6_refine_001.log
 ------------------------------
@@ -161,16 +243,16 @@ Running phenix.refine
 
 phenix.refine 1ae6.pdb 1ae6.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-17 Time 20:17:48 PST -0800 (1487391468.46 s)
+# Date 2017-02-21 Time 16:08:33 PST -0800 (1487722113.49 s)
 #phil __OFF__
 
 Command line arguments: "1ae6.pdb" "1ae6.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 65363
-JOB_ID = 6368462
+PID = 34753
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -338,16 +420,16 @@ Running phenix.refine
 
 phenix.refine 1ae6.pdb 1ae6.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6/4amber_1ae6.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6/4amber_1ae6.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
-# Date 2017-02-17 Time 20:17:57 PST -0800 (1487391477.60 s)
+# Date 2017-02-21 Time 16:08:42 PST -0800 (1487722122.47 s)
 #phil __OFF__
 
 Command line arguments: "1ae6.pdb" "1ae6.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6/4amber_1ae6.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ae/1ae6/4amber_1ae6.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 65471
-JOB_ID = 6368462
+PID = 34835
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400

@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 144
 only_code None
 force_amber_prep True
@@ -12,39 +12,104 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ox/pdb2oxo.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ox/r2oxosf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ox/2oxo.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.cif
-Can't determine output label for r2oxosf,_refln.crystal_id - skipping.
-Can't determine output label for r2oxosf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.099
-R-free-flags: missing 413 reflections
-Can't determine output label for r2oxosf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2oxo.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ox/pdb2oxo.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ox/r2oxosf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ox/2oxo.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.cif
-Can't determine output label for r2oxosf,_refln.crystal_id - skipping.
-Can't determine output label for r2oxosf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.099
-R-free-flags: missing 413 reflections
-Can't determine output label for r2oxosf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2oxo.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ox/2oxo/4amber_2oxo.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo/2oxo.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2oxo.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+HIS_91
+
+---------- Mising heavy atom(s)
+
+LYS_12 misses 3 heavy atom(s)
+LYS_20 misses 3 heavy atom(s)
+LYS_32 misses 2 heavy atom(s)
+ARG_36 misses 5 heavy atom(s)
+LYS_49 misses 4 heavy atom(s)
+LEU_69 misses 3 heavy atom(s)
+ARG_71 misses 3 heavy atom(s)
+GLU_84 misses 2 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+
+==================================================
+Summary of pdb4amber for: 2oxo_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ox/2oxo/4amber_2oxo.prmtop
 
 	Running AmberPrep : 2oxo.pdb
 
@@ -115,6 +180,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2oxo.pdb
@@ -122,7 +189,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2oxo.prmtop
     rst7   : 4amber_2oxo.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo
 return_files 2oxo
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2oxo.pdb
@@ -156,7 +223,7 @@ cp 4amber_2oxo.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ox/2oxo
 2oxo_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ox/2oxo/2oxo.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ox/2oxo
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ox/2oxo/2oxo_refine_001.log
 ------------------------------

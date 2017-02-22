@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 237
 only_code None
 force_amber_prep True
@@ -7,40 +7,701 @@ dry_run False
 /net/chevy/raid1/nigel/amber/hi_lo
 /net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq
 1lnq.pdb 4phenix_1lnq.pdb
+1lnq.pdb 4phenix_1lnq.pdb
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ln/pdb1lnq.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ln/r1lnqsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ln/1lnq.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.cif
-Can't determine output label for r1lnqsf,_refln.crystal_id - skipping.
-Can't determine output label for r1lnqsf,_refln.scale_group_code - skipping.
-Can't determine output label for r1lnqsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1lnq.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ln/pdb1lnq.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/ln/r1lnqsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/ln/1lnq.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.cif
-Can't determine output label for r1lnqsf,_refln.crystal_id - skipping.
-Can't determine output label for r1lnqsf,_refln.scale_group_code - skipping.
-Can't determine output label for r1lnqsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1lnq.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/ln/1lnq/4amber_1lnq.prmtop
-not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq/4amber_1lnq.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq/1lnq.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1lnq.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 25.512248 A between LEU 80 and ARG 81
+gap of 24.845504 A between LEU 381 and ARG 382
+gap of 25.278533 A between LEU 682 and ARG 683
+gap of 24.882128 A between LEU 983 and ARG 984
+gap of 22.703388 A between LEU 1284 and ARG 1285
+gap of 24.161030 A between LEU 1585 and ARG 1586
+gap of 22.470555 A between LEU 1886 and ARG 1887
+gap of 24.141322 A between LEU 2187 and ARG 2188
+
+---------- Mising heavy atom(s)
+
+PRO_1 misses 2 heavy atom(s)
+THR_3 misses 2 heavy atom(s)
+ARG_4 misses 6 heavy atom(s)
+ILE_5 misses 3 heavy atom(s)
+LEU_6 misses 3 heavy atom(s)
+LEU_7 misses 3 heavy atom(s)
+LEU_8 misses 3 heavy atom(s)
+VAL_9 misses 2 heavy atom(s)
+LEU_10 misses 3 heavy atom(s)
+VAL_12 misses 2 heavy atom(s)
+ILE_13 misses 3 heavy atom(s)
+ILE_14 misses 3 heavy atom(s)
+TYR_15 misses 7 heavy atom(s)
+THR_17 misses 2 heavy atom(s)
+PHE_20 misses 6 heavy atom(s)
+HIS_21 misses 5 heavy atom(s)
+PHE_22 misses 6 heavy atom(s)
+ILE_23 misses 3 heavy atom(s)
+GLU_24 misses 4 heavy atom(s)
+GLU_26 misses 4 heavy atom(s)
+SER_27 misses 1 heavy atom(s)
+TRP_28 misses 9 heavy atom(s)
+THR_29 misses 2 heavy atom(s)
+VAL_30 misses 2 heavy atom(s)
+SER_31 misses 1 heavy atom(s)
+LEU_32 misses 3 heavy atom(s)
+TYR_33 misses 7 heavy atom(s)
+TRP_34 misses 9 heavy atom(s)
+THR_35 misses 2 heavy atom(s)
+PHE_36 misses 6 heavy atom(s)
+VAL_37 misses 2 heavy atom(s)
+THR_38 misses 2 heavy atom(s)
+ILE_39 misses 3 heavy atom(s)
+THR_41 misses 2 heavy atom(s)
+VAL_42 misses 2 heavy atom(s)
+TYR_44 misses 7 heavy atom(s)
+ASP_46 misses 3 heavy atom(s)
+TYR_47 misses 7 heavy atom(s)
+SER_48 misses 1 heavy atom(s)
+PRO_49 misses 2 heavy atom(s)
+SER_50 misses 1 heavy atom(s)
+THR_51 misses 2 heavy atom(s)
+PRO_52 misses 2 heavy atom(s)
+LEU_53 misses 3 heavy atom(s)
+MET_55 misses 3 heavy atom(s)
+TYR_56 misses 7 heavy atom(s)
+PHE_57 misses 6 heavy atom(s)
+THR_58 misses 2 heavy atom(s)
+VAL_59 misses 2 heavy atom(s)
+THR_60 misses 2 heavy atom(s)
+LEU_61 misses 3 heavy atom(s)
+ILE_62 misses 3 heavy atom(s)
+VAL_63 misses 2 heavy atom(s)
+LEU_64 misses 3 heavy atom(s)
+ILE_66 misses 3 heavy atom(s)
+THR_68 misses 2 heavy atom(s)
+PHE_69 misses 6 heavy atom(s)
+VAL_71 misses 2 heavy atom(s)
+VAL_73 misses 2 heavy atom(s)
+GLU_74 misses 4 heavy atom(s)
+ARG_75 misses 6 heavy atom(s)
+LEU_76 misses 3 heavy atom(s)
+LEU_77 misses 3 heavy atom(s)
+GLU_78 misses 4 heavy atom(s)
+PHE_79 misses 6 heavy atom(s)
+LEU_80 misses 3 heavy atom(s)
+PRO_302 misses 2 heavy atom(s)
+THR_304 misses 2 heavy atom(s)
+ARG_305 misses 6 heavy atom(s)
+ILE_306 misses 3 heavy atom(s)
+LEU_307 misses 3 heavy atom(s)
+LEU_308 misses 3 heavy atom(s)
+LEU_309 misses 3 heavy atom(s)
+VAL_310 misses 2 heavy atom(s)
+LEU_311 misses 3 heavy atom(s)
+VAL_313 misses 2 heavy atom(s)
+ILE_314 misses 3 heavy atom(s)
+ILE_315 misses 3 heavy atom(s)
+TYR_316 misses 7 heavy atom(s)
+THR_318 misses 2 heavy atom(s)
+PHE_321 misses 6 heavy atom(s)
+HIS_322 misses 5 heavy atom(s)
+PHE_323 misses 6 heavy atom(s)
+ILE_324 misses 3 heavy atom(s)
+GLU_325 misses 4 heavy atom(s)
+GLU_327 misses 4 heavy atom(s)
+SER_328 misses 1 heavy atom(s)
+TRP_329 misses 9 heavy atom(s)
+THR_330 misses 2 heavy atom(s)
+VAL_331 misses 2 heavy atom(s)
+SER_332 misses 1 heavy atom(s)
+LEU_333 misses 3 heavy atom(s)
+TYR_334 misses 7 heavy atom(s)
+TRP_335 misses 9 heavy atom(s)
+THR_336 misses 2 heavy atom(s)
+PHE_337 misses 6 heavy atom(s)
+VAL_338 misses 2 heavy atom(s)
+THR_339 misses 2 heavy atom(s)
+ILE_340 misses 3 heavy atom(s)
+THR_342 misses 2 heavy atom(s)
+VAL_343 misses 2 heavy atom(s)
+TYR_345 misses 7 heavy atom(s)
+ASP_347 misses 3 heavy atom(s)
+TYR_348 misses 7 heavy atom(s)
+SER_349 misses 1 heavy atom(s)
+PRO_350 misses 2 heavy atom(s)
+SER_351 misses 1 heavy atom(s)
+THR_352 misses 2 heavy atom(s)
+PRO_353 misses 2 heavy atom(s)
+LEU_354 misses 3 heavy atom(s)
+MET_356 misses 3 heavy atom(s)
+TYR_357 misses 7 heavy atom(s)
+PHE_358 misses 6 heavy atom(s)
+THR_359 misses 2 heavy atom(s)
+VAL_360 misses 2 heavy atom(s)
+THR_361 misses 2 heavy atom(s)
+LEU_362 misses 3 heavy atom(s)
+ILE_363 misses 3 heavy atom(s)
+VAL_364 misses 2 heavy atom(s)
+LEU_365 misses 3 heavy atom(s)
+ILE_367 misses 3 heavy atom(s)
+THR_369 misses 2 heavy atom(s)
+PHE_370 misses 6 heavy atom(s)
+VAL_372 misses 2 heavy atom(s)
+VAL_374 misses 2 heavy atom(s)
+GLU_375 misses 4 heavy atom(s)
+ARG_376 misses 6 heavy atom(s)
+LEU_377 misses 3 heavy atom(s)
+LEU_378 misses 3 heavy atom(s)
+GLU_379 misses 4 heavy atom(s)
+PHE_380 misses 6 heavy atom(s)
+LEU_381 misses 3 heavy atom(s)
+PRO_603 misses 2 heavy atom(s)
+THR_605 misses 2 heavy atom(s)
+ARG_606 misses 6 heavy atom(s)
+ILE_607 misses 3 heavy atom(s)
+LEU_608 misses 3 heavy atom(s)
+LEU_609 misses 3 heavy atom(s)
+LEU_610 misses 3 heavy atom(s)
+VAL_611 misses 2 heavy atom(s)
+LEU_612 misses 3 heavy atom(s)
+VAL_614 misses 2 heavy atom(s)
+ILE_615 misses 3 heavy atom(s)
+ILE_616 misses 3 heavy atom(s)
+TYR_617 misses 7 heavy atom(s)
+THR_619 misses 2 heavy atom(s)
+PHE_622 misses 6 heavy atom(s)
+HIS_623 misses 5 heavy atom(s)
+PHE_624 misses 6 heavy atom(s)
+ILE_625 misses 3 heavy atom(s)
+GLU_626 misses 4 heavy atom(s)
+GLU_628 misses 4 heavy atom(s)
+SER_629 misses 1 heavy atom(s)
+TRP_630 misses 9 heavy atom(s)
+THR_631 misses 2 heavy atom(s)
+VAL_632 misses 2 heavy atom(s)
+SER_633 misses 1 heavy atom(s)
+LEU_634 misses 3 heavy atom(s)
+TYR_635 misses 7 heavy atom(s)
+TRP_636 misses 9 heavy atom(s)
+THR_637 misses 2 heavy atom(s)
+PHE_638 misses 6 heavy atom(s)
+VAL_639 misses 2 heavy atom(s)
+THR_640 misses 2 heavy atom(s)
+ILE_641 misses 3 heavy atom(s)
+THR_643 misses 2 heavy atom(s)
+VAL_644 misses 2 heavy atom(s)
+TYR_646 misses 7 heavy atom(s)
+ASP_648 misses 3 heavy atom(s)
+TYR_649 misses 7 heavy atom(s)
+SER_650 misses 1 heavy atom(s)
+PRO_651 misses 2 heavy atom(s)
+SER_652 misses 1 heavy atom(s)
+THR_653 misses 2 heavy atom(s)
+PRO_654 misses 2 heavy atom(s)
+LEU_655 misses 3 heavy atom(s)
+MET_657 misses 3 heavy atom(s)
+TYR_658 misses 7 heavy atom(s)
+PHE_659 misses 6 heavy atom(s)
+THR_660 misses 2 heavy atom(s)
+VAL_661 misses 2 heavy atom(s)
+THR_662 misses 2 heavy atom(s)
+LEU_663 misses 3 heavy atom(s)
+ILE_664 misses 3 heavy atom(s)
+VAL_665 misses 2 heavy atom(s)
+LEU_666 misses 3 heavy atom(s)
+ILE_668 misses 3 heavy atom(s)
+THR_670 misses 2 heavy atom(s)
+PHE_671 misses 6 heavy atom(s)
+VAL_673 misses 2 heavy atom(s)
+VAL_675 misses 2 heavy atom(s)
+GLU_676 misses 4 heavy atom(s)
+ARG_677 misses 6 heavy atom(s)
+LEU_678 misses 3 heavy atom(s)
+LEU_679 misses 3 heavy atom(s)
+GLU_680 misses 4 heavy atom(s)
+PHE_681 misses 6 heavy atom(s)
+LEU_682 misses 3 heavy atom(s)
+PRO_904 misses 2 heavy atom(s)
+THR_906 misses 2 heavy atom(s)
+ARG_907 misses 6 heavy atom(s)
+ILE_908 misses 3 heavy atom(s)
+LEU_909 misses 3 heavy atom(s)
+LEU_910 misses 3 heavy atom(s)
+LEU_911 misses 3 heavy atom(s)
+VAL_912 misses 2 heavy atom(s)
+LEU_913 misses 3 heavy atom(s)
+VAL_915 misses 2 heavy atom(s)
+ILE_916 misses 3 heavy atom(s)
+ILE_917 misses 3 heavy atom(s)
+TYR_918 misses 7 heavy atom(s)
+THR_920 misses 2 heavy atom(s)
+PHE_923 misses 6 heavy atom(s)
+HIS_924 misses 5 heavy atom(s)
+PHE_925 misses 6 heavy atom(s)
+ILE_926 misses 3 heavy atom(s)
+GLU_927 misses 4 heavy atom(s)
+GLU_929 misses 4 heavy atom(s)
+SER_930 misses 1 heavy atom(s)
+TRP_931 misses 9 heavy atom(s)
+THR_932 misses 2 heavy atom(s)
+VAL_933 misses 2 heavy atom(s)
+SER_934 misses 1 heavy atom(s)
+LEU_935 misses 3 heavy atom(s)
+TYR_936 misses 7 heavy atom(s)
+TRP_937 misses 9 heavy atom(s)
+THR_938 misses 2 heavy atom(s)
+PHE_939 misses 6 heavy atom(s)
+VAL_940 misses 2 heavy atom(s)
+THR_941 misses 2 heavy atom(s)
+ILE_942 misses 3 heavy atom(s)
+THR_944 misses 2 heavy atom(s)
+VAL_945 misses 2 heavy atom(s)
+TYR_947 misses 7 heavy atom(s)
+ASP_949 misses 3 heavy atom(s)
+TYR_950 misses 7 heavy atom(s)
+SER_951 misses 1 heavy atom(s)
+PRO_952 misses 2 heavy atom(s)
+SER_953 misses 1 heavy atom(s)
+THR_954 misses 2 heavy atom(s)
+PRO_955 misses 2 heavy atom(s)
+LEU_956 misses 3 heavy atom(s)
+MET_958 misses 3 heavy atom(s)
+TYR_959 misses 7 heavy atom(s)
+PHE_960 misses 6 heavy atom(s)
+THR_961 misses 2 heavy atom(s)
+VAL_962 misses 2 heavy atom(s)
+THR_963 misses 2 heavy atom(s)
+LEU_964 misses 3 heavy atom(s)
+ILE_965 misses 3 heavy atom(s)
+VAL_966 misses 2 heavy atom(s)
+LEU_967 misses 3 heavy atom(s)
+ILE_969 misses 3 heavy atom(s)
+THR_971 misses 2 heavy atom(s)
+PHE_972 misses 6 heavy atom(s)
+VAL_974 misses 2 heavy atom(s)
+VAL_976 misses 2 heavy atom(s)
+GLU_977 misses 4 heavy atom(s)
+ARG_978 misses 6 heavy atom(s)
+LEU_979 misses 3 heavy atom(s)
+LEU_980 misses 3 heavy atom(s)
+GLU_981 misses 4 heavy atom(s)
+PHE_982 misses 6 heavy atom(s)
+LEU_983 misses 3 heavy atom(s)
+PRO_1205 misses 2 heavy atom(s)
+THR_1207 misses 2 heavy atom(s)
+ARG_1208 misses 6 heavy atom(s)
+ILE_1209 misses 3 heavy atom(s)
+LEU_1210 misses 3 heavy atom(s)
+LEU_1211 misses 3 heavy atom(s)
+LEU_1212 misses 3 heavy atom(s)
+VAL_1213 misses 2 heavy atom(s)
+LEU_1214 misses 3 heavy atom(s)
+VAL_1216 misses 2 heavy atom(s)
+ILE_1217 misses 3 heavy atom(s)
+ILE_1218 misses 3 heavy atom(s)
+TYR_1219 misses 7 heavy atom(s)
+THR_1221 misses 2 heavy atom(s)
+PHE_1224 misses 6 heavy atom(s)
+HIS_1225 misses 5 heavy atom(s)
+PHE_1226 misses 6 heavy atom(s)
+ILE_1227 misses 3 heavy atom(s)
+GLU_1228 misses 4 heavy atom(s)
+GLU_1230 misses 4 heavy atom(s)
+SER_1231 misses 1 heavy atom(s)
+TRP_1232 misses 9 heavy atom(s)
+THR_1233 misses 2 heavy atom(s)
+VAL_1234 misses 2 heavy atom(s)
+SER_1235 misses 1 heavy atom(s)
+LEU_1236 misses 3 heavy atom(s)
+TYR_1237 misses 7 heavy atom(s)
+TRP_1238 misses 9 heavy atom(s)
+THR_1239 misses 2 heavy atom(s)
+PHE_1240 misses 6 heavy atom(s)
+VAL_1241 misses 2 heavy atom(s)
+THR_1242 misses 2 heavy atom(s)
+ILE_1243 misses 3 heavy atom(s)
+THR_1245 misses 2 heavy atom(s)
+VAL_1246 misses 2 heavy atom(s)
+TYR_1248 misses 7 heavy atom(s)
+ASP_1250 misses 3 heavy atom(s)
+TYR_1251 misses 7 heavy atom(s)
+SER_1252 misses 1 heavy atom(s)
+PRO_1253 misses 2 heavy atom(s)
+SER_1254 misses 1 heavy atom(s)
+THR_1255 misses 2 heavy atom(s)
+PRO_1256 misses 2 heavy atom(s)
+LEU_1257 misses 3 heavy atom(s)
+MET_1259 misses 3 heavy atom(s)
+TYR_1260 misses 7 heavy atom(s)
+PHE_1261 misses 6 heavy atom(s)
+THR_1262 misses 2 heavy atom(s)
+VAL_1263 misses 2 heavy atom(s)
+THR_1264 misses 2 heavy atom(s)
+LEU_1265 misses 3 heavy atom(s)
+ILE_1266 misses 3 heavy atom(s)
+VAL_1267 misses 2 heavy atom(s)
+LEU_1268 misses 3 heavy atom(s)
+ILE_1270 misses 3 heavy atom(s)
+THR_1272 misses 2 heavy atom(s)
+PHE_1273 misses 6 heavy atom(s)
+VAL_1275 misses 2 heavy atom(s)
+VAL_1277 misses 2 heavy atom(s)
+GLU_1278 misses 4 heavy atom(s)
+ARG_1279 misses 6 heavy atom(s)
+LEU_1280 misses 3 heavy atom(s)
+LEU_1281 misses 3 heavy atom(s)
+GLU_1282 misses 4 heavy atom(s)
+PHE_1283 misses 6 heavy atom(s)
+LEU_1284 misses 3 heavy atom(s)
+PRO_1506 misses 2 heavy atom(s)
+THR_1508 misses 2 heavy atom(s)
+ARG_1509 misses 6 heavy atom(s)
+ILE_1510 misses 3 heavy atom(s)
+LEU_1511 misses 3 heavy atom(s)
+LEU_1512 misses 3 heavy atom(s)
+LEU_1513 misses 3 heavy atom(s)
+VAL_1514 misses 2 heavy atom(s)
+LEU_1515 misses 3 heavy atom(s)
+VAL_1517 misses 2 heavy atom(s)
+ILE_1518 misses 3 heavy atom(s)
+ILE_1519 misses 3 heavy atom(s)
+TYR_1520 misses 7 heavy atom(s)
+THR_1522 misses 2 heavy atom(s)
+PHE_1525 misses 6 heavy atom(s)
+HIS_1526 misses 5 heavy atom(s)
+PHE_1527 misses 6 heavy atom(s)
+ILE_1528 misses 3 heavy atom(s)
+GLU_1529 misses 4 heavy atom(s)
+GLU_1531 misses 4 heavy atom(s)
+SER_1532 misses 1 heavy atom(s)
+TRP_1533 misses 9 heavy atom(s)
+THR_1534 misses 2 heavy atom(s)
+VAL_1535 misses 2 heavy atom(s)
+SER_1536 misses 1 heavy atom(s)
+LEU_1537 misses 3 heavy atom(s)
+TYR_1538 misses 7 heavy atom(s)
+TRP_1539 misses 9 heavy atom(s)
+THR_1540 misses 2 heavy atom(s)
+PHE_1541 misses 6 heavy atom(s)
+VAL_1542 misses 2 heavy atom(s)
+THR_1543 misses 2 heavy atom(s)
+ILE_1544 misses 3 heavy atom(s)
+THR_1546 misses 2 heavy atom(s)
+VAL_1547 misses 2 heavy atom(s)
+TYR_1549 misses 7 heavy atom(s)
+ASP_1551 misses 3 heavy atom(s)
+TYR_1552 misses 7 heavy atom(s)
+SER_1553 misses 1 heavy atom(s)
+PRO_1554 misses 2 heavy atom(s)
+SER_1555 misses 1 heavy atom(s)
+THR_1556 misses 2 heavy atom(s)
+PRO_1557 misses 2 heavy atom(s)
+LEU_1558 misses 3 heavy atom(s)
+MET_1560 misses 3 heavy atom(s)
+TYR_1561 misses 7 heavy atom(s)
+PHE_1562 misses 6 heavy atom(s)
+THR_1563 misses 2 heavy atom(s)
+VAL_1564 misses 2 heavy atom(s)
+THR_1565 misses 2 heavy atom(s)
+LEU_1566 misses 3 heavy atom(s)
+ILE_1567 misses 3 heavy atom(s)
+VAL_1568 misses 2 heavy atom(s)
+LEU_1569 misses 3 heavy atom(s)
+ILE_1571 misses 3 heavy atom(s)
+THR_1573 misses 2 heavy atom(s)
+PHE_1574 misses 6 heavy atom(s)
+VAL_1576 misses 2 heavy atom(s)
+VAL_1578 misses 2 heavy atom(s)
+GLU_1579 misses 4 heavy atom(s)
+ARG_1580 misses 6 heavy atom(s)
+LEU_1581 misses 3 heavy atom(s)
+LEU_1582 misses 3 heavy atom(s)
+GLU_1583 misses 4 heavy atom(s)
+PHE_1584 misses 6 heavy atom(s)
+LEU_1585 misses 3 heavy atom(s)
+PRO_1807 misses 2 heavy atom(s)
+THR_1809 misses 2 heavy atom(s)
+ARG_1810 misses 6 heavy atom(s)
+ILE_1811 misses 3 heavy atom(s)
+LEU_1812 misses 3 heavy atom(s)
+LEU_1813 misses 3 heavy atom(s)
+LEU_1814 misses 3 heavy atom(s)
+VAL_1815 misses 2 heavy atom(s)
+LEU_1816 misses 3 heavy atom(s)
+VAL_1818 misses 2 heavy atom(s)
+ILE_1819 misses 3 heavy atom(s)
+ILE_1820 misses 3 heavy atom(s)
+TYR_1821 misses 7 heavy atom(s)
+THR_1823 misses 2 heavy atom(s)
+PHE_1826 misses 6 heavy atom(s)
+HIS_1827 misses 5 heavy atom(s)
+PHE_1828 misses 6 heavy atom(s)
+ILE_1829 misses 3 heavy atom(s)
+GLU_1830 misses 4 heavy atom(s)
+GLU_1832 misses 4 heavy atom(s)
+SER_1833 misses 1 heavy atom(s)
+TRP_1834 misses 9 heavy atom(s)
+THR_1835 misses 2 heavy atom(s)
+VAL_1836 misses 2 heavy atom(s)
+SER_1837 misses 1 heavy atom(s)
+LEU_1838 misses 3 heavy atom(s)
+TYR_1839 misses 7 heavy atom(s)
+TRP_1840 misses 9 heavy atom(s)
+THR_1841 misses 2 heavy atom(s)
+PHE_1842 misses 6 heavy atom(s)
+VAL_1843 misses 2 heavy atom(s)
+THR_1844 misses 2 heavy atom(s)
+ILE_1845 misses 3 heavy atom(s)
+THR_1847 misses 2 heavy atom(s)
+VAL_1848 misses 2 heavy atom(s)
+TYR_1850 misses 7 heavy atom(s)
+ASP_1852 misses 3 heavy atom(s)
+TYR_1853 misses 7 heavy atom(s)
+SER_1854 misses 1 heavy atom(s)
+PRO_1855 misses 2 heavy atom(s)
+SER_1856 misses 1 heavy atom(s)
+THR_1857 misses 2 heavy atom(s)
+PRO_1858 misses 2 heavy atom(s)
+LEU_1859 misses 3 heavy atom(s)
+MET_1861 misses 3 heavy atom(s)
+TYR_1862 misses 7 heavy atom(s)
+PHE_1863 misses 6 heavy atom(s)
+THR_1864 misses 2 heavy atom(s)
+VAL_1865 misses 2 heavy atom(s)
+THR_1866 misses 2 heavy atom(s)
+LEU_1867 misses 3 heavy atom(s)
+ILE_1868 misses 3 heavy atom(s)
+VAL_1869 misses 2 heavy atom(s)
+LEU_1870 misses 3 heavy atom(s)
+ILE_1872 misses 3 heavy atom(s)
+THR_1874 misses 2 heavy atom(s)
+PHE_1875 misses 6 heavy atom(s)
+VAL_1877 misses 2 heavy atom(s)
+VAL_1879 misses 2 heavy atom(s)
+GLU_1880 misses 4 heavy atom(s)
+ARG_1881 misses 6 heavy atom(s)
+LEU_1882 misses 3 heavy atom(s)
+LEU_1883 misses 3 heavy atom(s)
+GLU_1884 misses 4 heavy atom(s)
+PHE_1885 misses 6 heavy atom(s)
+LEU_1886 misses 3 heavy atom(s)
+PRO_2108 misses 2 heavy atom(s)
+THR_2110 misses 2 heavy atom(s)
+ARG_2111 misses 6 heavy atom(s)
+ILE_2112 misses 3 heavy atom(s)
+LEU_2113 misses 3 heavy atom(s)
+LEU_2114 misses 3 heavy atom(s)
+LEU_2115 misses 3 heavy atom(s)
+VAL_2116 misses 2 heavy atom(s)
+LEU_2117 misses 3 heavy atom(s)
+VAL_2119 misses 2 heavy atom(s)
+ILE_2120 misses 3 heavy atom(s)
+ILE_2121 misses 3 heavy atom(s)
+TYR_2122 misses 7 heavy atom(s)
+THR_2124 misses 2 heavy atom(s)
+PHE_2127 misses 6 heavy atom(s)
+HIS_2128 misses 5 heavy atom(s)
+PHE_2129 misses 6 heavy atom(s)
+ILE_2130 misses 3 heavy atom(s)
+GLU_2131 misses 4 heavy atom(s)
+GLU_2133 misses 4 heavy atom(s)
+SER_2134 misses 1 heavy atom(s)
+TRP_2135 misses 9 heavy atom(s)
+THR_2136 misses 2 heavy atom(s)
+VAL_2137 misses 2 heavy atom(s)
+SER_2138 misses 1 heavy atom(s)
+LEU_2139 misses 3 heavy atom(s)
+TYR_2140 misses 7 heavy atom(s)
+TRP_2141 misses 9 heavy atom(s)
+THR_2142 misses 2 heavy atom(s)
+PHE_2143 misses 6 heavy atom(s)
+VAL_2144 misses 2 heavy atom(s)
+THR_2145 misses 2 heavy atom(s)
+ILE_2146 misses 3 heavy atom(s)
+THR_2148 misses 2 heavy atom(s)
+VAL_2149 misses 2 heavy atom(s)
+TYR_2151 misses 7 heavy atom(s)
+ASP_2153 misses 3 heavy atom(s)
+TYR_2154 misses 7 heavy atom(s)
+SER_2155 misses 1 heavy atom(s)
+PRO_2156 misses 2 heavy atom(s)
+SER_2157 misses 1 heavy atom(s)
+THR_2158 misses 2 heavy atom(s)
+PRO_2159 misses 2 heavy atom(s)
+LEU_2160 misses 3 heavy atom(s)
+MET_2162 misses 3 heavy atom(s)
+TYR_2163 misses 7 heavy atom(s)
+PHE_2164 misses 6 heavy atom(s)
+THR_2165 misses 2 heavy atom(s)
+VAL_2166 misses 2 heavy atom(s)
+THR_2167 misses 2 heavy atom(s)
+LEU_2168 misses 3 heavy atom(s)
+ILE_2169 misses 3 heavy atom(s)
+VAL_2170 misses 2 heavy atom(s)
+LEU_2171 misses 3 heavy atom(s)
+ILE_2173 misses 3 heavy atom(s)
+THR_2175 misses 2 heavy atom(s)
+PHE_2176 misses 6 heavy atom(s)
+VAL_2178 misses 2 heavy atom(s)
+VAL_2180 misses 2 heavy atom(s)
+GLU_2181 misses 4 heavy atom(s)
+ARG_2182 misses 6 heavy atom(s)
+LEU_2183 misses 3 heavy atom(s)
+LEU_2184 misses 3 heavy atom(s)
+GLU_2185 misses 4 heavy atom(s)
+PHE_2186 misses 6 heavy atom(s)
+LEU_2187 misses 3 heavy atom(s)
+
+==================================================
+Summary of pdb4amber for: 1lnq_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 25.512248 A between LEU 80 and ARG 81
+gap of 24.845504 A between LEU 381 and ARG 382
+gap of 25.278533 A between LEU 682 and ARG 683
+gap of 24.882128 A between LEU 983 and ARG 984
+gap of 22.703388 A between LEU 1284 and ARG 1285
+gap of 24.161030 A between LEU 1585 and ARG 1586
+gap of 22.470555 A between LEU 1886 and ARG 1887
+gap of 24.141322 A between LEU 2187 and ARG 2188
+gap of 25.511441 A between LEU 2496 and ARG 2497
+gap of 24.845507 A between LEU 2797 and ARG 2798
+gap of 25.278712 A between LEU 3098 and ARG 3099
+gap of 24.881938 A between LEU 3399 and ARG 3400
+gap of 22.702495 A between LEU 3700 and ARG 3701
+gap of 24.160737 A between LEU 4001 and ARG 4002
+gap of 22.470606 A between LEU 4302 and ARG 4303
+gap of 24.141907 A between LEU 4603 and ARG 4604
+gap of 25.511736 A between LEU 4912 and ARG 4913
+gap of 24.845312 A between LEU 5213 and ARG 5214
+gap of 25.279099 A between LEU 5514 and ARG 5515
+gap of 24.882126 A between LEU 5815 and ARG 5816
+gap of 22.703062 A between LEU 6116 and ARG 6117
+gap of 24.160899 A between LEU 6417 and ARG 6418
+gap of 22.470751 A between LEU 6718 and ARG 6719
+gap of 24.141401 A between LEU 7019 and ARG 7020
+gap of 25.512248 A between LEU 7328 and ARG 7329
+gap of 24.845504 A between LEU 7629 and ARG 7630
+gap of 25.278533 A between LEU 7930 and ARG 7931
+gap of 24.882128 A between LEU 8231 and ARG 8232
+gap of 22.703388 A between LEU 8532 and ARG 8533
+gap of 24.161030 A between LEU 8833 and ARG 8834
+gap of 22.470555 A between LEU 9134 and ARG 9135
+gap of 24.141322 A between LEU 9435 and ARG 9436
+gap of 25.511441 A between LEU 9744 and ARG 9745
+gap of 24.845507 A between LEU 10045 and ARG 10046
+gap of 25.278712 A between LEU 10346 and ARG 10347
+gap of 24.881938 A between LEU 10647 and ARG 10648
+gap of 22.702495 A between LEU 10948 and ARG 10949
+gap of 24.160737 A between LEU 11249 and ARG 11250
+gap of 22.470606 A between LEU 11550 and ARG 11551
+gap of 24.141907 A between LEU 11851 and ARG 11852
+gap of 25.511736 A between LEU 12160 and ARG 12161
+gap of 24.845312 A between LEU 12461 and ARG 12462
+gap of 25.279099 A between LEU 12762 and ARG 12763
+gap of 24.882126 A between LEU 13063 and ARG 13064
+gap of 22.703062 A between LEU 13364 and ARG 13365
+gap of 24.160899 A between LEU 13665 and ARG 13666
+gap of 22.470751 A between LEU 13966 and ARG 13967
+gap of 24.141401 A between LEU 14267 and ARG 14268
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ln/1lnq/4amber_1lnq.prmtop
 
 	Running AmberPrep : 1lnq.pdb
 
@@ -107,6 +768,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 1lnq.pdb
@@ -114,7 +777,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_1lnq.prmtop
     rst7   : 4amber_1lnq.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq
 return_files 1lnq
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1lnq.pdb
@@ -148,24 +811,14 @@ cp 4amber_1lnq.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq
 1lnq_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq/1lnq.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ln/1lnq
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq/1lnq_refine_001.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 1lnq_refine_001.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 1lnq.pdb 1lnq.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
-
+	Already done (on chevy) 1lnq_refine_001
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq/1lnq_refine_002.log
 ------------------------------
-------------------------------
-phenix.refine log filename ? > 1lnq_refine_002.log
-------------------------------
-Running phenix.refine
 
-phenix.refine 1lnq.pdb 1lnq.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq/4amber_1lnq.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/ln/1lnq/4amber_1lnq.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
-
+	Already done (on chevy) 1lnq_refine_002

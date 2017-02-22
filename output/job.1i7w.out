@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 122
 only_code None
 force_amber_prep True
@@ -11,39 +11,146 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/i7/pdb1i7w.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/i7/r1i7wsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/i7/1i7w.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.cif
-Can't determine output label for r1i7wsf,_refln.crystal_id - skipping.
-Can't determine output label for r1i7wsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.055
-R-free-flags: missing 6666 reflections
-Can't determine output label for r1i7wsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1i7w.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/i7/pdb1i7w.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/i7/r1i7wsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/i7/1i7w.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.cif
-Can't determine output label for r1i7wsf,_refln.crystal_id - skipping.
-Can't determine output label for r1i7wsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.055
-R-free-flags: missing 6666 reflections
-Can't determine output label for r1i7wsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 1i7w.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/i7/1i7w/4amber_1i7w.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/i7/1i7w/1i7w.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1i7w.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+ASN_21
+LYS_22
+ARG_77
+GLU_78
+GLY_79
+THR_191
+THR_192
+LYS_206
+MET_289
+VAL_290
+ARG_305
+ALA_306
+MET_598
+ARG_599
+HIS_633
+ARG_634
+PRO_656
+VAL_657
+THR_666
+THR_667
+MET_680
+ALA_681
+ILE_736
+MET_737
+ARG_738
+THR_739
+TRP_792
+THR_793
+ASP_865
+ARG_866
+ASN_892
+ALA_893
+GLU_968
+GLY_969
+ILE_987
+ARG_988
+
+---------- Gaps (Renumbered Residues!)
+gap of 16.062236 A between ARG 401 and VAL 402
+gap of 3.751332 A between GLY 523 and GLY 525
+gap of 4.260463 A between GLY 525 and GLU 527
+gap of 4.065615 A between LEU 531 and SER 533
+gap of 27.207470 A between LEU 534 and ASP 535
+gap of 18.332076 A between THR 960 and VAL 961
+gap of 27.400092 A between PRO 1064 and ILE 1065
+gap of 3.735750 A between GLY 1091 and GLY 1093
+gap of 4.109053 A between GLY 1093 and GLU 1095
+gap of 4.151035 A between LEU 1099 and SER 1101
+gap of 25.369169 A between LEU 1102 and TYR 1103
+
+---------- Mising heavy atom(s)
+
+ARG_3 misses 6 heavy atom(s)
+LYS_10 misses 4 heavy atom(s)
+LYS_22 misses 2 heavy atom(s)
+LYS_33 misses 4 heavy atom(s)
+GLU_34 misses 4 heavy atom(s)
+HIS_38 misses 5 heavy atom(s)
+LYS_144 misses 1 heavy atom(s)
+LYS_463 misses 4 heavy atom(s)
+LYS_502 misses 4 heavy atom(s)
+ASP_535 misses 3 heavy atom(s)
+GLU_556 misses 4 heavy atom(s)
+LYS_590 misses 4 heavy atom(s)
+GLU_938 misses 4 heavy atom(s)
+ARG_951 misses 4 heavy atom(s)
+ARG_959 misses 6 heavy atom(s)
+GLU_1023 misses 4 heavy atom(s)
+The alternate coordinates have been discarded.
+Only the first occurrence for each atom was kept.
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/i7/1i7w/4amber_1i7w.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/i7/1i7w/4amber_1i7w.prmtop
 
 	Running AmberPrep : 1i7w.pdb
@@ -69,7 +176,7 @@ MoleculeClass :  C: 3  N: 1  O: 6  P: 1 (CHEMICAL COMPONENTS format)
 	0 rings (groups, rings, atoms) 0 0
 	1 chirals : S 
 
-~> antechamber -i 4antechamber_SEP.pdb -fi pdb -o SEP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1', grms_tol=0.0005, scfconv=1.d-10, maxcyc=0, ndiis_attempts=700,"
+~> antechamber -i 4antechamber_SEP.pdb -fi pdb -o SEP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 
 ~> parmchk2 -s 2 -i SEP.mol2 -f mol2 -o SEP.frcmod
@@ -83,3 +190,5 @@ Preparing asu files and 4phenix_1i7w.pdb
 
 Checking output filenames
   file : 1i7w_asu.prmtop
+Sorry:   Output file is empty : 1i7w_asu.prmtop
+  Check contents of "leap.log"

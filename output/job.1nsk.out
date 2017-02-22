@@ -1,0 +1,108 @@
+HOST lewis.lbl.gov
+only_i 13
+only_code None
+force_amber_prep True
+dry_run False
+... 13 1nsk
+/net/chevy/raid1/nigel/amber/hi_lo
+/net/chevy/raid1/nigel/amber/hi_lo/ns/1nsk
+1nsk.pdb 4phenix_1nsk.pdb
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ns/pdb1nsk.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ns/1nsk/1nsk.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/ns/pdb1nsk.ent.gz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ns/1nsk/1nsk.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 1nsk.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+L
+N
+O
+R
+T
+U
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ns/1nsk/4amber_1nsk.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ns/1nsk/4amber_1nsk.prmtop
+
+	Running AmberPrep : 1nsk.pdb
+
+
+==================================================
+Running pdb4amber on 1nsk.pdb
+==================================================
+Traceback (most recent call last):
+  File "run_tests_local.py", line 323, in <module>
+    run(*tuple(args))
+  File "run_tests_local.py", line 307, in run
+    w2 = run_all_tests(code, force_amber_prep=force_amber_prep)
+  File "run_tests_local.py", line 93, in run_all_tests
+    "clean=on",
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 951, in run
+    arg_conect=False,
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/pdb4amber/pdb4amber.py", line 522, in run
+    gaplist = pdbfixer.find_gaps()
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/pdb4amber/pdb4amber.py", line 213, in find_gaps
+    N_atom = parm.atoms[N_atoms[i + 1]]
+IndexError: list index out of range

@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 365
 only_code None
 force_amber_prep True
@@ -11,39 +11,236 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/xt/pdb2xtw.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/xt/r2xtwsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/xt/2xtw.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.cif
-Can't determine output label for r2xtwsf,_refln.crystal_id - skipping.
-Can't determine output label for r2xtwsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 58 reflections
-Can't determine output label for r2xtwsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2xtw.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/xt/pdb2xtw.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/xt/r2xtwsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/xt/2xtw.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.cif
-Can't determine output label for r2xtwsf,_refln.crystal_id - skipping.
-Can't determine output label for r2xtwsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.050
-R-free-flags: missing 58 reflections
-Can't determine output label for r2xtwsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2xtw.mtz
-not prmtop_filename /net/rebus/scratch1/nigel/amber/hi_lo/xt/2xtw/4amber_2xtw.prmtop
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/xt/2xtw/2xtw.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2xtw.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 2xtw_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+HIS_3 misses 9 heavy atom(s)
+HIS_4 misses 10 heavy atom(s)
+HIS_5 misses 9 heavy atom(s)
+HIS_6 misses 10 heavy atom(s)
+HIS_7 misses 9 heavy atom(s)
+HIS_8 misses 10 heavy atom(s)
+HIS_9 misses 10 heavy atom(s)
+HIS_10 misses 9 heavy atom(s)
+HIS_11 misses 9 heavy atom(s)
+HIS_12 misses 9 heavy atom(s)
+HIS_13 misses 10 heavy atom(s)
+HIS_14 misses 9 heavy atom(s)
+HIE_15 misses 10 heavy atom(s)
+HIS_16 misses 9 heavy atom(s)
+HIS_17 misses 10 heavy atom(s)
+HIS_18 misses 9 heavy atom(s)
+HIS_19 misses 9 heavy atom(s)
+HIS_232 misses 9 heavy atom(s)
+HIS_233 misses 10 heavy atom(s)
+HIS_234 misses 9 heavy atom(s)
+HIS_235 misses 10 heavy atom(s)
+HIS_236 misses 9 heavy atom(s)
+HIS_237 misses 10 heavy atom(s)
+HIS_238 misses 10 heavy atom(s)
+HIS_239 misses 9 heavy atom(s)
+HIS_240 misses 9 heavy atom(s)
+HIS_241 misses 9 heavy atom(s)
+HIS_242 misses 10 heavy atom(s)
+HIS_243 misses 9 heavy atom(s)
+HIE_244 misses 10 heavy atom(s)
+HIS_245 misses 9 heavy atom(s)
+HIS_246 misses 10 heavy atom(s)
+HIS_247 misses 9 heavy atom(s)
+HIS_248 misses 9 heavy atom(s)
+HIS_880 misses 9 heavy atom(s)
+HIS_881 misses 10 heavy atom(s)
+HIS_882 misses 9 heavy atom(s)
+HIS_883 misses 10 heavy atom(s)
+HIS_884 misses 9 heavy atom(s)
+HIS_885 misses 10 heavy atom(s)
+HIS_886 misses 10 heavy atom(s)
+HIS_887 misses 9 heavy atom(s)
+HIS_888 misses 9 heavy atom(s)
+HIS_889 misses 9 heavy atom(s)
+HIS_890 misses 10 heavy atom(s)
+HIS_891 misses 9 heavy atom(s)
+HIE_892 misses 10 heavy atom(s)
+HIS_893 misses 9 heavy atom(s)
+HIS_894 misses 10 heavy atom(s)
+HIS_895 misses 9 heavy atom(s)
+HIS_896 misses 9 heavy atom(s)
+HIS_1109 misses 9 heavy atom(s)
+HIS_1110 misses 10 heavy atom(s)
+HIS_1111 misses 9 heavy atom(s)
+HIS_1112 misses 10 heavy atom(s)
+HIS_1113 misses 9 heavy atom(s)
+HIS_1114 misses 10 heavy atom(s)
+HIS_1115 misses 10 heavy atom(s)
+HIS_1116 misses 9 heavy atom(s)
+HIS_1117 misses 9 heavy atom(s)
+HIS_1118 misses 9 heavy atom(s)
+HIS_1119 misses 10 heavy atom(s)
+HIS_1120 misses 9 heavy atom(s)
+HIE_1121 misses 10 heavy atom(s)
+HIS_1122 misses 9 heavy atom(s)
+HIS_1123 misses 10 heavy atom(s)
+HIS_1124 misses 9 heavy atom(s)
+HIS_1125 misses 9 heavy atom(s)
+HIS_1757 misses 9 heavy atom(s)
+HIS_1758 misses 10 heavy atom(s)
+HIS_1759 misses 9 heavy atom(s)
+HIS_1760 misses 10 heavy atom(s)
+HIS_1761 misses 9 heavy atom(s)
+HIS_1762 misses 10 heavy atom(s)
+HIS_1763 misses 10 heavy atom(s)
+HIS_1764 misses 9 heavy atom(s)
+HIS_1765 misses 9 heavy atom(s)
+HIS_1766 misses 9 heavy atom(s)
+HIS_1767 misses 10 heavy atom(s)
+HIS_1768 misses 9 heavy atom(s)
+HIE_1769 misses 10 heavy atom(s)
+HIS_1770 misses 9 heavy atom(s)
+HIS_1771 misses 10 heavy atom(s)
+HIS_1772 misses 9 heavy atom(s)
+HIS_1773 misses 9 heavy atom(s)
+HIS_1986 misses 9 heavy atom(s)
+HIS_1987 misses 10 heavy atom(s)
+HIS_1988 misses 9 heavy atom(s)
+HIS_1989 misses 10 heavy atom(s)
+HIS_1990 misses 9 heavy atom(s)
+HIS_1991 misses 10 heavy atom(s)
+HIS_1992 misses 10 heavy atom(s)
+HIS_1993 misses 9 heavy atom(s)
+HIS_1994 misses 9 heavy atom(s)
+HIS_1995 misses 9 heavy atom(s)
+HIS_1996 misses 10 heavy atom(s)
+HIS_1997 misses 9 heavy atom(s)
+HIE_1998 misses 10 heavy atom(s)
+HIS_1999 misses 9 heavy atom(s)
+HIS_2000 misses 10 heavy atom(s)
+HIS_2001 misses 9 heavy atom(s)
+HIS_2002 misses 9 heavy atom(s)
+HIS_2634 misses 9 heavy atom(s)
+HIS_2635 misses 10 heavy atom(s)
+HIS_2636 misses 9 heavy atom(s)
+HIS_2637 misses 10 heavy atom(s)
+HIS_2638 misses 9 heavy atom(s)
+HIS_2639 misses 10 heavy atom(s)
+HIS_2640 misses 10 heavy atom(s)
+HIS_2641 misses 9 heavy atom(s)
+HIS_2642 misses 9 heavy atom(s)
+HIS_2643 misses 9 heavy atom(s)
+HIS_2644 misses 10 heavy atom(s)
+HIS_2645 misses 9 heavy atom(s)
+HIE_2646 misses 10 heavy atom(s)
+HIS_2647 misses 9 heavy atom(s)
+HIS_2648 misses 10 heavy atom(s)
+HIS_2649 misses 9 heavy atom(s)
+HIS_2650 misses 9 heavy atom(s)
+HIS_2863 misses 9 heavy atom(s)
+HIS_2864 misses 10 heavy atom(s)
+HIS_2865 misses 9 heavy atom(s)
+HIS_2866 misses 10 heavy atom(s)
+HIS_2867 misses 9 heavy atom(s)
+HIS_2868 misses 10 heavy atom(s)
+HIS_2869 misses 10 heavy atom(s)
+HIS_2870 misses 9 heavy atom(s)
+HIS_2871 misses 9 heavy atom(s)
+HIS_2872 misses 9 heavy atom(s)
+HIS_2873 misses 10 heavy atom(s)
+HIS_2874 misses 9 heavy atom(s)
+HIE_2875 misses 10 heavy atom(s)
+HIS_2876 misses 9 heavy atom(s)
+HIS_2877 misses 10 heavy atom(s)
+HIS_2878 misses 9 heavy atom(s)
+HIS_2879 misses 9 heavy atom(s)
+not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/xt/2xtw/4amber_2xtw.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/xt/2xtw/4amber_2xtw.prmtop
 
 	Running AmberPrep : 2xtw.pdb
@@ -81,3 +278,5 @@ Preparing unit cell files: 4amber_2xtw.prmtop and 4amber_2xtw.rst7
 
 Checking output filenames
   file : 2xtw_uc.prmtop
+Sorry:   Output file is empty : 2xtw_uc.prmtop
+  Check contents of "leap.log"

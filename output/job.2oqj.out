@@ -1,4 +1,4 @@
-HOST rebus.lbl.gov
+HOST lewis.lbl.gov
 only_i 331
 only_code None
 force_amber_prep True
@@ -12,20 +12,87 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/oq/pdb2oqj.ent.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj/2oqj.pdb
-Sequence saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj/2oqj.fa
-Reading from local mirror:
-  /net/cci/pdb_mirror/structure_factors/oq/r2oqjsf.ent.gz
-Structure factors saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj/2oqj-sf.cif
-Reading from local mirror:
-  /net/cci/pdb_mirror/mmcif/oq/2oqj.cif.gz
-Model saved to /net/rebus/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj/2oqj.cif
-Can't determine output label for r2oqjsf,_refln.crystal_id - skipping.
-Can't determine output label for r2oqjsf,_refln.scale_group_code - skipping.
-R-free-flags: fraction_free=0.051
-R-free-flags: missing 1174 reflections
-Can't determine output label for r2oqjsf,_refln.wavelength_id - skipping.
-Converted structure factors saved to 2oqj.mtz
+Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj/2oqj.pdb
+Traceback (most recent call last):
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
+    run2(sys.argv[1:])
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
+    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
+    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
+    data = libtbx.utils.urlopen(url)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
+    return urllib2.urlopen(*args, **kwds)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
+    response = self._open(req, data)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
+    '_open', req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+
+==================================================
+Summary of pdb4amber for: 2oqj.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
+
+==================================================
+Summary of pdb4amber for: 2oqj_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Mising heavy atom(s)
+
+None
 
 	Running AmberPrep : 2oqj.pdb
 
@@ -92,6 +159,8 @@ Example
 
 
 Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
 
   Amber files
     PDB    : 2oqj.pdb
@@ -99,7 +168,7 @@ Substituting Amber PDB file for downloaded file
     prmtop : 4amber_2oqj.prmtop
     rst7   : 4amber_2oqj.rst7
   
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj
 return_files 2oqj
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2oqj.pdb
@@ -133,7 +202,7 @@ cp 4amber_2oqj.prmtop /net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj
 2oqj_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj/2oqj.pdb
-/net/rebus/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj
+/net/lewis/raid1/scratch1/nigel/amber/hi_lo/oq/2oqj
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj/2oqj_refine_001.log
 ------------------------------
@@ -144,16 +213,16 @@ Running phenix.refine
 
 phenix.refine 2oqj.pdb 2oqj.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-18 Time 08:36:51 PST -0800 (1487435811.58 s)
+# Date 2017-02-21 Time 16:35:28 PST -0800 (1487723728.35 s)
 #phil __OFF__
 
 Command line arguments: "2oqj.pdb" "2oqj.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 21414
-JOB_ID = 6368462
+PID = 12742
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -259,17 +328,17 @@ R-free flags:
 
 Miller array info: 2oqj.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=63150
+Type of data: int, size=61976
 Type of sigmas: None
-Number of Miller indices: 63150
+Number of Miller indices: 61976
 Anomalous flag: False
 Unit cell: (66.264, 171.348, 119.568, 90, 105.638, 90)
 Space group: P 1 21 1 (No. 4)
 Systematic absences: 0
-Centric reflections: 1527
-Resolution range: 115.142 2.80001
-Completeness in resolution range: 1
-Completeness with d_max=infinity: 1
+Centric reflections: 1329
+Resolution range: 47.968 2.80001
+Completeness in resolution range: 0.981658
+Completeness with d_max=infinity: 0.981409
 Wavelength: 0.0000
 
 Test (R-free flags) flag value: 0
@@ -321,16 +390,16 @@ Running phenix.refine
 
 phenix.refine 2oqj.pdb 2oqj.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj/4amber_2oqj.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj/4amber_2oqj.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
-# Date 2017-02-18 Time 08:37:02 PST -0800 (1487435822.25 s)
+# Date 2017-02-21 Time 16:35:40 PST -0800 (1487723740.93 s)
 #phil __OFF__
 
 Command line arguments: "2oqj.pdb" "2oqj.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj/4amber_2oqj.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/oq/2oqj/4amber_2oqj.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
 
-HOST = rebus.lbl.gov
+HOST = lewis.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 21683
-JOB_ID = 6368462
+PID = 12950
+JOB_ID = 6368467
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -442,17 +511,17 @@ R-free flags:
 
 Miller array info: 2oqj.mtz:R-free-flags
 Observation type: None
-Type of data: int, size=63150
+Type of data: int, size=61976
 Type of sigmas: None
-Number of Miller indices: 63150
+Number of Miller indices: 61976
 Anomalous flag: False
 Unit cell: (66.264, 171.348, 119.568, 90, 105.638, 90)
 Space group: P 1 21 1 (No. 4)
 Systematic absences: 0
-Centric reflections: 1527
-Resolution range: 115.142 2.80001
-Completeness in resolution range: 1
-Completeness with d_max=infinity: 1
+Centric reflections: 1329
+Resolution range: 47.968 2.80001
+Completeness in resolution range: 0.981658
+Completeness with d_max=infinity: 0.981409
 Wavelength: 0.0000
 
 Test (R-free flags) flag value: 0
