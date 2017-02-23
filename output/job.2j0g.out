@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 11
 only_code None
 force_amber_prep True
@@ -12,64 +12,39 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/j0/pdb2j0g.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/j0/r2j0gsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/j0/2j0g.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.cif
+Can't determine output label for r2j0gsf,_refln.crystal_id - skipping.
+Can't determine output label for r2j0gsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2j0gsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2j0g.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/j0/pdb2j0g.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/j0/r2j0gsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/j0/2j0g.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g/2j0g.cif
+Can't determine output label for r2j0gsf,_refln.crystal_id - skipping.
+Can't determine output label for r2j0gsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2j0gsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2j0g.mtz
 
 ==================================================
 Summary of pdb4amber for: 2j0g.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -98,7 +73,7 @@ THR_216 misses 1 heavy atom(s)
 THR_432 misses 1 heavy atom(s)
 The alternate coordinates have been discarded.
 Only the first occurrence for each atom was kept.
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/j0/2j0g/4amber_2j0g.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/j0/2j0g/4amber_2j0g.prmtop
 
 	Running AmberPrep : 2j0g.pdb
 
@@ -254,7 +229,7 @@ run_tests_local.py:222: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_2j0g.prmtop
     rst7   : 4amber_2j0g.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
 return_files 2j0g
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_2j0g.pdb
@@ -288,7 +263,7 @@ cp 4amber_2j0g.prmtop /net/chevy/raid1/nigel/amber/hi_lo/j0/2j0g
 2j0g_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/j0/2j0g/2j0g.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/j0/2j0g
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/j0/2j0g/2j0g_refine_001.log
 ------------------------------
@@ -305,16 +280,16 @@ ligand_file /net/cci/lbnl/nigel/all_chemical_components/cifs/BM3.cif
   Restarting
     phenix.refine 2j0g.pdb 2j0g.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True /net/cci/lbnl/nigel/all_chemical_components/cifs/BM3.cif
     
-# Date 2017-02-21 Time 15:47:59 PST -0800 (1487720879.88 s)
+# Date 2017-02-23 Time 10:19:34 PST -0800 (1487873974.73 s)
 #phil __OFF__
 
 Command line arguments: "2j0g.pdb" "2j0g.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True" "/net/cci/lbnl/nigel/all_chemical_components/cifs/BM3.cif"
 
-HOST = lewis.lbl.gov
+HOST = morse.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 6338
-JOB_ID = 6368467
+PID = 8180
+JOB_ID = 6368472
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -608,7 +583,7 @@ Number of work/free reflections by resolution:
     "HETATM20087  H22 BM3 C 400 .*.     H  "
     "HETATM20120  H22 BM3 E 400 .*.     H  "
     "HETATM20259  H22 BM3 F 400 .*.     H  "
-  Time building chain proxies: 14.73, per 1000 atoms: 0.72
+  Time building chain proxies: 13.29, per 1000 atoms: 0.65
   Number of scatterers: 20431
   At special positions: 0
   Unit cell: (96.94, 96.94, 139.47, 90, 90, 120)

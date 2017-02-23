@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 366
 only_code None
 force_amber_prep True
@@ -11,60 +11,38 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/xt/pdb2xty.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/xt/r2xtysf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/xt/2xty.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.cif
+Can't determine output label for r2xtysf,_refln.crystal_id - skipping.
+Can't determine output label for r2xtysf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 115 reflections
+Can't determine output label for r2xtysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2xty.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/xt/pdb2xty.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/xt/r2xtysf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/xt/2xty.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty/2xty.cif
+Can't determine output label for r2xtysf,_refln.crystal_id - skipping.
+Can't determine output label for r2xtysf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.051
+R-free-flags: missing 115 reflections
+Can't determine output label for r2xtysf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2xty.mtz
 
 ==================================================
 Summary of pdb4amber for: 2xty.pdb
@@ -107,298 +85,27 @@ The following residues had alternate locations:
 None
 
 ---------- Gaps (Renumbered Residues!)
-gap of 6.118985 A between MET 121 and PHE 122
-gap of 5.099690 A between PHE 344 and CYS 345
-gap of 6.118985 A between MET 891 and PHE 892
-gap of 5.099690 A between PHE 1114 and CYS 1115
-gap of 6.118985 A between MET 1661 and PHE 1662
-gap of 5.099690 A between PHE 1884 and CYS 1885
-gap of 6.118985 A between MET 2431 and PHE 2432
-gap of 5.099690 A between PHE 2654 and CYS 2655
-gap of 6.118985 A between MET 3201 and PHE 3202
-gap of 5.099690 A between PHE 3424 and CYS 3425
-gap of 6.118985 A between MET 3971 and PHE 3972
-gap of 5.099690 A between PHE 4194 and CYS 4195
-gap of 6.118985 A between MET 4741 and PHE 4742
-gap of 5.099690 A between PHE 4964 and CYS 4965
-gap of 6.118985 A between MET 5511 and PHE 5512
-gap of 5.099690 A between PHE 5734 and CYS 5735
+gap of 6.118985 A between MET 105 and PHE 106
+gap of 5.099690 A between PHE 312 and CYS 313
+gap of 6.118985 A between MET 843 and PHE 844
+gap of 5.099690 A between PHE 1050 and CYS 1051
+gap of 6.118985 A between MET 1581 and PHE 1582
+gap of 5.099690 A between PHE 1788 and CYS 1789
+gap of 6.118985 A between MET 2319 and PHE 2320
+gap of 5.099690 A between PHE 2526 and CYS 2527
+gap of 6.118985 A between MET 3057 and PHE 3058
+gap of 5.099690 A between PHE 3264 and CYS 3265
+gap of 6.118985 A between MET 3795 and PHE 3796
+gap of 5.099690 A between PHE 4002 and CYS 4003
+gap of 6.118985 A between MET 4533 and PHE 4534
+gap of 5.099690 A between PHE 4740 and CYS 4741
+gap of 6.118985 A between MET 5271 and PHE 5272
+gap of 5.099690 A between PHE 5478 and CYS 5479
 
 ---------- Mising heavy atom(s)
 
-HIS_3 misses 9 heavy atom(s)
-HIS_4 misses 10 heavy atom(s)
-HIS_5 misses 9 heavy atom(s)
-HIS_6 misses 10 heavy atom(s)
-HIS_7 misses 9 heavy atom(s)
-HIS_8 misses 10 heavy atom(s)
-HIS_9 misses 10 heavy atom(s)
-HIS_10 misses 9 heavy atom(s)
-HIS_11 misses 9 heavy atom(s)
-HIS_12 misses 9 heavy atom(s)
-HIS_13 misses 10 heavy atom(s)
-HIS_14 misses 9 heavy atom(s)
-HIE_15 misses 10 heavy atom(s)
-HIS_16 misses 9 heavy atom(s)
-HIS_17 misses 10 heavy atom(s)
-HIS_18 misses 9 heavy atom(s)
-HIS_19 misses 9 heavy atom(s)
-HIS_227 misses 9 heavy atom(s)
-HIS_228 misses 10 heavy atom(s)
-HIS_229 misses 9 heavy atom(s)
-HIS_230 misses 10 heavy atom(s)
-HIS_231 misses 9 heavy atom(s)
-HIS_232 misses 10 heavy atom(s)
-HIS_233 misses 10 heavy atom(s)
-HIS_234 misses 9 heavy atom(s)
-HIS_235 misses 9 heavy atom(s)
-HIS_236 misses 9 heavy atom(s)
-HIS_237 misses 10 heavy atom(s)
-HIS_238 misses 9 heavy atom(s)
-HIE_239 misses 10 heavy atom(s)
-HIS_240 misses 9 heavy atom(s)
-HIS_241 misses 10 heavy atom(s)
-HIS_242 misses 9 heavy atom(s)
-HIS_243 misses 9 heavy atom(s)
-HIS_773 misses 9 heavy atom(s)
-HIS_774 misses 10 heavy atom(s)
-HIS_775 misses 9 heavy atom(s)
-HIS_776 misses 10 heavy atom(s)
-HIS_777 misses 9 heavy atom(s)
-HIS_778 misses 10 heavy atom(s)
-HIS_779 misses 10 heavy atom(s)
-HIS_780 misses 9 heavy atom(s)
-HIS_781 misses 9 heavy atom(s)
-HIS_782 misses 9 heavy atom(s)
-HIS_783 misses 10 heavy atom(s)
-HIS_784 misses 9 heavy atom(s)
-HIE_785 misses 10 heavy atom(s)
-HIS_786 misses 9 heavy atom(s)
-HIS_787 misses 10 heavy atom(s)
-HIS_788 misses 9 heavy atom(s)
-HIS_789 misses 9 heavy atom(s)
-HIS_997 misses 9 heavy atom(s)
-HIS_998 misses 10 heavy atom(s)
-HIS_999 misses 9 heavy atom(s)
-HIS_1000 misses 10 heavy atom(s)
-HIS_1001 misses 9 heavy atom(s)
-HIS_1002 misses 10 heavy atom(s)
-HIS_1003 misses 10 heavy atom(s)
-HIS_1004 misses 9 heavy atom(s)
-HIS_1005 misses 9 heavy atom(s)
-HIS_1006 misses 9 heavy atom(s)
-HIS_1007 misses 10 heavy atom(s)
-HIS_1008 misses 9 heavy atom(s)
-HIE_1009 misses 10 heavy atom(s)
-HIS_1010 misses 9 heavy atom(s)
-HIS_1011 misses 10 heavy atom(s)
-HIS_1012 misses 9 heavy atom(s)
-HIS_1013 misses 9 heavy atom(s)
-HIS_1543 misses 9 heavy atom(s)
-HIS_1544 misses 10 heavy atom(s)
-HIS_1545 misses 9 heavy atom(s)
-HIS_1546 misses 10 heavy atom(s)
-HIS_1547 misses 9 heavy atom(s)
-HIS_1548 misses 10 heavy atom(s)
-HIS_1549 misses 10 heavy atom(s)
-HIS_1550 misses 9 heavy atom(s)
-HIS_1551 misses 9 heavy atom(s)
-HIS_1552 misses 9 heavy atom(s)
-HIS_1553 misses 10 heavy atom(s)
-HIS_1554 misses 9 heavy atom(s)
-HIE_1555 misses 10 heavy atom(s)
-HIS_1556 misses 9 heavy atom(s)
-HIS_1557 misses 10 heavy atom(s)
-HIS_1558 misses 9 heavy atom(s)
-HIS_1559 misses 9 heavy atom(s)
-HIS_1767 misses 9 heavy atom(s)
-HIS_1768 misses 10 heavy atom(s)
-HIS_1769 misses 9 heavy atom(s)
-HIS_1770 misses 10 heavy atom(s)
-HIS_1771 misses 9 heavy atom(s)
-HIS_1772 misses 10 heavy atom(s)
-HIS_1773 misses 10 heavy atom(s)
-HIS_1774 misses 9 heavy atom(s)
-HIS_1775 misses 9 heavy atom(s)
-HIS_1776 misses 9 heavy atom(s)
-HIS_1777 misses 10 heavy atom(s)
-HIS_1778 misses 9 heavy atom(s)
-HIE_1779 misses 10 heavy atom(s)
-HIS_1780 misses 9 heavy atom(s)
-HIS_1781 misses 10 heavy atom(s)
-HIS_1782 misses 9 heavy atom(s)
-HIS_1783 misses 9 heavy atom(s)
-HIS_2313 misses 9 heavy atom(s)
-HIS_2314 misses 10 heavy atom(s)
-HIS_2315 misses 9 heavy atom(s)
-HIS_2316 misses 10 heavy atom(s)
-HIS_2317 misses 9 heavy atom(s)
-HIS_2318 misses 10 heavy atom(s)
-HIS_2319 misses 10 heavy atom(s)
-HIS_2320 misses 9 heavy atom(s)
-HIS_2321 misses 9 heavy atom(s)
-HIS_2322 misses 9 heavy atom(s)
-HIS_2323 misses 10 heavy atom(s)
-HIS_2324 misses 9 heavy atom(s)
-HIE_2325 misses 10 heavy atom(s)
-HIS_2326 misses 9 heavy atom(s)
-HIS_2327 misses 10 heavy atom(s)
-HIS_2328 misses 9 heavy atom(s)
-HIS_2329 misses 9 heavy atom(s)
-HIS_2537 misses 9 heavy atom(s)
-HIS_2538 misses 10 heavy atom(s)
-HIS_2539 misses 9 heavy atom(s)
-HIS_2540 misses 10 heavy atom(s)
-HIS_2541 misses 9 heavy atom(s)
-HIS_2542 misses 10 heavy atom(s)
-HIS_2543 misses 10 heavy atom(s)
-HIS_2544 misses 9 heavy atom(s)
-HIS_2545 misses 9 heavy atom(s)
-HIS_2546 misses 9 heavy atom(s)
-HIS_2547 misses 10 heavy atom(s)
-HIS_2548 misses 9 heavy atom(s)
-HIE_2549 misses 10 heavy atom(s)
-HIS_2550 misses 9 heavy atom(s)
-HIS_2551 misses 10 heavy atom(s)
-HIS_2552 misses 9 heavy atom(s)
-HIS_2553 misses 9 heavy atom(s)
-HIS_3083 misses 9 heavy atom(s)
-HIS_3084 misses 10 heavy atom(s)
-HIS_3085 misses 9 heavy atom(s)
-HIS_3086 misses 10 heavy atom(s)
-HIS_3087 misses 9 heavy atom(s)
-HIS_3088 misses 10 heavy atom(s)
-HIS_3089 misses 10 heavy atom(s)
-HIS_3090 misses 9 heavy atom(s)
-HIS_3091 misses 9 heavy atom(s)
-HIS_3092 misses 9 heavy atom(s)
-HIS_3093 misses 10 heavy atom(s)
-HIS_3094 misses 9 heavy atom(s)
-HIE_3095 misses 10 heavy atom(s)
-HIS_3096 misses 9 heavy atom(s)
-HIS_3097 misses 10 heavy atom(s)
-HIS_3098 misses 9 heavy atom(s)
-HIS_3099 misses 9 heavy atom(s)
-HIS_3307 misses 9 heavy atom(s)
-HIS_3308 misses 10 heavy atom(s)
-HIS_3309 misses 9 heavy atom(s)
-HIS_3310 misses 10 heavy atom(s)
-HIS_3311 misses 9 heavy atom(s)
-HIS_3312 misses 10 heavy atom(s)
-HIS_3313 misses 10 heavy atom(s)
-HIS_3314 misses 9 heavy atom(s)
-HIS_3315 misses 9 heavy atom(s)
-HIS_3316 misses 9 heavy atom(s)
-HIS_3317 misses 10 heavy atom(s)
-HIS_3318 misses 9 heavy atom(s)
-HIE_3319 misses 10 heavy atom(s)
-HIS_3320 misses 9 heavy atom(s)
-HIS_3321 misses 10 heavy atom(s)
-HIS_3322 misses 9 heavy atom(s)
-HIS_3323 misses 9 heavy atom(s)
-HIS_3853 misses 9 heavy atom(s)
-HIS_3854 misses 10 heavy atom(s)
-HIS_3855 misses 9 heavy atom(s)
-HIS_3856 misses 10 heavy atom(s)
-HIS_3857 misses 9 heavy atom(s)
-HIS_3858 misses 10 heavy atom(s)
-HIS_3859 misses 10 heavy atom(s)
-HIS_3860 misses 9 heavy atom(s)
-HIS_3861 misses 9 heavy atom(s)
-HIS_3862 misses 9 heavy atom(s)
-HIS_3863 misses 10 heavy atom(s)
-HIS_3864 misses 9 heavy atom(s)
-HIE_3865 misses 10 heavy atom(s)
-HIS_3866 misses 9 heavy atom(s)
-HIS_3867 misses 10 heavy atom(s)
-HIS_3868 misses 9 heavy atom(s)
-HIS_3869 misses 9 heavy atom(s)
-HIS_4077 misses 9 heavy atom(s)
-HIS_4078 misses 10 heavy atom(s)
-HIS_4079 misses 9 heavy atom(s)
-HIS_4080 misses 10 heavy atom(s)
-HIS_4081 misses 9 heavy atom(s)
-HIS_4082 misses 10 heavy atom(s)
-HIS_4083 misses 10 heavy atom(s)
-HIS_4084 misses 9 heavy atom(s)
-HIS_4085 misses 9 heavy atom(s)
-HIS_4086 misses 9 heavy atom(s)
-HIS_4087 misses 10 heavy atom(s)
-HIS_4088 misses 9 heavy atom(s)
-HIE_4089 misses 10 heavy atom(s)
-HIS_4090 misses 9 heavy atom(s)
-HIS_4091 misses 10 heavy atom(s)
-HIS_4092 misses 9 heavy atom(s)
-HIS_4093 misses 9 heavy atom(s)
-HIS_4623 misses 9 heavy atom(s)
-HIS_4624 misses 10 heavy atom(s)
-HIS_4625 misses 9 heavy atom(s)
-HIS_4626 misses 10 heavy atom(s)
-HIS_4627 misses 9 heavy atom(s)
-HIS_4628 misses 10 heavy atom(s)
-HIS_4629 misses 10 heavy atom(s)
-HIS_4630 misses 9 heavy atom(s)
-HIS_4631 misses 9 heavy atom(s)
-HIS_4632 misses 9 heavy atom(s)
-HIS_4633 misses 10 heavy atom(s)
-HIS_4634 misses 9 heavy atom(s)
-HIE_4635 misses 10 heavy atom(s)
-HIS_4636 misses 9 heavy atom(s)
-HIS_4637 misses 10 heavy atom(s)
-HIS_4638 misses 9 heavy atom(s)
-HIS_4639 misses 9 heavy atom(s)
-HIS_4847 misses 9 heavy atom(s)
-HIS_4848 misses 10 heavy atom(s)
-HIS_4849 misses 9 heavy atom(s)
-HIS_4850 misses 10 heavy atom(s)
-HIS_4851 misses 9 heavy atom(s)
-HIS_4852 misses 10 heavy atom(s)
-HIS_4853 misses 10 heavy atom(s)
-HIS_4854 misses 9 heavy atom(s)
-HIS_4855 misses 9 heavy atom(s)
-HIS_4856 misses 9 heavy atom(s)
-HIS_4857 misses 10 heavy atom(s)
-HIS_4858 misses 9 heavy atom(s)
-HIE_4859 misses 10 heavy atom(s)
-HIS_4860 misses 9 heavy atom(s)
-HIS_4861 misses 10 heavy atom(s)
-HIS_4862 misses 9 heavy atom(s)
-HIS_4863 misses 9 heavy atom(s)
-HIS_5393 misses 9 heavy atom(s)
-HIS_5394 misses 10 heavy atom(s)
-HIS_5395 misses 9 heavy atom(s)
-HIS_5396 misses 10 heavy atom(s)
-HIS_5397 misses 9 heavy atom(s)
-HIS_5398 misses 10 heavy atom(s)
-HIS_5399 misses 10 heavy atom(s)
-HIS_5400 misses 9 heavy atom(s)
-HIS_5401 misses 9 heavy atom(s)
-HIS_5402 misses 9 heavy atom(s)
-HIS_5403 misses 10 heavy atom(s)
-HIS_5404 misses 9 heavy atom(s)
-HIE_5405 misses 10 heavy atom(s)
-HIS_5406 misses 9 heavy atom(s)
-HIS_5407 misses 10 heavy atom(s)
-HIS_5408 misses 9 heavy atom(s)
-HIS_5409 misses 9 heavy atom(s)
-HIS_5617 misses 9 heavy atom(s)
-HIS_5618 misses 10 heavy atom(s)
-HIS_5619 misses 9 heavy atom(s)
-HIS_5620 misses 10 heavy atom(s)
-HIS_5621 misses 9 heavy atom(s)
-HIS_5622 misses 10 heavy atom(s)
-HIS_5623 misses 10 heavy atom(s)
-HIS_5624 misses 9 heavy atom(s)
-HIS_5625 misses 9 heavy atom(s)
-HIS_5626 misses 9 heavy atom(s)
-HIS_5627 misses 10 heavy atom(s)
-HIS_5628 misses 9 heavy atom(s)
-HIE_5629 misses 10 heavy atom(s)
-HIS_5630 misses 9 heavy atom(s)
-HIS_5631 misses 10 heavy atom(s)
-HIS_5632 misses 9 heavy atom(s)
-HIS_5633 misses 9 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/xt/2xty/4amber_2xty.prmtop
+None
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/xt/2xty/4amber_2xty.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty/4amber_2xty.prmtop
 
 	Running AmberPrep : 2xty.pdb
@@ -436,5 +143,87 @@ Preparing unit cell files: 4amber_2xty.prmtop and 4amber_2xty.rst7
 
 Checking output filenames
   file : 2xty_uc.prmtop
-Sorry:   Output file is empty : 2xty_uc.prmtop
-  Check contents of "leap.log"
+  file : 2xty_uc.rst7
+
+~> ChBox -c 2xty_uc.rst7 -o 2xty_uc.rst7 -X 55.33 -Y 55.33 -Z 282.46 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2xty_amber_all.in -p 4amber_2xty.prmtop -c 4amber_2xty.rst7 -o 2xty.min.out            -ref 4amber_2xty.rst7 -r 4amber_2xty.min.rst7
+
+checking special positions in 4phenix_2xty.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2xty.pdb
+      4amber_2xty.prmtop
+      4amber_2xty.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2xty.pdb use_amber=True \
+    amber.topology_file_name=4amber_2xty.prmtop \
+    amber.coordinate_file_name=4amber_2xty.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
+
+  Amber files
+    PDB    : 2xty.pdb
+    MTZ    : 2xty.mtz
+    prmtop : 4amber_2xty.prmtop
+    rst7   : 4amber_2xty.rst7
+  
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty
+return_files 2xty
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_2xty.pdb
+4phenix_2xty.pdb
+cp 4phenix_2xty.pdb /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty
+2xty.pdb
+cp 2xty.pdb /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty
+4amber_2xty.mtz
+4phenix_2xty.mtz
+2xty.mtz
+cp 2xty.mtz /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty
+4amber_2xty.rst7
+cp 4amber_2xty.rst7 /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty
+4phenix_2xty.rst7
+2xty.rst7
+4amber_2xty.prmtop
+cp 4amber_2xty.prmtop /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty
+4phenix_2xty.prmtop
+2xty.prmtop
+4amber_2xty_refine_001.log
+4phenix_2xty_refine_001.log
+2xty_refine_001.log
+4amber_2xty_refine_002.log
+4phenix_2xty_refine_002.log
+2xty_refine_002.log
+4amber_2xty_refine_001.pdb
+4phenix_2xty_refine_001.pdb
+2xty_refine_001.pdb
+4amber_2xty_refine_002.pdb
+4phenix_2xty_refine_002.pdb
+2xty_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty/2xty.pdb
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/xt/2xty
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/xt/2xty/2xty_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 2xty_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 2xty.pdb 2xty.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+

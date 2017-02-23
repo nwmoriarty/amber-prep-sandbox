@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 304
 only_code None
 force_amber_prep True
@@ -11,31 +11,21 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/cb/pdb1cb6.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/cb/1cb6/1cb6.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/cb/1cb6/1cb6.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/cb/1cb6/1cb6.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/cb/r1cb6sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/cb/1cb6/1cb6-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/cb/1cb6.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/cb/1cb6/1cb6.cif
+Warning: merging non-unique data
+Can't determine output label for r1cb6sf,_refln.crystal_id - skipping.
+Can't determine output label for r1cb6sf,_refln.scale_group_code - skipping.
+Warning: merging non-unique data
+Sorry: cctbx Error: merge_equivalents_exact: incompatible flags for hkl = (0, 0, 0) (mismatch between Friedel mates) for _refln.status
+Add --incompatible_flags_to_work_set to command line arguments to place incompatible flags to working set.
+Sorry: MTZ conversion failed - try running phenix.cif_as_mtz manually (and check 1cb6-sf.cif for format errors).
 Traceback (most recent call last):
   File "run_tests_local.py", line 323, in <module>
     run(*tuple(args))

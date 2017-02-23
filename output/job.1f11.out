@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 339
 only_code None
 force_amber_prep True
@@ -12,64 +12,39 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f1/pdb1f11.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f1/r1f11sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f1/1f11.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.cif
+Can't determine output label for r1f11sf,_refln.crystal_id - skipping.
+Can't determine output label for r1f11sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1f11sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1f11.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f1/pdb1f11.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f1/r1f11sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f1/1f11.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11/1f11.cif
+Can't determine output label for r1f11sf,_refln.crystal_id - skipping.
+Can't determine output label for r1f11sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1f11sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1f11.mtz
 
 ==================================================
 Summary of pdb4amber for: 1f11.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -106,7 +81,7 @@ None
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/f1/1f11/4amber_1f11.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/f1/1f11/4amber_1f11.prmtop
 
 	Running AmberPrep : 1f11.pdb
 
@@ -182,7 +157,7 @@ run_tests_local.py:222: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1f11.prmtop
     rst7   : 4amber_1f11.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f1/1f11
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11
 return_files 1f11
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1f11.pdb
@@ -216,7 +191,7 @@ cp 4amber_1f11.prmtop /net/chevy/raid1/nigel/amber/hi_lo/f1/1f11
 1f11_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/f1/1f11/1f11.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/f1/1f11
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/f1/1f11
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/f1/1f11/1f11_refine_001.log
 ------------------------------
@@ -227,16 +202,16 @@ Running phenix.refine
 
 phenix.refine 1f11.pdb 1f11.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
 
-# Date 2017-02-21 Time 16:36:58 PST -0800 (1487723818.71 s)
+# Date 2017-02-23 Time 10:46:42 PST -0800 (1487875602.37 s)
 #phil __OFF__
 
 Command line arguments: "1f11.pdb" "1f11.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
 
-HOST = lewis.lbl.gov
+HOST = morse.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 15141
-JOB_ID = 6368467
+PID = 3595
+JOB_ID = 6368472
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400
@@ -404,16 +379,16 @@ Running phenix.refine
 
 phenix.refine 1f11.pdb 1f11.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f1/1f11/4amber_1f11.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f1/1f11/4amber_1f11.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
 
-# Date 2017-02-21 Time 16:37:14 PST -0800 (1487723834.64 s)
+# Date 2017-02-23 Time 10:46:56 PST -0800 (1487875616.05 s)
 #phil __OFF__
 
 Command line arguments: "1f11.pdb" "1f11.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f1/1f11/4amber_1f11.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/f1/1f11/4amber_1f11.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
 
-HOST = lewis.lbl.gov
+HOST = morse.lbl.gov
 HOSTTYPE = x86_64-linux
 USER = nigel
-PID = 15433
-JOB_ID = 6368467
+PID = 4361
+JOB_ID = 6368472
 SGE_ARCH = lx24-amd64
 SGE_TASK_FIRST = 1
 SGE_TASK_LAST = 400

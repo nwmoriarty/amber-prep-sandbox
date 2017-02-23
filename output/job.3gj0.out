@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 358
 only_code None
 force_amber_prep True
@@ -11,36 +11,164 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/gj/pdb3gj0.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gj/r3gj0sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gj/3gj0.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.cif
+Can't determine output label for r3gj0sf,_refln.crystal_id - skipping.
+Can't determine output label for r3gj0sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 3618 reflections
+Can't determine output label for r3gj0sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3gj0.mtz
+local_archive None
+archive PDB None
+Reading from local mirror:
+  /net/cci/pdb_mirror/pdb/gj/pdb3gj0.ent.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/gj/r3gj0sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/gj/3gj0.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/gj/3gj0/3gj0.cif
+Can't determine output label for r3gj0sf,_refln.crystal_id - skipping.
+Can't determine output label for r3gj0sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 3618 reflections
+Can't determine output label for r3gj0sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3gj0.mtz
+
+==================================================
+Summary of pdb4amber for: 3gj0.pdb
+===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 8.892295 A between GLY 268 and LEU 269
+
+---------- Mising heavy atom(s)
+
+None
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/gj/3gj0/4amber_3gj0.prmtop
+not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/gj/3gj0/4amber_3gj0.prmtop
+
+	Running AmberPrep : 3gj0.pdb
+
+
+==================================================
+Running pdb4amber on 3gj0.pdb
+==================================================
+
+==================================================
+Setting up library files for non-standard residues
+==================================================
+
+==================================================
+Running elbow/antechamber for GDP 
+==================================================
+
+==================================================
+Summary of pdb4amber for: 3gj0_4tleap_uc1.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+
+---------- Gaps (Renumbered Residues!)
+gap of 8.892295 A between GLY 268 and LEU 269
+gap of 8.892295 A between GLY 1150 and LEU 1151
+gap of 8.892295 A between GLY 2032 and LEU 2033
+gap of 8.892295 A between GLY 2914 and LEU 2915
+gap of 8.892295 A between GLY 3796 and LEU 3797
+gap of 8.892295 A between GLY 4678 and LEU 4679
+gap of 8.892295 A between GLY 5560 and LEU 5561
+gap of 8.892295 A between GLY 6442 and LEU 6443
+
+---------- Mising heavy atom(s)
+
+None
+
+MoleculeClass :  C:10  N: 5  O:11  P: 2 (CHEMICAL COMPONENTS format)
+	40 atoms
+	42 bonds
+	73 angles
+	102 dihedrals
+	2 rings (groups, rings, atoms) 3 16
+	4 chirals : R S R R 
+
+~> antechamber -i 4antechamber_GDP.pdb -fi pdb -o GDP.mol2 -fo mol2       -nc -3 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
+
+
+~> parmchk2 -s 2 -i GDP.mol2 -f mol2 -o GDP.frcmod
+
+
+==================================================
+Preparing asu files and 4phenix_3gj0.pdb
+==================================================
+
+~> tleap -f 3gj0_asu_tleap_input_run
+
+Checking output filenames
+  file : 3gj0_asu.prmtop
+  file : 3gj0_asu.rst7
+
+~> ChBox -c 3gj0_asu.rst7 -o 3gj0_asu.rst7 -X 81.544 -Y 81.544 -Z 130.567 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3gj0.prmtop and 4amber_3gj0.rst7
+============================================================
+
+~> UnitCell -p 3gj0_4UnitCell.pdb -o 3gj0_4tleap_uc1.pdb
+
+
+~> tleap -f 3gj0_uc_tleap_input_run
+
+Checking output filenames
+  file : 3gj0_uc.prmtop
+  file : 3gj0_uc.rst7
+
+~> ChBox -c 3gj0_uc.rst7 -o 3gj0_uc.rst7 -X 81.544 -Y 81.544 -Z 130.567 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3gj0_amber_all.in -p 4amber_3gj0.prmtop -c 4amber_3gj0.rst7 -o 3gj0.min.out            -ref 4amber_3gj0.rst7 -r 4amber_3gj0.min.rst7
+
 Traceback (most recent call last):
   File "run_tests_local.py", line 323, in <module>
     run(*tuple(args))
-  File "run_tests_local.py", line 302, in run
-    mtz_file = get_mtz_filename(code)
-  File "/net/chevy/raid1/nigel/amber/hi_lo/run_utils.py", line 421, in get_mtz_filename
-    assert 0
+  File "run_tests_local.py", line 307, in run
+    w2 = run_all_tests(code, force_amber_prep=force_amber_prep)
+  File "run_tests_local.py", line 93, in run_all_tests
+    "clean=on",
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 1034, in run
+    minimization_options=actions.minimization_options)
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 685, in run_minimise
+    assert (ero.return_code == 0)
 AssertionError

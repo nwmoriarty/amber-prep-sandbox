@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 163
 only_code None
 force_amber_prep True
@@ -11,64 +11,43 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f8/pdb2f8x.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f8/r2f8xsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f8/2f8x.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.cif
+Can't determine output label for r2f8xsf,_refln.crystal_id - skipping.
+Can't determine output label for r2f8xsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2f8xsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r2f8xsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2f8x.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/f8/pdb2f8x.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/f8/r2f8xsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/f8/2f8x.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/f8/2f8x/2f8x.cif
+Can't determine output label for r2f8xsf,_refln.crystal_id - skipping.
+Can't determine output label for r2f8xsf,_refln.scale_group_code - skipping.
+Can't determine output label for r2f8xsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r2f8xsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2f8x.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
 
 ==================================================
 Summary of pdb4amber for: 2f8x.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -115,35 +94,35 @@ The following residues had alternate locations:
 None
 
 ---------- Gaps (Renumbered Residues!)
-gap of 12.235972 A between SER 499 and ALA 500
-gap of 10.386817 A between TYR 507 and SER 508
-gap of 12.235444 A between SER 1272 and ALA 1273
-gap of 10.387048 A between TYR 1280 and SER 1281
-gap of 12.236494 A between SER 2045 and ALA 2046
-gap of 10.386455 A between TYR 2053 and SER 2054
-gap of 12.235972 A between SER 2818 and ALA 2819
-gap of 10.386817 A between TYR 2826 and SER 2827
-gap of 12.235444 A between SER 3591 and ALA 3592
-gap of 10.387048 A between TYR 3599 and SER 3600
-gap of 12.236494 A between SER 4364 and ALA 4365
-gap of 10.386455 A between TYR 4372 and SER 4373
-gap of 12.236494 A between SER 5137 and ALA 5138
-gap of 10.386455 A between TYR 5145 and SER 5146
-gap of 12.235972 A between SER 5910 and ALA 5911
-gap of 10.386817 A between TYR 5918 and SER 5919
-gap of 12.235444 A between SER 6683 and ALA 6684
-gap of 10.387048 A between TYR 6691 and SER 6692
-gap of 12.236494 A between SER 7456 and ALA 7457
-gap of 10.386455 A between TYR 7464 and SER 7465
-gap of 12.235972 A between SER 8229 and ALA 8230
-gap of 10.386817 A between TYR 8237 and SER 8238
-gap of 12.235444 A between SER 9002 and ALA 9003
-gap of 10.387048 A between TYR 9010 and SER 9011
+gap of 12.235972 A between SER 469 and ALA 470
+gap of 10.386817 A between TYR 477 and SER 478
+gap of 12.235444 A between SER 1212 and ALA 1213
+gap of 10.387048 A between TYR 1220 and SER 1221
+gap of 12.236494 A between SER 1955 and ALA 1956
+gap of 10.386455 A between TYR 1963 and SER 1964
+gap of 12.235972 A between SER 2698 and ALA 2699
+gap of 10.386817 A between TYR 2706 and SER 2707
+gap of 12.235444 A between SER 3441 and ALA 3442
+gap of 10.387048 A between TYR 3449 and SER 3450
+gap of 12.236494 A between SER 4184 and ALA 4185
+gap of 10.386455 A between TYR 4192 and SER 4193
+gap of 12.236494 A between SER 4927 and ALA 4928
+gap of 10.386455 A between TYR 4935 and SER 4936
+gap of 12.235972 A between SER 5670 and ALA 5671
+gap of 10.386817 A between TYR 5678 and SER 5679
+gap of 12.235444 A between SER 6413 and ALA 6414
+gap of 10.387048 A between TYR 6421 and SER 6422
+gap of 12.236494 A between SER 7156 and ALA 7157
+gap of 10.386455 A between TYR 7164 and SER 7165
+gap of 12.235972 A between SER 7899 and ALA 7900
+gap of 10.386817 A between TYR 7907 and SER 7908
+gap of 12.235444 A between SER 8642 and ALA 8643
+gap of 10.387048 A between TYR 8650 and SER 8651
 
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/f8/2f8x/4amber_2f8x.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/f8/2f8x/4amber_2f8x.prmtop
 not pdb_filename /net/chevy/raid1/nigel/amber/hi_lo/f8/2f8x/4phenix_2f8x.pdb
 
 	Running AmberPrep : 2f8x.pdb
@@ -181,5 +160,35 @@ Preparing unit cell files: 4amber_2f8x.prmtop and 4amber_2f8x.rst7
 
 Checking output filenames
   file : 2f8x_uc.prmtop
-Sorry:   Output file is empty : 2f8x_uc.prmtop
-  Check contents of "leap.log"
+  file : 2f8x_uc.rst7
+
+~> ChBox -c 2f8x_uc.rst7 -o 2f8x_uc.rst7 -X 273.866 -Y 273.866 -Z 121.016 -al 90.0 -bt 90.0 -gm 120.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2f8x_amber_all.in -p 4amber_2f8x.prmtop -c 4amber_2f8x.rst7 -o 2f8x.min.out            -ref 4amber_2f8x.rst7 -r 4amber_2f8x.min.rst7
+
+checking special positions in 4phenix_2f8x.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2f8x.pdb
+      4amber_2f8x.prmtop
+      4amber_2f8x.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2f8x.pdb use_amber=True \
+    amber.topology_file_name=4amber_2f8x.prmtop \
+    amber.coordinate_file_name=4amber_2f8x.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)

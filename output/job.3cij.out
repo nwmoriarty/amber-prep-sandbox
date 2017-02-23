@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 136
 only_code None
 force_amber_prep True
@@ -11,64 +11,39 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ci/pdb3cij.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ci/r3cijsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ci/3cij.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.cif
+Can't determine output label for r3cijsf,_refln.crystal_id - skipping.
+Can't determine output label for r3cijsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3cijsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3cij.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ci/pdb3cij.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ci/r3cijsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ci/3cij.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ci/3cij/3cij.cif
+Can't determine output label for r3cijsf,_refln.crystal_id - skipping.
+Can't determine output label for r3cijsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3cijsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3cij.mtz
 
 ==================================================
 Summary of pdb4amber for: 3cij.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -117,7 +92,7 @@ LEU_509
 None
 The alternate coordinates have been discarded.
 Only the first occurrence for each atom was kept.
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ci/3cij/4amber_3cij.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/ci/3cij/4amber_3cij.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ci/3cij/4amber_3cij.prmtop
 
 	Running AmberPrep : 3cij.pdb
@@ -150,40 +125,4 @@ MoleculeClass :  O: 4  W: 1 (CHEMICAL COMPONENTS format)
 ~> antechamber -i 4antechamber_WO4.pdb -fi pdb -o WO4.mol2 -fo mol2       -nc -2 -m 1 -s 2 -pf y -c bcc -at gaff2 -ek "qm_theory='AM1',grms_tol=0.0005,scfconv=1.d-10,maxcyc=0,ndiis_attempts=700,"
 
 For atom[1]:W, the best APS is not zero, bonds involved by this atom are frozen
-
-~> parmchk2 -s 2 -i WO4.mol2 -f mol2 -o WO4.frcmod
-
-
-  Residue "SO4" already in amber monomer library. Skipping elbow/antechamber
-    run for this residue.
-        
-
-==================================================
-Preparing asu files and 4phenix_3cij.pdb
-==================================================
-
-~> tleap -f 3cij_asu_tleap_input_run
-
-
-~> " --- Testing environment ---"
-
-
-AMBERHOME: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber
-
-PATH: /net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin
-    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
-    : /net/cci-filer2/raid1/xp/phenix/phenix-svn/build/bin
-    : /net/cci/xp/CCDC/CSD_2016/bin
-    : /net/boa/srv/sge-6.1u2/bin/lx24-amd64
-    : .
-    : /net/cci/nigel/bin
-    : /net/cci/nigel/bin/Linux
-    : /usr/local_cci/bin
-    : /usr/local/bin
-    : /bin
-    : /usr/bin
-    : /usr/sbin
-    : /usr/bin/X11
-    : /etc
-    : /usr/etc
-Sorry: tleap error : "Could not open file WO4.mol2: not found"
+Sorry: Error: cannot run "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/bin/bondtype -j full -i ANTECHAMBER_BOND_TYPE.AC0 -o ANTECHAMBER_BOND_TYPE.AC -f ac" in judgebondtype() of antechamber.c properly, exit

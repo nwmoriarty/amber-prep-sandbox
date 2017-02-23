@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 77
 only_code None
 force_amber_prep True
@@ -11,60 +11,34 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/sj/pdb1sj5.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/sj/r1sj5sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/sj/1sj5.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.cif
+Can't determine output label for r1sj5sf,_refln.crystal_id - skipping.
+Can't determine output label for r1sj5sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1sj5sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1sj5.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/sj/pdb1sj5.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/sj/r1sj5sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/sj/1sj5.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5/1sj5.cif
+Can't determine output label for r1sj5sf,_refln.crystal_id - skipping.
+Can't determine output label for r1sj5sf,_refln.scale_group_code - skipping.
+Can't determine output label for r1sj5sf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1sj5.mtz
 
 ==================================================
 Summary of pdb4amber for: 1sj5.pdb
@@ -105,90 +79,15 @@ The following residues had alternate locations:
 None
 
 ---------- Gaps (Renumbered Residues!)
-gap of 10.498840 A between THR 114 and ALA 115
-gap of 5.687785 A between TYR 276 and GLU 277
-gap of 10.498840 A between THR 430 and ALA 431
-gap of 5.687785 A between TYR 592 and GLU 593
+gap of 10.498840 A between THR 96 and ALA 97
+gap of 5.687785 A between TYR 240 and GLU 241
+gap of 10.498840 A between THR 376 and ALA 377
+gap of 5.687785 A between TYR 520 and GLU 521
 
 ---------- Mising heavy atom(s)
 
-HIS_1 misses 9 heavy atom(s)
-HIS_2 misses 10 heavy atom(s)
-HIS_3 misses 10 heavy atom(s)
-HIS_4 misses 10 heavy atom(s)
-HIS_5 misses 9 heavy atom(s)
-HIS_6 misses 10 heavy atom(s)
-HIS_7 misses 9 heavy atom(s)
-HIS_8 misses 10 heavy atom(s)
-HIS_9 misses 10 heavy atom(s)
-HIS_10 misses 9 heavy atom(s)
-HIS_11 misses 9 heavy atom(s)
-HIS_12 misses 9 heavy atom(s)
-HIS_13 misses 10 heavy atom(s)
-HIS_14 misses 9 heavy atom(s)
-HIE_15 misses 10 heavy atom(s)
-HIS_16 misses 9 heavy atom(s)
-HIS_17 misses 10 heavy atom(s)
-HIS_18 misses 9 heavy atom(s)
-HIS_19 misses 9 heavy atom(s)
-HIS_162 misses 9 heavy atom(s)
-HIS_163 misses 10 heavy atom(s)
-HIS_164 misses 10 heavy atom(s)
-HIS_165 misses 10 heavy atom(s)
-HIS_166 misses 9 heavy atom(s)
-HIS_167 misses 10 heavy atom(s)
-HIS_168 misses 9 heavy atom(s)
-HIS_169 misses 10 heavy atom(s)
-HIS_170 misses 10 heavy atom(s)
-HIS_171 misses 9 heavy atom(s)
-HIS_172 misses 9 heavy atom(s)
-HIS_173 misses 9 heavy atom(s)
-HIS_174 misses 10 heavy atom(s)
-HIS_175 misses 9 heavy atom(s)
-HIE_176 misses 10 heavy atom(s)
-HIS_177 misses 9 heavy atom(s)
-HIS_178 misses 10 heavy atom(s)
-HIS_179 misses 9 heavy atom(s)
-HIS_180 misses 9 heavy atom(s)
-HIS_317 misses 9 heavy atom(s)
-HIS_318 misses 10 heavy atom(s)
-HIS_319 misses 10 heavy atom(s)
-HIS_320 misses 10 heavy atom(s)
-HIS_321 misses 9 heavy atom(s)
-HIS_322 misses 10 heavy atom(s)
-HIS_323 misses 9 heavy atom(s)
-HIS_324 misses 10 heavy atom(s)
-HIS_325 misses 10 heavy atom(s)
-HIS_326 misses 9 heavy atom(s)
-HIS_327 misses 9 heavy atom(s)
-HIS_328 misses 9 heavy atom(s)
-HIS_329 misses 10 heavy atom(s)
-HIS_330 misses 9 heavy atom(s)
-HIE_331 misses 10 heavy atom(s)
-HIS_332 misses 9 heavy atom(s)
-HIS_333 misses 10 heavy atom(s)
-HIS_334 misses 9 heavy atom(s)
-HIS_335 misses 9 heavy atom(s)
-HIS_478 misses 9 heavy atom(s)
-HIS_479 misses 10 heavy atom(s)
-HIS_480 misses 10 heavy atom(s)
-HIS_481 misses 10 heavy atom(s)
-HIS_482 misses 9 heavy atom(s)
-HIS_483 misses 10 heavy atom(s)
-HIS_484 misses 9 heavy atom(s)
-HIS_485 misses 10 heavy atom(s)
-HIS_486 misses 10 heavy atom(s)
-HIS_487 misses 9 heavy atom(s)
-HIS_488 misses 9 heavy atom(s)
-HIS_489 misses 9 heavy atom(s)
-HIS_490 misses 10 heavy atom(s)
-HIS_491 misses 9 heavy atom(s)
-HIE_492 misses 10 heavy atom(s)
-HIS_493 misses 9 heavy atom(s)
-HIS_494 misses 10 heavy atom(s)
-HIS_495 misses 9 heavy atom(s)
-HIS_496 misses 9 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.prmtop
+None
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.prmtop
 
 	Running AmberPrep : 1sj5.pdb
@@ -226,5 +125,97 @@ Preparing unit cell files: 4amber_1sj5.prmtop and 4amber_1sj5.rst7
 
 Checking output filenames
   file : 1sj5_uc.prmtop
-Sorry:   Output file is empty : 1sj5_uc.prmtop
-  Check contents of "leap.log"
+  file : 1sj5_uc.rst7
+
+~> ChBox -c 1sj5_uc.rst7 -o 1sj5_uc.rst7 -X 44.001 -Y 52.136 -Z 73.33 -al 90.0 -bt 97.64 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 1sj5_amber_all.in -p 4amber_1sj5.prmtop -c 4amber_1sj5.rst7 -o 1sj5.min.out            -ref 4amber_1sj5.rst7 -r 4amber_1sj5.min.rst7
+
+checking special positions in 4phenix_1sj5.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_1sj5.pdb
+      4amber_1sj5.prmtop
+      4amber_1sj5.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_1sj5.pdb use_amber=True \
+    amber.topology_file_name=4amber_1sj5.prmtop \
+    amber.coordinate_file_name=4amber_1sj5.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
+
+  Amber files
+    PDB    : 1sj5.pdb
+    MTZ    : 1sj5.mtz
+    prmtop : 4amber_1sj5.prmtop
+    rst7   : 4amber_1sj5.rst7
+  
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5
+return_files 1sj5
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_1sj5.pdb
+4phenix_1sj5.pdb
+cp 4phenix_1sj5.pdb /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5
+1sj5.pdb
+cp 1sj5.pdb /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5
+4amber_1sj5.mtz
+4phenix_1sj5.mtz
+1sj5.mtz
+cp 1sj5.mtz /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5
+4amber_1sj5.rst7
+cp 4amber_1sj5.rst7 /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5
+4phenix_1sj5.rst7
+1sj5.rst7
+4amber_1sj5.prmtop
+cp 4amber_1sj5.prmtop /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5
+4phenix_1sj5.prmtop
+1sj5.prmtop
+4amber_1sj5_refine_001.log
+4phenix_1sj5_refine_001.log
+1sj5_refine_001.log
+4amber_1sj5_refine_002.log
+4phenix_1sj5_refine_002.log
+1sj5_refine_002.log
+4amber_1sj5_refine_001.pdb
+4phenix_1sj5_refine_001.pdb
+1sj5_refine_001.pdb
+4amber_1sj5_refine_002.pdb
+4phenix_1sj5_refine_002.pdb
+1sj5_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/1sj5.pdb
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/sj/1sj5
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/1sj5_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 1sj5_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 1sj5.pdb 1sj5.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/1sj5_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 1sj5_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 1sj5.pdb 1sj5.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/sj/1sj5/4amber_1sj5.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+

@@ -60,8 +60,8 @@ def run():
   for pdb_code, error in results.items():
     nums.setdefault(error, [])
     nums[error].append(pdb_code)
-  for error, pdb_codes in nums.items():
-    print '%-60s %3d %s' % (error, len(pdb_codes), pdb_codes[:10])
+  for error, pdb_codes in sorted(nums.items()):
+    print ' - %-60s %3d %s' % (error, len(pdb_codes), pdb_codes[:10])
     
 if __name__=="__main__":
   run()#sys.argv[1])

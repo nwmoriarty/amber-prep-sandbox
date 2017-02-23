@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 273
 only_code None
 force_amber_prep True
@@ -11,64 +11,39 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ge/pdb2ger.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ge/r2gersf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ge/2ger.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.cif
+Can't determine output label for r2gersf,_refln.crystal_id - skipping.
+Can't determine output label for r2gersf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gersf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ger.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ge/pdb2ger.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ge/r2gersf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ge/2ger.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ge/2ger/2ger.cif
+Can't determine output label for r2gersf,_refln.crystal_id - skipping.
+Can't determine output label for r2gersf,_refln.scale_group_code - skipping.
+Can't determine output label for r2gersf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 2ger.mtz
 
 ==================================================
 Summary of pdb4amber for: 2ger.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -113,214 +88,15 @@ The following residues had alternate locations:
 None
 
 ---------- Gaps (Renumbered Residues!)
-gap of 4.806791 A between LYS 348 and THR 349
-gap of 4.806791 A between LYS 2374 and THR 2375
-gap of 4.806862 A between LYS 4400 and THR 4401
-gap of 4.806791 A between LYS 6426 and THR 6427
+gap of 4.806791 A between LYS 330 and THR 331
+gap of 4.806791 A between LYS 2311 and THR 2312
+gap of 4.806862 A between LYS 4292 and THR 4293
+gap of 4.806791 A between LYS 6273 and THR 6274
 
 ---------- Mising heavy atom(s)
 
-ALA_2 misses 4 heavy atom(s)
-ALA_3 misses 5 heavy atom(s)
-ALA_4 misses 4 heavy atom(s)
-ALA_5 misses 5 heavy atom(s)
-ALA_6 misses 4 heavy atom(s)
-ALA_7 misses 5 heavy atom(s)
-ALA_8 misses 5 heavy atom(s)
-ALA_9 misses 5 heavy atom(s)
-ALA_10 misses 4 heavy atom(s)
-ALA_11 misses 4 heavy atom(s)
-ALA_288 misses 4 heavy atom(s)
-ALA_289 misses 5 heavy atom(s)
-ALA_290 misses 4 heavy atom(s)
-ALA_291 misses 5 heavy atom(s)
-ALA_292 misses 4 heavy atom(s)
-ALA_293 misses 5 heavy atom(s)
-ALA_294 misses 5 heavy atom(s)
-ALA_295 misses 5 heavy atom(s)
-ALA_296 misses 4 heavy atom(s)
-ALA_297 misses 4 heavy atom(s)
-ALA_573 misses 4 heavy atom(s)
-ALA_574 misses 5 heavy atom(s)
-ALA_575 misses 4 heavy atom(s)
-ALA_576 misses 5 heavy atom(s)
-ALA_577 misses 4 heavy atom(s)
-ALA_578 misses 5 heavy atom(s)
-ALA_579 misses 5 heavy atom(s)
-ALA_580 misses 5 heavy atom(s)
-ALA_581 misses 4 heavy atom(s)
-ALA_582 misses 4 heavy atom(s)
-ALA_859 misses 4 heavy atom(s)
-ALA_860 misses 5 heavy atom(s)
-ALA_861 misses 4 heavy atom(s)
-ALA_862 misses 5 heavy atom(s)
-ALA_863 misses 4 heavy atom(s)
-ALA_864 misses 5 heavy atom(s)
-ALA_865 misses 5 heavy atom(s)
-ALA_866 misses 5 heavy atom(s)
-ALA_867 misses 4 heavy atom(s)
-ALA_868 misses 4 heavy atom(s)
-ALA_1145 misses 4 heavy atom(s)
-ALA_1146 misses 5 heavy atom(s)
-ALA_1147 misses 4 heavy atom(s)
-ALA_1148 misses 5 heavy atom(s)
-ALA_1149 misses 4 heavy atom(s)
-ALA_1150 misses 5 heavy atom(s)
-ALA_1151 misses 5 heavy atom(s)
-ALA_1152 misses 5 heavy atom(s)
-ALA_1153 misses 4 heavy atom(s)
-ALA_1154 misses 4 heavy atom(s)
-ALA_2028 misses 4 heavy atom(s)
-ALA_2029 misses 5 heavy atom(s)
-ALA_2030 misses 4 heavy atom(s)
-ALA_2031 misses 5 heavy atom(s)
-ALA_2032 misses 4 heavy atom(s)
-ALA_2033 misses 5 heavy atom(s)
-ALA_2034 misses 5 heavy atom(s)
-ALA_2035 misses 5 heavy atom(s)
-ALA_2036 misses 4 heavy atom(s)
-ALA_2037 misses 4 heavy atom(s)
-ALA_2314 misses 4 heavy atom(s)
-ALA_2315 misses 5 heavy atom(s)
-ALA_2316 misses 4 heavy atom(s)
-ALA_2317 misses 5 heavy atom(s)
-ALA_2318 misses 4 heavy atom(s)
-ALA_2319 misses 5 heavy atom(s)
-ALA_2320 misses 5 heavy atom(s)
-ALA_2321 misses 5 heavy atom(s)
-ALA_2322 misses 4 heavy atom(s)
-ALA_2323 misses 4 heavy atom(s)
-ALA_2599 misses 4 heavy atom(s)
-ALA_2600 misses 5 heavy atom(s)
-ALA_2601 misses 4 heavy atom(s)
-ALA_2602 misses 5 heavy atom(s)
-ALA_2603 misses 4 heavy atom(s)
-ALA_2604 misses 5 heavy atom(s)
-ALA_2605 misses 5 heavy atom(s)
-ALA_2606 misses 5 heavy atom(s)
-ALA_2607 misses 4 heavy atom(s)
-ALA_2608 misses 4 heavy atom(s)
-ALA_2885 misses 4 heavy atom(s)
-ALA_2886 misses 5 heavy atom(s)
-ALA_2887 misses 4 heavy atom(s)
-ALA_2888 misses 5 heavy atom(s)
-ALA_2889 misses 4 heavy atom(s)
-ALA_2890 misses 5 heavy atom(s)
-ALA_2891 misses 5 heavy atom(s)
-ALA_2892 misses 5 heavy atom(s)
-ALA_2893 misses 4 heavy atom(s)
-ALA_2894 misses 4 heavy atom(s)
-ALA_3171 misses 4 heavy atom(s)
-ALA_3172 misses 5 heavy atom(s)
-ALA_3173 misses 4 heavy atom(s)
-ALA_3174 misses 5 heavy atom(s)
-ALA_3175 misses 4 heavy atom(s)
-ALA_3176 misses 5 heavy atom(s)
-ALA_3177 misses 5 heavy atom(s)
-ALA_3178 misses 5 heavy atom(s)
-ALA_3179 misses 4 heavy atom(s)
-ALA_3180 misses 4 heavy atom(s)
-ALA_4054 misses 4 heavy atom(s)
-ALA_4055 misses 5 heavy atom(s)
-ALA_4056 misses 4 heavy atom(s)
-ALA_4057 misses 5 heavy atom(s)
-ALA_4058 misses 4 heavy atom(s)
-ALA_4059 misses 5 heavy atom(s)
-ALA_4060 misses 5 heavy atom(s)
-ALA_4061 misses 5 heavy atom(s)
-ALA_4062 misses 4 heavy atom(s)
-ALA_4063 misses 4 heavy atom(s)
-ALA_4340 misses 4 heavy atom(s)
-ALA_4341 misses 5 heavy atom(s)
-ALA_4342 misses 4 heavy atom(s)
-ALA_4343 misses 5 heavy atom(s)
-ALA_4344 misses 4 heavy atom(s)
-ALA_4345 misses 5 heavy atom(s)
-ALA_4346 misses 5 heavy atom(s)
-ALA_4347 misses 5 heavy atom(s)
-ALA_4348 misses 4 heavy atom(s)
-ALA_4349 misses 4 heavy atom(s)
-ALA_4625 misses 4 heavy atom(s)
-ALA_4626 misses 5 heavy atom(s)
-ALA_4627 misses 4 heavy atom(s)
-ALA_4628 misses 5 heavy atom(s)
-ALA_4629 misses 4 heavy atom(s)
-ALA_4630 misses 5 heavy atom(s)
-ALA_4631 misses 5 heavy atom(s)
-ALA_4632 misses 5 heavy atom(s)
-ALA_4633 misses 4 heavy atom(s)
-ALA_4634 misses 4 heavy atom(s)
-ALA_4911 misses 4 heavy atom(s)
-ALA_4912 misses 5 heavy atom(s)
-ALA_4913 misses 4 heavy atom(s)
-ALA_4914 misses 5 heavy atom(s)
-ALA_4915 misses 4 heavy atom(s)
-ALA_4916 misses 5 heavy atom(s)
-ALA_4917 misses 5 heavy atom(s)
-ALA_4918 misses 5 heavy atom(s)
-ALA_4919 misses 4 heavy atom(s)
-ALA_4920 misses 4 heavy atom(s)
-ALA_5197 misses 4 heavy atom(s)
-ALA_5198 misses 5 heavy atom(s)
-ALA_5199 misses 4 heavy atom(s)
-ALA_5200 misses 5 heavy atom(s)
-ALA_5201 misses 4 heavy atom(s)
-ALA_5202 misses 5 heavy atom(s)
-ALA_5203 misses 5 heavy atom(s)
-ALA_5204 misses 5 heavy atom(s)
-ALA_5205 misses 4 heavy atom(s)
-ALA_5206 misses 4 heavy atom(s)
-ALA_6080 misses 4 heavy atom(s)
-ALA_6081 misses 5 heavy atom(s)
-ALA_6082 misses 4 heavy atom(s)
-ALA_6083 misses 5 heavy atom(s)
-ALA_6084 misses 4 heavy atom(s)
-ALA_6085 misses 5 heavy atom(s)
-ALA_6086 misses 5 heavy atom(s)
-ALA_6087 misses 5 heavy atom(s)
-ALA_6088 misses 4 heavy atom(s)
-ALA_6089 misses 4 heavy atom(s)
-ALA_6366 misses 4 heavy atom(s)
-ALA_6367 misses 5 heavy atom(s)
-ALA_6368 misses 4 heavy atom(s)
-ALA_6369 misses 5 heavy atom(s)
-ALA_6370 misses 4 heavy atom(s)
-ALA_6371 misses 5 heavy atom(s)
-ALA_6372 misses 5 heavy atom(s)
-ALA_6373 misses 5 heavy atom(s)
-ALA_6374 misses 4 heavy atom(s)
-ALA_6375 misses 4 heavy atom(s)
-ALA_6651 misses 4 heavy atom(s)
-ALA_6652 misses 5 heavy atom(s)
-ALA_6653 misses 4 heavy atom(s)
-ALA_6654 misses 5 heavy atom(s)
-ALA_6655 misses 4 heavy atom(s)
-ALA_6656 misses 5 heavy atom(s)
-ALA_6657 misses 5 heavy atom(s)
-ALA_6658 misses 5 heavy atom(s)
-ALA_6659 misses 4 heavy atom(s)
-ALA_6660 misses 4 heavy atom(s)
-ALA_6937 misses 4 heavy atom(s)
-ALA_6938 misses 5 heavy atom(s)
-ALA_6939 misses 4 heavy atom(s)
-ALA_6940 misses 5 heavy atom(s)
-ALA_6941 misses 4 heavy atom(s)
-ALA_6942 misses 5 heavy atom(s)
-ALA_6943 misses 5 heavy atom(s)
-ALA_6944 misses 5 heavy atom(s)
-ALA_6945 misses 4 heavy atom(s)
-ALA_6946 misses 4 heavy atom(s)
-ALA_7223 misses 4 heavy atom(s)
-ALA_7224 misses 5 heavy atom(s)
-ALA_7225 misses 4 heavy atom(s)
-ALA_7226 misses 5 heavy atom(s)
-ALA_7227 misses 4 heavy atom(s)
-ALA_7228 misses 5 heavy atom(s)
-ALA_7229 misses 5 heavy atom(s)
-ALA_7230 misses 5 heavy atom(s)
-ALA_7231 misses 4 heavy atom(s)
-ALA_7232 misses 4 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ge/2ger/4amber_2ger.prmtop
+None
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/ge/2ger/4amber_2ger.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/ge/2ger/4amber_2ger.prmtop
 
 	Running AmberPrep : 2ger.pdb
@@ -358,5 +134,35 @@ Preparing unit cell files: 4amber_2ger.prmtop and 4amber_2ger.rst7
 
 Checking output filenames
   file : 2ger_uc.prmtop
-Sorry:   Output file is empty : 2ger_uc.prmtop
-  Check contents of "leap.log"
+  file : 2ger_uc.rst7
+
+~> ChBox -c 2ger_uc.rst7 -o 2ger_uc.rst7 -X 207.607 -Y 123.805 -Z 120.79 -al 90.0 -bt 121.76 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 2ger_amber_all.in -p 4amber_2ger.prmtop -c 4amber_2ger.rst7 -o 2ger.min.out            -ref 4amber_2ger.rst7 -r 4amber_2ger.min.rst7
+
+checking special positions in 4phenix_2ger.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_2ger.pdb
+      4amber_2ger.prmtop
+      4amber_2ger.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_2ger.pdb use_amber=True \
+    amber.topology_file_name=4amber_2ger.prmtop \
+    amber.coordinate_file_name=4amber_2ger.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)

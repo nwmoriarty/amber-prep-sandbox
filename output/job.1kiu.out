@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 69
 only_code None
 force_amber_prep True
@@ -12,35 +12,23 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ki/pdb1kiu.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu/1kiu.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu/1kiu.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu/1kiu.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ki/r1kiusf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu/1kiu-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ki/1kiu.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu/1kiu.cif
+Can't determine output label for r1kiusf,_refln.crystal_id - skipping.
+Can't determine output label for r1kiusf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kiusf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kiu.mtz
 
 ==================================================
 Summary of pdb4amber for: 1kiu.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -101,7 +89,7 @@ None
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ki/1kiu/4amber_1kiu.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/ki/1kiu/4amber_1kiu.prmtop
 
 	Running AmberPrep : 1kiu.pdb
 
@@ -179,7 +167,7 @@ run_tests_local.py:222: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_1kiu.prmtop
     rst7   : 4amber_1kiu.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu
 return_files 1kiu
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_1kiu.pdb
@@ -213,7 +201,7 @@ cp 4amber_1kiu.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ki/1kiu
 1kiu_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ki/1kiu/1kiu.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/ki/1kiu
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ki/1kiu/1kiu_refine_001.log
 ------------------------------
@@ -224,36 +212,3 @@ phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ki/1kiu/1kiu_r
 ------------------------------
 
 	Already done (on chevy) 1kiu_refine_002
-zing input coordinates.
-==================================================
-
-~> sander -O -i 1kiu_amber_all.in -p 4amber_1kiu.prmtop -c 4amber_1kiu.rst7 -o 1kiu.min.out            -ref 4amber_1kiu.rst7 -r 4amber_1kiu.min.rst7
-
-Traceback (most recent call last):
-  File "run_tests_local.py", line 323, in <module>
-    run(*tuple(args))
-  File "run_tests_local.py", line 307, in run
-    w2 = run_all_tests(code, force_amber_prep=force_amber_prep)
-  File "run_tests_local.py", line 93, in run_all_tests
-    "clean=on",
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 1034, in run
-    minimization_options=actions.minimization_options)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 689, in run_minimise
-    output_pdb_file )
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 313, in uc_parm7_to_4phenix_pdb
-    parm = parmed.load_file( parm7_file, xyz=rst7_file )
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 197, in load_file
-    return cls.parse(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/amberformat.py", line 353, in parse
-    return LoadParm(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/readparm.py", line 73, in LoadParm
-    f = load_file(xyz)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 214, in load_file
-    return cls(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/asciicrd.py", line 195, in __init__
-    mode, title)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/asciicrd.py", line 73, in __init__
-    self._parse()
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/asciicrd.py", line 231, in _parse
-    'for %d atoms.' % (len(lines), self.natom))
-RuntimeError: Badly formatted restart file. Has 107186 lines for 238700 atoms.

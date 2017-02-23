@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 315
 only_code None
 force_amber_prep True
@@ -11,64 +11,39 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/et/pdb3etb.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/et/r3etbsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/et/3etb.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.cif
+Can't determine output label for r3etbsf,_refln.crystal_id - skipping.
+Can't determine output label for r3etbsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3etbsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3etb.mtz
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/et/pdb3etb.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/et/r3etbsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/et/3etb.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb/3etb.cif
+Can't determine output label for r3etbsf,_refln.crystal_id - skipping.
+Can't determine output label for r3etbsf,_refln.scale_group_code - skipping.
+Can't determine output label for r3etbsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3etb.mtz
 
 ==================================================
 Summary of pdb4amber for: 3etb.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -1516,226 +1491,35 @@ The following residues had alternate locations:
 None
 
 ---------- Gaps (Renumbered Residues!)
-gap of 4.112092 A between LEU 215 and SER 216
-gap of 4.920476 A between SER 216 and SER 216
-gap of 3.691617 A between SER 216 and LEU 217
-gap of 4.113982 A between LEU 466 and SER 467
-gap of 4.988542 A between SER 467 and SER 467
-gap of 3.676501 A between SER 467 and LEU 468
-gap of 4.124780 A between LEU 717 and SER 718
-gap of 4.979808 A between SER 718 and SER 718
-gap of 3.714473 A between SER 718 and LEU 719
-gap of 4.102389 A between LEU 967 and SER 968
-gap of 4.940027 A between SER 968 and SER 968
-gap of 3.715921 A between SER 968 and LEU 969
-gap of 4.112092 A between LEU 1792 and SER 1793
-gap of 4.920476 A between SER 1793 and SER 1793
-gap of 3.691617 A between SER 1793 and LEU 1794
-gap of 4.113982 A between LEU 2043 and SER 2044
-gap of 4.988542 A between SER 2044 and SER 2044
-gap of 3.676501 A between SER 2044 and LEU 2045
-gap of 4.124780 A between LEU 2294 and SER 2295
-gap of 4.979808 A between SER 2295 and SER 2295
-gap of 3.714473 A between SER 2295 and LEU 2296
-gap of 4.102389 A between LEU 2544 and SER 2545
-gap of 4.940027 A between SER 2545 and SER 2545
-gap of 3.715921 A between SER 2545 and LEU 2546
+gap of 4.112092 A between LEU 192 and SER 193
+gap of 4.920476 A between SER 193 and SER 193
+gap of 3.691617 A between SER 193 and LEU 194
+gap of 4.113982 A between LEU 420 and SER 421
+gap of 4.988542 A between SER 421 and SER 421
+gap of 3.676501 A between SER 421 and LEU 422
+gap of 4.124780 A between LEU 648 and SER 649
+gap of 4.979808 A between SER 649 and SER 649
+gap of 3.714473 A between SER 649 and LEU 650
+gap of 4.102389 A between LEU 875 and SER 876
+gap of 4.940027 A between SER 876 and SER 876
+gap of 3.715921 A between SER 876 and LEU 877
+gap of 4.112092 A between LEU 1677 and SER 1678
+gap of 4.920476 A between SER 1678 and SER 1678
+gap of 3.691617 A between SER 1678 and LEU 1679
+gap of 4.113982 A between LEU 1905 and SER 1906
+gap of 4.988542 A between SER 1906 and SER 1906
+gap of 3.676501 A between SER 1906 and LEU 1907
+gap of 4.124780 A between LEU 2133 and SER 2134
+gap of 4.979808 A between SER 2134 and SER 2134
+gap of 3.714473 A between SER 2134 and LEU 2135
+gap of 4.102389 A between LEU 2360 and SER 2361
+gap of 4.940027 A between SER 2361 and SER 2361
+gap of 3.715921 A between SER 2361 and LEU 2362
 
 ---------- Mising heavy atom(s)
 
-LYS_1 misses 8 heavy atom(s)
-LYS_2 misses 9 heavy atom(s)
-LYS_3 misses 9 heavy atom(s)
-LYS_4 misses 9 heavy atom(s)
-LYS_5 misses 8 heavy atom(s)
-LYS_6 misses 9 heavy atom(s)
-LYS_7 misses 8 heavy atom(s)
-LYS_8 misses 9 heavy atom(s)
-LYS_9 misses 9 heavy atom(s)
-LYS_10 misses 8 heavy atom(s)
-LYS_11 misses 9 heavy atom(s)
-LYS_12 misses 9 heavy atom(s)
-LYS_13 misses 8 heavy atom(s)
-LYS_14 misses 9 heavy atom(s)
-LYS_15 misses 9 heavy atom(s)
-LYS_16 misses 8 heavy atom(s)
-LYS_17 misses 9 heavy atom(s)
-LYS_18 misses 9 heavy atom(s)
-LYS_19 misses 8 heavy atom(s)
-LYS_20 misses 9 heavy atom(s)
-LYS_21 misses 9 heavy atom(s)
-LYS_22 misses 9 heavy atom(s)
-LYS_23 misses 8 heavy atom(s)
-LYS_24 misses 8 heavy atom(s)
-LYS_251 misses 8 heavy atom(s)
-LYS_252 misses 9 heavy atom(s)
-LYS_253 misses 9 heavy atom(s)
-LYS_254 misses 9 heavy atom(s)
-LYS_255 misses 8 heavy atom(s)
-LYS_256 misses 9 heavy atom(s)
-LYS_257 misses 8 heavy atom(s)
-LYS_258 misses 9 heavy atom(s)
-LYS_259 misses 9 heavy atom(s)
-LYS_260 misses 8 heavy atom(s)
-LYS_261 misses 9 heavy atom(s)
-LYS_262 misses 9 heavy atom(s)
-LYS_263 misses 8 heavy atom(s)
-LYS_264 misses 9 heavy atom(s)
-LYS_265 misses 9 heavy atom(s)
-LYS_266 misses 8 heavy atom(s)
-LYS_267 misses 9 heavy atom(s)
-LYS_268 misses 9 heavy atom(s)
-LYS_269 misses 8 heavy atom(s)
-LYS_270 misses 9 heavy atom(s)
-LYS_271 misses 9 heavy atom(s)
-LYS_272 misses 9 heavy atom(s)
-LYS_273 misses 8 heavy atom(s)
-LYS_274 misses 8 heavy atom(s)
-LYS_502 misses 8 heavy atom(s)
-LYS_503 misses 9 heavy atom(s)
-LYS_504 misses 9 heavy atom(s)
-LYS_505 misses 9 heavy atom(s)
-LYS_506 misses 8 heavy atom(s)
-LYS_507 misses 9 heavy atom(s)
-LYS_508 misses 8 heavy atom(s)
-LYS_509 misses 9 heavy atom(s)
-LYS_510 misses 9 heavy atom(s)
-LYS_511 misses 8 heavy atom(s)
-LYS_512 misses 9 heavy atom(s)
-LYS_513 misses 9 heavy atom(s)
-LYS_514 misses 8 heavy atom(s)
-LYS_515 misses 9 heavy atom(s)
-LYS_516 misses 9 heavy atom(s)
-LYS_517 misses 8 heavy atom(s)
-LYS_518 misses 9 heavy atom(s)
-LYS_519 misses 9 heavy atom(s)
-LYS_520 misses 8 heavy atom(s)
-LYS_521 misses 9 heavy atom(s)
-LYS_522 misses 9 heavy atom(s)
-LYS_523 misses 9 heavy atom(s)
-LYS_524 misses 8 heavy atom(s)
-LYS_525 misses 8 heavy atom(s)
-LYS_753 misses 8 heavy atom(s)
-LYS_754 misses 9 heavy atom(s)
-LYS_755 misses 9 heavy atom(s)
-LYS_756 misses 9 heavy atom(s)
-LYS_757 misses 8 heavy atom(s)
-LYS_758 misses 9 heavy atom(s)
-LYS_759 misses 8 heavy atom(s)
-LYS_760 misses 9 heavy atom(s)
-LYS_761 misses 9 heavy atom(s)
-LYS_762 misses 8 heavy atom(s)
-LYS_763 misses 9 heavy atom(s)
-LYS_764 misses 9 heavy atom(s)
-LYS_765 misses 8 heavy atom(s)
-LYS_766 misses 9 heavy atom(s)
-LYS_767 misses 9 heavy atom(s)
-LYS_768 misses 8 heavy atom(s)
-LYS_769 misses 9 heavy atom(s)
-LYS_770 misses 9 heavy atom(s)
-LYS_771 misses 8 heavy atom(s)
-LYS_772 misses 9 heavy atom(s)
-LYS_773 misses 9 heavy atom(s)
-LYS_774 misses 9 heavy atom(s)
-LYS_775 misses 8 heavy atom(s)
-LYS_776 misses 8 heavy atom(s)
-LYS_1578 misses 8 heavy atom(s)
-LYS_1579 misses 9 heavy atom(s)
-LYS_1580 misses 9 heavy atom(s)
-LYS_1581 misses 9 heavy atom(s)
-LYS_1582 misses 8 heavy atom(s)
-LYS_1583 misses 9 heavy atom(s)
-LYS_1584 misses 8 heavy atom(s)
-LYS_1585 misses 9 heavy atom(s)
-LYS_1586 misses 9 heavy atom(s)
-LYS_1587 misses 8 heavy atom(s)
-LYS_1588 misses 9 heavy atom(s)
-LYS_1589 misses 9 heavy atom(s)
-LYS_1590 misses 8 heavy atom(s)
-LYS_1591 misses 9 heavy atom(s)
-LYS_1592 misses 9 heavy atom(s)
-LYS_1593 misses 8 heavy atom(s)
-LYS_1594 misses 9 heavy atom(s)
-LYS_1595 misses 9 heavy atom(s)
-LYS_1596 misses 8 heavy atom(s)
-LYS_1597 misses 9 heavy atom(s)
-LYS_1598 misses 9 heavy atom(s)
-LYS_1599 misses 9 heavy atom(s)
-LYS_1600 misses 8 heavy atom(s)
-LYS_1601 misses 8 heavy atom(s)
-LYS_1828 misses 8 heavy atom(s)
-LYS_1829 misses 9 heavy atom(s)
-LYS_1830 misses 9 heavy atom(s)
-LYS_1831 misses 9 heavy atom(s)
-LYS_1832 misses 8 heavy atom(s)
-LYS_1833 misses 9 heavy atom(s)
-LYS_1834 misses 8 heavy atom(s)
-LYS_1835 misses 9 heavy atom(s)
-LYS_1836 misses 9 heavy atom(s)
-LYS_1837 misses 8 heavy atom(s)
-LYS_1838 misses 9 heavy atom(s)
-LYS_1839 misses 9 heavy atom(s)
-LYS_1840 misses 8 heavy atom(s)
-LYS_1841 misses 9 heavy atom(s)
-LYS_1842 misses 9 heavy atom(s)
-LYS_1843 misses 8 heavy atom(s)
-LYS_1844 misses 9 heavy atom(s)
-LYS_1845 misses 9 heavy atom(s)
-LYS_1846 misses 8 heavy atom(s)
-LYS_1847 misses 9 heavy atom(s)
-LYS_1848 misses 9 heavy atom(s)
-LYS_1849 misses 9 heavy atom(s)
-LYS_1850 misses 8 heavy atom(s)
-LYS_1851 misses 8 heavy atom(s)
-LYS_2079 misses 8 heavy atom(s)
-LYS_2080 misses 9 heavy atom(s)
-LYS_2081 misses 9 heavy atom(s)
-LYS_2082 misses 9 heavy atom(s)
-LYS_2083 misses 8 heavy atom(s)
-LYS_2084 misses 9 heavy atom(s)
-LYS_2085 misses 8 heavy atom(s)
-LYS_2086 misses 9 heavy atom(s)
-LYS_2087 misses 9 heavy atom(s)
-LYS_2088 misses 8 heavy atom(s)
-LYS_2089 misses 9 heavy atom(s)
-LYS_2090 misses 9 heavy atom(s)
-LYS_2091 misses 8 heavy atom(s)
-LYS_2092 misses 9 heavy atom(s)
-LYS_2093 misses 9 heavy atom(s)
-LYS_2094 misses 8 heavy atom(s)
-LYS_2095 misses 9 heavy atom(s)
-LYS_2096 misses 9 heavy atom(s)
-LYS_2097 misses 8 heavy atom(s)
-LYS_2098 misses 9 heavy atom(s)
-LYS_2099 misses 9 heavy atom(s)
-LYS_2100 misses 9 heavy atom(s)
-LYS_2101 misses 8 heavy atom(s)
-LYS_2102 misses 8 heavy atom(s)
-LYS_2330 misses 8 heavy atom(s)
-LYS_2331 misses 9 heavy atom(s)
-LYS_2332 misses 9 heavy atom(s)
-LYS_2333 misses 9 heavy atom(s)
-LYS_2334 misses 8 heavy atom(s)
-LYS_2335 misses 9 heavy atom(s)
-LYS_2336 misses 8 heavy atom(s)
-LYS_2337 misses 9 heavy atom(s)
-LYS_2338 misses 9 heavy atom(s)
-LYS_2339 misses 8 heavy atom(s)
-LYS_2340 misses 9 heavy atom(s)
-LYS_2341 misses 9 heavy atom(s)
-LYS_2342 misses 8 heavy atom(s)
-LYS_2343 misses 9 heavy atom(s)
-LYS_2344 misses 9 heavy atom(s)
-LYS_2345 misses 8 heavy atom(s)
-LYS_2346 misses 9 heavy atom(s)
-LYS_2347 misses 9 heavy atom(s)
-LYS_2348 misses 8 heavy atom(s)
-LYS_2349 misses 9 heavy atom(s)
-LYS_2350 misses 9 heavy atom(s)
-LYS_2351 misses 9 heavy atom(s)
-LYS_2352 misses 8 heavy atom(s)
-LYS_2353 misses 8 heavy atom(s)
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/et/3etb/4amber_3etb.prmtop
+None
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/et/3etb/4amber_3etb.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.prmtop
 
 	Running AmberPrep : 3etb.pdb
@@ -1773,5 +1557,445 @@ Preparing unit cell files: 4amber_3etb.prmtop and 4amber_3etb.rst7
 
 Checking output filenames
   file : 3etb_uc.prmtop
-Sorry:   Output file is empty : 3etb_uc.prmtop
-  Check contents of "leap.log"
+  file : 3etb_uc.rst7
+
+~> ChBox -c 3etb_uc.rst7 -o 3etb_uc.rst7 -X 48.94 -Y 299.72 -Z 68.95 -al 90.0 -bt 94.45 -gm 90.0 
+
+
+==================================================
+Minimizing input coordinates.
+==================================================
+
+~> sander -O -i 3etb_amber_all.in -p 4amber_3etb.prmtop -c 4amber_3etb.rst7 -o 3etb.min.out            -ref 4amber_3etb.rst7 -r 4amber_3etb.min.rst7
+
+checking special positions in 4phenix_3etb.pdb
+
+==================================================
+Done.  Three new files have been made:
+      4phenix_3etb.pdb
+      4amber_3etb.prmtop
+      4amber_3etb.rst7
+==================================================
+
+Example
+
+  phenix.refine 4phenix_3etb.pdb use_amber=True \
+    amber.topology_file_name=4amber_3etb.prmtop \
+    amber.coordinate_file_name=4amber_3etb.rst7 \
+    ....(other refinement keywords here).....
+
+
+
+Substituting Amber PDB file for downloaded file
+run_tests_local.py:222: UserWarning: os.system() is not safe: please use the subprocess module or libtbx.easy_run instead.
+  os.system(cmd)
+
+  Amber files
+    PDB    : 3etb.pdb
+    MTZ    : 3etb.mtz
+    prmtop : 4amber_3etb.prmtop
+    rst7   : 4amber_3etb.rst7
+  
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb
+return_files 3etb
+/net/chevy/raid1/nigel/amber/hi_lo
+4amber_3etb.pdb
+4phenix_3etb.pdb
+cp 4phenix_3etb.pdb /net/chevy/raid1/nigel/amber/hi_lo/et/3etb
+3etb.pdb
+cp 3etb.pdb /net/chevy/raid1/nigel/amber/hi_lo/et/3etb
+4amber_3etb.mtz
+4phenix_3etb.mtz
+3etb.mtz
+cp 3etb.mtz /net/chevy/raid1/nigel/amber/hi_lo/et/3etb
+4amber_3etb.rst7
+cp 4amber_3etb.rst7 /net/chevy/raid1/nigel/amber/hi_lo/et/3etb
+4phenix_3etb.rst7
+3etb.rst7
+4amber_3etb.prmtop
+cp 4amber_3etb.prmtop /net/chevy/raid1/nigel/amber/hi_lo/et/3etb
+4phenix_3etb.prmtop
+3etb.prmtop
+4amber_3etb_refine_001.log
+4phenix_3etb_refine_001.log
+3etb_refine_001.log
+4amber_3etb_refine_002.log
+4phenix_3etb_refine_002.log
+3etb_refine_002.log
+4amber_3etb_refine_001.pdb
+4phenix_3etb_refine_001.pdb
+3etb_refine_001.pdb
+4amber_3etb_refine_002.pdb
+4phenix_3etb_refine_002.pdb
+3etb_refine_002.pdb
+local_archive /net/chevy/raid1/nigel/amber/hi_lo
+archive PDB /net/chevy/raid1/nigel/amber/hi_lo/et/3etb/3etb.pdb
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/et/3etb
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/et/3etb/3etb_refine_001.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3etb_refine_001.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3etb.pdb 3etb.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False serial=1 cdl=True
+
+# Date 2017-02-23 Time 10:45:32 PST -0800 (1487875532.57 s)
+#phil __OFF__
+
+Command line arguments: "3etb.pdb" "3etb.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "serial=1" "cdl=True"
+
+HOST = morse.lbl.gov
+HOSTTYPE = x86_64-linux
+USER = nigel
+PID = 65171
+JOB_ID = 6368472
+SGE_ARCH = lx24-amd64
+SGE_TASK_FIRST = 1
+SGE_TASK_LAST = 400
+SGE_TASK_ID = 315
+
+-------------------------------------------------------------------------------
+  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
+  Version: dev
+  Release tag: svn+SVN
+  User: nigel
+-------------------------------------------------------------------------------
+
+              phenix.refine: Macromolecular Structure Refinement
+
+-------------------------------------------------------------------------------
+
+Phenix developers include:
+  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
+  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
+  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
+  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
+  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
+  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
+  Tom Terwilliger, Christopher Williams, Peter Zwart
+Phenix home page:
+  http://www.phenix-online.org/
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Phenix components are copyrighted by:
+  - Lawrence Berkeley National Laboratory
+  - Los Alamos National Laboratory
+  - University of Cambridge
+  - Duke University
+  - Texas Agricultural Experiment Station &
+    Texas Engineering Experiment Station
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Major third-party components of Phenix include:
+    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
+    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
+    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
+  Enter phenix.acknowledgments for details.
+-------------------------------------------------------------------------------
+
+Processing inputs. This may take a minute or two.
+
+Command line parameter definitions:
+  refinement.pdb_interpretation.c_beta_restraints = False
+
+  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
+
+  refinement.refine.strategy = *individual_sites individual_sites_real_space \
+                               rigid_body *individual_adp group_adp tls \
+                               *occupancies group_anomalous
+
+  refinement.target_weights.optimize_xyz_weight = True
+
+  refinement.main.number_of_macro_cycles = 10
+
+  refinement.output.write_geo_file = False
+
+  refinement.output.serial = 1
+
+  refinement.pdb_interpretation.restraints_library.cdl = True
+
+  No user-defined map coefficients or files defined; will use default map
+  outputs instead.
+Working crystal symmetry after inspecting all inputs:
+  Unit cell: (48.94, 299.72, 68.95, 90, 94.45, 90)
+  Space group: P 1 21 1 (No. 4)
+
+
+================================== X-ray data =================================
+
+F-obs:
+  3etb.mtz:FOBS,SIGFOBS
+
+Miller array info: 3etb.mtz:FOBS,SIGFOBS
+Observation type: xray.amplitude
+Type of data: double, size=18322
+Type of sigmas: double, size=18322
+Number of Miller indices: 18322
+Anomalous flag: False
+Unit cell: (48.94, 299.72, 68.95, 90, 94.45, 90)
+Space group: P 1 21 1 (No. 4)
+Systematic absences: 0
+Centric reflections: 264
+Resolution range: 43.8432 3.81268
+Completeness in resolution range: 0.953576
+Completeness with d_max=infinity: 0.95298
+Wavelength: 1.5418
+
+Number of F-obs in resolution range:                   18322
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 1061
+Refinement resolution range: d_max =  43.8432
+                             d_min =   3.8127
+
+R-free flags:
+  3etb.mtz:R-free-flags
+
+Miller array info: 3etb.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=18322
+Type of sigmas: None
+Number of Miller indices: 18322
+Anomalous flag: False
+Unit cell: (48.94, 299.72, 68.95, 90, 94.45, 90)
+Space group: P 1 21 1 (No. 4)
+Systematic absences: 0
+Centric reflections: 264
+Resolution range: 43.8432 3.81268
+Completeness in resolution range: 0.953576
+Completeness with d_max=infinity: 0.95298
+Wavelength: 1.5418
+
+Test (R-free flags) flag value: 0
+
+Number of work/free reflections by resolution:
+                                         work  free  %free
+  bin  1: 43.8461 -  8.1980 [1888/1938]  1791    97   5.1%
+  bin  2:  8.1980 -  6.5139 [1924/1947]  1829    95   4.9%
+  bin  3:  6.5139 -  5.6925 [1865/1914]  1774    91   4.9%
+  bin  4:  5.6925 -  5.1729 [1862/1929]  1784    78   4.2%
+  bin  5:  5.1729 -  4.8026 [1833/1896]  1719   114   6.2%
+  bin  6:  4.8026 -  4.5198 [1835/1920]  1752    83   4.5%
+  bin  7:  4.5198 -  4.2936 [1815/1909]  1722    93   5.1%
+  bin  8:  4.2936 -  4.1069 [1830/1909]  1719   111   6.1%
+  bin  9:  4.1069 -  3.9489 [1869/1962]  1772    97   5.2%
+  bin 10:  3.9489 -  3.8127 [1601/1890]  1518    83   5.2%
+                                overall 17380   942   5.1%
+
+*** Automatic customization  **************************************************
+  nonbonded_weight=100.000 
+*******************************************************************************
+Sorry: number of groups of duplicate atom labels:  76
+  total number of affected atoms:          152
+  group "ATOM    .*.  N   LEU F1082 .*.     N  "
+        "ATOM    .*.  N   LEU F1082 .*.     N  "
+  group "ATOM    .*.  CA  LEU F1082 .*.     C  "
+        "ATOM    .*.  CA  LEU F1082 .*.     C  "
+  group "ATOM    .*.  C   LEU F1082 .*.     C  "
+        "ATOM    .*.  C   LEU F1082 .*.     C  "
+  group "ATOM    .*.  O   LEU F1082 .*.     O  "
+        "ATOM    .*.  O   LEU F1082 .*.     O  "
+  group "ATOM    .*.  CB  LEU F1082 .*.     C  "
+        "ATOM    .*.  CB  LEU F1082 .*.     C  "
+  group "ATOM    .*.  CG  LEU F1082 .*.     C  "
+        "ATOM    .*.  CG  LEU F1082 .*.     C  "
+  group "ATOM    .*.  CD1 LEU F1082 .*.     C  "
+        "ATOM    .*.  CD1 LEU F1082 .*.     C  "
+  group "ATOM    .*.  CD2 LEU F1082 .*.     C  "
+        "ATOM    .*.  CD2 LEU F1082 .*.     C  "
+  group "ATOM    .*.  H   LEU F1082 .*.     H  "
+        "ATOM    .*.  H   LEU F1082 .*.     H  "
+  group "ATOM    .*.  HA  LEU F1082 .*.     H  "
+        "ATOM    .*.  HA  LEU F1082 .*.     H  "
+  ... 66 remaining groups not shown
+
+------------------------------
+phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/et/3etb/3etb_refine_002.log
+------------------------------
+------------------------------
+phenix.refine log filename ? > 3etb_refine_002.log
+------------------------------
+Running phenix.refine
+
+phenix.refine 3etb.pdb 3etb.mtz c_beta_restraints=False discard_psi_phi=False strategy="*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.prmtop amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.rst7 use_amber=True refinement.target_weights.optimize_xyz_weight=True refinement.main.number_of_macro_cycles=10 write_geo=False amber.wxc_factor=0.300000 serial=2
+
+# Date 2017-02-23 Time 10:45:43 PST -0800 (1487875543.73 s)
+#phil __OFF__
+
+Command line arguments: "3etb.pdb" "3etb.mtz" "c_beta_restraints=False" "discard_psi_phi=False" "strategy=*individual_sites individual_sites_real_space rigid_body *individual_adp group_adp tls *occupancies group_anomalous" "topology_file_name=/net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.prmtop" "amber.coordinate_file_name=/net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.rst7" "use_amber=True" "refinement.target_weights.optimize_xyz_weight=True" "refinement.main.number_of_macro_cycles=10" "write_geo=False" "amber.wxc_factor=0.300000" "serial=2"
+
+HOST = morse.lbl.gov
+HOSTTYPE = x86_64-linux
+USER = nigel
+PID = 503
+JOB_ID = 6368472
+SGE_ARCH = lx24-amd64
+SGE_TASK_FIRST = 1
+SGE_TASK_LAST = 400
+SGE_TASK_ID = 315
+
+-------------------------------------------------------------------------------
+  PHENIX: Python-based Hierarchical ENvironment for Integrated Xtallography
+  Version: dev
+  Release tag: svn+SVN
+  User: nigel
+-------------------------------------------------------------------------------
+
+              phenix.refine: Macromolecular Structure Refinement
+
+-------------------------------------------------------------------------------
+
+Phenix developers include:
+  Paul Adams, Pavel Afonine, Gabor Bunkoczi, Tom Burnley, Vincent Chen, 
+  Youval Dar, Ian Davis, Eli Draizen, Nathaniel Echols, Richard Gildea, 
+  Piet Gros, Ralf Grosse-Kunstleve, Jeffrey Headd, Bradley Hintze, Li-Wei Hung, 
+  Tom Ioerger, Dorothee Liebschner, Airlie McCoy, Erik McKee, Nigel Moriarty, 
+  Robert Oeffner, Billy Poon, Randy Read, Jane Richardson, David Richardson, 
+  Jim Sacchettini, Nicholas Sauter, Oleg Sobolev, Laurent Storoni, 
+  Tom Terwilliger, Christopher Williams, Peter Zwart
+Phenix home page:
+  http://www.phenix-online.org/
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Phenix components are copyrighted by:
+  - Lawrence Berkeley National Laboratory
+  - Los Alamos National Laboratory
+  - University of Cambridge
+  - Duke University
+  - Texas Agricultural Experiment Station &
+    Texas Engineering Experiment Station
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Major third-party components of Phenix include:
+    Python, wxWidgets, wxPython, Boost, SCons, Clipper,
+    CCP4 Monomer Library, CCP4 I/O libraries, PyCifRW, FFTPACK, L-BFGS,
+    MUSCLE, KSDSSP, PULCHRA, ANTLRv3
+  Enter phenix.acknowledgments for details.
+-------------------------------------------------------------------------------
+
+Processing inputs. This may take a minute or two.
+
+Command line parameter definitions:
+  refinement.pdb_interpretation.c_beta_restraints = False
+
+  refinement.pdb_interpretation.peptide_link.discard_psi_phi = False
+
+  refinement.refine.strategy = *individual_sites individual_sites_real_space \
+                               rigid_body *individual_adp group_adp tls \
+                               *occupancies group_anomalous
+
+  refinement.amber.topology_file_name = /net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.prmtop
+
+  refinement.amber.coordinate_file_name = /net/chevy/raid1/nigel/amber/hi_lo/et/3etb/4amber_3etb.rst7
+
+  refinement.amber.use_amber = True
+
+  refinement.target_weights.optimize_xyz_weight = True
+
+  refinement.main.number_of_macro_cycles = 10
+
+  refinement.output.write_geo_file = False
+
+  refinement.amber.wxc_factor = 0.300000
+
+  refinement.output.serial = 2
+
+  No user-defined map coefficients or files defined; will use default map
+  outputs instead.
+Working crystal symmetry after inspecting all inputs:
+  Unit cell: (48.94, 299.72, 68.95, 90, 94.45, 90)
+  Space group: P 1 21 1 (No. 4)
+
+
+================================== X-ray data =================================
+
+F-obs:
+  3etb.mtz:FOBS,SIGFOBS
+
+Miller array info: 3etb.mtz:FOBS,SIGFOBS
+Observation type: xray.amplitude
+Type of data: double, size=18322
+Type of sigmas: double, size=18322
+Number of Miller indices: 18322
+Anomalous flag: False
+Unit cell: (48.94, 299.72, 68.95, 90, 94.45, 90)
+Space group: P 1 21 1 (No. 4)
+Systematic absences: 0
+Centric reflections: 264
+Resolution range: 43.8432 3.81268
+Completeness in resolution range: 0.953576
+Completeness with d_max=infinity: 0.95298
+Wavelength: 1.5418
+
+Number of F-obs in resolution range:                   18322
+Number of F-obs<0 (these reflections will be rejected): 0
+Number of F-obs=0 (these reflections will be used in refinement): 1061
+Refinement resolution range: d_max =  43.8432
+                             d_min =   3.8127
+
+R-free flags:
+  3etb.mtz:R-free-flags
+
+Miller array info: 3etb.mtz:R-free-flags
+Observation type: None
+Type of data: int, size=18322
+Type of sigmas: None
+Number of Miller indices: 18322
+Anomalous flag: False
+Unit cell: (48.94, 299.72, 68.95, 90, 94.45, 90)
+Space group: P 1 21 1 (No. 4)
+Systematic absences: 0
+Centric reflections: 264
+Resolution range: 43.8432 3.81268
+Completeness in resolution range: 0.953576
+Completeness with d_max=infinity: 0.95298
+Wavelength: 1.5418
+
+Test (R-free flags) flag value: 0
+
+Number of work/free reflections by resolution:
+                                         work  free  %free
+  bin  1: 43.8461 -  8.1980 [1888/1938]  1791    97   5.1%
+  bin  2:  8.1980 -  6.5139 [1924/1947]  1829    95   4.9%
+  bin  3:  6.5139 -  5.6925 [1865/1914]  1774    91   4.9%
+  bin  4:  5.6925 -  5.1729 [1862/1929]  1784    78   4.2%
+  bin  5:  5.1729 -  4.8026 [1833/1896]  1719   114   6.2%
+  bin  6:  4.8026 -  4.5198 [1835/1920]  1752    83   4.5%
+  bin  7:  4.5198 -  4.2936 [1815/1909]  1722    93   5.1%
+  bin  8:  4.2936 -  4.1069 [1830/1909]  1719   111   6.1%
+  bin  9:  4.1069 -  3.9489 [1869/1962]  1772    97   5.2%
+  bin 10:  3.9489 -  3.8127 [1601/1890]  1518    83   5.2%
+                                overall 17380   942   5.1%
+
+*** Automatic customization  **************************************************
+  nonbonded_weight=100.000 
+*******************************************************************************
+Sorry: number of groups of duplicate atom labels:  76
+  total number of affected atoms:          152
+  group "ATOM    .*.  N   LEU F1082 .*.     N  "
+        "ATOM    .*.  N   LEU F1082 .*.     N  "
+  group "ATOM    .*.  CA  LEU F1082 .*.     C  "
+        "ATOM    .*.  CA  LEU F1082 .*.     C  "
+  group "ATOM    .*.  C   LEU F1082 .*.     C  "
+        "ATOM    .*.  C   LEU F1082 .*.     C  "
+  group "ATOM    .*.  O   LEU F1082 .*.     O  "
+        "ATOM    .*.  O   LEU F1082 .*.     O  "
+  group "ATOM    .*.  CB  LEU F1082 .*.     C  "
+        "ATOM    .*.  CB  LEU F1082 .*.     C  "
+  group "ATOM    .*.  CG  LEU F1082 .*.     C  "
+        "ATOM    .*.  CG  LEU F1082 .*.     C  "
+  group "ATOM    .*.  CD1 LEU F1082 .*.     C  "
+        "ATOM    .*.  CD1 LEU F1082 .*.     C  "
+  group "ATOM    .*.  CD2 LEU F1082 .*.     C  "
+        "ATOM    .*.  CD2 LEU F1082 .*.     C  "
+  group "ATOM    .*.  H   LEU F1082 .*.     H  "
+        "ATOM    .*.  H   LEU F1082 .*.     H  "
+  group "ATOM    .*.  HA  LEU F1082 .*.     H  "
+        "ATOM    .*.  HA  LEU F1082 .*.     H  "
+  ... 66 remaining groups not shown
+

@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 117
 only_code None
 force_amber_prep True
@@ -11,64 +11,43 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kf/pdb1kfl.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kf/r1kflsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kf/1kfl.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.cif
+Can't determine output label for r1kflsf,_refln.crystal_id - skipping.
+Can't determine output label for r1kflsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kflsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r1kflsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kfl.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
 local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/kf/pdb1kfl.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/kf/r1kflsf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/kf/1kfl.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/kf/1kfl/1kfl.cif
+Can't determine output label for r1kflsf,_refln.crystal_id - skipping.
+Can't determine output label for r1kflsf,_refln.scale_group_code - skipping.
+Can't determine output label for r1kflsf,wavelength_id=1,_refln.status - skipping.
+Can't determine output label for r1kflsf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 1kfl.mtz
+  F(+),SIGF(+),F(-),SIGF(-) is anomalous
 
 ==================================================
 Summary of pdb4amber for: 1kfl.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -162,7 +141,7 @@ gap of 4.385792 A between VAL 2749 and VAL 2751
 None
 The alternate coordinates have been discarded.
 Only the first occurrence for each atom was kept.
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/kf/1kfl/4amber_1kfl.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/kf/1kfl/4amber_1kfl.prmtop
 not prmtop_filename /net/chevy/raid1/nigel/amber/hi_lo/kf/1kfl/4amber_1kfl.prmtop
 
 	Running AmberPrep : 1kfl.pdb
@@ -180,8 +159,8 @@ Setting up library files for non-standard residues
 Running elbow/antechamber for MSE 
 ==================================================
 --------------------------------------------------------------------------------
-['/tmp/6368467.117.all.q/tmpN3AxoG', '/tmp/6368467.117.all.q/tmpwQo8vH']
-/tmp/6368467.117.all.q/tmpN3AxoG
+['/tmp/6368472.117.all.q/tmpaDGNj7', '/tmp/6368472.117.all.q/tmpaCAp0X']
+/tmp/6368472.117.all.q/tmpaDGNj7
   Monomer Library directory:
     "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/chem_data/mon_lib"
   Total number of atoms: 19

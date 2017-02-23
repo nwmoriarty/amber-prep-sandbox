@@ -1,4 +1,4 @@
-HOST lewis.lbl.gov
+HOST morse.lbl.gov
 only_i 334
 only_code None
 force_amber_prep True
@@ -12,35 +12,30 @@ local_archive None
 archive PDB None
 Reading from local mirror:
   /net/cci/pdb_mirror/pdb/ll/pdb3ll8.ent.gz
-Model saved to /net/lewis/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.pdb
-Traceback (most recent call last):
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 199, in <module>
-    run2(sys.argv[1:])
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/build/../modules/cctbx_project/mmtbx/command_line/fetch_pdb.py", line 155, in run2
-    files.append(get_pdb(id, data_type_, mirror, log, format=data_format))
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 213, in get_pdb
-    data = fetch(id, data_type, mirror=mirror, format=format, log=log)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/iotbx/pdb/fetch.py", line 150, in fetch
-    data = libtbx.utils.urlopen(url)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/cctbx_project/libtbx/utils.py", line 2069, in urlopen
-    return urllib2.urlopen(*args, **kwds)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 127, in urlopen
-    return _opener.open(url, data, timeout)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 404, in open
-    response = self._open(req, data)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 422, in _open
-    '_open', req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 382, in _call_chain
-    result = func(*args)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1214, in http_open
-    return self.do_open(httplib.HTTPConnection, req)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/base/lib/python2.7/urllib2.py", line 1184, in do_open
-    raise URLError(err)
-urllib2.URLError: <urlopen error [Errno 110] Connection timed out>
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.pdb
+Sequence saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.fa
+Reading from local mirror:
+  /net/cci/pdb_mirror/structure_factors/ll/r3ll8sf.ent.gz
+Structure factors saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8-sf.cif
+Reading from local mirror:
+  /net/cci/pdb_mirror/mmcif/ll/3ll8.cif.gz
+Model saved to /net/morse/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8/3ll8.cif
+Can't determine output label for r3ll8sf,_refln.crystal_id - skipping.
+Can't determine output label for r3ll8sf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.050
+R-free-flags: missing 934 reflections
+Can't determine output label for r3ll8sf,_refln.wavelength_id - skipping.
+Can't determine output label for r3ll8Asf,_refln.crystal_id - skipping.
+Can't determine output label for r3ll8Asf,_refln.scale_group_code - skipping.
+R-free-flags: fraction_free=0.000
+WARNING: R-free flags in R-free-flags do not appear to contain a valid test, so they can't be extended to higher resolution.
+Can't determine output label for r3ll8Asf,_refln.wavelength_id - skipping.
+Converted structure factors saved to 3ll8.mtz
 
 ==================================================
 Summary of pdb4amber for: 3ll8.pdb
 ===================================================
+REDUCE returned non-zero exit status: See reduce_info.log for more details
 
 ----------Chains
 The following (original) chains have been found:
@@ -79,7 +74,7 @@ None
 ---------- Mising heavy atom(s)
 
 None
-not prmtop_filename /net/lewis/scratch1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.prmtop
+not prmtop_filename /net/morse/scratch1/nigel/amber/hi_lo/ll/3ll8/4amber_3ll8.prmtop
 
 	Running AmberPrep : 3ll8.pdb
 
@@ -138,22 +133,26 @@ Traceback (most recent call last):
     w2 = run_all_tests(code, force_amber_prep=force_amber_prep)
   File "run_tests_local.py", line 93, in run_all_tests
     "clean=on",
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 1034, in run
-    minimization_options=actions.minimization_options)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 689, in run_minimise
-    output_pdb_file )
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 313, in uc_parm7_to_4phenix_pdb
-    parm = parmed.load_file( parm7_file, xyz=rst7_file )
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 197, in load_file
-    return cls.parse(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/amberformat.py", line 353, in parse
-    return LoadParm(filename, *args, **kwargs)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/amber/readparm.py", line 73, in LoadParm
-    f = load_file(xyz)
-  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber/lib/python2.7/site-packages/parmed/formats/registry.py", line 168, in load_file
-    raise IOError('%s does not exist' % filename)
-IOError: 4amber_3ll8.min.rst7 does not exist
-.rst7 -o 3ll8_uc.rst7 -X 86.275 -Y 89.699 -Z 158.914 -al 90.0 -bt 90.0 -gm 90.0 
+  File "/net/cci-filer2/raid1/xp/phenix/phenix-svn/modules/amber_adaptbx/command_line/AmberPrepClass.py", line 1039, in run
+    os.rename('4amber_%s.min.rst7' % base, '4amber_%s.rst7' % base)
+OSError: [Errno 2] No such file or directory
+58.914 -al 90.0 -bt 90.0 -gm 90.0 
+
+
+============================================================
+Preparing unit cell files: 4amber_3ll8.prmtop and 4amber_3ll8.rst7
+============================================================
+
+~> UnitCell -p 3ll8_4UnitCell.pdb -o 3ll8_4tleap_uc1.pdb
+
+
+~> tleap -f 3ll8_uc_tleap_input_run
+
+Checking output filenames
+  file : 3ll8_uc.prmtop
+  file : 3ll8_uc.rst7
+
+~> ChBox -c 3ll8_uc.rst7 -o 3ll8_uc.rst7 -X 86.275 -Y 89.699 -Z 158.914 -al 90.0 -bt 90.0 -gm 90.0 
 
 
 ==================================================
@@ -190,7 +189,7 @@ run_tests_local.py:222: UserWarning: os.system() is not safe: please use the sub
     prmtop : 4amber_3ll8.prmtop
     rst7   : 4amber_3ll8.rst7
   
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
 return_files 3ll8
 /net/chevy/raid1/nigel/amber/hi_lo
 4amber_3ll8.pdb
@@ -224,7 +223,7 @@ cp 4amber_3ll8.prmtop /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8
 3ll8_refine_002.pdb
 local_archive /net/chevy/raid1/nigel/amber/hi_lo
 archive PDB /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/3ll8.pdb
-/net/lewis/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
+/net/morse/raid1/scratch1/nigel/amber/hi_lo/ll/3ll8
 ------------------------------
 phenix.refine log filename ? > /net/chevy/raid1/nigel/amber/hi_lo/ll/3ll8/3ll8_refine_001.log
 ------------------------------
