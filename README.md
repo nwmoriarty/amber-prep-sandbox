@@ -10,6 +10,7 @@ ends with
  - Check contents of "leap.log"                                   3 ['3ipq', '1jkx', '1fvv']
      - 3ipq: resname is a number? 'HET    965  A 801      41'
  - IndexError: list index out of range                           15 ['2jlq', '2wn9', '2w8c', '1nsk', '1gvd', '2vc2', '2uyz', '2xbm', '2xeg', '2xb4']
+     - This is probably limitation in pdb4amber (new code) in detecting gap. 
  - Molecule too small to optimise                                 2 ['1rer', '1io4']
  - OSError: [Errno 2] No such file or directory                   1 ['3ll8']
  - Running elbow/antechamber for MSE                             16 ['1fg5', '2jla', '2g3k', '2dwk', '1t6i', '1xm3', '1vjl', '2cy2', '1i6k', '2axy']
