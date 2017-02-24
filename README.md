@@ -17,6 +17,7 @@ ends with
  - Sorry:   Output file is empty :                               51 ['3cfb', '1c0n', '1qf6', '3lkz', '3n9g', '3hww', '1brr', '2br7', '3fg1', '2rg3']
  - ValueError: invalid literal for int() with base 16:            2 ['2b9v', '1fnt']
  - assert (ero.return_code == 0)                                  8 ['3hsh', '3bwu', '2zhx', '3oiu', '3gj0', '1fss', '3ous', '1baw']
+     - may be due to minimization step (e.g: 3hsh, 2zhx)
  - assert 0                                                       1 ['1cb6']
  - in judgebondtype() of antechamber.c properly, exit             6 ['2ayl', '2onk', '2j6e', '3od5', '3cij', '1zv8']
  - not finished                                                   3 ['2ger', '2f8x', '2izz']
