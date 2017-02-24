@@ -19,6 +19,7 @@ error_strings = [
   ': /usr/etc',
   'Sorry:   Output file is empty :',
   "OSError: [Errno 17] File exists: 'h5'",
+  'Running elbow/antechamber for MSE',
   ]
 
 last_lines = [
