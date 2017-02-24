@@ -8,6 +8,7 @@ ends with
 
  - (2) adjust atom valence penalty parameters in APS.DAT, and/or   9 ['1pge', '3nxu', '1cx2', '2pcb', '1w0e', '3nt1', '2b4z', '1ue8', '3b4x']
  - Check contents of "leap.log"                                   3 ['3ipq', '1jkx', '1fvv']
+     - 3ipq: resname is a number? 'HET    965  A 801      41'
  - IndexError: list index out of range                           15 ['2jlq', '2wn9', '2w8c', '1nsk', '1gvd', '2vc2', '2uyz', '2xbm', '2xeg', '2xb4']
  - Molecule too small to optimise                                 2 ['1rer', '1io4']
  - OSError: [Errno 2] No such file or directory                   1 ['3ll8']
