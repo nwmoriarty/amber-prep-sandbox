@@ -23,6 +23,8 @@ ends with
  - in judgebondtype() of antechamber.c properly, exit             6 ['2ayl', '2onk', '2j6e', '3od5', '3cij', '1zv8']
  - not finished                                                   3 ['2ger', '2f8x', '2izz']
      - phenix.refine seems to be failing but AmberPrep is OK. Will delve deeper. NWM
+     - For 2iZZ, the refinement fails with large gradient if the input model is take from the PDB but is fine if minimize=amber_h is
+       used in AmberPrep
  - of bcc() in charge.c properly, exit                            7 ['2q3z', '1ihi', '3oha', '3gug', '3o41', '2r8j', '3lex']
  - phenix.refine running/done                                   237 ['3kqr', '2bky', '1ar2', '2gps', '1xni', '1a9b', '1wmk', '3f6l', '2c6q', '3g4z']
 
